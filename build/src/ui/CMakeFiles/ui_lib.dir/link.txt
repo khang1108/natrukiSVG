@@ -1,0 +1,2 @@
+C:\msys64\ucrt64\bin\ar.exe qc libui_lib.a CMakeFiles/ui_lib.dir/ui_lib_autogen/mocs_compilation.cpp.obj
+C:\msys64\ucrt64\bin\ranlib.exe libui_lib.a

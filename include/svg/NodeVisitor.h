@@ -9,7 +9,8 @@ class SVGPolygon;
 class SVGPolyline;
 class SVGText;
 class SVGGroup;
-
+class SVGEllipse; 
+class SVGLine;
 /**
  * @brief Giao diện (Interface) trừu tượng của mẫu Visitor Pattern.
  *
@@ -38,6 +39,8 @@ public:
     virtual void visit(SVGPolygon& polygon) = 0;
     virtual void visit(SVGPolyline& polyline) = 0;
     virtual void visit(SVGText& text) = 0;
+    virtual void visit(SVGEllipse& ellipse) = 0; 
+    virtual void visit(SVGLine& line) = 0;       
     
     /**
      * @brief Được gọi KHI BẮT ĐẦU duyệt một <g> (group).

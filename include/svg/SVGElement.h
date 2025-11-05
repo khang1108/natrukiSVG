@@ -33,6 +33,28 @@ public:
      */
     virtual void accept(NodeVisitor& visitor) = 0;
 
+    // --- CÁC HÀM BOUNDING BOX ---
+
+
+    /**
+     * @brief Tính BBox "cục bộ" (trước khi transform).
+     * BẮT BUỘC tất cả các lớp con phải implement hàm này.
+     *
+     * * - Vai trò của Role B (Implement):
+     * Phải viết logic .cpp cho hàm này ở TẤT CẢ các shape con.
+     */
+    virtual SVGRectF localBox() const = 0;
+
+    /**
+     * @brief Tính BBox "thế giới" (sau khi transform).
+     * BẮT BUỘC tất cả các lớp con phải implement hàm này.
+     *
+     * * - Vai trò của Role B (Implement):
+     * Phải viết logic .cpp cho hàm này ở TẤT CẢ các shape con
+     * (thường là gọi localBox() và áp dụng m_transform).
+     */
+    virtual SVGRectF worldBox() const = 0;
+
     // --- Các hàm Setters / Getters ---
 
     /**

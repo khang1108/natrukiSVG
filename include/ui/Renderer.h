@@ -1,10 +1,12 @@
+// File: /include/ui/Renderer.h (ĐÃ CẬP NHẬT GHI CHÚ)
+
 #ifndef UI_RENDERER_H
 #define UI_RENDERER_H
 
 // --- BAO GỒM "CẦU NỐI" VỚI LÕI SVG ---
 // Bằng cách kế thừa 'NodeVisitor', lớp Renderer này
 // có thể được "truyền" vào hàm 'SVGDocument::draw()'
-#include "svg/NodeVisitor.h"
+#include "svg/NodeVisitor.h" 
 
 /**
  * @brief Giao diện (Interface) trừu tượng cho Strategy Pattern.
@@ -34,11 +36,12 @@ public:
     // virtual void visit(SVGPolygon& polygon) = 0;
     // virtual void visit(SVGPolyline& polyline) = 0;
     // virtual void visit(SVGText& text) = 0;
+    // virtual void visit(SVGEllipse& ellipse) = 0; 
+    // virtual void visit(SVGLine& line) = 0;       
+    //
     // virtual void visitGroupBegin(SVGGroup& group) = 0;
     // virtual void visitGroupEnd(SVGGroup& group) = 0;
 
-    // (Bạn có thể thêm các hàm chung cho Renderer ở đây nếu muốn,
-    // ví dụ: 'beginFrame()', 'endFrame()')
 };
 
 #endif // UI_RENDERER_H

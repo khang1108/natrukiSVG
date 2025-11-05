@@ -1,0 +1,9 @@
+{
+    "cmake.configureArgs": [
+    "-DCMAKE_PREFIX_PATH=C:/Qt/6.10.0/mingw_64"
+],
+"files.associations": {
+    "qpainter": "cpp",
+    "qwidget": "cpp"
+}
+}

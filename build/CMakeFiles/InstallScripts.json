@@ -1,9 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/cmake_install.cmake",
-		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/cmake_install.cmake",
-		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/cmake_install.cmake"
+		"C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/cmake_install.cmake",
+		"C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/src/svg/cmake_install.cmake",
+		"C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/src/ui/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
