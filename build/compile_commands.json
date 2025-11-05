@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/NaTruKi_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtNetwork -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/NaTruKi.dir/NaTruKi_autogen/mocs_compilation.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/NaTruKi_autogen/mocs_compilation.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/NaTruKi_autogen/mocs_compilation.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/CMakeFiles/NaTruKi.dir/NaTruKi_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/NaTruKi_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtNetwork -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/NaTruKi.dir/src/main.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/main.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/main.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/CMakeFiles/NaTruKi.dir/src/main.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/svg_lib_autogen/mocs_compilation.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/mocs_compilation.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/mocs_compilation.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/svg_lib_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGCircle.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGCircle.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGCircle.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGCircle.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGDocument.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGDocument.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGDocument.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGDocument.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGElement.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGElement.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGElement.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGElement.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGPolygon.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGPolygon.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGPolygon.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGPolygon.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGPolyline.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGPolyline.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGPolyline.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGPolyline.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGRect.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGRect.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGRect.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGRect.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGStyle.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGStyle.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGStyle.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGStyle.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/svg_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include/svg -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -g -std=gnu++17 -mno-direct-extern-access -o src/svg/CMakeFiles/svg_lib.dir/SVGText.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGText.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/src/svg/SVGText.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/CMakeFiles/svg_lib.dir/SVGText.cpp.o"
+},
+{
+  "directory": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/ui_lib_autogen/include -I/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/include -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtNetwork -g -std=gnu++17 -mno-direct-extern-access -o src/ui/CMakeFiles/ui_lib.dir/ui_lib_autogen/mocs_compilation.cpp.o -c /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/ui_lib_autogen/mocs_compilation.cpp",
+  "file": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/ui_lib_autogen/mocs_compilation.cpp",
+  "output": "/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/CMakeFiles/ui_lib.dir/ui_lib_autogen/mocs_compilation.cpp.o"
+}
+]

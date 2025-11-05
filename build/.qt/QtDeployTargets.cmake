@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_svg_lib_FILE /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/libsvg_lib.a)
+set(__QT_DEPLOY_TARGET_svg_lib_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_ui_lib_FILE /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/libui_lib.a)
+set(__QT_DEPLOY_TARGET_ui_lib_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_NaTruKi_FILE /run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/NaTruKi)
+set(__QT_DEPLOY_TARGET_NaTruKi_TYPE EXECUTABLE)
