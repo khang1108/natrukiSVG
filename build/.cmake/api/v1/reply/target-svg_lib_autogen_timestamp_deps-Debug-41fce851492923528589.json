@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/svg/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8",
+	"isGeneratorProvided" : true,
+	"name" : "svg_lib_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/svg",
+		"source" : "src/svg"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

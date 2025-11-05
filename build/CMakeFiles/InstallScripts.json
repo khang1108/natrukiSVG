@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/cmake_install.cmake",
+		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/svg/cmake_install.cmake",
+		"/run/media/phuckhang/HDD/MyWorkspace/ChuongTrinhDaiHoc-HCMUS/NaTruKi_OOP_Project/build/src/ui/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
