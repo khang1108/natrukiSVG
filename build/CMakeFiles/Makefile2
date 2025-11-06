@@ -132,10 +132,10 @@ src/ui/clean: src/ui/CMakeFiles/ui_lib_autogen.dir/clean
 # Target rules for target CMakeFiles/NaTruKi.dir
 
 # All Build rule for target.
-CMakeFiles/NaTruKi.dir/all: CMakeFiles/NaTruKi_autogen_timestamp_deps.dir/all
 CMakeFiles/NaTruKi.dir/all: src/svg/CMakeFiles/svg_lib.dir/all
-CMakeFiles/NaTruKi.dir/all: src/ui/CMakeFiles/ui_lib.dir/all
 CMakeFiles/NaTruKi.dir/all: CMakeFiles/NaTruKi_autogen.dir/all
+CMakeFiles/NaTruKi.dir/all: CMakeFiles/NaTruKi_autogen_timestamp_deps.dir/all
+CMakeFiles/NaTruKi.dir/all: src/ui/CMakeFiles/ui_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NaTruKi.dir\build.make CMakeFiles/NaTruKi.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NaTruKi.dir\build.make CMakeFiles/NaTruKi.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Cao\OneDrive\Máy tính\natrukiSVG\build\CMakeFiles" --progress-num=1,2,3,4 "Built target NaTruKi"
@@ -232,8 +232,8 @@ CMakeFiles/NaTruKi_autogen.dir/clean:
 # Target rules for target src/svg/CMakeFiles/svg_lib.dir
 
 # All Build rule for target.
-src/svg/CMakeFiles/svg_lib.dir/all: src/svg/CMakeFiles/svg_lib_autogen_timestamp_deps.dir/all
 src/svg/CMakeFiles/svg_lib.dir/all: src/svg/CMakeFiles/svg_lib_autogen.dir/all
+src/svg/CMakeFiles/svg_lib.dir/all: src/svg/CMakeFiles/svg_lib_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f src\svg\CMakeFiles\svg_lib.dir\build.make src/svg/CMakeFiles/svg_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\svg\CMakeFiles\svg_lib.dir\build.make src/svg/CMakeFiles/svg_lib.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Cao\OneDrive\Máy tính\natrukiSVG\build\CMakeFiles" --progress-num=6,7,8,9,10,11,12,13,14,15,16 "Built target svg_lib"
@@ -329,8 +329,8 @@ src/svg/CMakeFiles/svg_lib_autogen.dir/clean:
 # Target rules for target src/ui/CMakeFiles/ui_lib.dir
 
 # All Build rule for target.
-src/ui/CMakeFiles/ui_lib.dir/all: src/ui/CMakeFiles/ui_lib_autogen_timestamp_deps.dir/all
 src/ui/CMakeFiles/ui_lib.dir/all: src/ui/CMakeFiles/ui_lib_autogen.dir/all
+src/ui/CMakeFiles/ui_lib.dir/all: src/ui/CMakeFiles/ui_lib_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f src\ui\CMakeFiles\ui_lib.dir\build.make src/ui/CMakeFiles/ui_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\ui\CMakeFiles\ui_lib.dir\build.make src/ui/CMakeFiles/ui_lib.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Cao\OneDrive\Máy tính\natrukiSVG\build\CMakeFiles" --progress-num=18,19,20 "Built target ui_lib"

@@ -1,5 +1,3 @@
-// File: /include/ui/Renderer.h (ĐÃ CẬP NHẬT GHI CHÚ)
-
 #ifndef UI_RENDERER_H
 #define UI_RENDERER_H
 
