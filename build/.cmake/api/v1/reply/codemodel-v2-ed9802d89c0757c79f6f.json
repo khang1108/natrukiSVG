@@ -657,7 +657,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "NaTruKi::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-NaTruKi-Debug-d351e00c1e0bbdceda9e.json",
+					"jsonFile" : "target-NaTruKi-Debug-597cdcf00d288e5fc985.json",
 					"name" : "NaTruKi",
 					"projectIndex" : 0
 				},
@@ -678,7 +678,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "svg_lib::@9a132819dfa4a68249c8",
-					"jsonFile" : "target-svg_lib-Debug-8314d5d2717124dbbdec.json",
+					"jsonFile" : "target-svg_lib-Debug-57a8d331013ed1a02ab7.json",
 					"name" : "svg_lib",
 					"projectIndex" : 0
 				},
@@ -699,7 +699,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "ui_lib::@e0ce1d6ecae3dc67b834",
-					"jsonFile" : "target-ui_lib-Debug-528979348eef355e28c8.json",
+					"jsonFile" : "target-ui_lib-Debug-160996f0829f83499c7e.json",
 					"name" : "ui_lib",
 					"projectIndex" : 0
 				},
