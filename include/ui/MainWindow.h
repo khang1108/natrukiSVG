@@ -39,6 +39,8 @@ private:
     QAction* m_copyAction;    // Cho nút "Copy PNG"
     QAction* m_downloadAction;   // Cho nút "Download PNG"
     QAction* m_fullscreenAction; // Cho nút "Fullscreen"
+    QAction* m_exitFullscreenAction; // Cho nút "Exit Fullscreen"
+    QAction* m_backtoviewerAction; // CHo nút "Back" ở 2 chỗ (trang About & Premium)
 public:
     /**
      * @brief Hàm khởi tạo (Constructor).
@@ -160,6 +162,20 @@ private slots:
      * Sẽ render 'm_canvas' ra QPixmap và mở hộp thoại lưu file.
      */
     void onDownload();
+
+    /**
+     * @brief Được gọi khi nhấp vào "Back" (trang About & Premium).
+     * * - Vai trò của Role C (Implement):
+     * Sẽ quay về trang chính (canvas viewer).
+     */
+    void onBack();
+
+    /**
+     * @brief Được gọi khi nhấp vào "Exit Fullscreen = ESC".
+     * * - Vai trò của Role C (Implement):
+     * Sẽ thoát chế độ toàn màn hình.
+     */
+    void onExitFullscreen();
 };
 
 #endif // UI_MAIN_WINDOW_H
