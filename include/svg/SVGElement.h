@@ -1,11 +1,11 @@
 #ifndef SVG_ELEMENT_H
 #define SVG_ELEMENT_H
 
-#include "SVGStyle.h"     // Vì mỗi element có style riêng
-#include "SVGTransform.h" // Vì mỗi element có transform riêng
-#include "NodeVisitor.h"  // Vì mỗi element phải chấp nhận (accept) visitor
+#include "SVGStyle.h"      // Vì mỗi element có style riêng
+#include "SVGTransform.h"  // Vì mỗi element có transform riêng
+#include "NodeVisitor.h"   // Vì mỗi element phải chấp nhận (accept) visitor
 #include <string>
-#include <memory> 
+#include <memory>
 
 /**
  * @brief Lớp cha trừu tượng (abstract base class) cho TẤT CẢ các
@@ -35,7 +35,6 @@ public:
 
     // --- CÁC HÀM BOUNDING BOX ---
 
-
     /**
      * @brief Tính BBox "cục bộ" (trước khi transform).
      * BẮT BUỘC tất cả các lớp con phải implement hàm này.
@@ -47,13 +46,12 @@ public:
 
     /**
      * @brief Tính BBox "thế giới" (sau khi transform).
-     * BẮT BUỘC tất cả các lớp con phải implement hàm này.
+     * Hàm này có thể implement chung cho tất cả các shape.
      *
      * * - Vai trò của Role B (Implement):
-     * Phải viết logic .cpp cho hàm này ở TẤT CẢ các shape con
-     * (thường là gọi localBox() và áp dụng m_transform).
+     * Thường là gọi localBox() và áp dụng m_transform.
      */
-    virtual SVGRectF worldBox() const = 0;
+    virtual SVGRectF worldBox() const;
 
     // --- Các hàm Setters / Getters ---
 
@@ -71,9 +69,9 @@ public:
     void setStyle(const SVGStyle& style);
     void setTransform(const SVGTransform& transform);
     SVGStyle& getStyle();
-    const SVGStyle& getStyle() const; // Thêm phiên bản const
+    const SVGStyle& getStyle() const;       // Phiên bản const
     SVGTransform& getTransform();
-    const SVGTransform& getTransform() const; // Thêm phiên bản const
+    const SVGTransform& getTransform() const; // Phiên bản const
 };
 
 #endif // SVG_ELEMENT_H
