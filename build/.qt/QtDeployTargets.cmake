@@ -1,7 +1,0 @@
-set(__QT_DEPLOY_TARGET_svg_lib_FILE C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/src/svg/libsvg_lib.a)
-set(__QT_DEPLOY_TARGET_svg_lib_TYPE STATIC_LIBRARY)
-set(__QT_DEPLOY_TARGET_ui_lib_FILE C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/src/ui/libui_lib.a)
-set(__QT_DEPLOY_TARGET_ui_lib_TYPE STATIC_LIBRARY)
-set(__QT_DEPLOY_TARGET_NaTruKi_FILE C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/NaTruKi.exe)
-set(__QT_DEPLOY_TARGET_NaTruKi_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_NaTruKi_RUNTIME_DLLS C:/Qt/6.10.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Network.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Core.dll)
