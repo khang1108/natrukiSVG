@@ -13,6 +13,7 @@ set(SVG_SOURCES
     SVGPolygon.cpp
     SVGPolyline.cpp
     SVGText.cpp
+    SVGFactoryImpl.cpp
 )
 
 # 2. Tạo thư viện
