@@ -175,11 +175,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "svg_lib_autogen::@9a132819dfa4a68249c8"
+		},
+		{
+			"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8"
 		}
 	],
 	"id" : "svg_lib::@9a132819dfa4a68249c8",
@@ -227,11 +227,11 @@
 			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "svg_lib_autogen::@9a132819dfa4a68249c8"
+		},
+		{
+			"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8"
 		}
 	],
 	"paths" : 
