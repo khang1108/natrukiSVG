@@ -95,24 +95,14 @@ void printTree(SVGElement* element, const std::string& indent = "") {
 
 // === HÀM MAIN ===
 int main(int argc, char* argv[]) {
-    // Sửa lỗi font chữ "cá»§a" trên Console Windows
-    system("chcp 65001 > nul"); // "> nul" để ẩn output của lệnh system
-
-    // Sửa lỗi định dạng "8e+02"
     // Ép std::cout luôn dùng định dạng thập phân (fixed)
     // và hiển thị 1 chữ số sau dấu phẩy.
     std::cout << std::fixed << std::setprecision(1);
 
     std::cout << "=== Bat dau Test Parser (Role B) ===\n" << std::endl;
 
-    // --- CHỌN FILE TEST Ở ĐÂY ---
-    // (Hãy copy các file test vào thư mục build (ví dụ: 'out/build/x64-Debug')
-    // hoặc nằm cùng cấp với file .exe)
-
     std::string filePath = "sample.svg";
-    // std::string filePath = "test_style.svg";
-    // std::string filePath = "test_transform.svg";
-
+    // Đổi filePath nếu muốn test file khác
     std::cout << "--- Dang load file: " << filePath << " ---\n" << std::endl;
 
     SVGDocument myDocument;
