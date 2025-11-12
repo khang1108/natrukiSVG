@@ -371,19 +371,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "NaTruKi_autogen::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 2,
 			"id" : "svg_lib::@9a132819dfa4a68249c8"
+		},
+		{
+			"id" : "NaTruKi_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "ui_lib::@e0ce1d6ecae3dc67b834"
 		},
 		{
-			"id" : "NaTruKi_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "NaTruKi_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "NaTruKi::@6890427a1f51a3e7e1df",
@@ -501,11 +501,11 @@
 			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "NaTruKi_autogen::@6890427a1f51a3e7e1df"
+			"id" : "NaTruKi_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "NaTruKi_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "NaTruKi_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"paths" : 

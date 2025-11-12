@@ -657,7 +657,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "NaTruKi::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-NaTruKi-Debug-6f011bed28a3aa81af42.json",
+					"jsonFile" : "target-NaTruKi-Debug-597cdcf00d288e5fc985.json",
 					"name" : "NaTruKi",
 					"projectIndex" : 0
 				},
@@ -671,14 +671,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "NaTruKi_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-NaTruKi_autogen_timestamp_deps-Debug-34217770d8a5d084cc11.json",
+					"jsonFile" : "target-NaTruKi_autogen_timestamp_deps-Debug-ba6d57ba05dd7d83915f.json",
 					"name" : "NaTruKi_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "svg_lib::@9a132819dfa4a68249c8",
-					"jsonFile" : "target-svg_lib-Debug-8314d5d2717124dbbdec.json",
+					"jsonFile" : "target-svg_lib-Debug-b55aecca2bdd91e2d19c.json",
 					"name" : "svg_lib",
 					"projectIndex" : 0
 				},
@@ -692,28 +692,28 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "svg_lib_autogen_timestamp_deps::@9a132819dfa4a68249c8",
-					"jsonFile" : "target-svg_lib_autogen_timestamp_deps-Debug-60736001626c84c93a40.json",
+					"jsonFile" : "target-svg_lib_autogen_timestamp_deps-Debug-cfd730e0250d93727a44.json",
 					"name" : "svg_lib_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "ui_lib::@e0ce1d6ecae3dc67b834",
-					"jsonFile" : "target-ui_lib-Debug-160996f0829f83499c7e.json",
+					"jsonFile" : "target-ui_lib-Debug-697e23643b350954ba00.json",
 					"name" : "ui_lib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "ui_lib_autogen::@e0ce1d6ecae3dc67b834",
-					"jsonFile" : "target-ui_lib_autogen-Debug-ce7923579600f5db1766.json",
+					"jsonFile" : "target-ui_lib_autogen-Debug-43e0b18c38c43258ccf7.json",
 					"name" : "ui_lib_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "ui_lib_autogen_timestamp_deps::@e0ce1d6ecae3dc67b834",
-					"jsonFile" : "target-ui_lib_autogen_timestamp_deps-Debug-a1bd3c48372afddc4f19.json",
+					"jsonFile" : "target-ui_lib_autogen_timestamp_deps-Debug-1fc03f6d68a9b430fd33.json",
 					"name" : "ui_lib_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
