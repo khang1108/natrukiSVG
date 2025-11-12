@@ -7,7 +7,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      The system is: Windows - 10.0.26100 - AMD64
+      The system is: Windows - 10.0.26200 - AMD64
   -
     kind: "find-v1"
     backtrace:
@@ -43,9 +43,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
       - "/REGISTRY-NOTFOUND/bin/"
       - "c:/MinGW/bin/"
       - "/MinGW/bin/"
@@ -73,10 +76,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -122,10 +128,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -184,9 +193,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/ar.com"
     found: "C:/msys64/ucrt64/bin/ar.exe"
@@ -210,10 +222,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -250,9 +265,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/ranlib.com"
     found: "C:/msys64/ucrt64/bin/ranlib.exe"
@@ -276,10 +294,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -316,9 +337,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/strip.com"
     found: "C:/msys64/ucrt64/bin/strip.exe"
@@ -342,10 +366,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -382,9 +409,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/ld.com"
     found: "C:/msys64/ucrt64/bin/ld.exe"
@@ -408,10 +438,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -448,9 +481,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/nm.com"
     found: "C:/msys64/ucrt64/bin/nm.exe"
@@ -474,10 +510,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -514,9 +553,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/objdump.com"
     found: "C:/msys64/ucrt64/bin/objdump.exe"
@@ -540,10 +582,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -580,9 +625,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/objcopy.com"
     found: "C:/msys64/ucrt64/bin/objcopy.exe"
@@ -606,10 +654,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -646,9 +697,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/readelf.com"
     found: "C:/msys64/ucrt64/bin/readelf.exe"
@@ -672,10 +726,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -712,9 +769,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/dlltool.com"
     found: "C:/msys64/ucrt64/bin/dlltool.exe"
@@ -738,10 +798,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -778,9 +841,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/addr2line.com"
     found: "C:/msys64/ucrt64/bin/addr2line.exe"
@@ -804,10 +870,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -844,9 +913,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/tapi.com"
       - "C:/msys64/ucrt64/bin/tapi.exe"
@@ -896,6 +968,12 @@ events:
       - "C:/Program Files/CMake/bin/tapi.com"
       - "C:/Program Files/CMake/bin/tapi.exe"
       - "C:/Program Files/CMake/bin/tapi"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/tapi.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/tapi.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/tapi"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/tapi.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/tapi.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/tapi"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/tapi.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/tapi.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/tapi"
@@ -905,6 +983,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "C:/Users/Cao/AppData/Local/Python/bin/tapi.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/tapi.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -926,10 +1007,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -969,9 +1053,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/gcc-ar-14.2.com"
       - "C:/msys64/ucrt64/bin/gcc-ar-14.2.exe"
@@ -1021,6 +1108,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ar-14.2.com"
       - "C:/Program Files/CMake/bin/gcc-ar-14.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-14.2"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14.2"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14.2"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14.2.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14.2.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14.2"
@@ -1030,6 +1123,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14.2.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14.2.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14.2"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14.2"
       - "C:/msys64/ucrt64/bin/gcc-ar-14.com"
       - "C:/msys64/ucrt64/bin/gcc-ar-14.exe"
       - "C:/msys64/ucrt64/bin/gcc-ar-14"
@@ -1078,6 +1174,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ar-14.com"
       - "C:/Program Files/CMake/bin/gcc-ar-14.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar-14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar-14"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar-14"
@@ -1087,6 +1189,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-14"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar-14"
       - "C:/msys64/ucrt64/bin/gcc-ar14.com"
       - "C:/msys64/ucrt64/bin/gcc-ar14.exe"
       - "C:/msys64/ucrt64/bin/gcc-ar14"
@@ -1135,6 +1240,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ar14.com"
       - "C:/Program Files/CMake/bin/gcc-ar14.exe"
       - "C:/Program Files/CMake/bin/gcc-ar14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ar14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ar14"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar14.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar14.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ar14"
@@ -1144,6 +1255,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar14.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar14.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar14"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar14.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar14.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ar14"
       - "C:/msys64/ucrt64/bin/gcc-ar.com"
     found: "C:/msys64/ucrt64/bin/gcc-ar.exe"
     search_context:
@@ -1166,10 +1280,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1209,9 +1326,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
     searched_directories:
       - "C:/msys64/ucrt64/bin/gcc-ranlib-14.2.com"
       - "C:/msys64/ucrt64/bin/gcc-ranlib-14.2.exe"
@@ -1261,6 +1381,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ranlib-14.2.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-14.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-14.2"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14.2"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14.2"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14.2.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14.2.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14.2"
@@ -1270,6 +1396,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14.2.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14.2.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14.2"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14.2.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14.2.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14.2"
       - "C:/msys64/ucrt64/bin/gcc-ranlib-14.com"
       - "C:/msys64/ucrt64/bin/gcc-ranlib-14.exe"
       - "C:/msys64/ucrt64/bin/gcc-ranlib-14"
@@ -1318,6 +1447,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ranlib-14.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-14.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib-14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib-14"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-14"
@@ -1327,6 +1462,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-14"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib-14"
       - "C:/msys64/ucrt64/bin/gcc-ranlib14.com"
       - "C:/msys64/ucrt64/bin/gcc-ranlib14.exe"
       - "C:/msys64/ucrt64/bin/gcc-ranlib14"
@@ -1375,6 +1513,12 @@ events:
       - "C:/Program Files/CMake/bin/gcc-ranlib14.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib14.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/gcc-ranlib14"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib14.com"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib14.exe"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/gcc-ranlib14"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib14.com"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib14.exe"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/gcc-ranlib14"
@@ -1384,6 +1528,9 @@ events:
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib14.com"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib14.exe"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib14"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib14.com"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib14.exe"
+      - "C:/Users/Cao/AppData/Local/Python/bin/gcc-ranlib14"
       - "C:/msys64/ucrt64/bin/gcc-ranlib.com"
     found: "C:/msys64/ucrt64/bin/gcc-ranlib.exe"
     search_context:
@@ -1406,10 +1553,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1449,9 +1599,12 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/"
       - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/Cao/.dotnet/tools/"
       - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/Cao/AppData/Local/Python/bin/"
       - "C:/msys64/ucrt64/bin/"
       - "C:/msys64/ucrt64/sbin/"
       - "C:/msys64/ucrt64/"
@@ -1490,10 +1643,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/msys64/ucrt64"
@@ -1510,8 +1666,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1"
+      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m"
+      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1521,13 +1677,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1'
+        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_2f778/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2f778.dir\\build.make CMakeFiles/cmTC_2f778.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1'
-        Building CXX object CMakeFiles/cmTC_2f778.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_a60e3/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a60e3.dir\\build.make CMakeFiles/cmTC_a60e3.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m'
+        Building CXX object CMakeFiles/cmTC_a60e3.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\msys64\\ucrt64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\g++.exe
         Target: x86_64-w64-mingw32
@@ -1535,8 +1691,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_2f778.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\Cao\\AppData\\Local\\Temp\\cc54X8yQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a60e3.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\Cao\\AppData\\Local\\Temp\\ccB1oPkS.s
         GNU C++17 (Rev2, Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1561,14 +1717,14 @@ events:
          C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed
         End of search list.
         Compiler executable checksum: 0ae76c501e8dc149b84d2c95ded0e2f3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Cao\\AppData\\Local\\Temp\\cc54X8yQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Cao\\AppData\\Local\\Temp\\ccB1oPkS.s
         GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.43.1
         COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_2f778.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2f778.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a60e3.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a60e3.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe
@@ -1579,16 +1735,16 @@ events:
         gcc version 14.2.0 (Rev2, Built by MSYS2 project) 
         COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/msys64/ucrt64/bin/../lib/gcc/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2f778.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_2f778.'
-         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\cc9eixl5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_2f778.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2f778.dir/objects.a --no-whole-archive --out-implib libcmTC_2f778.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a60e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a60e3.'
+         C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\ccqPVECC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a60e3.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a60e3.dir/objects.a --no-whole-archive --out-implib libcmTC_a60e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\cc9eixl5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_2f778.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2f778.dir/objects.a --no-whole-archive --out-implib libcmTC_2f778.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\ccqPVECC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a60e3.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a60e3.dir/objects.a --no-whole-archive --out-implib libcmTC_a60e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.43.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2f778.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_2f778.'
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_2f778.dir/objects.a
-        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_2f778.dir/objects.a @CMakeFiles\\cmTC_2f778.dir\\objects1.rsp
-        C:\\msys64\\ucrt64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_2f778.dir/objects.a -Wl,--no-whole-archive -o cmTC_2f778.exe -Wl,--out-implib,libcmTC_2f778.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a60e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a60e3.'
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a60e3.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_a60e3.dir/objects.a @CMakeFiles\\cmTC_a60e3.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_a60e3.dir/objects.a -Wl,--no-whole-archive -o cmTC_a60e3.exe -Wl,--out-implib,libcmTC_a60e3.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m'
         
       exitCode: 0
   -
@@ -1627,13 +1783,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1']
+        ignore line: [Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_2f778/fast]
-        ignore line: [C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2f778.dir\\build.make CMakeFiles/cmTC_2f778.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-ust2v1']
-        ignore line: [Building CXX object CMakeFiles/cmTC_2f778.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\msys64\\ucrt64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_a60e3/fast]
+        ignore line: [C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a60e3.dir\\build.make CMakeFiles/cmTC_a60e3.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-2jgm9m']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a60e3.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\msys64\\ucrt64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\g++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -1641,8 +1797,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (Rev2  Built by MSYS2 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\']
-        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_2f778.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\Cao\\AppData\\Local\\Temp\\cc54X8yQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a60e3.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\Cao\\AppData\\Local\\Temp\\ccB1oPkS.s]
         ignore line: [GNU C++17 (Rev2  Built by MSYS2 project) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1667,8 +1823,8 @@ events:
         ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 0ae76c501e8dc149b84d2c95ded0e2f3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\']
-        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Cao\\AppData\\Local\\Temp\\cc54X8yQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\']
+        ignore line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Cao\\AppData\\Local\\Temp\\ccB1oPkS.s]
         ignore line: [GNU assembler version 2.43.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.43.1]
         ignore line: [COMPILER_PATH=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/]
@@ -1679,9 +1835,9 @@ events:
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2f778.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_2f778.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2f778.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a60e3.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_a60e3.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a60e3.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\msys64\\ucrt64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe]
@@ -1699,13 +1855,13 @@ events:
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2f778.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_2f778.']
-        link line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\cc9eixl5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_2f778.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2f778.dir/objects.a --no-whole-archive --out-implib libcmTC_2f778.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a60e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a60e3.']
+        link line: [ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\ccqPVECC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a60e3.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a60e3.dir/objects.a --no-whole-archive --out-implib libcmTC_a60e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\cc9eixl5.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\ccqPVECC.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -1727,7 +1883,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_2f778.exe] ==> ignore
+          arg [cmTC_a60e3.exe] ==> ignore
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -1738,10 +1894,10 @@ events:
           arg [-LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_2f778.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_a60e3.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_2f778.dll.a] ==> ignore
+          arg [libcmTC_a60e3.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -1767,7 +1923,7 @@ events:
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o]
           arg [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\cc9eixl5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_2f778.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2f778.dir/objects.a --no-whole-archive --out-implib libcmTC_2f778.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Cao\\AppData\\Local\\Temp\\ccqPVECC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a60e3.exe C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/crt2.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/msys64/ucrt64/bin/../lib/gcc -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a60e3.dir/objects.a --no-whole-archive --out-implib libcmTC_a60e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/default-manifest.o C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'CXX': C:/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -1982,6 +2138,22 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Cao/AppData/Local/Programs/Python/Python313/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1995,6 +2167,14 @@ events:
         reason: "no_exist"
       -
         path: "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Cao/AppData/Local/Python/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/Cao/AppData/Local/Python/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -2042,2004 +2222,13 @@ events:
         - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
         - "C:/Program Files/Git/cmd"
         - "C:\\Program Files\\CMake\\bin"
+        - "C:/Users/Cao/AppData/Local/Programs/Python/Python313/Scripts/"
+        - "C:\\Users\\Cao\\AppData\\Local\\Programs\\Python\\Python313\\"
         - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
         - "C:\\Users\\Cao\\.dotnet\\tools"
         - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-...
-
----
-events:
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:226 (_threads_check_libc)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:172 (include)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-qzl10v"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-qzl10v"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "CMAKE_HAVE_LIBC_PTHREAD"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-qzl10v'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_fb133/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fb133.dir\\build.make CMakeFiles/cmTC_fb133.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-qzl10v'
-        Building CXX object CMakeFiles/cmTC_fb133.dir/src.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles\\cmTC_fb133.dir\\src.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qzl10v\\src.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qzl10v\\src.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_fb133.dir\\build.make:80: CMakeFiles/cmTC_fb133.dir/src.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-qzl10v'
-        mingw32-make: *** [Makefile:133: cmTC_fb133/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:199 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:232 (_threads_check_flag_pthread)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:172 (include)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Check if compiler accepts -pthread"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-x76rji"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-x76rji"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "THREADS_HAVE_PTHREAD_ARG"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-x76rji'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_2b718/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2b718.dir\\build.make CMakeFiles/cmTC_2b718.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-x76rji'
-        Building CXX object CMakeFiles/cmTC_2b718.dir/CheckForPthreads.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe   -std=gnu++17 -o CMakeFiles\\cmTC_2b718.dir\\CheckForPthreads.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x76rji\\CheckForPthreads.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x76rji\\CheckForPthreads.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_2b718.dir\\build.make:80: CMakeFiles/cmTC_2b718.dir/CheckForPthreads.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-x76rji'
-        mingw32-make: *** [Makefile:133: cmTC_2b718/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake:154 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:175 (check_library_exists)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:238 (_threads_check_lib)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:172 (include)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthreads"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-vo7i8c"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-vo7i8c"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREADS_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-vo7i8c'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_c4a37/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c4a37.dir\\build.make CMakeFiles/cmTC_c4a37.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-vo7i8c'
-        Building CXX object CMakeFiles/cmTC_c4a37.dir/CheckFunctionExists.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++17 -o CMakeFiles\\cmTC_c4a37.dir\\CheckFunctionExists.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vo7i8c\\CheckFunctionExists.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vo7i8c\\CheckFunctionExists.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_c4a37.dir\\build.make:80: CMakeFiles/cmTC_c4a37.dir/CheckFunctionExists.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-vo7i8c'
-        mingw32-make: *** [Makefile:133: cmTC_c4a37/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake:154 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:175 (check_library_exists)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake:239 (_threads_check_lib)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake:37 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:172 (include)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthread"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-bsrblb"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-bsrblb"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREAD_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-bsrblb'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_af4b0/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_af4b0.dir\\build.make CMakeFiles/cmTC_af4b0.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-bsrblb'
-        Building CXX object CMakeFiles/cmTC_af4b0.dir/CheckFunctionExists.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++17 -o CMakeFiles\\cmTC_af4b0.dir\\CheckFunctionExists.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bsrblb\\CheckFunctionExists.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bsrblb\\CheckFunctionExists.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_af4b0.dir\\build.make:80: CMakeFiles/cmTC_af4b0.dir/CheckFunctionExists.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-bsrblb'
-        mingw32-make: *** [Makefile:133: cmTC_af4b0/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:11 (_qt_internal_find_tool_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:36 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_tool_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6CoreTools"
-    configs:
-      -
-        filename: "Qt6CoreToolsConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6coretools-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6CoreTools"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:11 (_qt_internal_find_tool_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:36 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_tool_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6GuiTools"
-    configs:
-      -
-        filename: "Qt6GuiToolsConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6guitools-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6GuiTools"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_tool_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6WidgetsTools"
-    configs:
-      -
-        filename: "Qt6WidgetsToolsConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6widgetstools-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6WidgetsTools"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Performing Test HAVE_STDATOMIC"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-fsnh1d"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-fsnh1d"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "HAVE_STDATOMIC"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-fsnh1d'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_f4293/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f4293.dir\\build.make CMakeFiles/cmTC_f4293.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-fsnh1d'
-        Building CXX object CMakeFiles/cmTC_f4293.dir/src.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles\\cmTC_f4293.dir\\src.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fsnh1d\\src.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fsnh1d\\src.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_f4293.dir\\build.make:80: CMakeFiles/cmTC_f4293.dir/src.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-fsnh1d'
-        mingw32-make: *** [Makefile:133: cmTC_f4293/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake:41 (check_cxx_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    checks:
-      - "Performing Test HAVE_STDATOMIC_WITH_LIB"
-    directories:
-      source: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-1ijt54"
-      binary: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-1ijt54"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
-    buildResult:
-      variable: "HAVE_STDATOMIC_WITH_LIB"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-1ijt54'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_67021/fast
-        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_67021.dir\\build.make CMakeFiles/cmTC_67021.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-1ijt54'
-        Building CXX object CMakeFiles/cmTC_67021.dir/src.cxx.obj
-        C:\\msys64\\ucrt64\\bin\\g++.exe -DHAVE_STDATOMIC_WITH_LIB  -std=gnu++17 -o CMakeFiles\\cmTC_67021.dir\\src.cxx.obj -c "C:\\Users\\Cao\\OneDrive\\MĂ¡y tĂ­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ijt54\\src.cxx"
-        cc1plus.exe: fatal error: C:\\Users\\Cao\\OneDrive\\MÄ‚Â¡y tÄ‚Â­nh\\natrukiSVG\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ijt54\\src.cxx: No such file or directory
-        compilation terminated.
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_67021.dir\\build.make:80: CMakeFiles/cmTC_67021.dir/src.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/Cao/OneDrive/Máy tính/natrukiSVG/build/CMakeFiles/CMakeScratch/TryCompile-1ijt54'
-        mingw32-make: *** [Makefile:133: cmTC_67021/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:46 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6ZlibPrivate"
-    configs:
-      -
-        filename: "Qt6ZlibPrivateConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6zlibprivate-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6ZlibPrivate"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6ZlibPrivateConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6zlibprivate-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6ZlibPrivateConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6zlibprivate-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:46 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:42 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6EntryPointPrivate"
-    configs:
-      -
-        filename: "Qt6EntryPointPrivateConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6entrypointprivate-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6EntryPointPrivate"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6EntryPointPrivateConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6entrypointprivate-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6EntryPointPrivateConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6entrypointprivate-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:3101 (find_program)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:30 (_qt_internal_setup_deploy_support)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:190 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    mode: "program"
-    variable: "WINDEPLOYQT_EXECUTABLE"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "windeployqt"
-    candidate_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/"
-      - "C:/Qt/6.10.0/mingw_64/sbin/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "C:/Qt/6.10.0/mingw_64/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/ucrt64/sbin/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/bin/"
-      - "C:/Program Files/sbin/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/bin/"
-      - "C:/Program Files (x86)/sbin/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/bin/"
-      - "C:/Program Files (x86)/NaTruKi/sbin/"
-      - "C:/Program Files (x86)/NaTruKi/"
-    searched_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/windeployqt.com"
-    found: "C:/Qt/6.10.0/mingw_64/bin/windeployqt.exe"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6Core"
-    configs:
-      -
-        filename: "Qt6CoreConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6core-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6Core"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6core-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CoreConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6core-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CoreTools/qt6core-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CoreConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CorePrivate/qt6core-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindVulkan.cmake:392 (find_path)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    mode: "path"
-    variable: "Vulkan_INCLUDE_DIR"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "vulkan/vulkan.h"
-    candidate_directories:
-      - "C:/Qt/6.10.0/mingw_64/include/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "/include/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/include/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/include/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/include/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/include/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/include/"
-      - "C:/Program Files (x86)/NaTruKi/"
-    searched_directories:
-      - "C:/Qt/6.10.0/mingw_64/include/vulkan/vulkan.h"
-      - "C:/Qt/6.10.0/mingw_64/vulkan/vulkan.h"
-      - "/include/vulkan/vulkan.h"
-      - "C:/msys64/ucrt64/bin/vulkan/vulkan.h"
-      - "C:/msys64/usr/bin/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/vulkan/vulkan.h"
-      - "C:/Windows/System32/vulkan/vulkan.h"
-      - "C:/Windows/vulkan/vulkan.h"
-      - "C:/Windows/System32/wbem/vulkan/vulkan.h"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/vulkan/vulkan.h"
-      - "C:/Windows/System32/OpenSSH/vulkan/vulkan.h"
-      - "C:/msys64/mingw64/bin/vulkan/vulkan.h"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/vulkan/vulkan.h"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/vulkan/vulkan.h"
-      - "C:/Program Files/dotnet/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/vulkan/vulkan.h"
-      - "C:/Program Files/Git/cmd/vulkan/vulkan.h"
-      - "C:/Program Files/CMake/bin/vulkan/vulkan.h"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/vulkan/vulkan.h"
-      - "C:/Users/Cao/.dotnet/tools/vulkan/vulkan.h"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/vulkan/vulkan.h"
-      - "C:/msys64/ucrt64/include/vulkan/vulkan.h"
-      - "C:/msys64/ucrt64/vulkan/vulkan.h"
-      - "C:/Program Files/include/vulkan/vulkan.h"
-      - "C:/Program Files/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/include/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/vulkan/vulkan.h"
-      - "C:/Program Files/CMake/include/vulkan/vulkan.h"
-      - "C:/Program Files/CMake/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/NaTruKi/include/vulkan/vulkan.h"
-      - "C:/Program Files (x86)/NaTruKi/vulkan/vulkan.h"
-    found: false
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindVulkan.cmake:399 (find_library)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    mode: "library"
-    variable: "Vulkan_LIBRARY"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "vulkan-1"
-    candidate_directories:
-      - "C:/Qt/6.10.0/mingw_64/lib/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "/lib/"
-      - "/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/lib/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/lib/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/lib/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/lib/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/lib/"
-      - "C:/Program Files (x86)/NaTruKi/"
-      - "C:/Program Files (x86)/NaTruKi/bin/"
-    searched_directories:
-      - "C:/Qt/6.10.0/mingw_64/lib/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "/lib/"
-      - "/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/lib/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/lib/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/lib/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/lib/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/lib/"
-      - "C:/Program Files (x86)/NaTruKi/"
-      - "C:/Program Files (x86)/NaTruKi/bin/"
-    found: false
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "C:/Program Files (x86)/NaTruKi/bin"
-        - "C:/Program Files/CMake/bin"
-        - "/bin"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindVulkan.cmake:407 (find_program)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    mode: "program"
-    variable: "Vulkan_GLSLC_EXECUTABLE"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "glslc"
-    candidate_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/"
-      - "C:/Qt/6.10.0/mingw_64/sbin/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/ucrt64/sbin/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/bin/"
-      - "C:/Program Files/sbin/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/bin/"
-      - "C:/Program Files (x86)/sbin/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/bin/"
-      - "C:/Program Files (x86)/NaTruKi/sbin/"
-      - "C:/Program Files (x86)/NaTruKi/"
-    searched_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/glslc.com"
-      - "C:/Qt/6.10.0/mingw_64/bin/glslc.exe"
-      - "C:/Qt/6.10.0/mingw_64/bin/glslc"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslc.com"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslc.exe"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslc"
-      - "C:/Qt/6.10.0/mingw_64/glslc.com"
-      - "C:/Qt/6.10.0/mingw_64/glslc.exe"
-      - "C:/Qt/6.10.0/mingw_64/glslc"
-      - "/bin/glslc.com"
-      - "/bin/glslc.exe"
-      - "/bin/glslc"
-      - "C:/msys64/ucrt64/bin/glslc.com"
-      - "C:/msys64/ucrt64/bin/glslc.exe"
-      - "C:/msys64/ucrt64/bin/glslc"
-      - "C:/msys64/usr/bin/glslc.com"
-      - "C:/msys64/usr/bin/glslc.exe"
-      - "C:/msys64/usr/bin/glslc"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslc.com"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslc.exe"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslc"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslc.com"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslc.exe"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslc"
-      - "C:/Windows/System32/glslc.com"
-      - "C:/Windows/System32/glslc.exe"
-      - "C:/Windows/System32/glslc"
-      - "C:/Windows/glslc.com"
-      - "C:/Windows/glslc.exe"
-      - "C:/Windows/glslc"
-      - "C:/Windows/System32/wbem/glslc.com"
-      - "C:/Windows/System32/wbem/glslc.exe"
-      - "C:/Windows/System32/wbem/glslc"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslc"
-      - "C:/Windows/System32/OpenSSH/glslc.com"
-      - "C:/Windows/System32/OpenSSH/glslc.exe"
-      - "C:/Windows/System32/OpenSSH/glslc"
-      - "C:/msys64/mingw64/bin/glslc.com"
-      - "C:/msys64/mingw64/bin/glslc.exe"
-      - "C:/msys64/mingw64/bin/glslc"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslc.com"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslc.exe"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslc"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslc.com"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslc.exe"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslc"
-      - "C:/Program Files/dotnet/glslc.com"
-      - "C:/Program Files/dotnet/glslc.exe"
-      - "C:/Program Files/dotnet/glslc"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.com"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslc"
-      - "C:/Program Files/Git/cmd/glslc.com"
-      - "C:/Program Files/Git/cmd/glslc.exe"
-      - "C:/Program Files/Git/cmd/glslc"
-      - "C:/Program Files/CMake/bin/glslc.com"
-      - "C:/Program Files/CMake/bin/glslc.exe"
-      - "C:/Program Files/CMake/bin/glslc"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslc.com"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslc.exe"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslc"
-      - "C:/Users/Cao/.dotnet/tools/glslc.com"
-      - "C:/Users/Cao/.dotnet/tools/glslc.exe"
-      - "C:/Users/Cao/.dotnet/tools/glslc"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslc.com"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslc.exe"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslc"
-      - "C:/msys64/ucrt64/bin/glslc.com"
-      - "C:/msys64/ucrt64/bin/glslc.exe"
-      - "C:/msys64/ucrt64/bin/glslc"
-      - "C:/msys64/ucrt64/sbin/glslc.com"
-      - "C:/msys64/ucrt64/sbin/glslc.exe"
-      - "C:/msys64/ucrt64/sbin/glslc"
-      - "C:/msys64/ucrt64/glslc.com"
-      - "C:/msys64/ucrt64/glslc.exe"
-      - "C:/msys64/ucrt64/glslc"
-      - "C:/Program Files/bin/glslc.com"
-      - "C:/Program Files/bin/glslc.exe"
-      - "C:/Program Files/bin/glslc"
-      - "C:/Program Files/sbin/glslc.com"
-      - "C:/Program Files/sbin/glslc.exe"
-      - "C:/Program Files/sbin/glslc"
-      - "C:/Program Files/glslc.com"
-      - "C:/Program Files/glslc.exe"
-      - "C:/Program Files/glslc"
-      - "C:/Program Files (x86)/bin/glslc.com"
-      - "C:/Program Files (x86)/bin/glslc.exe"
-      - "C:/Program Files (x86)/bin/glslc"
-      - "C:/Program Files (x86)/sbin/glslc.com"
-      - "C:/Program Files (x86)/sbin/glslc.exe"
-      - "C:/Program Files (x86)/sbin/glslc"
-      - "C:/Program Files (x86)/glslc.com"
-      - "C:/Program Files (x86)/glslc.exe"
-      - "C:/Program Files (x86)/glslc"
-      - "C:/Program Files/CMake/bin/glslc.com"
-      - "C:/Program Files/CMake/bin/glslc.exe"
-      - "C:/Program Files/CMake/bin/glslc"
-      - "C:/Program Files/CMake/sbin/glslc.com"
-      - "C:/Program Files/CMake/sbin/glslc.exe"
-      - "C:/Program Files/CMake/sbin/glslc"
-      - "C:/Program Files/CMake/glslc.com"
-      - "C:/Program Files/CMake/glslc.exe"
-      - "C:/Program Files/CMake/glslc"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslc.com"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslc.exe"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslc"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslc.com"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslc.exe"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslc"
-      - "C:/Program Files (x86)/NaTruKi/glslc.com"
-      - "C:/Program Files (x86)/NaTruKi/glslc.exe"
-      - "C:/Program Files (x86)/NaTruKi/glslc"
-    found: false
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/FindVulkan.cmake:415 (find_program)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:13 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:34 (find_package)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:35 (_qt_internal_find_third_party_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:40 (include)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    mode: "program"
-    variable: "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "glslangValidator"
-    candidate_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/"
-      - "C:/Qt/6.10.0/mingw_64/sbin/"
-      - "C:/Qt/6.10.0/mingw_64/"
-      - "/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/usr/bin/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/msys64/mingw64/bin/"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
-      - "C:/Program Files/dotnet/"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
-      - "C:/Program Files/Git/cmd/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/Cao/.dotnet/tools/"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/msys64/ucrt64/bin/"
-      - "C:/msys64/ucrt64/sbin/"
-      - "C:/msys64/ucrt64/"
-      - "C:/Program Files/bin/"
-      - "C:/Program Files/sbin/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/bin/"
-      - "C:/Program Files (x86)/sbin/"
-      - "C:/Program Files (x86)/"
-      - "C:/Program Files/CMake/bin/"
-      - "C:/Program Files/CMake/sbin/"
-      - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/NaTruKi/bin/"
-      - "C:/Program Files (x86)/NaTruKi/sbin/"
-      - "C:/Program Files (x86)/NaTruKi/"
-    searched_directories:
-      - "C:/Qt/6.10.0/mingw_64/bin/glslangValidator.com"
-      - "C:/Qt/6.10.0/mingw_64/bin/glslangValidator.exe"
-      - "C:/Qt/6.10.0/mingw_64/bin/glslangValidator"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslangValidator.com"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslangValidator.exe"
-      - "C:/Qt/6.10.0/mingw_64/sbin/glslangValidator"
-      - "C:/Qt/6.10.0/mingw_64/glslangValidator.com"
-      - "C:/Qt/6.10.0/mingw_64/glslangValidator.exe"
-      - "C:/Qt/6.10.0/mingw_64/glslangValidator"
-      - "/bin/glslangValidator.com"
-      - "/bin/glslangValidator.exe"
-      - "/bin/glslangValidator"
-      - "C:/msys64/ucrt64/bin/glslangValidator.com"
-      - "C:/msys64/ucrt64/bin/glslangValidator.exe"
-      - "C:/msys64/ucrt64/bin/glslangValidator"
-      - "C:/msys64/usr/bin/glslangValidator.com"
-      - "C:/msys64/usr/bin/glslangValidator.exe"
-      - "C:/msys64/usr/bin/glslangValidator"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslangValidator.com"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslangValidator.exe"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/glslangValidator"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslangValidator.com"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslangValidator.exe"
-      - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler/glslangValidator"
-      - "C:/Windows/System32/glslangValidator.com"
-      - "C:/Windows/System32/glslangValidator.exe"
-      - "C:/Windows/System32/glslangValidator"
-      - "C:/Windows/glslangValidator.com"
-      - "C:/Windows/glslangValidator.exe"
-      - "C:/Windows/glslangValidator"
-      - "C:/Windows/System32/wbem/glslangValidator.com"
-      - "C:/Windows/System32/wbem/glslangValidator.exe"
-      - "C:/Windows/System32/wbem/glslangValidator"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/glslangValidator"
-      - "C:/Windows/System32/OpenSSH/glslangValidator.com"
-      - "C:/Windows/System32/OpenSSH/glslangValidator.exe"
-      - "C:/Windows/System32/OpenSSH/glslangValidator"
-      - "C:/msys64/mingw64/bin/glslangValidator.com"
-      - "C:/msys64/mingw64/bin/glslangValidator.exe"
-      - "C:/msys64/mingw64/bin/glslangValidator"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslangValidator.com"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslangValidator.exe"
-      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/glslangValidator"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslangValidator.com"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslangValidator.exe"
-      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/glslangValidator"
-      - "C:/Program Files/dotnet/glslangValidator.com"
-      - "C:/Program Files/dotnet/glslangValidator.exe"
-      - "C:/Program Files/dotnet/glslangValidator"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.com"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator.exe"
-      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/glslangValidator"
-      - "C:/Program Files/Git/cmd/glslangValidator.com"
-      - "C:/Program Files/Git/cmd/glslangValidator.exe"
-      - "C:/Program Files/Git/cmd/glslangValidator"
-      - "C:/Program Files/CMake/bin/glslangValidator.com"
-      - "C:/Program Files/CMake/bin/glslangValidator.exe"
-      - "C:/Program Files/CMake/bin/glslangValidator"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslangValidator.com"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslangValidator.exe"
-      - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps/glslangValidator"
-      - "C:/Users/Cao/.dotnet/tools/glslangValidator.com"
-      - "C:/Users/Cao/.dotnet/tools/glslangValidator.exe"
-      - "C:/Users/Cao/.dotnet/tools/glslangValidator"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator.com"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator.exe"
-      - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin/glslangValidator"
-      - "C:/msys64/ucrt64/bin/glslangValidator.com"
-      - "C:/msys64/ucrt64/bin/glslangValidator.exe"
-      - "C:/msys64/ucrt64/bin/glslangValidator"
-      - "C:/msys64/ucrt64/sbin/glslangValidator.com"
-      - "C:/msys64/ucrt64/sbin/glslangValidator.exe"
-      - "C:/msys64/ucrt64/sbin/glslangValidator"
-      - "C:/msys64/ucrt64/glslangValidator.com"
-      - "C:/msys64/ucrt64/glslangValidator.exe"
-      - "C:/msys64/ucrt64/glslangValidator"
-      - "C:/Program Files/bin/glslangValidator.com"
-      - "C:/Program Files/bin/glslangValidator.exe"
-      - "C:/Program Files/bin/glslangValidator"
-      - "C:/Program Files/sbin/glslangValidator.com"
-      - "C:/Program Files/sbin/glslangValidator.exe"
-      - "C:/Program Files/sbin/glslangValidator"
-      - "C:/Program Files/glslangValidator.com"
-      - "C:/Program Files/glslangValidator.exe"
-      - "C:/Program Files/glslangValidator"
-      - "C:/Program Files (x86)/bin/glslangValidator.com"
-      - "C:/Program Files (x86)/bin/glslangValidator.exe"
-      - "C:/Program Files (x86)/bin/glslangValidator"
-      - "C:/Program Files (x86)/sbin/glslangValidator.com"
-      - "C:/Program Files (x86)/sbin/glslangValidator.exe"
-      - "C:/Program Files (x86)/sbin/glslangValidator"
-      - "C:/Program Files (x86)/glslangValidator.com"
-      - "C:/Program Files (x86)/glslangValidator.exe"
-      - "C:/Program Files (x86)/glslangValidator"
-      - "C:/Program Files/CMake/bin/glslangValidator.com"
-      - "C:/Program Files/CMake/bin/glslangValidator.exe"
-      - "C:/Program Files/CMake/bin/glslangValidator"
-      - "C:/Program Files/CMake/sbin/glslangValidator.com"
-      - "C:/Program Files/CMake/sbin/glslangValidator.exe"
-      - "C:/Program Files/CMake/sbin/glslangValidator"
-      - "C:/Program Files/CMake/glslangValidator.com"
-      - "C:/Program Files/CMake/glslangValidator.exe"
-      - "C:/Program Files/CMake/glslangValidator"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslangValidator.com"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslangValidator.exe"
-      - "C:/Program Files (x86)/NaTruKi/bin/glslangValidator"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslangValidator.com"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslangValidator.exe"
-      - "C:/Program Files (x86)/NaTruKi/sbin/glslangValidator"
-      - "C:/Program Files (x86)/NaTruKi/glslangValidator.com"
-      - "C:/Program Files (x86)/NaTruKi/glslangValidator.exe"
-      - "C:/Program Files (x86)/NaTruKi/glslangValidator"
-    found: false
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
-      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:142 (find_dependency)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:45 (_qt_internal_find_qt_dependencies)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6Gui"
-    configs:
-      -
-        filename: "Qt6GuiConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6gui-config.cmake"
-        kind: "cmake"
-    version_request:
-      version: "6.10.0"
-      version_complete: "6.10.0"
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6Gui"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/.."
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6gui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiTools/qt6gui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiPrivate/qt6gui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6Widgets"
-    configs:
-      -
-        filename: "Qt6WidgetsConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6widgets-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6Widgets"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6widgets-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools/qt6widgets-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsPrivate/qt6widgets-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/msys64/ucrt64"
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/NaTruKi"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:233 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
-    name: "Qt6Network"
-    configs:
-      -
-        filename: "Qt6NetworkConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6network-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6Network"
-      search_paths:
-        - "C:/Qt/6.10.0/mingw_64/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Users/Cao/OneDrive/M\u00e1y t\u00ednh/natrukiSVG/build/CMakeFiles/pkgRedirects/qt6network-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6NetworkConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/qt6network-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6NetworkPrivate/qt6network-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake"
-      mode: "config"
-      version: "6.10.0"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "C:/Qt/6.10.0/mingw_64"
-      ENV{PATH}:
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\ucrt64\\bin"
-        - "C:\\msys64\\usr\\bin"
-        - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler"
-        - "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler"
-        - "C:/WINDOWS/system32"
-        - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
-        - "C:\\msys64\\mingw64\\bin"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
-        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/dotnet/"
-        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
-        - "C:/Program Files/Git/cmd"
-        - "C:\\Program Files\\CMake\\bin"
-        - "C:/Users/Cao/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\Cao\\.dotnet\\tools"
-        - "C:/Users/Cao/AppData/Local/Programs/Microsoft VS Code/bin"
-        - "C:\\msys64\\ucrt64\\bin"
+        - "C:/Users/Cao/AppData/Local/Python/bin"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NaTruKi"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/msys64/ucrt64"

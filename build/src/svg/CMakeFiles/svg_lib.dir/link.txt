@@ -1,2 +1,0 @@
-C:\msys64\ucrt64\bin\ar.exe qc libsvg_lib.a CMakeFiles/svg_lib.dir/svg_lib_autogen/mocs_compilation.cpp.obj CMakeFiles/svg_lib.dir/SVGCircle.cpp.obj CMakeFiles/svg_lib.dir/SVGDocument.cpp.obj CMakeFiles/svg_lib.dir/SVGElement.cpp.obj CMakeFiles/svg_lib.dir/SVGPolygon.cpp.obj CMakeFiles/svg_lib.dir/SVGPolyline.cpp.obj CMakeFiles/svg_lib.dir/SVGRect.cpp.obj CMakeFiles/svg_lib.dir/SVGStyle.cpp.obj CMakeFiles/svg_lib.dir/SVGText.cpp.obj
-C:\msys64\ucrt64\bin\ranlib.exe libsvg_lib.a

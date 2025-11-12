@@ -23,6 +23,13 @@ public:
     std::string fontFamily;
     SVGNumber fontSize = 16.0; // Kích thước font chữ mặc định
 
+    /**
+     * @brief Lưu thuộc tính 'display'.
+     * Mặc định là 'true' (hiển thị).
+     * Nếu 'display="none"', nó sẽ là 'false'.
+     */
+    bool isDisplayed = true;
+
 public:
     /**
      * @brief Hàm khởi tạo (Constructor).
