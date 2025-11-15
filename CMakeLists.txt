@@ -27,3 +27,9 @@ target_link_libraries(${PROJECT_NAME}
     Qt6::Core
     Qt6::Network
 )
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${Qt6Widgets_INCLUDE_DIRS}
+    ${Qt6Core_INCLUDE_DIRS}
+    ${Qt6Network_INCLUDE_DIRS}
+)
