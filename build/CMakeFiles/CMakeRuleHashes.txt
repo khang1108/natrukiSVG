@@ -1,9 +1,0 @@
-# Hashes of file build rules.
-9686acdddad0a7c2bad2e5c240d6453a CMakeFiles/NaTruKi_autogen
-517f3399fd70dd58c9e709ddb9c13025 NaTruKi_autogen/3YJK5W5UP7/qrc_resources.cpp
-d275441cf60bee498dd3c65aeba17257 NaTruKi_autogen/timestamp
-77db3045f9413353127cf453afce7ca2 src/svg/CMakeFiles/svg_lib_autogen
-20f390d06a35963de83d2ecb866894ea src/svg/svg_lib_autogen/timestamp
-bd33b96d636325d0048a2ae6d44c08dc src/ui/CMakeFiles/ui_lib_autogen
-46b3d88a2628670e133f52e1c1b55401 src/ui/ui_lib_autogen/timestamp
-4994653135cd87046bb9852a0b28c227 src/ui/ui_mainwindow.h

@@ -1,8 +1,0 @@
-#ifndef CANVASWIDGET_H
-#define CANVASWIDGET_H
-
-#include <qt6/QtWidgets/QWidget>
-
-
-
-#endif

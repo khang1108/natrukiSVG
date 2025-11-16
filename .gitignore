@@ -1,1 +1,33 @@
-./.doc
+# Build directories
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# IDE and editor files
+.vscode/
+.cache/
+.backup_merge/
+.doc/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# Qt
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.autosave
+
+# Compiled files
+*.exe
+*.out
