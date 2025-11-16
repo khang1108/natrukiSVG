@@ -1,6 +1,6 @@
 ﻿#include "SVGPolygon.h"
 #include <algorithm> // Dùng cho std::min và std::max
-#include <limits>    // Dùng cho std::numeric_limits
+#include <limits> // Dùng cho std::numeric_limits
 
 // --- Hàm khởi tạo (Constructor) ---
 SVGPolygon::SVGPolygon(const std::vector<SVGPointF>& points)

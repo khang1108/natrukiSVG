@@ -1,6 +1,6 @@
 ﻿#include "SVGTransform.h"
-#include <cmath>     // Dùng cho std::cos, std::sin
-#include <cstring>   // Dùng cho std::memset hoặc std::memcpy
+#include <cmath>// Dùng cho std::cos, std::sin
+#include <cstring>// Dùng cho std::memset hoặc std::memcpy
 #include <algorithm> // Dùng cho std::swap (nếu cần)
 
 // Định nghĩa hằng số PI nếu chưa có
