@@ -27,8 +27,18 @@ void QtRenderer::visit(SVGRect &rect)
     SVGNumber ry = rect.getRy();
 
     // Thiết lập bút và cọ vẽ (ví dụ, màu sắc, độ dày)
-    QPen pen(Qt::black);       // Mặc định màu đen
-    QBrush brush(Qt::NoBrush); // Mặc định không tô
+    QPen pen(Qt::black); // Mặc định màu đen
+    SVGColor fillColor = rect.getStyle().fillColor;
+    QBrush brush;
+    if (fillColor.a == 0)
+    {
+        brush = QBrush(Qt::NoBrush); // Không tô màu nếu alpha = 0
+    }
+    else
+    {
+        QColor qColor(fillColor.r, fillColor.g, fillColor.b, fillColor.a);
+        brush = QBrush(qColor);
+    }
     m_painter->setPen(pen);
     m_painter->setBrush(brush);
 
@@ -41,7 +51,17 @@ void QtRenderer::visit(SVGCircle &circle)
     SVGPointF center = circle.getCenter();
     SVGNumber radius = circle.getRadius();
     QPen pen(Qt::black);
-    QBrush brush(Qt::NoBrush);
+    SVGColor fillColor = circle.getStyle().fillColor;
+    QBrush brush;
+    if (fillColor.a == 0)
+    {
+        brush = QBrush(Qt::NoBrush); // Không tô màu nếu alpha = 0
+    }
+    else
+    {
+        QColor qColor(fillColor.r, fillColor.g, fillColor.b, fillColor.a);
+        brush = QBrush(qColor);
+    }
     m_painter->setPen(pen);
     m_painter->setBrush(brush);
     m_painter->drawEllipse(QPointF(center.x, center.y), radius, radius);
@@ -56,7 +76,17 @@ void QtRenderer::visit(SVGPolygon &polygon)
         qPolygon << QPointF(pt.x, pt.y);
     }
     QPen pen(Qt::black);
-    QBrush brush(Qt::NoBrush);
+    SVGColor fillColor = polygon.getStyle().fillColor;
+    QBrush brush;
+    if (fillColor.a == 0)
+    {
+        brush = QBrush(Qt::NoBrush); // Không tô màu nếu alpha = 0
+    }
+    else
+    {
+        QColor qColor(fillColor.r, fillColor.g, fillColor.b, fillColor.a);
+        brush = QBrush(qColor);
+    }
     m_painter->setPen(pen);
     m_painter->setBrush(brush);
     m_painter->drawPolygon(qPolygon);
@@ -71,7 +101,15 @@ void QtRenderer::visit(SVGPolyline &polyline)
         qPolygon << QPointF(pt.x, pt.y);
     }
     QPen pen(Qt::black);
+    QBrush brush;
+    SVGColor strokeColor = polyline.getStyle().strokeColor;
+    if (strokeColor.a != 0)
+    {
+        QColor qColor(strokeColor.r, strokeColor.g, strokeColor.b, strokeColor.a);
+        brush = QBrush(qColor);
+    }
     m_painter->setPen(pen);
+    m_painter->setBrush(brush);
     m_painter->drawPolyline(qPolygon);
 }
 // Visit SVGText
@@ -80,7 +118,10 @@ void QtRenderer::visit(SVGText &text)
     SVGPointF position = text.getPosition();
     std::string content = text.getText();
     QFont font("Arial", 12); // Mặc định font Arial, cỡ 12
-    QPen pen(Qt::black);
+    QPen pen;
+    SVGColor fillColor = text.getStyle().fillColor;
+    QColor qColor(fillColor.r, fillColor.g, fillColor.b, fillColor.a);
+    pen.setColor(qColor);
     m_painter->setFont(font);
     m_painter->setPen(pen);
     m_painter->drawText(QPointF(position.x, position.y), QString::fromStdString(content));
@@ -92,7 +133,17 @@ void QtRenderer::visit(SVGEllipse &ellipse)
     SVGNumber rx = ellipse.getRx();
     SVGNumber ry = ellipse.getRy();
     QPen pen(Qt::black);
-    QBrush brush(Qt::NoBrush);
+    SVGColor fillColor = ellipse.getStyle().fillColor;
+    QBrush brush;
+    if (fillColor.a == 0)
+    {
+        brush = QBrush(Qt::NoBrush); // Không tô màu nếu alpha = 0
+    }
+    else
+    {
+        QColor qColor(fillColor.r, fillColor.g, fillColor.b, fillColor.a);
+        brush = QBrush(qColor);
+    }
     m_painter->setPen(pen);
     m_painter->setBrush(brush);
     m_painter->drawEllipse(QPointF(center.x, center.y), rx, ry);
@@ -102,7 +153,10 @@ void QtRenderer::visit(SVGLine &line)
 {
     SVGPointF start = line.getP1();
     SVGPointF end = line.getP2();
-    QPen pen(Qt::black);
+    SVGColor strokeColor = line.getStyle().strokeColor;
+    QPen pen;
+    QColor qColor(strokeColor.r, strokeColor.g, strokeColor.b, strokeColor.a);
+    pen.setColor(qColor);
     m_painter->setPen(pen);
     m_painter->drawLine(QPointF(start.x, start.y), QPointF(end.x, end.y));
 }

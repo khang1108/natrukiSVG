@@ -1,0 +1,53 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/images">
+        <file alias="resources/images/Frame 1.png">viewer/images/Frame 1.png</file>
+        <file alias="resources/images/NaTruKiSVG.png">viewer/images/NaTruKiSVG.png</file>
+        <file alias="resources/about/images/Gradient.png">about/images/Gradient.png</file>
+        <file alias="resources/about/images/About NaTruKiSVG.png">about/images/About NaTruKiSVG.png</file>
+        <file alias="resources/premium/images/Gradient.png">premium/images/Gradient.png</file>
+        <file alias="resources/premium/images/NaTruKiSVG.png">premium/images/NaTruKiSVG.png</file>
+        <file alias="resources/premium/images/Upgrade your tool.png">premium/images/Upgrade your tool.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="resources/icons/About Button.png">viewer/icons/About Button.png</file>
+        <file alias="resources/icons/Premium Button.png">viewer/icons/Premium Button.png</file>
+        <file alias="resources/icons/UploadFile button.png">viewer/icons/UploadFile button.png</file>
+        <file alias="resources/icons/Rotate Button.png">viewer/icons/Rotate Button.png</file>
+        <file alias="resources/icons/Flip Button.png">viewer/icons/Flip Button.png</file>
+        <file alias="resources/icons/Copy button.png">viewer/icons/Copy button.png</file>
+        <file alias="resources/icons/Size button.png">viewer/icons/Size button.png</file>
+        <file alias="resources/icons/Upload.png">viewer/icons/Upload.png</file>
+        <file alias="resources/icons/Zoom Button.png">viewer/icons/Zoom Button.png</file>
+        <file alias="resources/icons/Download button.png">viewer/icons/Download button.png</file>
+        <file alias="resources/icons/zoom in button.png">viewer/icons/zoom in button.png</file>
+        <file alias="resources/icons/zoom out button.png">viewer/icons/zoom out button.png</file>
+    </qresource>
+    <qresource prefix="/about/icons">
+        <file alias="resources/about/icons/Khung text.png">about/icons/Khung text.png</file>
+        <file alias="resources/about/icons/about Khang.png">about/icons/about Khang.png</file>
+        <file alias="resources/about/icons/About Cao.png">about/icons/About Cao.png</file>
+        <file alias="resources/about/icons/About Nghia.png">about/icons/About Nghia.png</file>
+        <file alias="resources/about/icons/About Nhat.png">about/icons/About Nhat.png</file>
+        <file alias="resources/about/icons/Back Button.png">about/icons/Back Button.png</file>
+    </qresource>
+    <qresource prefix="/about/images">
+        <file alias="resources/about/images/Gradient.png">about/images/Gradient.png</file>
+        <file alias="resources/about/images/About NaTruKiSVG.png">about/images/About NaTruKiSVG.png</file>
+    </qresource>
+    <qresource prefix="/premium/icons">
+        <file alias="resources/premium/icons/Back Button.png">premium/icons/Back Button.png</file>
+        <file alias="resources/premium/icons/NatrukiFree.png">premium/icons/NatrukiFree.png</file>
+        <file alias="resources/premium/icons/NatrukiGo.png">premium/icons/NatrukiGo.png</file>
+        <file alias="resources/premium/icons/NatrukiPlus.png">premium/icons/NatrukiPlus.png</file>
+    </qresource>
+    <qresource prefix="/premium/images">
+        <file alias="resources/premium/images/Gradient.png">premium/images/Gradient.png</file>
+        <file alias="resources/premium/images/NaTruKiSVG.png">premium/images/NaTruKiSVG.png</file>
+        <file alias="resources/premium/images/Upgrade your tool.png">premium/images/Upgrade your tool.png</file>
+    </qresource>
+    <qresource prefix="/i18n">
+        <!-- Translation files can be added here if needed -->
+    </qresource>
+</RCC>
+

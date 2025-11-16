@@ -1,6 +1,6 @@
-﻿#include "SVGFactoryImpl.h" // Include header MỚI của chính nó
+#include "SVGFactoryImpl.h"
 
-// Bao gồm TẤT CẢ các "sản phẩm" mà nhà máy này tạo ra
+
 #include "SVGGroup.h"
 #include "SVGRect.h"
 #include "SVGCircle.h"
@@ -10,14 +10,14 @@
 #include "SVGPolyline.h"
 #include "SVGText.h"
 
-// Bao gồm các thư viện C++ chuẩn
-#include <sstream>      
-#include <stdexcept>    
-#include <algorithm>    
-#include <cstring>      
-#include <cctype>       
 
-// --- HÀM FACTORY CỐT LÕI (Implement "hợp đồng") ---
+#include <sstream>
+#include <stdexcept>
+#include <algorithm>
+#include <cstring>
+#include <cctype>
+
+
 std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(
     rapidxml::xml_node<char>* node,
     SVGElement* parentElement
@@ -28,18 +28,18 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(
         return nullptr;
     }
 
-    // **BƯỚC 1: LẤY STYLE VÀ TRANSFORM CỦA CHA**
+
     const SVGStyle& parentStyle = (parentElement) ?
         parentElement->getStyle() :
-        SVGStyle(); // Lấy style mặc định
+        SVGStyle();
 
     const SVGTransform& parentTransform = (parentElement) ?
         parentElement->getTransform() :
-        SVGTransform(); // Lấy transform mặc định
+        SVGTransform();
 
     std::unique_ptr<SVGElement> newElement = nullptr;
 
-    // --- Logic Factory (Tạo đối tượng) ---
+
     if (strcmp(name, "rect") == 0) {
         SVGRectF rect = {
             parseNumber(getAttr(node, "x"), 0.0),
@@ -96,7 +96,7 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(
         newElement = std::make_unique<SVGText>(pos, node->value());
     }
 
-    // --- Gán Style & Transform (SAU KHI TẠO) ---
+
     if (newElement) {
         SVGStyle style = parseStyle(node, parentStyle);
         newElement->setStyle(style);
@@ -109,8 +109,8 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(
 }
 
 
-// --- CÁC HÀM TIỆN ÍCH (HELPERS) ĐỂ PARSE ---
-// (Đây là định nghĩa của các hàm private trong .h)
+
+
 
 const char* SVGFactoryImpl::getAttr(rapidxml::xml_node<char>* node, const char* attrName) {
     if (!node) return "";
@@ -139,7 +139,7 @@ SVGNumber SVGFactoryImpl::parseNumber(const char* value, SVGNumber defaultValue)
         if (unitPos != std::string::npos && unitPos == strValue.length() - 2) {
             return std::stod(strValue.substr(0, unitPos));
         }
-        // (Bỏ qua logic 'em', '%' như trong code cũ)
+
         return std::stod(strValue);
     }
     catch (...) {
@@ -182,7 +182,7 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
     if (colorStr == "green") return { 0, 128, 0, 255, false };
     if (colorStr == "blue") return { 0, 0, 255, 255, false };
     if (colorStr == "white") return { 255, 255, 255, 255, false };
-    //Thêm màu khác...
+
 
     if (colorStr.rfind("rgb(", 0) == 0) {
         SVGColor color{ 0, 0, 0, 255, false };
