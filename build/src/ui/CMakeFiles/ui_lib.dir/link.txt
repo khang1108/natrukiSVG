@@ -1,0 +1,2 @@
+/usr/bin/ar qc libui_lib.a CMakeFiles/ui_lib.dir/ui_lib_autogen/mocs_compilation.cpp.o CMakeFiles/ui_lib.dir/main.cpp.o CMakeFiles/ui_lib.dir/mainwindow.cpp.o
+/usr/bin/ranlib libui_lib.a

@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1440</width>
+    <height>1024</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1440</width>
+      <height>1024</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <widget class="QWidget" name="mainViewer">
+     <widget class="QFrame" name="viewerFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1440</width>
+        <height>1024</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#viewerFrame {
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/images/resources/images/Frame 1.png); 
+    
+    /* Đảm bảo ảnh không lặp lại */
+    background-repeat: no-repeat; 
+
+    /* Căn giữa ảnh */
+    background-position: center; 
+    
+    /* Đảm bảo nền QFrame sạch sẽ */
+    border: none;
+    
+  	background-color: transparent;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="About">
+       <property name="geometry">
+        <rect>
+         <x>941</x>
+         <y>45</y>
+         <width>191</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#About{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/About Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Premium">
+       <property name="geometry">
+        <rect>
+         <x>1187</x>
+         <y>45</y>
+         <width>191</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Premium{
+    /* Tham chiếu đến file SVG */
+    background-image:url(:/icons/resources/icons/Premium Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Upload">
+       <property name="geometry">
+        <rect>
+         <x>214</x>
+         <y>925</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Upload{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/UploadFile button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Rotate">
+       <property name="geometry">
+        <rect>
+         <x>305</x>
+         <y>924</y>
+         <width>81</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Rotate{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/Rotate Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Flip">
+       <property name="geometry">
+        <rect>
+         <x>396</x>
+         <y>924</y>
+         <width>81</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Flip{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/Flip Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Copy">
+       <property name="geometry">
+        <rect>
+         <x>638</x>
+         <y>924</y>
+         <width>81</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Copy{
+    /* Tham chiếu đến file SVG */
+    background-image:url(:/icons/resources/icons/Copy button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Zoom">
+       <property name="geometry">
+        <rect>
+         <x>752</x>
+         <y>926</y>
+         <width>244</width>
+         <height>79</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Zoom{
+    /* Tham chiếu đến file SVG */
+    background-image:url(:/icons/resources/icons/Size button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Logo">
+       <property name="geometry">
+        <rect>
+         <x>-12</x>
+         <y>30</y>
+         <width>640</width>
+         <height>90</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Logo{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/images/resources/images/NaTruKiSVG.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Browse">
+       <property name="geometry">
+        <rect>
+         <x>65</x>
+         <y>158</y>
+         <width>1313</width>
+         <height>746</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Browse{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/Upload.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Fullscreen">
+       <property name="geometry">
+        <rect>
+         <x>1143</x>
+         <y>925</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Fullscreen{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/Zoom Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="DownloadPNG">
+       <property name="geometry">
+        <rect>
+         <x>1029</x>
+         <y>924</y>
+         <width>81</width>
+         <height>82</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#DownloadPNG{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/icons/resources/icons/Download button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ZoomIn">
+       <property name="geometry">
+        <rect>
+         <x>933</x>
+         <y>934</y>
+         <width>58</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ZoomIn{
+    /* Tham chiếu đến file SVG */
+    background-image:url(:/icons/resources/icons/zoom in button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ZoomOut">
+       <property name="geometry">
+        <rect>
+         <x>757</x>
+         <y>934</y>
+         <width>58</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ZoomOut{
+    /* Tham chiếu đến file SVG */
+    background-image:url(:/icons/resources/icons/zoom out button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="About_2">
+     <widget class="QFrame" name="Background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1440</width>
+        <height>1024</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#Background{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/images/resources/about/images/Gradient.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QFrame" name="Description">
+       <property name="geometry">
+        <rect>
+         <x>63</x>
+         <y>130</y>
+         <width>593</width>
+         <height>809</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Description{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/Khung text.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Logo_2">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>22</y>
+         <width>651</width>
+         <height>99</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Logo_2{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/images/resources/about/images/About NaTruKiSVG.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Khang">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>130</y>
+         <width>302</width>
+         <height>379</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Khang{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/about Khang.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Cao">
+       <property name="geometry">
+        <rect>
+         <x>1084</x>
+         <y>130</y>
+         <width>302</width>
+         <height>379</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Cao{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/About Cao.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Nghia">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>560</y>
+         <width>302</width>
+         <height>379</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Nghia{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/About Nghia.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Nhat">
+       <property name="geometry">
+        <rect>
+         <x>1084</x>
+         <y>560</y>
+         <width>302</width>
+         <height>379</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Nhat{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/About Nhat.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Back">
+       <property name="geometry">
+        <rect>
+         <x>1195</x>
+         <y>41</y>
+         <width>191</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Back{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/about/icons/resources/about/icons/Back Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Premium_2">
+     <widget class="QFrame" name="Background_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1440</width>
+        <height>1024</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#Background_2{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/images/resources/premium/images/Gradient.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QFrame" name="Logo_7">
+       <property name="geometry">
+        <rect>
+         <x>-64</x>
+         <y>22</y>
+         <width>640</width>
+         <height>90</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Logo_7{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/images/resources/premium/images/NaTruKiSVG.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Upgrade">
+       <property name="geometry">
+        <rect>
+         <x>493</x>
+         <y>108</y>
+         <width>455</width>
+         <height>79</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Upgrade{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/images/resources/premium/images/Upgrade your tool.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Back_2">
+       <property name="geometry">
+        <rect>
+         <x>1205</x>
+         <y>37</y>
+         <width>191</width>
+         <height>58</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Back_2{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/icons/resources/premium/icons/Back Button.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Free">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>214</y>
+         <width>425</width>
+         <height>726</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Free{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/icons/resources/premium/icons/NatrukiFree.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Go">
+       <property name="geometry">
+        <rect>
+         <x>507</x>
+         <y>214</y>
+         <width>425</width>
+         <height>726</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Go{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/icons/resources/premium/icons/NatrukiGo.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="Plus">
+       <property name="geometry">
+        <rect>
+         <x>971</x>
+         <y>214</y>
+         <width>425</width>
+         <height>726</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#Plus{
+    /* Tham chiếu đến file SVG */
+    background-image: url(:/premium/icons/resources/premium/icons/NatrukiPlus.png); 
+    
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+    
+    border: none;
+
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
