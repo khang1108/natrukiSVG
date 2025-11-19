@@ -1,0 +1,29 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: false
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+PointerAlignment: Left
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 4
+NamespaceIndentation: All
+DerivePointerAlignment: false
+SpaceAfterTemplateKeyword: false
+Cpp11BracedListStyle: true
+SortIncludes: true
+IncludeBlocks: Regroup
+Language: Cpp
+Standard: c++17
+

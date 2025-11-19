@@ -1,11 +1,13 @@
 
 
 #include "SVGFactory.h"
+
 #include "SVGFactoryImpl.h"
+
 #include <memory>
 
+std::unique_ptr<SVGFactory> SVGFactory::createDefaultFactory()
+{
 
-std::unique_ptr<SVGFactory> SVGFactory::createDefaultFactory() {
-
-    return std::make_unique<SVGFactoryImpl>();
+  return std::make_unique<SVGFactoryImpl>();
 }

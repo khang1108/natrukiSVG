@@ -3,13 +3,21 @@
 #ifndef UI_CANVAS_WIDGET_H
 #define UI_CANVAS_WIDGET_H
 
+#include "svg/Types.h"
+
+#include <QImage>
+#include <QPoint>
+#include <QPointF>
+#include <QTransform>
 #include <QWidget>
 #include <memory>
-#include <QPointF>
 
 // --- Khai báo trước (Forward Declarations) ---
 class SVGDocument;
 class QPaintEvent;
+class QMouseEvent;
+class QWheelEvent;
+class QPainter;
 
 /**
  * @brief Widget tùy chỉnh (custom widget) dùng để hiển thị (render)
@@ -18,14 +26,16 @@ class QPaintEvent;
  * Nó cũng quản lý trạng thái camera (Pan, Zoom, Rotate, Flip).
  *
  */
-class CanvasWidget : public QWidget {
-    Q_OBJECT // Macro bắt buộc
+class CanvasWidget : public QWidget
+{
+  Q_OBJECT // Macro bắt buộc
 
-private:
+      private :
     /**
      * @brief Con trỏ thông minh "sở hữu" tài liệu SVG.
      */
-    std::unique_ptr<SVGDocument> m_document;
+    std::unique_ptr<SVGDocument>
+        m_document;
 
     // --- CÁC BIẾN LƯU TRẠNG THÁI CAMERA (VIEW) ---
     // (Role C
@@ -51,8 +61,10 @@ private:
      * @brief Cờ (flag) cho biết hình có bị lật (Flip) hay không.
      */
     bool m_isFlipped = false;
+    SVGRectF m_sceneBounds{0, 0, 0, 0};
+    bool m_hasSceneBounds = false;
 
-public:
+  public:
     /**
      * @brief Hàm khởi tạo (Constructor).
      *
@@ -75,8 +87,19 @@ public:
      */
     void setDocument(std::unique_ptr<SVGDocument> document);
 
-// --- CÁC HÀM (SLOTS) CÔNG KHAI ĐỂ MAINWINDOW GỌI ---
-public slots:
+    /**
+     * @brief Kiểm tra xem widget hiện có tài liệu để hiển thị hay không.
+     */
+    bool hasDocument() const;
+
+    /**
+     * @brief Kết xuất tài liệu hiện tại sang một QImage.
+     * @param size Kích thước ảnh đầu ra. Nếu size rỗng sẽ dùng kích thước widget.
+     */
+    QImage renderToImage(const QSize& size = QSize());
+
+    // --- CÁC HÀM (SLOTS) CÔNG KHAI ĐỂ MAINWINDOW GỌI ---
+  public slots:
     /**
      * @brief Tăng mức độ phóng to.
      * * - Role C (Implement):
@@ -117,7 +140,7 @@ public slots:
      */
     void flip();
 
-protected:
+  protected:
     /**
      * @brief Hàm vẽ chính.
      *
@@ -132,10 +155,26 @@ protected:
      */
     void paintEvent(QPaintEvent* event) override;
 
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void wheelEvent(QWheelEvent* event) override;
+
     // * - Role C (Implement):
     // Cũng sẽ implement các hàm sự kiện (mousePress, wheelEvent)
     // để cập nhật 'm_scale' và 'm_panOffset' cho Pan/Zoom.
     //
+
+  private:
+    SVGRectF calculateDocumentBounds() const;
+    QTransform buildViewTransform(const QSize& viewportSize) const;
+    void renderDocument(QPainter& painter, const QSize& viewportSize);
+    void clampScale();
+    void updateSceneBounds();
+    const SVGRectF& sceneBounds() const;
+
+    bool m_isPanning = false;
+    QPoint m_lastMousePos;
 };
 
 #endif // UI_CANVAS_WIDGET_H

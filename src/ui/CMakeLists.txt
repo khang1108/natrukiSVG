@@ -4,6 +4,7 @@ file(GLOB UI_SOURCES *.cpp)
 # Collect header files that need MOC processing
 set(UI_HEADERS_FOR_MOC
     ${PROJECT_SOURCE_DIR}/include/ui/mainwindow.h
+    ${PROJECT_SOURCE_DIR}/include/ui/CanvasWidget.h
 )
 
 # Manually wrap the UI file to generate ui_mainwindow.h
