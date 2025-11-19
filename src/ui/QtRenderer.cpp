@@ -4,6 +4,7 @@
 #include "svg/SVGEllipse.h"
 #include "svg/SVGGroup.h"
 #include "svg/SVGLine.h"
+#include "svg/SVGPath.h"
 #include "svg/SVGPolygon.h"
 #include "svg/SVGPolyline.h"
 #include "svg/SVGRect.h"
@@ -18,6 +19,8 @@
 #include <QPolygonF>
 #include <QTransform>
 #include <algorithm>
+#include <cctype>
+#include <cstdlib>
 #include <vector>
 
 namespace
@@ -85,6 +88,344 @@ namespace
     Qt::FillRule toQtFillRule(SVGFillRule rule)
     {
         return (rule == SVGFillRule::EvenOdd) ? Qt::OddEvenFill : Qt::WindingFill;
+    }
+
+    bool isCommand(char c) { return std::isalpha(static_cast<unsigned char>(c)) != 0; }
+
+    class SvgPathBuilder
+    {
+      public:
+        explicit SvgPathBuilder(const std::string& data) : m_data(data) {}
+
+        QPainterPath build()
+        {
+            while (m_index < m_data.size()) {
+                skipSeparators();
+                if (m_index >= m_data.size()) {
+                    break;
+                }
+
+                char c = m_data[m_index];
+                if (isCommand(c)) {
+                    m_command = c;
+                    ++m_index;
+                }
+                else if (m_command == 0) {
+                    ++m_index;
+                    continue;
+                }
+
+                bool relative = std::islower(static_cast<unsigned char>(m_command)) != 0;
+                char cmd = static_cast<char>(std::toupper(static_cast<unsigned char>(m_command)));
+
+                switch (cmd) {
+                case 'M':
+                    handleMove(relative);
+                    break;
+                case 'L':
+                    handleLine(relative);
+                    break;
+                case 'H':
+                    handleHorizontal(relative);
+                    break;
+                case 'V':
+                    handleVertical(relative);
+                    break;
+                case 'C':
+                    handleCubic(relative);
+                    break;
+                case 'S':
+                    handleSmoothCubic(relative);
+                    break;
+                case 'Q':
+                    handleQuadratic(relative);
+                    break;
+                case 'T':
+                    handleSmoothQuadratic(relative);
+                    break;
+                case 'A':
+                    handleArc(relative);
+                    break;
+                case 'Z':
+                    m_path.closeSubpath();
+                    m_current = m_subpathStart;
+                    m_prevCommand = 'Z';
+                    break;
+                default:
+                    skipUnknown();
+                    break;
+                }
+            }
+
+            return m_path;
+        }
+
+      private:
+        const std::string& m_data;
+        size_t m_index = 0;
+        char m_command = 0;
+        char m_prevCommand = 0;
+        QPointF m_current{0.0, 0.0};
+        QPointF m_subpathStart{0.0, 0.0};
+        QPointF m_lastCubicControl{0.0, 0.0};
+        QPointF m_lastQuadControl{0.0, 0.0};
+        QPainterPath m_path;
+
+        void skipSeparators()
+        {
+            while (m_index < m_data.size()) {
+                char c = m_data[m_index];
+                if (c == ',' || std::isspace(static_cast<unsigned char>(c))) {
+                    ++m_index;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        bool readNumber(double& value)
+        {
+            skipSeparators();
+            if (m_index >= m_data.size()) {
+                return false;
+            }
+            const char* start = m_data.c_str() + m_index;
+            char* end = nullptr;
+            value = std::strtod(start, &end);
+            if (start == end) {
+                return false;
+            }
+            m_index = static_cast<size_t>(end - m_data.c_str());
+            return true;
+        }
+
+        bool readPoint(QPointF& out, bool relative)
+        {
+            double x = 0.0;
+            double y = 0.0;
+            if (!readNumber(x) || !readNumber(y)) {
+                return false;
+            }
+            if (relative) {
+                out.setX(m_current.x() + x);
+                out.setY(m_current.y() + y);
+            }
+            else {
+                out.setX(x);
+                out.setY(y);
+            }
+            return true;
+        }
+
+        void handleMove(bool relative)
+        {
+            bool firstPoint = true;
+            while (true) {
+                QPointF point;
+                if (!readPoint(point, relative)) {
+                    break;
+                }
+                if (firstPoint) {
+                    m_path.moveTo(point);
+                    m_subpathStart = point;
+                    m_current = point;
+                    firstPoint = false;
+                    m_prevCommand = 'M';
+                }
+                else {
+                    m_path.lineTo(point);
+                    m_current = point;
+                    m_prevCommand = 'L';
+                }
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleLine(bool relative)
+        {
+            while (true) {
+                QPointF point;
+                if (!readPoint(point, relative)) {
+                    break;
+                }
+                m_path.lineTo(point);
+                m_current = point;
+                m_prevCommand = 'L';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleHorizontal(bool relative)
+        {
+            while (true) {
+                double value = 0.0;
+                if (!readNumber(value)) {
+                    break;
+                }
+                QPointF point = m_current;
+                point.setX(relative ? m_current.x() + value : value);
+                m_path.lineTo(point);
+                m_current = point;
+                m_prevCommand = 'L';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleVertical(bool relative)
+        {
+            while (true) {
+                double value = 0.0;
+                if (!readNumber(value)) {
+                    break;
+                }
+                QPointF point = m_current;
+                point.setY(relative ? m_current.y() + value : value);
+                m_path.lineTo(point);
+                m_current = point;
+                m_prevCommand = 'L';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleCubic(bool relative)
+        {
+            while (true) {
+                QPointF c1;
+                QPointF c2;
+                QPointF end;
+                if (!readPoint(c1, relative) || !readPoint(c2, relative) ||
+                    !readPoint(end, relative)) {
+                    break;
+                }
+                m_path.cubicTo(c1, c2, end);
+                m_lastCubicControl = c2;
+                m_current = end;
+                m_prevCommand = 'C';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleSmoothCubic(bool relative)
+        {
+            while (true) {
+                QPointF c2;
+                QPointF end;
+                if (!readPoint(c2, relative) || !readPoint(end, relative)) {
+                    break;
+                }
+                QPointF c1 = m_current;
+                if (m_prevCommand == 'C' || m_prevCommand == 'S') {
+                    c1 = QPointF(2 * m_current.x() - m_lastCubicControl.x(),
+                                 2 * m_current.y() - m_lastCubicControl.y());
+                }
+                m_path.cubicTo(c1, c2, end);
+                m_lastCubicControl = c2;
+                m_current = end;
+                m_prevCommand = 'S';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleQuadratic(bool relative)
+        {
+            while (true) {
+                QPointF control;
+                QPointF end;
+                if (!readPoint(control, relative) || !readPoint(end, relative)) {
+                    break;
+                }
+                m_path.quadTo(control, end);
+                m_lastQuadControl = control;
+                m_current = end;
+                m_prevCommand = 'Q';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleSmoothQuadratic(bool relative)
+        {
+            while (true) {
+                QPointF end;
+                if (!readPoint(end, relative)) {
+                    break;
+                }
+                QPointF control = m_current;
+                if (m_prevCommand == 'Q' || m_prevCommand == 'T') {
+                    control = QPointF(2 * m_current.x() - m_lastQuadControl.x(),
+                                      2 * m_current.y() - m_lastQuadControl.y());
+                }
+                m_path.quadTo(control, end);
+                m_lastQuadControl = control;
+                m_current = end;
+                m_prevCommand = 'T';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void handleArc(bool relative)
+        {
+            constexpr int paramsPerArc = 7;
+            while (true) {
+                double values[paramsPerArc] = {};
+                bool ok = true;
+                for (int i = 0; i < paramsPerArc; ++i) {
+                    ok &= readNumber(values[i]);
+                }
+                if (!ok) {
+                    break;
+                }
+                QPointF end(values[5], values[6]);
+                if (relative) {
+                    end.setX(m_current.x() + end.x());
+                    end.setY(m_current.y() + end.y());
+                }
+                m_path.lineTo(end);
+                m_current = end;
+                m_prevCommand = 'A';
+                skipSeparators();
+                if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
+                    break;
+                }
+            }
+        }
+
+        void skipUnknown()
+        {
+            while (m_index < m_data.size() && !isCommand(m_data[m_index])) {
+                ++m_index;
+            }
+        }
+    };
+
+    QPainterPath buildPainterPath(const std::string& data)
+    {
+        SvgPathBuilder builder(data);
+        return builder.build();
     }
 
 } // namespace
@@ -170,15 +511,6 @@ void QtRenderer::visit(SVGText& text)
     }
 
     const SVGStyle& style = text.getStyle();
-    if (!m_painter) {
-        return;
-    }
-
-    m_painter->save();
-    QTransform transform = m_painter->worldTransform();
-    transform *= toQTransform(text.getTransform());
-    m_painter->setWorldTransform(transform);
-
     QFont font;
     if (!style.fontFamily.empty()) {
         font.setFamily(QString::fromStdString(style.fontFamily));
@@ -187,18 +519,10 @@ void QtRenderer::visit(SVGText& text)
         font.setFamily(QStringLiteral("Times New Roman"));
     }
     font.setPointSizeF(style.fontSize > 0 ? style.fontSize : 16.0);
-    m_painter->setFont(font);
-
-    if (hasVisibleFill(style)) {
-        QColor fillColor = toQColor(style.fillColor, normalizedOpacity(style.fillOpacity));
-        m_painter->setPen(Qt::NoPen);
-        m_painter->setBrush(Qt::NoBrush);
-        SVGPointF pos = text.getPosition();
-        m_painter->setPen(fillColor);
-        m_painter->drawText(QPointF(pos.x, pos.y), QString::fromStdString(text.getText()));
-    }
-
-    m_painter->restore();
+    SVGPointF pos = text.getPosition();
+    QPainterPath path;
+    path.addText(QPointF(pos.x, pos.y), font, QString::fromStdString(text.getText()));
+    drawPath(path, style, text.getTransform());
 }
 
 void QtRenderer::visit(SVGEllipse& ellipse)
@@ -242,6 +566,23 @@ void QtRenderer::visit(SVGLine& line)
     SVGPointF p2 = line.getP2();
     m_painter->drawLine(QPointF(p1.x, p1.y), QPointF(p2.x, p2.y));
     m_painter->restore();
+}
+void QtRenderer::visit(SVGPath& path)
+{
+    if (!prepareForDrawing(path.getStyle())) {
+        return;
+    }
+
+    const auto& d = path.getPath();
+    if (d.empty()) {
+        return;
+    }
+
+    QPainterPath qPath = buildPainterPath(d);
+    if (qPath.isEmpty()) {
+        return;
+    }
+    drawPath(qPath, path.getStyle(), path.getTransform());
 }
 
 void QtRenderer::visitGroupBegin(SVGGroup& group) { Q_UNUSED(group); }

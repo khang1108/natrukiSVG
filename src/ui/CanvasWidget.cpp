@@ -149,9 +149,27 @@ void CanvasWidget::mouseReleaseEvent(QMouseEvent* event)
 void CanvasWidget::wheelEvent(QWheelEvent* event)
 {
     if (!event->angleDelta().isNull()) {
+        QTransform currentTransform = buildViewTransform(size());
+        QTransform inverseTransform;
+        QPointF worldAnchor;
+        bool invertible = false;
+        inverseTransform = currentTransform.inverted(&invertible);
+        bool hasAnchor = invertible;
+        if (hasAnchor) {
+            worldAnchor = inverseTransform.map(event->position());
+        }
+
         double factor = std::pow(1.0015, event->angleDelta().y());
         m_scale *= factor;
         clampScale();
+
+        if (hasAnchor) {
+            QTransform newTransform = buildViewTransform(size());
+            QPointF projected = newTransform.map(worldAnchor);
+            QPointF delta = event->position() - projected;
+            m_panOffset += delta;
+        }
+
         update();
     }
     QWidget::wheelEvent(event);
@@ -212,14 +230,14 @@ QTransform CanvasWidget::buildViewTransform(const QSize& viewportSize) const
     double fitScaleY = viewportSize.height() / bounds.height;
     double fitScale = 0.9 * std::min(fitScaleX, fitScaleY);
 
-    transform.translate(viewportSize.width() / 2.0, viewportSize.height() / 2.0);
-    transform.translate(m_panOffset.x(), m_panOffset.y());
+    transform.translate(-(bounds.x + bounds.width / 2.0), -(bounds.y + bounds.height / 2.0));
+    transform.scale(m_scale * fitScale, m_scale * fitScale);
+    transform.rotate(m_rotation);
     if (m_isFlipped) {
         transform.scale(-1.0, 1.0);
     }
-    transform.rotate(m_rotation);
-    transform.scale(m_scale * fitScale, m_scale * fitScale);
-    transform.translate(-(bounds.x + bounds.width / 2.0), -(bounds.y + bounds.height / 2.0));
+    transform.translate(m_panOffset.x(), m_panOffset.y());
+    transform.translate(viewportSize.width() / 2.0, viewportSize.height() / 2.0);
     return transform;
 }
 

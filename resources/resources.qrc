@@ -49,5 +49,8 @@
     <qresource prefix="/i18n">
         <!-- Translation files can be added here if needed -->
     </qresource>
-</RCC>
+    <qresource>
+        <file alias="resources/images/logo.png">logo.png</file>
+    </qresource>
+</RCC>  
 
