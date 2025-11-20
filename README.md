@@ -42,17 +42,10 @@ NaTruKi_App/
    git clone https://github.com/khang1108/natrukiSVG.git
    cd NaTruKi_OOP_Project
    ```
-2. **Create build directory:**
+2. **Run bash:**
 
    ```bash
-   mkdir build
-   cd build
-   ```
-3. **Configure and build**
-
-   ```bash
-   cmake ..
-   cmake --build .
+   bash ./build_and_run.sh
    ```
 
 ## Contributors
