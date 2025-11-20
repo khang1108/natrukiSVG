@@ -63,6 +63,7 @@ class CanvasWidget : public QWidget
     bool m_isFlipped = false;
     SVGRectF m_sceneBounds{0, 0, 0, 0};
     bool m_hasSceneBounds = false;
+    bool m_hasPaintedWithValidSize = false;
 
   public:
     /**
@@ -159,6 +160,8 @@ class CanvasWidget : public QWidget
     void mouseMoveEvent(QMouseEvent* event) override;
     void mouseReleaseEvent(QMouseEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
+    void showEvent(QShowEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
 
     // * - Role C (Implement):
     // Cũng sẽ implement các hàm sự kiện (mousePress, wheelEvent)
@@ -172,6 +175,7 @@ class CanvasWidget : public QWidget
     void clampScale();
     void updateSceneBounds();
     const SVGRectF& sceneBounds() const;
+    void applyZoom(double factor, const QPointF& viewportAnchor);
 
     bool m_isPanning = false;
     QPoint m_lastMousePos;

@@ -16,25 +16,59 @@
 #include <sstream>
 #include <stdexcept>
 
+/**
+ * @brief Creates an SVGElement from an XML node (Factory Method pattern).
+ *
+ * Algorithm:
+ * 1. Extract element name (tag name) from XML node
+ * 2. Get parent's style and transform for inheritance
+ * 3. Based on element name, create the appropriate SVGElement subclass:
+ *    - "rect": Parse x, y, width, height, rx, ry -> create SVGRect
+ *    - "circle": Parse cx, cy, r -> create SVGCircle
+ *    - "ellipse": Parse cx, cy, rx, ry -> create SVGEllipse
+ *    - "line": Parse x1, y1, x2, y2 -> create SVGLine
+ *    - "polygon": Parse points attribute -> create SVGPolygon
+ *    - "polyline": Parse points attribute -> create SVGPolyline
+ *    - "g": Create SVGGroup (no attributes needed)
+ *    - "path": Parse d attribute -> create SVGPath
+ *    - "text": Parse x, y and text content -> create SVGText
+ * 4. Parse style from XML attributes (inheriting from parent)
+ * 5. Parse transform from XML attributes (accumulating from parent)
+ * 6. Apply style and transform to the element
+ *
+ * Style inheritance:
+ * - Child elements inherit parent's style if not explicitly set
+ * - parseStyle() handles the inheritance logic
+ *
+ * Transform accumulation:
+ * - Child transforms are multiplied with parent transforms
+ * - Order: parent transform first, then child transform
+ * - parseTransform() handles the accumulation
+ *
+ * @param node The XML node to parse
+ * @param parentElement The parent SVG element (for style/transform inheritance)
+ * @return Unique pointer to the created element, or nullptr if unknown element type
+ */
 std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<char>* node,
                                                           SVGElement* parentElement)
 {
     const char* name = node->name();
     if (!name || *name == '\0') {
-        return nullptr;
+        return nullptr; // Invalid node
     }
 
+    // Get parent's style and transform for inheritance
     const SVGStyle& parentStyle = (parentElement) ? parentElement->getStyle() : SVGStyle();
-
     const SVGTransform& parentTransform =
         (parentElement) ? parentElement->getTransform() : SVGTransform();
 
     std::unique_ptr<SVGElement> newElement = nullptr;
 
+    // Create element based on tag name
     if (strcmp(name, "rect") == 0) {
         SVGRectF rect = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0),
-                        parseNumber(getAttr(node, "width"), 0.0),
-                        parseNumber(getAttr(node, "height"), 0.0)};
+                         parseNumber(getAttr(node, "width"), 0.0),
+                         parseNumber(getAttr(node, "height"), 0.0)};
         SVGNumber rx = parseNumber(getAttr(node, "rx"), 0.0);
         SVGNumber ry = parseNumber(getAttr(node, "ry"), 0.0);
         newElement = std::make_unique<SVGRect>(rect, rx, ry);
@@ -78,6 +112,7 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
         newElement = std::make_unique<SVGText>(pos, node->value());
     }
 
+    // Apply style and transform to the element
     if (newElement) {
         SVGStyle style = parseStyle(node, parentStyle);
         newElement->setStyle(style);
@@ -89,6 +124,18 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
     return newElement;
 }
 
+/**
+ * @brief Gets an attribute value from an XML node.
+ *
+ * Algorithm:
+ * - Searches for an attribute with the given name
+ * - Returns the attribute's value if found, empty string if not found
+ * - Returns empty string if node is null
+ *
+ * @param node The XML node to search
+ * @param attrName The name of the attribute to find
+ * @return The attribute value, or empty string if not found
+ */
 const char* SVGFactoryImpl::getAttr(rapidxml::xml_node<char>* node, const char* attrName)
 {
     if (!node)
@@ -97,15 +144,49 @@ const char* SVGFactoryImpl::getAttr(rapidxml::xml_node<char>* node, const char* 
     return (attr) ? attr->value() : "";
 }
 
+/**
+ * @brief Removes leading and trailing whitespace from a string.
+ *
+ * Algorithm:
+ * 1. Find first non-whitespace character (from start)
+ * 2. Find last non-whitespace character (from end)
+ * 3. Extract substring between these positions
+ * 4. If string is all whitespace, return as-is
+ *
+ * Whitespace characters: space, tab, newline, carriage return
+ *
+ * @param str The string to trim
+ * @return Trimmed string with leading/trailing whitespace removed
+ */
 std::string SVGFactoryImpl::trim(const std::string& str)
 {
     size_t first = str.find_first_not_of(" \t\n\r");
     if (std::string::npos == first)
-        return str;
+        return str; // String is all whitespace
     size_t last = str.find_last_not_of(" \t\n\r");
     return str.substr(first, (last - first + 1));
 }
 
+/**
+ * @brief Parses a numeric string to a floating-point number.
+ *
+ * Algorithm:
+ * 1. Check if value is null or empty -> return default
+ * 2. Trim whitespace from the string
+ * 3. Check for "px" unit suffix and remove it if present
+ * 4. Use std::stod to convert string to double
+ * 5. Return default value if parsing fails
+ *
+ * Supported formats:
+ * - "10" -> 10.0
+ * - "10.5" -> 10.5
+ * - "10px" -> 10.0 (removes px unit)
+ * - "-5.2" -> -5.2
+ *
+ * @param value The string to parse
+ * @param defaultValue Value to return if parsing fails
+ * @return Parsed number, or defaultValue if parsing fails
+ */
 SVGNumber SVGFactoryImpl::parseNumber(const char* value, SVGNumber defaultValue)
 {
     if (!value || *value == '\0') {
@@ -116,6 +197,7 @@ SVGNumber SVGFactoryImpl::parseNumber(const char* value, SVGNumber defaultValue)
         return defaultValue;
     }
     try {
+        // Check for "px" unit and remove it
         size_t unitPos = std::string::npos;
         unitPos = strValue.rfind("px");
         if (unitPos != std::string::npos && unitPos == strValue.length() - 2) {
@@ -125,42 +207,92 @@ SVGNumber SVGFactoryImpl::parseNumber(const char* value, SVGNumber defaultValue)
         return std::stod(strValue);
     }
     catch (...) {
-        return defaultValue;
+        return defaultValue; // Parsing failed
     }
 }
 
+/**
+ * @brief Parses a points string into a vector of points.
+ *
+ * Algorithm:
+ * 1. Parse coordinate pairs (x, y) from the string
+ * 2. Skip whitespace and commas between numbers
+ * 3. Read x coordinate, then y coordinate
+ * 4. Add point (x, y) to vector
+ * 5. Continue until no more coordinates can be read
+ *
+ * Points format: "x1,y1 x2,y2 x3,y3" or "x1 y1 x2 y2 x3 y3"
+ * - Commas and whitespace are both allowed as separators
+ * - Pairs must be complete (x and y), incomplete pairs are ignored
+ *
+ * Example: "10,20 30,40 50,60" -> [(10,20), (30,40), (50,60)]
+ *
+ * @param pointsStr The points string to parse
+ * @return Vector of parsed points
+ */
 std::vector<SVGPointF> SVGFactoryImpl::parsePoints(const char* pointsStr)
 {
     std::vector<SVGPointF> points;
     if (!pointsStr || *pointsStr == '\0') {
-        return points;
+        return points; // Empty string
     }
     std::stringstream ss(pointsStr);
     SVGNumber x, y;
     while (ss >> x) {
+        // Skip separators (commas, whitespace)
         while (ss.peek() == ',' || std::isspace(ss.peek())) {
             ss.get();
         }
         if (!(ss >> y)) {
-            break;
+            break; // No y coordinate found, stop
         }
         points.push_back({x, y});
     }
     return points;
 }
 
+/**
+ * @brief Parses a color string into an SVGColor object.
+ *
+ * Algorithm:
+ * 1. Convert string to lowercase for case-insensitive matching
+ * 2. Check for special color names: "none", "black", "red", "green", "blue", "white"
+ * 3. Check for RGB format: "rgb(r, g, b)"
+ *    - Extract r, g, b values (0-255)
+ *    - Clamp values to valid range [0, 255]
+ * 4. Check for hex format: "#RRGGBB" or "#RGB"
+ *    - 6-digit: "#FF0000" -> (255, 0, 0)
+ *    - 3-digit: "#F00" -> (255, 0, 0) (each digit duplicated)
+ *    - Parse hex digits using base-16 conversion
+ * 5. Return default value if format is not recognized
+ *
+ * Supported formats:
+ * - Named colors: "none", "black", "red", "green", "blue", "white"
+ * - RGB: "rgb(255, 0, 0)" -> red
+ * - Hex 6-digit: "#ff0000" or "#FF0000" -> red
+ * - Hex 3-digit: "#f00" -> red (shorthand)
+ *
+ * @param colorStr The color string to parse
+ * @param defaultValue Value to return if parsing fails
+ * @return SVGColor object representing the parsed color
+ */
 SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaultValue)
 {
     if (colorStr.empty()) {
         return defaultValue;
     }
+    // Convert to lowercase for case-insensitive matching
     std::transform(colorStr.begin(), colorStr.end(), colorStr.begin(), ::tolower);
+
+    // Check for "none" (transparent/no color)
     if (colorStr == "none") {
         SVGColor color;
         color.isNone = true;
         color.a = 0;
         return color;
     }
+
+    // Check for named colors
     if (colorStr == "black")
         return {0, 0, 0, 255, false};
     if (colorStr == "red")
@@ -172,9 +304,11 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
     if (colorStr == "white")
         return {255, 255, 255, 255, false};
 
+    // Check for RGB format: "rgb(r, g, b)"
     if (colorStr.rfind("rgb(", 0) == 0) {
         SVGColor color{0, 0, 0, 255, false};
         try {
+            // Extract arguments: "rgb(255, 0, 0)" -> "255, 0, 0"
             std::string args = colorStr.substr(4, colorStr.length() - 5);
             std::stringstream ss(args);
             int r, g, b;
@@ -183,6 +317,7 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
             if (ss.fail()) {
                 return defaultValue;
             }
+            // Clamp values to [0, 255]
             color.r = (unsigned char)std::max(0, std::min(r, 255));
             color.g = (unsigned char)std::max(0, std::min(g, 255));
             color.b = (unsigned char)std::max(0, std::min(b, 255));
@@ -193,22 +328,25 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
         }
     }
 
+    // Check for hex format: "#RRGGBB" or "#RGB"
     if (colorStr[0] == '#') {
         SVGColor color{0, 0, 0, 255, false};
-        std::string hex = colorStr.substr(1);
+        std::string hex = colorStr.substr(1); // Remove '#'
         try {
             if (hex.length() == 6) {
+                // 6-digit hex: "#FF0000"
                 color.r = (unsigned char)std::stoul(hex.substr(0, 2), nullptr, 16);
                 color.g = (unsigned char)std::stoul(hex.substr(2, 2), nullptr, 16);
                 color.b = (unsigned char)std::stoul(hex.substr(4, 2), nullptr, 16);
             }
             else if (hex.length() == 3) {
+                // 3-digit hex shorthand: "#F00" -> "#FF0000" (each digit duplicated)
                 color.r =
                     (unsigned char)std::stoul(hex.substr(0, 1) + hex.substr(0, 1), nullptr, 16);
                 color.g =
                     (unsigned char)std::stoul(hex.substr(1, 1) + hex.substr(1, 1), nullptr, 16);
                 color.b =
-                    (unsigned char)std::stoul(hex.substr(2, 2) + hex.substr(2, 2), nullptr, 16);
+                    (unsigned char)std::stoul(hex.substr(2, 1) + hex.substr(2, 1), nullptr, 16);
             }
             return color;
         }
@@ -219,11 +357,37 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
     return defaultValue;
 }
 
+/**
+ * @brief Parses style attributes from an XML node and applies CSS-style inheritance.
+ *
+ * Algorithm:
+ * 1. Create a new style and inherit from parent (CSS cascading)
+ * 2. Collect all style attributes from XML:
+ *    - Individual attributes: fill, stroke, stroke-width, font-size, font-family, etc.
+ *    - Style attribute: "style='fill:red;stroke:blue'" (CSS-like syntax)
+ * 3. Parse the style attribute string (semicolon-separated declarations)
+ * 4. Apply parsed values to the style object (overriding inherited values)
+ * 5. Apply defaults for any unset properties
+ *
+ * Style attribute format: "property1:value1;property2:value2"
+ * - Split by semicolon to get individual declarations
+ * - Split each declaration by colon to get property:value pairs
+ * - Trim whitespace from keys and values
+ *
+ * Opacity handling:
+ * - fill-opacity and stroke-opacity: specific opacity for fill/stroke
+ * - opacity: general opacity that multiplies with fill/stroke opacity
+ * - Values are clamped to [0.0, 1.0]
+ *
+ * @param node The XML node to parse style from
+ * @param parentStyle The parent style to inherit from
+ * @return SVGStyle object with parsed and inherited style properties
+ */
 SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGStyle& parentStyle)
 {
     SVGStyle style;
-    style.inheritFrom(parentStyle);
-    std::map<std::string, std::string> attrs;
+    style.inheritFrom(parentStyle);           // Start with inherited values
+    std::map<std::string, std::string> attrs; // Collect all style attributes
 
     if (auto* attr = node->first_attribute("fill"))
         attrs["fill"] = attr->value();
@@ -324,27 +488,63 @@ SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGSty
     return style;
 }
 
+/**
+ * @brief Parses the transform attribute and accumulates with parent transform.
+ *
+ * Algorithm:
+ * 1. Start with parent transform (accumulated from ancestors)
+ * 2. Parse the transform attribute string (if present)
+ * 3. Parse transform functions: translate(), scale(), rotate(), matrix()
+ * 4. Build local transform by multiplying functions in order
+ * 5. Multiply parent transform with local transform: result = local * parent
+ *    - This ensures parent transforms are applied first, then local
+ *    - SVG applies transforms left-to-right, so we multiply left-to-right
+ *
+ * Transform string format: "translate(10,20) rotate(45) scale(2)"
+ * - Functions are separated by whitespace
+ * - Each function has format: "functionName(arg1, arg2, ...)"
+ * - Functions are applied in the order they appear
+ *
+ * Supported functions:
+ * - translate(tx, ty): Move by (tx, ty). If ty omitted, ty=0
+ * - scale(sx, sy): Scale by (sx, sy). If sy omitted, sy=sx (uniform scaling)
+ * - rotate(angle): Rotate by angle degrees (counterclockwise)
+ * - matrix(a, b, c, d, e, f): 2x3 transformation matrix
+ *
+ * Transform accumulation:
+ * - Parent transforms are applied first
+ * - Local transforms are applied after parent
+ * - Matrix multiplication: result = localTransform * parentTransform
+ *
+ * @param node The XML node to parse transform from
+ * @param parentTransform The parent's accumulated transform
+ * @return SVGTransform representing the accumulated transform (parent + local)
+ */
 SVGTransform SVGFactoryImpl::parseTransform(rapidxml::xml_node<char>* node,
                                             const SVGTransform& parentTransform)
 {
-    SVGTransform worldTransform = parentTransform;
+    SVGTransform worldTransform = parentTransform; // Start with parent transform
     const char* transformStr = getAttr(node, "transform");
     if (!transformStr || *transformStr == '\0') {
-        return worldTransform;
+        return worldTransform; // No local transform, return parent
     }
 
-    SVGTransform localTransform;
+    SVGTransform localTransform; // Build local transform from string
     std::string str(transformStr);
     size_t pos = 0;
+    // Parse each transform function in the string
     while (pos < str.length()) {
+        // Find start of function name (skip whitespace)
         size_t startFunc = str.find_first_not_of(" \t\r\n", pos);
         if (startFunc == std::string::npos)
             break;
 
+        // Find opening parenthesis
         size_t startArgs = str.find('(', startFunc);
         if (startArgs == std::string::npos)
             break;
 
+        // Find closing parenthesis
         size_t endArgs = str.find(')', startArgs);
         if (endArgs == std::string::npos)
             break;
@@ -386,6 +586,20 @@ SVGTransform SVGFactoryImpl::parseTransform(rapidxml::xml_node<char>* node,
         pos = endArgs + 1;
     }
 
-    worldTransform.multiply(localTransform);
-    return worldTransform;
+    // In SVG, transforms are applied in order: parent first, then local.
+    // When we have: <g transform="A"><path transform="B"/></g>
+    // The path should be transformed by A then B (parent then local).
+    //
+    // In matrix multiplication, to apply transform A then B to point P:
+    //   First: A * P
+    //   Then: B * (A * P) = (B * A) * P
+    // So the combined matrix is B * A (local * parent).
+    //
+    // The multiply function does: this = this * other
+    // So: result.multiply(worldTransform) means result = result * worldTransform
+    // If result = localTransform, then: result = localTransform * worldTransform = local * parent
+    // This correctly applies parent first, then local.
+    SVGTransform result = localTransform;
+    result.multiply(worldTransform); // result = local * parent (correct: parent first, then local)
+    return result;
 }

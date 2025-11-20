@@ -44,17 +44,40 @@ bool SVGPath::readNumber(const std::string& data, size_t& index, SVGNumber& valu
     return true;
 }
 
+/**
+ * @brief Calculates the bounding box (local bounds) of the SVG path.
+ *
+ * Algorithm:
+ * 1. Parse the path data string similar to rendering, but track min/max coordinates instead
+ * 2. For each path command, track all points that the path passes through:
+ *    - M/L: Track the point coordinates
+ *    - H: Track the X coordinate (Y stays same)
+ *    - V: Track the Y coordinate (X stays same)
+ *    - C/S: Track control points and end point (approximate bounds for curves)
+ *    - Q/T: Track control point and end point
+ *    - A: Track end point (simplified - full implementation would calculate arc bounds)
+ *    - Z: Track subpath start point
+ * 3. Update min/max X and Y values as we encounter points
+ * 4. Return a rectangle containing all points
+ *
+ * Note: For curves (C, S, Q, T, A), this is an approximation. A more accurate implementation
+ * would calculate the actual extrema of the curves.
+ *
+ * The bounds are calculated in local coordinate space (before any transforms are applied).
+ */
 void SVGPath::computeLocalBounds()
 {
+    // Initialize bounds to extreme values
     SVGNumber minX = std::numeric_limits<SVGNumber>::infinity();
     SVGNumber minY = std::numeric_limits<SVGNumber>::infinity();
     SVGNumber maxX = -std::numeric_limits<SVGNumber>::infinity();
     SVGNumber maxY = -std::numeric_limits<SVGNumber>::infinity();
     bool hasPoint = false;
 
+    // Lambda function to update bounding box with a new point
     auto updateBounds = [&](SVGNumber x, SVGNumber y) {
         if (!std::isfinite(x) || !std::isfinite(y)) {
-            return;
+            return; // Skip invalid coordinates
         }
         hasPoint = true;
         minX = std::min(minX, x);
@@ -106,21 +129,48 @@ void SVGPath::computeLocalBounds()
         char upperCmd = static_cast<char>(std::toupper(static_cast<unsigned char>(command)));
 
         switch (upperCmd) {
-        case 'M':
+        case 'M': {
+            bool firstPoint = true;
+            while (true) {
+                SVGPointF point;
+                if (!readPoint(point, isRelative)) {
+                    break;
+                }
+                if (firstPoint) {
+                    current = point;
+                    subpathStart = point;
+                    updateBounds(point.x, point.y);
+                    firstPoint = false;
+                }
+                else {
+                    current = point;
+                    updateBounds(point.x, point.y);
+                }
+                skipSeparators(data, index);
+                if (index >= data.size() || isCommand(data[index])) {
+                    break;
+                }
+            }
+            // After M, subsequent coordinates are treated as L commands
+            // Check if there are more coordinates (not a command) to process as L
+            // Note: skipSeparators was already called in the loop, so index should be
+            // pointing to the next character (command or coordinate)
+            if (index < data.size() && !isCommand(data[index])) {
+                upperCmd = 'L';
+                command = isRelative ? 'l' : 'L';
+            }
+            else {
+                // Next character is a command, clear so it will be processed in next iteration
+                command = 0;
+            }
+            break;
+        }
         case 'L':
         case 'T': {
             while (true) {
                 SVGPointF point;
                 if (!readPoint(point, isRelative)) {
                     break;
-                }
-                if (upperCmd == 'M') {
-                    current = point;
-                    subpathStart = point;
-                    updateBounds(point.x, point.y);
-                    upperCmd = 'L';
-                    command = isRelative ? 'l' : 'L';
-                    continue;
                 }
                 current = point;
                 updateBounds(point.x, point.y);
@@ -241,9 +291,12 @@ void SVGPath::computeLocalBounds()
             }
             break;
         }
-        case 'Z': {
+        case 'Z':
+        case 'z': {
             current = subpathStart;
             updateBounds(current.x, current.y);
+            // Clear command after Z so we look for a new one
+            command = 0;
             break;
         }
         default: {
@@ -251,6 +304,8 @@ void SVGPath::computeLocalBounds()
             while (index < data.size() && !isCommand(data[index])) {
                 ++index;
             }
+            // Clear command if we hit unknown
+            command = 0;
             break;
         }
         }
