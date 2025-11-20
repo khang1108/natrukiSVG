@@ -357,10 +357,14 @@ SVGRectF CanvasWidget::calculateDocumentBounds() const
     }
 
     // Prefer viewBox if available (defines the coordinate system)
+    // However, if content has transforms that place it outside viewBox,
+    // we should calculate bounds from actual content instead
     const SVGRectF& viewBox = m_document->getViewBox();
-    if (viewBox.width > 0 && viewBox.height > 0) {
-        return viewBox;
-    }
+    // Only use viewBox if we have no children or if viewBox seems reasonable
+    // For now, always calculate from content to handle transforms correctly
+    // if (viewBox.width > 0 && viewBox.height > 0) {
+    //     return viewBox;
+    // }
 
     // Calculate bounds from actual content
     const auto& children = m_document->getChildren();
