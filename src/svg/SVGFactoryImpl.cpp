@@ -7,6 +7,7 @@
 #include "SVGPolygon.h"
 #include "SVGPolyline.h"
 #include "SVGRect.h"
+#include "SVGPath.h"
 #include "SVGText.h"
 
 #include <algorithm>
@@ -61,6 +62,10 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
   }
   else if (strcmp(name, "polyline") == 0) {
     newElement = std::make_unique<SVGPolyline>(parsePoints(getAttr(node, "points")));
+  }
+  else if (strcmp(name, "path") == 0) {
+      const char* dAttr = getAttr(node, "d");
+      newElement = std::make_unique<SVGPath>(dAttr);
   }
   else if (strcmp(name, "g") == 0) {
     newElement = std::make_unique<SVGGroup>();

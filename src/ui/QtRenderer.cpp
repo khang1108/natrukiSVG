@@ -1,4 +1,4 @@
-#include "ui/QtRenderer.h"
+﻿#include "ui/QtRenderer.h"
 
 #include "svg/SVGCircle.h"
 #include "svg/SVGEllipse.h"
@@ -7,6 +7,7 @@
 #include "svg/SVGPolygon.h"
 #include "svg/SVGPolyline.h"
 #include "svg/SVGRect.h"
+#include "svg/SVGPath.h"
 #include "svg/SVGStyle.h"
 #include "svg/SVGText.h"
 #include "svg/SVGTransform.h"
@@ -175,9 +176,10 @@ void QtRenderer::visit(SVGText& text)
     }
 
     m_painter->save();
-    QTransform transform = m_painter->worldTransform();
-    transform *= toQTransform(text.getTransform());
-    m_painter->setWorldTransform(transform);
+    QTransform localTransform = toQTransform(text.getTransform());
+    QTransform currentWorld = m_painter->worldTransform();
+
+    m_painter->setWorldTransform(localTransform * currentWorld);
 
     QFont font;
     if (!style.fontFamily.empty()) {
@@ -227,9 +229,10 @@ void QtRenderer::visit(SVGLine& line)
     }
 
     m_painter->save();
-    QTransform transform = m_painter->worldTransform();
-    transform *= toQTransform(line.getTransform());
-    m_painter->setWorldTransform(transform);
+    QTransform localTransform = toQTransform(line.getTransform());
+    QTransform currentWorld = m_painter->worldTransform();
+
+    m_painter->setWorldTransform(localTransform * currentWorld);
 
     QPen pen(toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity)));
     pen.setWidthF(style.strokeWidth > 0.0 ? style.strokeWidth : 1.0);
@@ -244,9 +247,156 @@ void QtRenderer::visit(SVGLine& line)
     m_painter->restore();
 }
 
-void QtRenderer::visitGroupBegin(SVGGroup& group) { Q_UNUSED(group); }
+void QtRenderer::visit(SVGPath& svgPath)
+{
+    if (!prepareForDrawing(svgPath.getStyle())) {
+        return;
+    }
 
-void QtRenderer::visitGroupEnd(SVGGroup& group) { Q_UNUSED(group); }
+    const auto& commands = svgPath.getCommands();
+    if (commands.empty())
+        return;
+
+    QPainterPath path;
+
+    QPointF currentPos(0, 0);
+
+    QPointF lastControlPoint(0, 0);
+    char lastCmd = '\0';
+
+    for (const auto& cmd : commands) {
+        bool isRelative = islower(cmd.type);
+        char type = tolower(cmd.type);
+        const auto& args = cmd.args;
+
+        switch (type) {
+        case 'm': { // MoveTo (x, y)
+            double x = args[0];
+            double y = args[1];
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.moveTo(x, y);
+            currentPos = QPointF(x, y);
+            lastControlPoint = currentPos; // Reset control point
+            break;
+        }
+        case 'l': { // LineTo (x, y)
+            double x = args[0];
+            double y = args[1];
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.lineTo(x, y);
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 'h': { // Horizontal LineTo (x)
+            double x = args[0];
+            if (isRelative)
+                x += currentPos.x();
+            path.lineTo(x, currentPos.y());
+            currentPos.setX(x);
+            break;
+        }
+        case 'v': { // Vertical LineTo (y)
+            double y = args[0];
+            if (isRelative)
+                y += currentPos.y();
+            path.lineTo(currentPos.x(), y);
+            currentPos.setY(y);
+            break;
+        }
+        case 'c': { // Cubic Bezier (x1, y1, x2, y2, x, y)
+            double x1 = args[0], y1 = args[1];
+            double x2 = args[2], y2 = args[3];
+            double x = args[4], y = args[5];
+
+            if (isRelative) {
+                x1 += currentPos.x();
+                y1 += currentPos.y();
+                x2 += currentPos.x();
+                y2 += currentPos.y();
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.cubicTo(x1, y1, x2, y2, x, y);
+            lastControlPoint = QPointF(x2, y2); // Lưu điểm điều khiển thứ 2
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 's': { // Smooth Cubic (x2, y2, x, y)
+            // Điểm điều khiển 1 là điểm phản chiếu của lastControlPoint qua currentPos
+            double x1, y1;
+            if (lastCmd == 'c' || lastCmd == 's') {
+                x1 = 2 * currentPos.x() - lastControlPoint.x();
+                y1 = 2 * currentPos.y() - lastControlPoint.y();
+            }
+            else {
+                x1 = currentPos.x();
+                y1 = currentPos.y();
+            }
+
+            double x2 = args[0], y2 = args[1];
+            double x = args[2], y = args[3];
+
+            if (isRelative) {
+                x2 += currentPos.x();
+                y2 += currentPos.y();
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+
+            path.cubicTo(x1, y1, x2, y2, x, y);
+            lastControlPoint = QPointF(x2, y2);
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 'z': { // ClosePath
+            path.closeSubpath();
+            // Sau khi close, currentPos thường quay về điểm MoveTo gần nhất
+            break;
+        }
+            // TODO: Thêm case 'q', 't', 'a' nếu cần sau này.
+        }
+
+        // Cập nhật lastCmd để dùng cho logic Smooth Curve
+        if (type != 'm')
+            lastCmd = type;
+    }
+
+    // Gọi hàm vẽ chung 
+    drawPath(path, svgPath.getStyle(), svgPath.getTransform());
+}
+
+void QtRenderer::visitGroupBegin(SVGGroup& group) 
+{
+    if (!m_painter) {
+        return;
+    }
+    m_painter->save();
+
+    SVGTransform groupTransform = group.getTransform();
+
+    QTransform localTransform = toQTransform(groupTransform);
+    QTransform currentWorld = m_painter->worldTransform();
+
+    QTransform combined = localTransform * currentWorld;
+
+    m_painter->setWorldTransform(combined);
+}
+
+void QtRenderer::visitGroupEnd(SVGGroup& group) 
+{
+    Q_UNUSED(group);
+    if (!m_painter) {
+        return;
+    }
+
+    m_painter->restore();
+}
 
 bool QtRenderer::prepareForDrawing(const SVGStyle& style) const
 {
@@ -267,8 +417,11 @@ void QtRenderer::drawPath(const QPainterPath& path, const SVGStyle& style,
     }
 
     m_painter->save();
-    QTransform combined = m_painter->worldTransform();
-    combined *= toQTransform(transform);
+    QTransform localTransform = toQTransform(transform);
+    QTransform currentWorld = m_painter->worldTransform();
+
+    // Đảo ngược thứ tự: Local * World
+    QTransform combined = localTransform * currentWorld;
     m_painter->setWorldTransform(combined);
 
     QBrush brush(Qt::NoBrush);

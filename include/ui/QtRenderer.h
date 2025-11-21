@@ -62,6 +62,7 @@ public:
   void visit(SVGText& text) override;
   void visit(SVGEllipse& ellipse) override;
   void visit(SVGLine& line) override;
+  void visit(SVGPath& path) override;
 
   /**
    * @brief Các hàm visit cho Group.
