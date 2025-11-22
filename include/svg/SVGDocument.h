@@ -39,6 +39,7 @@ private:
    * @brief Parse thuộc tính viewBox từ chuỗi "minX minY w h".
    */
   SVGRectF parseViewBox(const char* viewBoxStr) const;
+  SVGRectF getContentBoundingBox() const;
 
 public:
   SVGDocument();

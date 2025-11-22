@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <cmath> 
 #include <limits>
 #include <sstream>
 
@@ -9,15 +10,9 @@ SVGPath::SVGPath(const std::string& dData) : m_cachedBBox{0, 0, 0, 0} { parseD(d
 
 void SVGPath::accept(NodeVisitor& visitor) { visitor.visit(*this); }
 
-const std::vector<PathCommand>& SVGPath::getCommands() const { return m_commands; }
+SVGRectF SVGPath::localBox() const { return m_cachedBBox; }
 
-SVGRectF SVGPath::localBox() const
-{
-    // Trả về BBox bao quanh tất cả các điểm điều khiển (Control Points)
-    // Đây là cách tính gần đúng (nhanh), đủ tốt cho UI.
-    // Tính chính xác Bezier curve bbox rất phức tạp.
-    return m_cachedBBox;
-}
+const std::vector<PathCommand>& SVGPath::getCommands() const { return m_commands; }
 
 void SVGPath::parseD(const std::string& d)
 {
@@ -28,6 +23,12 @@ void SVGPath::parseD(const std::string& d)
     SVGNumber maxX = -std::numeric_limits<SVGNumber>::infinity();
     SVGNumber maxY = -std::numeric_limits<SVGNumber>::infinity();
     bool hasPoints = false;
+
+    // Virtual Pen để theo dõi tọa độ thực tế khi tính BBox
+    SVGNumber curX = 0.0;
+    SVGNumber curY = 0.0;
+    SVGNumber startX = 0.0; // Điểm bắt đầu của sub-path (để dùng cho lệnh Z)
+    SVGNumber startY = 0.0;
 
     size_t i = 0;
     size_t len = d.length();
@@ -48,7 +49,6 @@ void SVGPath::parseD(const std::string& d)
             i++;
         while (i < len && (isdigit(d[i]) || d[i] == '.'))
             i++;
-        // Handle scientific notation (e.g., 1.2e-5)
         if (i < len && (d[i] == 'e' || d[i] == 'E')) {
             i++;
             if (i < len && (d[i] == '-' || d[i] == '+'))
@@ -57,13 +57,27 @@ void SVGPath::parseD(const std::string& d)
                 i++;
         }
 
-        std::string numStr = d.substr(start, i - start);
+        if (start == i)
+            return 0.0; // Không đọc được số
+
         try {
-            return std::stod(numStr);
+            return std::stod(d.substr(start, i - start));
         }
         catch (...) {
             return 0.0;
         }
+    };
+
+    auto updateBounds = [&](SVGNumber x, SVGNumber y) {
+        if (x < minX)
+            minX = x;
+        if (x > maxX)
+            maxX = x;
+        if (y < minY)
+            minY = y;
+        if (y > maxY)
+            maxY = y;
+        hasPoints = true;
     };
 
     char currentCmd = '\0';
@@ -77,10 +91,8 @@ void SVGPath::parseD(const std::string& d)
             currentCmd = d[i];
             i++;
         }
-        // Nếu không gặp chữ cái, nghĩa là lệnh lặp lại (implicit command)
-        // Ví dụ: L 10 10 20 20 -> hiểu là L 10 10 rồi L 20 20
+        // Nếu không có chữ cái, dùng lại lệnh trước đó (implicit command)
         else if (currentCmd == '\0') {
-            // Lỗi format, bỏ qua
             i++;
             continue;
         }
@@ -88,50 +100,145 @@ void SVGPath::parseD(const std::string& d)
         PathCommand cmd;
         cmd.type = currentCmd;
 
-        // Xác định số lượng tham số dựa trên loại lệnh
-        int argsCount = 0;
-        char lowerCmd = tolower(currentCmd);
+        bool isRelative = islower(currentCmd);
+        char type = tolower(currentCmd);
 
-        if (lowerCmd == 'z')
+        // Xác định số lượng tham số và đọc chúng
+        int argsCount = 0;
+        if (type == 'z')
             argsCount = 0;
-        else if (lowerCmd == 'h' || lowerCmd == 'v')
+        else if (type == 'h' || type == 'v')
             argsCount = 1;
-        else if (lowerCmd == 'm' || lowerCmd == 'l' || lowerCmd == 't')
+        else if (type == 'm' || type == 'l' || type == 't')
             argsCount = 2;
-        else if (lowerCmd == 's' || lowerCmd == 'q')
+        else if (type == 's' || type == 'q')
             argsCount = 4;
-        else if (lowerCmd == 'c')
+        else if (type == 'c')
             argsCount = 6;
-        else if (lowerCmd == 'a')
+        else if (type == 'a')
             argsCount = 7;
 
         for (int k = 0; k < argsCount; ++k) {
-            SVGNumber val = readNumber();
-            cmd.args.push_back(val);
-
-            // Cập nhật BBox (chỉ lấy toạ độ x,y, bỏ qua flag hay bán kính)
-            // Logic này sơ sài để lấy bounds nhanh
-            if (lowerCmd != 'a') { // Arc xử lý phức tạp hơn, tạm bỏ qua check bounds chi tiết
-                if (k % 2 == 0) {  // X
-                    if (val < minX)
-                        minX = val;
-                    if (val > maxX)
-                        maxX = val;
-                }
-                else { // Y
-                    if (val < minY)
-                        minY = val;
-                    if (val > maxY)
-                        maxY = val;
-                }
-                hasPoints = true;
-            }
+            cmd.args.push_back(readNumber());
         }
-
         m_commands.push_back(cmd);
 
-        // Logic đặc biệt của SVG: Sau lệnh 'M' (Move), nếu còn số thì các số sau được hiểu là 'L'
-        // (Line)
+        SVGNumber nx = curX; // next X
+        SVGNumber ny = curY; // next Y
+
+        switch (type) {
+        case 'm': // MoveTo
+        case 'l': // LineTo
+        case 't': // Smooth Quad
+            nx = cmd.args[0];
+            ny = cmd.args[1];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+            curX = nx;
+            curY = ny;
+            if (type == 'm') {
+                startX = curX;
+                startY = curY;
+            } // M bắt đầu subpath mới
+            break;
+
+        case 'h': // Horizontal
+            nx = cmd.args[0];
+            if (isRelative)
+                nx += curX;
+            updateBounds(nx, curY);
+            curX = nx;
+            break;
+
+        case 'v': // Vertical
+            ny = cmd.args[0];
+            if (isRelative)
+                ny += curY;
+            updateBounds(curX, ny);
+            curY = ny;
+            break;
+
+        case 'c': // Cubic Bezier (x1 y1 x2 y2 x y)
+            // Cập nhật bounds cho điểm đích (x,y)
+            nx = cmd.args[4];
+            ny = cmd.args[5];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+
+            // Cập nhật bounds cho các điểm điều khiển (Control points)
+            // Để BBox bao trọn đường cong
+            {
+                SVGNumber c1x = cmd.args[0], c1y = cmd.args[1];
+                SVGNumber c2x = cmd.args[2], c2y = cmd.args[3];
+                if (isRelative) {
+                    c1x += curX;
+                    c1y += curY;
+                    c2x += curX;
+                    c2y += curY;
+                }
+                updateBounds(c1x, c1y);
+                updateBounds(c2x, c2y);
+            }
+            curX = nx;
+            curY = ny;
+            break;
+
+        case 's': // Smooth Cubic (x2 y2 x y)
+            nx = cmd.args[2];
+            ny = cmd.args[3];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+
+            {
+                SVGNumber c2x = cmd.args[0], c2y = cmd.args[1];
+                if (isRelative) {
+                    c2x += curX;
+                    c2y += curY;
+                }
+                updateBounds(c2x, c2y);
+            }
+            curX = nx;
+            curY = ny;
+            break;
+
+        case 'q': // Quadratic Bezier (x1 y1 x y)
+            nx = cmd.args[2];
+            ny = cmd.args[3];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+            {
+                SVGNumber c1x = cmd.args[0], c1y = cmd.args[1];
+                if (isRelative) {
+                    c1x += curX;
+                    c1y += curY;
+                }
+                updateBounds(c1x, c1y);
+            }
+            curX = nx;
+            curY = ny;
+            break;
+
+        case 'z': // Close Path
+            curX = startX;
+            curY = startY;
+            break;
+
+            // TODO: Arc ('a') tính toán phức tạp hơn, tạm thời bỏ qua check bounds chi tiết cho A
+        }
+
+        // Xử lý trường hợp đặc biệt: Sau M/m mà còn số thì các số sau là L/l
         if (currentCmd == 'M')
             currentCmd = 'L';
         if (currentCmd == 'm')
@@ -140,5 +247,8 @@ void SVGPath::parseD(const std::string& d)
 
     if (hasPoints) {
         m_cachedBBox = {minX, minY, maxX - minX, maxY - minY};
+    }
+    else {
+        m_cachedBBox = {0, 0, 0, 0};
     }
 }

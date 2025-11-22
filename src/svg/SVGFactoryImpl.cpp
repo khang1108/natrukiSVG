@@ -1,4 +1,4 @@
-#include "SVGFactoryImpl.h"
+﻿#include "SVGFactoryImpl.h"
 
 #include "SVGCircle.h"
 #include "SVGEllipse.h"
@@ -79,7 +79,7 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
     SVGStyle style = parseStyle(node, parentStyle);
     newElement->setStyle(style);
 
-    SVGTransform transform = parseTransform(node, parentTransform);
+    SVGTransform transform = parseTransform(node, SVGTransform());
     newElement->setTransform(transform);
   }
 
@@ -168,6 +168,27 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
     return {0, 0, 255, 255, false};
   if (colorStr == "white")
     return {255, 255, 255, 255, false};
+  if (colorStr == "yellow")
+      return {255, 255, 0, 255, false};
+  if (colorStr == "gray" || colorStr == "grey")
+      return {128, 128, 128, 255, false};
+  if (colorStr == "skyblue")
+      return {135, 206, 235, 255, false};
+  if (colorStr == "cyan")
+      return {0, 255, 255, 255, false};
+  if (colorStr == "magenta")
+      return {255, 0, 255, 255, false};
+  if (colorStr == "orange")
+      return {255, 165, 0, 255, false};
+  if (colorStr == "purple")
+      return {128, 0, 128, 255, false};
+  if (colorStr == "brown")
+      return {165, 42, 42, 255, false};
+  if (colorStr == "pink")
+      return {255, 192, 203, 255, false};
+  if (colorStr == "lime")
+      return {0, 255, 0, 255, false};
+  //... Thêm các màu phổ biến khác nếu cần
 
   if (colorStr.rfind("rgb(", 0) == 0) {
     SVGColor color{0, 0, 0, 255, false};

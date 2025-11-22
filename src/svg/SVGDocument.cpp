@@ -84,7 +84,13 @@ bool SVGDocument::load(const std::string& filePath)
 
     parseRecursive(childNode, nullptr);
   }
-
+  if (!m_children.empty()) {
+      SVGRectF contentBox = getContentBoundingBox();
+      // Chỉ cập nhật nếu tìm được vùng bao hợp lệ (width, height > 0)
+      if (contentBox.width > 0 && contentBox.height > 0) {
+          m_viewBox = contentBox;
+      }
+  }
   return true;
 }
 
@@ -154,4 +160,48 @@ SVGRectF SVGDocument::parseViewBox(const char* viewBoxStr) const
     return {0, 0, 0, 0};
 
   return {minX, minY, width, height};
+}
+
+// --- HÀM MỚI: Tính Bounding Box của toàn bộ tài liệu ---
+SVGRectF SVGDocument::getContentBoundingBox() const
+{
+    SVGNumber minX = std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber minY = std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber maxX = -std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber maxY = -std::numeric_limits<SVGNumber>::infinity();
+    bool hasContent = false;
+
+    for (const auto& child : m_children) {
+        if (!child)
+            continue;
+
+        // Lấy bounding box của element (đã tính cả transform)
+        SVGRectF bbox = child->worldBox();
+
+        // Bỏ qua các phần tử không có kích thước (như group rỗng hoặc định nghĩa)
+        if (bbox.width <= 0 || bbox.height <= 0)
+            continue;
+
+        if (bbox.x < minX)
+            minX = bbox.x;
+        if (bbox.y < minY)
+            minY = bbox.y;
+        if (bbox.x + bbox.width > maxX)
+            maxX = bbox.x + bbox.width;
+        if (bbox.y + bbox.height > maxY)
+            maxY = bbox.y + bbox.height;
+
+        hasContent = true;
+    }
+
+    if (!hasContent) {
+        return {0, 0, 0, 0};
+    }
+
+    // Thêm một chút padding (lề) khoảng 5% để hình không sát mép màn hình
+    SVGNumber paddingX = (maxX - minX) * 0.05;
+    SVGNumber paddingY = (maxY - minY) * 0.05;
+
+    return {minX - paddingX, minY - paddingY, (maxX - minX) + 2 * paddingX,
+            (maxY - minY) + 2 * paddingY};
 }
