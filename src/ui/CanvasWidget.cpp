@@ -1,4 +1,4 @@
-#include "ui/CanvasWidget.h"
+﻿#include "ui/CanvasWidget.h"
 
 #include "svg/SVGDocument.h"
 #include "svg/SVGElement.h"
@@ -214,13 +214,17 @@ QTransform CanvasWidget::buildViewTransform(const QSize& viewportSize) const
 
     transform.translate(viewportSize.width() / 2.0, viewportSize.height() / 2.0);
     transform.translate(m_panOffset.x(), m_panOffset.y());
+
+    transform.rotate(m_rotation);
+
     if (m_isFlipped) {
         transform.scale(-1.0, 1.0);
     }
-    transform.rotate(m_rotation);
     transform.scale(m_scale * fitScale, m_scale * fitScale);
     transform.translate(-(bounds.x + bounds.width / 2.0), -(bounds.y + bounds.height / 2.0));
     return transform;
+
+    // Đã fix phần rotate và flip
 }
 
 void CanvasWidget::renderDocument(QPainter& painter, const QSize& viewportSize)

@@ -16,6 +16,9 @@
 #include <sstream>
 #include <stdexcept>
 
+#include <QColor>
+#include <QString>
+
 std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<char>* node,
                                                           SVGElement* parentElement)
 {
@@ -188,6 +191,10 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
       return {255, 192, 203, 255, false};
   if (colorStr == "lime")
       return {0, 255, 0, 255, false};
+  if (colorStr == "navy")
+      return {0, 0, 128, 255, false};
+  if (colorStr == "deepskyblue")
+      return {0, 191, 255, 255, false};
   //... Thêm các màu phổ biến khác nếu cần
 
   if (colorStr.rfind("rgb(", 0) == 0) {
@@ -233,6 +240,36 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
   }
   return defaultValue;
 }
+
+//SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaultValue)
+//{
+//    // 1. Kiểm tra chuỗi rỗng
+//    if (colorStr.empty()) {
+//        return defaultValue;
+//    }
+//
+//    // 2. Xử lý trường hợp đặc biệt "none" (QColor không hiểu "none" theo cách của SVG style)
+//    if (colorStr == "none") {
+//        return {0, 0, 0, 0, true}; // r, g, b, a, isNone
+//    }
+//
+//    // 3. Dùng QColor để parse (Hỗ trợ tên màu, Hex, rgb(), rgba()...)
+//    // Chuyển std::string sang QString
+//    QColor qc(QString::fromStdString(colorStr));
+//
+//    // 4. Kiểm tra xem QColor có dịch được mã màu không
+//    if (qc.isValid()) {
+//        return {
+//            static_cast<unsigned char>(qc.red()), static_cast<unsigned char>(qc.green()),
+//            static_cast<unsigned char>(qc.blue()),
+//            static_cast<unsigned char>(qc.alpha()), // QColor mặc định alpha là 255
+//            false                                   // isNone = false
+//        };
+//    }
+//
+//    // 5. Nếu chuỗi lỗi, trả về mặc định
+//    return defaultValue;
+//}
 
 SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGStyle& parentStyle)
 {
