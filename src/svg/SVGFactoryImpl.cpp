@@ -151,125 +151,57 @@ std::vector<SVGPointF> SVGFactoryImpl::parsePoints(const char* pointsStr)
 
 SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaultValue)
 {
-  if (colorStr.empty()) {
-    return defaultValue;
-  }
-  std::transform(colorStr.begin(), colorStr.end(), colorStr.begin(), ::tolower);
-  if (colorStr == "none") {
-    SVGColor color;
-    color.isNone = true;
-    color.a = 0;
-    return color;
-  }
-  if (colorStr == "black")
-    return {0, 0, 0, 255, false};
-  if (colorStr == "red")
-    return {255, 0, 0, 255, false};
-  if (colorStr == "green")
-    return {0, 128, 0, 255, false};
-  if (colorStr == "blue")
-    return {0, 0, 255, 255, false};
-  if (colorStr == "white")
-    return {255, 255, 255, 255, false};
-  if (colorStr == "yellow")
-      return {255, 255, 0, 255, false};
-  if (colorStr == "gray" || colorStr == "grey")
-      return {128, 128, 128, 255, false};
-  if (colorStr == "skyblue")
-      return {135, 206, 235, 255, false};
-  if (colorStr == "cyan")
-      return {0, 255, 255, 255, false};
-  if (colorStr == "magenta")
-      return {255, 0, 255, 255, false};
-  if (colorStr == "orange")
-      return {255, 165, 0, 255, false};
-  if (colorStr == "purple")
-      return {128, 0, 128, 255, false};
-  if (colorStr == "brown")
-      return {165, 42, 42, 255, false};
-  if (colorStr == "pink")
-      return {255, 192, 203, 255, false};
-  if (colorStr == "lime")
-      return {0, 255, 0, 255, false};
-  if (colorStr == "navy")
-      return {0, 0, 128, 255, false};
-  if (colorStr == "deepskyblue")
-      return {0, 191, 255, 255, false};
-  //... Thêm các màu phổ biến khác nếu cần
-
-  if (colorStr.rfind("rgb(", 0) == 0) {
-    SVGColor color{0, 0, 0, 255, false};
-    try {
-      std::string args = colorStr.substr(4, colorStr.length() - 5);
-      std::stringstream ss(args);
-      int r, g, b;
-      char comma;
-      ss >> r >> comma >> g >> comma >> b;
-      if (ss.fail()) {
+    if (colorStr.empty())
         return defaultValue;
-      }
-      color.r = (unsigned char)std::max(0, std::min(r, 255));
-      color.g = (unsigned char)std::max(0, std::min(g, 255));
-      color.b = (unsigned char)std::max(0, std::min(b, 255));
-      return color;
-    }
-    catch (...) {
-      return defaultValue;
-    }
-  }
 
-  if (colorStr[0] == '#') {
-    SVGColor color{0, 0, 0, 255, false};
-    std::string hex = colorStr.substr(1);
-    try {
-      if (hex.length() == 6) {
-        color.r = (unsigned char)std::stoul(hex.substr(0, 2), nullptr, 16);
-        color.g = (unsigned char)std::stoul(hex.substr(2, 2), nullptr, 16);
-        color.b = (unsigned char)std::stoul(hex.substr(4, 2), nullptr, 16);
-      }
-      else if (hex.length() == 3) {
-        color.r = (unsigned char)std::stoul(hex.substr(0, 1) + hex.substr(0, 1), nullptr, 16);
-        color.g = (unsigned char)std::stoul(hex.substr(1, 1) + hex.substr(1, 1), nullptr, 16);
-        color.b = (unsigned char)std::stoul(hex.substr(2, 2) + hex.substr(2, 2), nullptr, 16);
-      }
-      return color;
+    // 1. Xử lý trường hợp "none" hoặc Gradient "url(...)" 
+    if (colorStr == "none" || colorStr.find("url(") != std::string::npos) {
+        return {0, 0, 0, 0, true}; // isNone = true
     }
-    catch (...) {
-      return defaultValue;
+
+    // 2. Xử lý thủ công cho "rgb(r, g, b)" vì QColor không hỗ trợ cú pháp này(có lẽ)
+    if (colorStr.find("rgb(") != std::string::npos) {
+        SVGColor color{0, 0, 0, 255, false};
+        try {
+            size_t start = colorStr.find('(') + 1;
+            size_t end = colorStr.find(')');
+            if (end == std::string::npos)
+                return defaultValue;
+
+            std::string args = colorStr.substr(start, end - start);
+            // Thay thế dấu phẩy bằng khoảng trắng để dễ parse
+            std::replace(args.begin(), args.end(), ',', ' ');
+
+            std::stringstream ss(args);
+            int r, g, b;
+            ss >> r >> g >> b; // stringstream tự bỏ qua khoảng trắng
+
+            if (!ss.fail()) {
+                // Clamp giá trị trong khoảng 0-255
+                color.r = static_cast<unsigned char>(std::max(0, std::min(r, 255)));
+                color.g = static_cast<unsigned char>(std::max(0, std::min(g, 255)));
+                color.b = static_cast<unsigned char>(std::max(0, std::min(b, 255)));
+                return color;
+            }
+        }
+        catch (...) {
+        }
+        return defaultValue; // Parse lỗi thì trả về mặc định
     }
-  }
-  return defaultValue;
+
+    // 3. Các trường hợp còn lại (Tên màu: "red", Hex: "#F00") cho QColor 
+    QColor qc(QString::fromStdString(colorStr));
+    if (qc.isValid()) {
+        return {static_cast<unsigned char>(qc.red()), static_cast<unsigned char>(qc.green()),
+                static_cast<unsigned char>(qc.blue()), static_cast<unsigned char>(qc.alpha()),
+                false};
+    }
+
+    // Nếu QColor cũng không xác định được
+    return defaultValue;
 }
 
-//SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaultValue)
-//{
-//    // 1. Kiểm tra chuỗi rỗng
-//    if (colorStr.empty()) {
-//        return defaultValue;
-//    }
-//
-//    // 2. Xử lý trường hợp đặc biệt "none" (QColor không hiểu "none" theo cách của SVG style)
-//    if (colorStr == "none") {
-//        return {0, 0, 0, 0, true}; // r, g, b, a, isNone
-//    }
-//
-//    // 3. Dùng QColor để parse (Hỗ trợ tên màu, Hex, rgb(), rgba()...)
-//    // Chuyển std::string sang QString
-//    QColor qc(QString::fromStdString(colorStr));
-//
-//    // 4. Kiểm tra xem QColor có dịch được mã màu không
-//    if (qc.isValid()) {
-//        return {
-//            static_cast<unsigned char>(qc.red()), static_cast<unsigned char>(qc.green()),
-//            static_cast<unsigned char>(qc.blue()),
-//            static_cast<unsigned char>(qc.alpha()), // QColor mặc định alpha là 255
-//            false                                   // isNone = false
-//        };
-//    }
-//
-//    // 5. Nếu chuỗi lỗi, trả về mặc định
-//    return defaultValue;
-//}
+// QColor không đọc được mã rgb nên tự viết thủ công
 
 SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGStyle& parentStyle)
 {
@@ -372,6 +304,39 @@ SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGSty
     }
   }
 
+// 1. Parse Text Anchor (Căn lề)
+  const char* anchor = getAttr(node, "text-anchor");
+  if (anchor) {
+      style.textAnchor = anchor;
+  }
+
+  // 2. Parse Font Style (In nghiêng)
+  const char* fStyle = getAttr(node, "font-style");
+  if (fStyle) {
+      std::string fs(fStyle);
+      // Nếu gặp italic hoặc oblique thì bật cờ isItalic
+      if (fs.find("italic") != std::string::npos || fs.find("oblique") != std::string::npos) {
+          style.isItalic = true;
+      }
+      else if (fs == "normal") {
+          style.isItalic = false;
+      }
+  }
+
+  // 3. Parse Font Weight (In đậm)
+  const char* fWeight = getAttr(node, "font-weight");
+  if (fWeight) {
+      std::string fw(fWeight);
+      if (fw == "bold" || fw == "bolder") {
+          style.isBold = true;
+          style.fontWeight = 75; // Qt::Bold tương đương 75
+      }
+      else if (fw == "normal") {
+          style.isBold = false;
+          style.fontWeight = 50; // Qt::Normal tương đương 50
+      }
+  }
+  
   style.applyDefaults();
   return style;
 }

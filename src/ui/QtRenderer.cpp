@@ -20,6 +20,7 @@
 #include <QTransform>
 #include <algorithm>
 #include <vector>
+#include <QFontMetrics>
 
 namespace
 {
@@ -41,7 +42,7 @@ namespace
         qreal dx = mappedOrigin.x;
         qreal dy = mappedOrigin.y;
 
-        return QTransform(m11, m12, 0.0, m21, m22, 0.0, dx, dy, 1.0);
+        return QTransform(m11, m21, 0.0, m12, m22, 0.0, dx, dy, 1.0);
     }
 
     double normalizedOpacity(SVGNumber value)
@@ -164,6 +165,7 @@ void QtRenderer::visit(SVGPolyline& polyline)
     drawPath(path, polyline.getStyle(), polyline.getTransform());
 }
 
+
 void QtRenderer::visit(SVGText& text)
 {
     if (!prepareForDrawing(text.getStyle())) {
@@ -171,33 +173,69 @@ void QtRenderer::visit(SVGText& text)
     }
 
     const SVGStyle& style = text.getStyle();
-    if (!m_painter) {
-        return;
-    }
 
     m_painter->save();
+
+    // 1. Transform
     QTransform localTransform = toQTransform(text.getTransform());
     QTransform currentWorld = m_painter->worldTransform();
+    QTransform combined = localTransform * currentWorld;
+    m_painter->setWorldTransform(combined);
 
-    m_painter->setWorldTransform(localTransform * currentWorld);
-
+    // 2. Setup Font
     QFont font;
-    if (!style.fontFamily.empty()) {
-        font.setFamily(QString::fromStdString(style.fontFamily));
+    font.setFamily(
+        QString::fromStdString(style.fontFamily.empty() ? "Times New Roman" : style.fontFamily));
+
+    // Set size
+    if (style.fontSize > 0) {
+        font.setPixelSize(static_cast<int>(style.fontSize));
     }
     else {
-        font.setFamily(QStringLiteral("Times New Roman"));
+        font.setPixelSize(16);
     }
-    font.setPointSizeF(style.fontSize > 0 ? style.fontSize : 16.0);
-    m_painter->setFont(font);
 
+    // Set Italic (Nghiêng)
+    if (style.isItalic) {
+        font.setItalic(true);
+    }
+
+    // Set Bold (Đậm)
+    if (style.isBold) {
+        font.setBold(true);
+    }
+
+    // 3. Xử lý căn lề (Text Anchor)
+    QString qText = QString::fromStdString(text.getText());
+    QFontMetrics fm(font);
+    int textWidth = fm.horizontalAdvance(qText); // Đo chiều dài chữ
+
+    double dx = 0.0;
+    if (style.textAnchor == "middle") {
+        dx = -textWidth / 2.0; // Dịch sang trái 50%
+    }
+    else if (style.textAnchor == "end") {
+        dx = -textWidth; // Dịch sang trái 100%
+    }
+
+    // 4. Vẽ Text dưới dạng Path (Để có cả Fill và Stroke)
+    SVGPointF pos = text.getPosition();
+    QPainterPath path;
+    // Cộng thêm dx vào tọa độ x
+    path.addText(pos.x + dx, pos.y, font, qText);
+
+    // 5. Tô màu (Fill)
     if (hasVisibleFill(style)) {
         QColor fillColor = toQColor(style.fillColor, normalizedOpacity(style.fillOpacity));
-        m_painter->setPen(Qt::NoPen);
-        m_painter->setBrush(Qt::NoBrush);
-        SVGPointF pos = text.getPosition();
-        m_painter->setPen(fillColor);
-        m_painter->drawText(QPointF(pos.x, pos.y), QString::fromStdString(text.getText()));
+        m_painter->fillPath(path, QBrush(fillColor));
+    }
+
+    // 6. Vẽ viền (Stroke)
+    if (hasVisibleStroke(style)) {
+        QColor strokeColor = toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity));
+        QPen pen(strokeColor);
+        pen.setWidthF(style.strokeWidth > 0 ? style.strokeWidth : 1.0);
+        m_painter->strokePath(path, pen);
     }
 
     m_painter->restore();

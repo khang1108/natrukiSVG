@@ -25,6 +25,13 @@ public:
   std::string fontFamily;
   SVGNumber fontSize = 16.0; // Kích thước font chữ mặc định
 
+  std::string textAnchor = "start"; // start, middle, end
+
+  bool isItalic = false;    
+  int fontWeight = 50;       // Độ đậm nhạt - Bold
+  bool isBold = false;      
+
+
   /**
    * @brief Lưu thuộc tính 'display'.
    * Mặc định là 'true' (hiển thị).
