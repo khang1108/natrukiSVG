@@ -6,7 +6,7 @@ This project is a C++ application developed by NaTruKi Team from [Faculty of Inf
 
 Welcome to our **SVG Viewer** project! This application is the result of a dedicated effort by the **NaTruKi Team**, students in the **24CTT6** class.
 
-This project was conceived not just to build a functional tool, but as a deep dive into **software architecture.** The entire application is written in **C++**, with a core philosophy centered around the practical application of **OOP design patterns** to solve real-world problems. The **Graphic User Interface (GUI)** is powered by the cross-platform **Qt5 frameworks**, ensuring a responsive and intuitive user experience.
+This project was conceived not just to build a functional tool, but as a deep dive into **software architecture.** The entire application is written in **C++**, with a core philosophy centered around the practical application of **OOP design patterns** to solve real-world problems. The **Graphic User Interface (GUI)** is powered by the cross-platform **Qt6 frameworks**, ensuring a responsive and intuitive user experience.
 
 ## Folder Structure
 
