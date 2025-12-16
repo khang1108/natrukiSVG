@@ -19,8 +19,8 @@
 namespace
 {
     constexpr double kZoomStep = 1.2;
-    constexpr double kMinScale = 0.05;
-    constexpr double kMaxScale = 40.0;
+    constexpr double kMinScale = 0.001; // Allow much smaller scale for very large SVGs
+    constexpr double kMaxScale = 100.0; // Allow larger scale for very small details
 } // namespace
 
 /**
@@ -60,7 +60,9 @@ void CanvasWidget::setDocument(std::unique_ptr<SVGDocument> document)
     // Invalidate cached bounds to force recalculation
     m_hasSceneBounds = false;
     m_hasPaintedWithValidSize = false;
-    zoomReset(); // Reset view to initial state
+    m_fitScale = 1.0;             // Reset fit scale
+    m_lastViewportSize = QSize(); // Reset viewport size tracking
+    zoomReset();                  // Reset view to initial state
 }
 
 /**
@@ -152,6 +154,9 @@ void CanvasWidget::zoomReset()
     m_panOffset = QPointF(0, 0);
     m_rotation = 0.0;
     m_isFlipped = false;
+    // Invalidate fitScale so it gets recalculated with current viewport size
+    m_fitScale = 0.0;
+    m_lastViewportSize = QSize();
     updateSceneBounds();
     update();
 }
@@ -275,6 +280,8 @@ void CanvasWidget::mouseMoveEvent(QMouseEvent* event)
     if (m_isPanning) {
         QPoint delta = event->pos() - m_lastMousePos;
         m_lastMousePos = event->pos();
+        // Pan speed should be consistent regardless of zoom level
+        // The delta is already in screen pixels, which is correct for pan offset
         m_panOffset += delta; // Move view by mouse delta
         update();             // Repaint
     }
@@ -356,17 +363,11 @@ SVGRectF CanvasWidget::calculateDocumentBounds() const
         return {0, 0, 0, 0};
     }
 
-    // Prefer viewBox if available (defines the coordinate system)
-    // However, if content has transforms that place it outside viewBox,
-    // we should calculate bounds from actual content instead
+    // Try to use viewBox if available and reasonable
+    // But also calculate bounds from content to see which is better
     const SVGRectF& viewBox = m_document->getViewBox();
-    // Only use viewBox if we have no children or if viewBox seems reasonable
-    // For now, always calculate from content to handle transforms correctly
-    // if (viewBox.width > 0 && viewBox.height > 0) {
-    //     return viewBox;
-    // }
 
-    // Calculate bounds from actual content
+    // Calculate bounds from actual content (after transforms)
     const auto& children = m_document->getChildren();
     SVGNumber minX = std::numeric_limits<SVGNumber>::infinity();
     SVGNumber minY = std::numeric_limits<SVGNumber>::infinity();
@@ -379,22 +380,39 @@ SVGRectF CanvasWidget::calculateDocumentBounds() const
         if (!child)
             continue;
         SVGRectF box = child->worldBox(); // Get bounds after transforms
-        if (box.width <= 0 && box.height <= 0)
+        // Accept bounds even if width or height is 0 (points/lines)
+        // Only skip if both are negative or invalid
+        if (box.width < 0 || box.height < 0 || !std::isfinite(box.x) || !std::isfinite(box.y))
             continue; // Skip invalid bounds
         hasBounds = true;
         // Update min/max coordinates
         minX = std::min(minX, box.x);
         minY = std::min(minY, box.y);
-        maxX = std::max(maxX, box.x + box.width);
-        maxY = std::max(maxY, box.y + box.height);
+        maxX = std::max(maxX, box.x + std::max(box.width, 0.0));
+        maxY = std::max(maxY, box.y + std::max(box.height, 0.0));
     }
 
     if (!hasBounds) {
+        // No content bounds found, try using viewBox as fallback
+        if (viewBox.width > 0 && viewBox.height > 0) {
+            return viewBox;
+        }
         return {0, 0, 0, 0}; // No valid bounds found
     }
 
-    // Return rectangle with calculated bounds
-    return {minX, minY, maxX - minX, maxY - minY};
+    SVGRectF contentBounds = {minX, minY, maxX - minX, maxY - minY};
+
+    // Ensure bounds have positive dimensions
+    if (contentBounds.width <= 0) {
+        contentBounds.width = 1.0;
+    }
+    if (contentBounds.height <= 0) {
+        contentBounds.height = 1.0;
+    }
+
+    // Use content bounds (they include transforms, which is what we want for rendering)
+    // This ensures we can see all the transformed content, even if it's outside the viewBox
+    return contentBounds;
 }
 
 /**
@@ -439,11 +457,29 @@ QTransform CanvasWidget::buildViewTransform(const QSize& viewportSize) const
                   static_cast<SVGNumber>(viewportSize.height())};
     }
 
-    // Calculate scale to fit content in viewport (90% to leave margin)
-    double fitScaleX = viewportSize.width() / bounds.width;
-    double fitScaleY = viewportSize.height() / bounds.height;
-    double fitScale =
-        0.9 * std::min(fitScaleX, fitScaleY); // Use smaller scale to fit both dimensions
+    // Recalculate fitScale if viewport size changed or if it hasn't been calculated yet
+    double fitScale = m_fitScale;
+    if (viewportSize != m_lastViewportSize || m_fitScale <= 0.0 || !std::isfinite(m_fitScale)) {
+        // Calculate scale to fit content in viewport (98% to leave small margin)
+        // Use a larger margin to ensure full content is visible
+        if (bounds.width > 0 && bounds.height > 0 && std::isfinite(bounds.width) &&
+            std::isfinite(bounds.height)) {
+            double fitScaleX = viewportSize.width() / bounds.width;
+            double fitScaleY = viewportSize.height() / bounds.height;
+            fitScale =
+                0.98 * std::min(fitScaleX, fitScaleY); // Use smaller scale to fit both dimensions
+            // Ensure fitScale is reasonable (not too small or too large)
+            if (fitScale < 1e-10 || fitScale > 1e10 || !std::isfinite(fitScale)) {
+                fitScale = 1.0; // Fallback for extreme values
+            }
+        }
+        else {
+            fitScale = 1.0; // Fallback if bounds are invalid
+        }
+        // Update stored values (need const_cast because this is const method, but we cache values)
+        const_cast<CanvasWidget*>(this)->m_fitScale = fitScale;
+        const_cast<CanvasWidget*>(this)->m_lastViewportSize = viewportSize;
+    }
 
     // Build transformation chain (applied right to left):
     // 1. Translate to scene center (move origin to center of SVG content)
@@ -583,11 +619,16 @@ void CanvasWidget::applyZoom(double factor, const QPointF& viewportAnchor)
  */
 void CanvasWidget::clampScale()
 {
+    // Clamp scale to valid range, but allow very small scales for very large SVGs
     if (m_scale < kMinScale) {
         m_scale = kMinScale; // Clamp to minimum
     }
     else if (m_scale > kMaxScale) {
         m_scale = kMaxScale; // Clamp to maximum
+    }
+    // Also ensure scale is finite
+    if (!std::isfinite(m_scale)) {
+        m_scale = 1.0; // Reset to default if invalid
     }
 }
 
@@ -648,6 +689,9 @@ void CanvasWidget::resizeEvent(QResizeEvent* event)
     QWidget::resizeEvent(event);
     // Update when widget is resized to ensure correct transform
     if (m_document && event->size().isValid()) {
+        // Invalidate fitScale so it gets recalculated with new viewport size
+        m_fitScale = 0.0;
+        m_lastViewportSize = QSize();
         update();
     }
 }

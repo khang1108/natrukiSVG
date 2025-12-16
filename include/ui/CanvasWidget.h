@@ -64,6 +64,8 @@ class CanvasWidget : public QWidget
     SVGRectF m_sceneBounds{0, 0, 0, 0};
     bool m_hasSceneBounds = false;
     bool m_hasPaintedWithValidSize = false;
+    double m_fitScale = 1.0;  // Initial scale to fit content in viewport
+    QSize m_lastViewportSize; // Track viewport size to recalculate fitScale when it changes
 
   public:
     /**
