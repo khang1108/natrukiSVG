@@ -10,7 +10,9 @@
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QImage>
+#include <QInputDialog>
 #include <QMessageBox>
+#include <QMouseEvent>
 #include <memory>
 
 /**
@@ -34,6 +36,9 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_initialSize = size();
     statusBar()->hide();
     initializeCanvas();
+
+    // Install event filter for scaleLabel to handle double-click
+    ui->scaleLabel->installEventFilter(this);
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -351,6 +356,7 @@ void MainWindow::on_Zoom_clicked()
         return;
     }
     m_canvas->zoomReset();
+    updateScaleLabel();
 }
 
 /**
@@ -362,6 +368,7 @@ void MainWindow::on_ZoomOut_clicked()
         return;
     }
     m_canvas->zoomOut();
+    updateScaleLabel();
 }
 
 /**
@@ -373,4 +380,55 @@ void MainWindow::on_ZoomIn_clicked()
         return;
     }
     m_canvas->zoomIn();
+    updateScaleLabel();
+}
+
+/**
+ * @brief Updates the scale label to show current zoom percentage.
+ */
+void MainWindow::updateScaleLabel()
+{
+    if (!m_canvas) {
+        return;
+    }
+    double scale = m_canvas->getScale();
+    int percentage = static_cast<int>(scale * 100);
+    ui->scaleLabel->setText(QString("%1%").arg(percentage));
+}
+
+/**
+ * @brief Event filter to handle double-click on scaleLabel for manual scale input.
+ */
+bool MainWindow::eventFilter(QObject* obj, QEvent* event)
+{
+    if (obj == ui->scaleLabel && event->type() == QEvent::MouseButtonDblClick) {
+        QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            if (!m_canvas || !m_canvas->hasDocument()) {
+                return QMainWindow::eventFilter(obj, event);
+            }
+
+            // Get current scale percentage
+            int currentPercentage = static_cast<int>(m_canvas->getScale() * 100);
+
+            // Show input dialog for scale percentage
+            bool ok;
+            int newPercentage =
+                QInputDialog::getInt(this, tr("Set Scale"), tr("Enter scale percentage (5-4000%):"),
+                                     currentPercentage, // current value
+                                     5,                 // minimum (0.05x)
+                                     4000,              // maximum (40x)
+                                     1,                 // step
+                                     &ok);
+
+            if (ok) {
+                double newScale = newPercentage / 100.0;
+                m_canvas->setScale(newScale);
+                updateScaleLabel();
+            }
+
+            return true; // Event handled
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
 }

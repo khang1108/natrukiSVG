@@ -157,6 +157,23 @@ void CanvasWidget::zoomReset()
 }
 
 /**
+ * @brief Sets the scale to a specific value.
+ *
+ * Algorithm:
+ * - Sets m_scale to the specified value
+ * - Clamps the scale to valid range (kMinScale to kMaxScale)
+ * - Triggers repaint
+ *
+ * @param scale The desired scale value (e.g., 0.48 for 48%)
+ */
+void CanvasWidget::setScale(double scale)
+{
+    m_scale = scale;
+    clampScale();
+    update();
+}
+
+/**
  * @brief Rotates the view by 90 degrees (clockwise).
  *
  * Algorithm:

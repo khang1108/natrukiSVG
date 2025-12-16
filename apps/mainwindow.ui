@@ -415,6 +415,31 @@
         <string/>
        </property>
       </widget>
+      <widget class="QLabel" name="scaleLabel">
+       <property name="geometry">
+        <rect>
+         <x>825</x>
+         <y>934</y>
+         <width>98</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#scaleLabel {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>100%</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="About_2">

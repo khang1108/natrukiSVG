@@ -94,6 +94,16 @@ class CanvasWidget : public QWidget
     bool hasDocument() const;
 
     /**
+     * @brief Lấy giá trị scale hiện tại.
+     */
+    double getScale() const { return m_scale; }
+
+    /**
+     * @brief Đặt giá trị scale thủ công.
+     */
+    void setScale(double scale);
+
+    /**
      * @brief Kết xuất tài liệu hiện tại sang một QImage.
      * @param size Kích thước ảnh đầu ra. Nếu size rỗng sẽ dùng kích thước widget.
      */
