@@ -7,6 +7,7 @@
 #include "rapidxml.hpp"
 
 #include <fstream>
+#include <limits>
 #include <sstream>
 #include <stdexcept>
 #include <vector>
@@ -117,48 +118,48 @@ bool SVGDocument::load(const std::string& filePath)
     rapidxml::xml_document<> doc;
     std::vector<char> buffer;
 
-    m_children.clear(); // Clear existing content
+    m_children.clear();
 
-    // Open and read file
     std::ifstream file(filePath);
     if (!file) {
 
-        return false; // File not found or cannot be opened
+        return false;
     }
 
-    // Read entire file into buffer
     buffer.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-    buffer.push_back('\0'); // Null-terminate for RapidXML
+    buffer.push_back('\0');
 
-    // Parse XML
     try {
         doc.parse<0>(&buffer[0]);
     }
     catch (rapidxml::parse_error& e) {
 
-        return false; // XML parsing failed
+        return false;
     }
 
-    // Find root <svg> element
     rapidxml::xml_node<char>* rootNode = doc.first_node("svg");
     if (!rootNode) {
 
-        return false; // No <svg> root element found
+        return false;
     }
 
-    // Parse viewBox attribute
     rapidxml::xml_attribute<char>* vbAttr = rootNode->first_attribute("viewBox");
     if (vbAttr) {
         this->m_viewBox = parseViewBox(vbAttr->value());
     }
 
-    // Recursively parse all child elements
     for (rapidxml::xml_node<char>* childNode = rootNode->first_node(); childNode;
          childNode = childNode->next_sibling()) {
 
-        parseRecursive(childNode, nullptr); // nullptr = top-level, no parent
+        parseRecursive(childNode, nullptr);
     }
-
+    if (!m_children.empty()) {
+        SVGRectF contentBox = getContentBoundingBox();
+        // Chỉ cập nhật nếu tìm được vùng bao hợp lệ (width, height > 0)
+        if (contentBox.width > 0 && contentBox.height > 0) {
+            m_viewBox = contentBox;
+        }
+    }
     return true;
 }
 
@@ -195,34 +196,32 @@ bool SVGDocument::load(const std::string& filePath)
 void SVGDocument::parseRecursive(rapidxml::xml_node<char>* xmlNode, SVGElement* parentElement)
 {
 
-    // Create element from XML node (factory handles parsing)
     std::unique_ptr<SVGElement> newElement = m_factory->createElement(xmlNode, parentElement);
 
     if (!newElement) {
-        return; // Failed to create element (unknown tag, etc.)
+        return;
     }
 
     SVGElement* newElementPtr = newElement.get();
     SVGGroup* group = dynamic_cast<SVGGroup*>(newElementPtr);
     if (group) {
-        // If this is a group, recursively parse its children
+
         for (rapidxml::xml_node<char>* childNode = xmlNode->first_node(); childNode;
              childNode = childNode->next_sibling()) {
 
-            parseRecursive(childNode, group); // Pass group as parent
+            parseRecursive(childNode, group);
         }
     }
 
-    // Add element to its parent
     if (parentElement) {
-        // Has a parent - add to parent group
+
         SVGGroup* parentGroup = dynamic_cast<SVGGroup*>(parentElement);
         if (parentGroup) {
             parentGroup->addChild(std::move(newElement));
         }
     }
     else {
-        // Top-level element - add to document
+
         this->addChild(std::move(newElement));
     }
 }
@@ -252,33 +251,72 @@ void SVGDocument::parseRecursive(rapidxml::xml_node<char>* xmlNode, SVGElement* 
 SVGRectF SVGDocument::parseViewBox(const char* viewBoxStr) const
 {
     if (!viewBoxStr || *viewBoxStr == '\0') {
-        return {0, 0, 0, 0}; // Invalid input
+        return {0, 0, 0, 0};
     }
 
     std::stringstream ss(viewBoxStr);
     SVGNumber minX, minY, width, height;
 
-    // Parse minX
     ss >> minX;
-    // Skip separators (whitespace or commas)
     while (ss.peek() == ',' || std::isspace(ss.peek())) {
         ss.get();
     }
-    // Parse minY
     ss >> minY;
     while (ss.peek() == ',' || std::isspace(ss.peek())) {
         ss.get();
     }
-    // Parse width
     ss >> width;
     while (ss.peek() == ',' || std::isspace(ss.peek())) {
         ss.get();
     }
-    // Parse height
     ss >> height;
 
     if (ss.fail())
-        return {0, 0, 0, 0}; // Parsing failed
+        return {0, 0, 0, 0};
 
     return {minX, minY, width, height};
+}
+
+// --- HÀM MỚI: Tính Bounding Box của toàn bộ tài liệu ---
+SVGRectF SVGDocument::getContentBoundingBox() const
+{
+    SVGNumber minX = std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber minY = std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber maxX = -std::numeric_limits<SVGNumber>::infinity();
+    SVGNumber maxY = -std::numeric_limits<SVGNumber>::infinity();
+    bool hasContent = false;
+
+    for (const auto& child : m_children) {
+        if (!child)
+            continue;
+
+        // Lấy bounding box của element (đã tính cả transform)
+        SVGRectF bbox = child->worldBox();
+
+        // Bỏ qua các phần tử không có kích thước (như group rỗng hoặc định nghĩa)
+        if (bbox.width <= 0 || bbox.height <= 0)
+            continue;
+
+        if (bbox.x < minX)
+            minX = bbox.x;
+        if (bbox.y < minY)
+            minY = bbox.y;
+        if (bbox.x + bbox.width > maxX)
+            maxX = bbox.x + bbox.width;
+        if (bbox.y + bbox.height > maxY)
+            maxY = bbox.y + bbox.height;
+
+        hasContent = true;
+    }
+
+    if (!hasContent) {
+        return {0, 0, 0, 0};
+    }
+
+    // Thêm một chút padding (lề) khoảng 5% để hình không sát mép màn hình
+    SVGNumber paddingX = (maxX - minX) * 0.05;
+    SVGNumber paddingY = (maxY - minY) * 0.05;
+
+    return {minX - paddingX, minY - paddingY, (maxX - minX) + 2 * paddingX,
+            (maxY - minY) + 2 * paddingY};
 }

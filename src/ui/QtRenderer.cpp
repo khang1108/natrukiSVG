@@ -1,4 +1,4 @@
-#include "ui/QtRenderer.h"
+﻿#include "ui/QtRenderer.h"
 
 #include "svg/SVGCircle.h"
 #include "svg/SVGEllipse.h"
@@ -14,6 +14,7 @@
 
 #include <QColor>
 #include <QFont>
+#include <QFontMetrics>
 #include <QPainter>
 #include <QPainterPath>
 #include <QPolygonF>
@@ -72,7 +73,7 @@ namespace
         qreal dx = mappedOrigin.x;              // Translation X
         qreal dy = mappedOrigin.y;              // Translation Y
 
-        return QTransform(m11, m12, 0.0, m21, m22, 0.0, dx, dy, 1.0);
+        return QTransform(m11, m21, 0.0, m12, m22, 0.0, dx, dy, 1.0);
     }
 
     double normalizedOpacity(SVGNumber value)
@@ -908,42 +909,77 @@ void QtRenderer::visit(SVGPolyline& polyline)
     drawPath(path, polyline.getStyle(), polyline.getTransform());
 }
 
-/**
- * @brief Renders an SVG text element.
- *
- * Algorithm:
- * 1. Check if element should be drawn (has visible fill or stroke)
- * 2. Get font properties from style (family, size)
- * 3. Create QFont with properties (default to "Times New Roman" if no family)
- * 4. Convert text to QPainterPath using addText (creates vector outline)
- * 5. Draw the path with style and transform applied
- *
- * Why convert text to path?
- * - Text as path ensures it scales and transforms correctly with other shapes
- * - Text position (x, y) is the baseline start position
- * - The path represents the text as vector outlines, not rasterized text
- *
- * @param text The text element to render
- */
 void QtRenderer::visit(SVGText& text)
 {
     if (!prepareForDrawing(text.getStyle()))
         return; // Nothing to draw
     const SVGStyle& style = text.getStyle();
 
-    // Create font from style
-    QFont font;
-    if (!style.fontFamily.empty())
-        font.setFamily(QString::fromStdString(style.fontFamily));
-    else
-        font.setFamily(QStringLiteral("Times New Roman")); // Default font
-    font.setPointSizeF(style.fontSize > 0 ? style.fontSize : 16.0);
+    m_painter->save();
 
-    // Convert text to path (vector outline)
+    // 1. Transform
+    QTransform localTransform = toQTransform(text.getTransform());
+    QTransform currentWorld = m_painter->worldTransform();
+    QTransform combined = localTransform * currentWorld;
+    m_painter->setWorldTransform(combined);
+
+    // 2. Setup Font
+    QFont font;
+    font.setFamily(
+        QString::fromStdString(style.fontFamily.empty() ? "Times New Roman" : style.fontFamily));
+
+    // Set size
+    if (style.fontSize > 0) {
+        font.setPixelSize(static_cast<int>(style.fontSize));
+    }
+    else {
+        font.setPixelSize(16);
+    }
+
+    // Set Italic (Nghiêng)
+    if (style.isItalic) {
+        font.setItalic(true);
+    }
+
+    // Set Bold (Đậm)
+    if (style.isBold) {
+        font.setBold(true);
+    }
+
+    // 3. Xử lý căn lề (Text Anchor)
+    QString qText = QString::fromStdString(text.getText());
+    QFontMetrics fm(font);
+    int textWidth = fm.horizontalAdvance(qText); // Đo chiều dài chữ
+
+    double dx = 0.0;
+    if (style.textAnchor == "middle") {
+        dx = -textWidth / 2.0; // Dịch sang trái 50%
+    }
+    else if (style.textAnchor == "end") {
+        dx = -textWidth; // Dịch sang trái 100%
+    }
+
+    // 4. Vẽ Text dưới dạng Path (Để có cả Fill và Stroke)
     SVGPointF pos = text.getPosition();
     QPainterPath path;
-    path.addText(QPointF(pos.x, pos.y), font, QString::fromStdString(text.getText()));
-    drawPath(path, style, text.getTransform());
+    // Cộng thêm dx vào tọa độ x
+    path.addText(pos.x + dx, pos.y, font, qText);
+
+    // 5. Tô màu (Fill)
+    if (hasVisibleFill(style)) {
+        QColor fillColor = toQColor(style.fillColor, normalizedOpacity(style.fillOpacity));
+        m_painter->fillPath(path, QBrush(fillColor));
+    }
+
+    // 6. Vẽ viền (Stroke)
+    if (hasVisibleStroke(style)) {
+        QColor strokeColor = toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity));
+        QPen pen(strokeColor);
+        pen.setWidthF(style.strokeWidth > 0 ? style.strokeWidth : 1.0);
+        m_painter->strokePath(path, pen);
+    }
+
+    m_painter->restore();
 }
 
 /**
@@ -1001,11 +1037,11 @@ void QtRenderer::visit(SVGLine& line)
         return; // Lines need visible stroke
     }
 
-    m_painter->save(); // Save current state
-    // Apply element's transform
-    QTransform transform = m_painter->worldTransform();
-    transform *= toQTransform(line.getTransform());
-    m_painter->setWorldTransform(transform);
+    m_painter->save();
+    QTransform localTransform = toQTransform(line.getTransform());
+    QTransform currentWorld = m_painter->worldTransform();
+
+    m_painter->setWorldTransform(localTransform * currentWorld);
 
     // Create pen for stroke
     QPen pen(toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity)));
@@ -1035,66 +1071,157 @@ void QtRenderer::visit(SVGLine& line)
  * - Handles both absolute (uppercase) and relative (lowercase) commands
  * - Builds a QPainterPath representing the complete path
  *
- * @param path The path element to render
+ * @param svgPath The path element to render
  */
-void QtRenderer::visit(SVGPath& path)
+void QtRenderer::visit(SVGPath& svgPath)
 {
-    if (!prepareForDrawing(path.getStyle())) {
-        return; // Nothing to draw
+    if (!prepareForDrawing(svgPath.getStyle())) {
+        return;
     }
 
-    const auto& d = path.getPath();
-    if (d.empty()) {
-        return; // No path data
+    const auto& commands = svgPath.getCommands();
+    if (commands.empty())
+        return;
+
+    QPainterPath path;
+
+    QPointF currentPos(0, 0);
+
+    QPointF lastControlPoint(0, 0);
+    char lastCmd = '\0';
+
+    for (const auto& cmd : commands) {
+        bool isRelative = islower(cmd.type);
+        char type = tolower(cmd.type);
+        const auto& args = cmd.args;
+
+        switch (type) {
+        case 'm': { // MoveTo (x, y)
+            double x = args[0];
+            double y = args[1];
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.moveTo(x, y);
+            currentPos = QPointF(x, y);
+            lastControlPoint = currentPos; // Reset control point
+            break;
+        }
+        case 'l': { // LineTo (x, y)
+            double x = args[0];
+            double y = args[1];
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.lineTo(x, y);
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 'h': { // Horizontal LineTo (x)
+            double x = args[0];
+            if (isRelative)
+                x += currentPos.x();
+            path.lineTo(x, currentPos.y());
+            currentPos.setX(x);
+            break;
+        }
+        case 'v': { // Vertical LineTo (y)
+            double y = args[0];
+            if (isRelative)
+                y += currentPos.y();
+            path.lineTo(currentPos.x(), y);
+            currentPos.setY(y);
+            break;
+        }
+        case 'c': { // Cubic Bezier (x1, y1, x2, y2, x, y)
+            double x1 = args[0], y1 = args[1];
+            double x2 = args[2], y2 = args[3];
+            double x = args[4], y = args[5];
+
+            if (isRelative) {
+                x1 += currentPos.x();
+                y1 += currentPos.y();
+                x2 += currentPos.x();
+                y2 += currentPos.y();
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.cubicTo(x1, y1, x2, y2, x, y);
+            lastControlPoint = QPointF(x2, y2); // Lưu điểm điều khiển thứ 2
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 's': { // Smooth Cubic (x2, y2, x, y)
+            // Điểm điều khiển 1 là điểm phản chiếu của lastControlPoint qua currentPos
+            double x1, y1;
+            if (lastCmd == 'c' || lastCmd == 's') {
+                x1 = 2 * currentPos.x() - lastControlPoint.x();
+                y1 = 2 * currentPos.y() - lastControlPoint.y();
+            }
+            else {
+                x1 = currentPos.x();
+                y1 = currentPos.y();
+            }
+
+            double x2 = args[0], y2 = args[1];
+            double x = args[2], y = args[3];
+
+            if (isRelative) {
+                x2 += currentPos.x();
+                y2 += currentPos.y();
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+
+            path.cubicTo(x1, y1, x2, y2, x, y);
+            lastControlPoint = QPointF(x2, y2);
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 'z': { // ClosePath
+            path.closeSubpath();
+            // Sau khi close, currentPos thường quay về điểm MoveTo gần nhất
+            break;
+        }
+            // TODO: Thêm case 'q', 't', 'a' nếu cần sau này.
+        }
+
+        // Cập nhật lastCmd để dùng cho logic Smooth Curve
+        if (type != 'm')
+            lastCmd = type;
     }
 
-    // Parse path data and build QPainterPath
-    QPainterPath qPath = buildPainterPath(d);
-    if (qPath.isEmpty()) {
-        return; // Path parsing failed or empty
-    }
-    drawPath(qPath, path.getStyle(), path.getTransform());
+    // Gọi hàm vẽ chung
+    drawPath(path, svgPath.getStyle(), svgPath.getTransform());
 }
 
-/**
- * @brief Called when entering a group element (Visitor pattern).
- *
- * Algorithm:
- * - Currently does nothing because transforms are accumulated during parsing
- * - Each child element already has the group's transform applied
- * - This avoids double-applying transforms
- *
- * Note: If transforms were not accumulated during parsing, we would:
- * 1. Save painter state
- * 2. Apply group's transform
- * 3. Render children (they would inherit the transform)
- * 4. Restore painter state in visitGroupEnd
- *
- * @param group The group element being entered
- */
 void QtRenderer::visitGroupBegin(SVGGroup& group)
 {
-    Q_UNUSED(group);
-    // Note: Transforms are already accumulated during parsing,
-    // so each child element already has the group's transform.
-    // We don't need to apply it here to avoid double-application.
-    // However, we might need to save/restore for style inheritance.
-    // For now, we do nothing since transforms are accumulated.
+    if (!m_painter) {
+        return;
+    }
+    m_painter->save();
+
+    SVGTransform groupTransform = group.getTransform();
+
+    QTransform localTransform = toQTransform(groupTransform);
+    QTransform currentWorld = m_painter->worldTransform();
+
+    QTransform combined = localTransform * currentWorld;
+
+    m_painter->setWorldTransform(combined);
 }
 
-/**
- * @brief Called when leaving a group element (Visitor pattern).
- *
- * Algorithm:
- * - Currently does nothing (see visitGroupBegin for explanation)
- * - If transforms were applied in visitGroupBegin, we would restore painter state here
- *
- * @param group The group element being left
- */
 void QtRenderer::visitGroupEnd(SVGGroup& group)
 {
     Q_UNUSED(group);
-    // See visitGroupBegin - no action needed
+    if (!m_painter) {
+        return;
+    }
+
+    m_painter->restore();
 }
 
 /**
@@ -1154,10 +1281,12 @@ void QtRenderer::drawPath(const QPainterPath& path, const SVGStyle& style,
         return;
     }
 
-    m_painter->save(); // Save current state
-    // Apply element's transform
-    QTransform combined = m_painter->worldTransform();
-    combined *= toQTransform(transform);
+    m_painter->save();
+    QTransform localTransform = toQTransform(transform);
+    QTransform currentWorld = m_painter->worldTransform();
+
+    // Đảo ngược thứ tự: Local * World
+    QTransform combined = localTransform * currentWorld;
     m_painter->setWorldTransform(combined);
 
     // Create brush for fill

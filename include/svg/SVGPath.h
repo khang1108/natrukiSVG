@@ -2,32 +2,33 @@
 #define SVG_PATH_H
 
 #include "SVGElement.h"
-#include "Types.h"
+#include "Types.h" // Chứa định nghĩa SVGPointF, SVGNumber
 
 #include <string>
+#include <vector>
 
-/**
- * @brief Đại diện cho phần tử <path>.
- */
-class SVGPath : public SVGElement
+struct PathCommand
 {
-  private:
-    std::string m_pathData;
-    SVGRectF m_localBounds;
-
-    void computeLocalBounds();
-    static void skipSeparators(const std::string& data, size_t& index);
-    static bool readNumber(const std::string& data, size_t& index, SVGNumber& value);
-
-  public:
-    explicit SVGPath(const std::string& pathData);
-
-    void accept(NodeVisitor& visitor) override { visitor.visit(*this); }
-
-    SVGRectF localBox() const override;
-    SVGRectF worldBox() const override;
-
-    const std::string& getPath() const { return m_pathData; }
+    char type;                   // M, L, C, Z, ...
+    std::vector<SVGNumber> args; // Danh sách tham số đi kèm
 };
 
-#endif // SVG_PATH_H
+class SVGPath : public SVGElement
+{
+  public:
+    SVGPath(const std::string& dData);
+
+    void accept(NodeVisitor& visitor) override;
+    SVGRectF localBox() const override;
+
+    // Getter để Renderer lấy dữ liệu
+    const std::vector<PathCommand>& getCommands() const;
+
+  private:
+    void parseD(const std::string& d); // Hàm tách chuỗi d="..."
+
+    std::vector<PathCommand> m_commands;
+    SVGRectF m_cachedBBox; // Lưu cache bbox để không phải tính lại nhiều lần
+};
+
+#endif

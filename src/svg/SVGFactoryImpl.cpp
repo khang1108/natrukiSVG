@@ -1,4 +1,4 @@
-#include "SVGFactoryImpl.h"
+﻿#include "SVGFactoryImpl.h"
 
 #include "SVGCircle.h"
 #include "SVGEllipse.h"
@@ -8,6 +8,7 @@
 #include "SVGPolygon.h"
 #include "SVGPolyline.h"
 #include "SVGRect.h"
+#include "SVGPath.h"
 #include "SVGText.h"
 
 #include <algorithm>
@@ -16,39 +17,9 @@
 #include <sstream>
 #include <stdexcept>
 
-/**
- * @brief Creates an SVGElement from an XML node (Factory Method pattern).
- *
- * Algorithm:
- * 1. Extract element name (tag name) from XML node
- * 2. Get parent's style and transform for inheritance
- * 3. Based on element name, create the appropriate SVGElement subclass:
- *    - "rect": Parse x, y, width, height, rx, ry -> create SVGRect
- *    - "circle": Parse cx, cy, r -> create SVGCircle
- *    - "ellipse": Parse cx, cy, rx, ry -> create SVGEllipse
- *    - "line": Parse x1, y1, x2, y2 -> create SVGLine
- *    - "polygon": Parse points attribute -> create SVGPolygon
- *    - "polyline": Parse points attribute -> create SVGPolyline
- *    - "g": Create SVGGroup (no attributes needed)
- *    - "path": Parse d attribute -> create SVGPath
- *    - "text": Parse x, y and text content -> create SVGText
- * 4. Parse style from XML attributes (inheriting from parent)
- * 5. Parse transform from XML attributes (accumulating from parent)
- * 6. Apply style and transform to the element
- *
- * Style inheritance:
- * - Child elements inherit parent's style if not explicitly set
- * - parseStyle() handles the inheritance logic
- *
- * Transform accumulation:
- * - Child transforms are multiplied with parent transforms
- * - Order: parent transform first, then child transform
- * - parseTransform() handles the accumulation
- *
- * @param node The XML node to parse
- * @param parentElement The parent SVG element (for style/transform inheritance)
- * @return Unique pointer to the created element, or nullptr if unknown element type
- */
+#include <QColor>
+#include <QString>
+
 std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<char>* node,
                                                           SVGElement* parentElement)
 {
@@ -64,62 +35,58 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
 
     std::unique_ptr<SVGElement> newElement = nullptr;
 
-    // Create element based on tag name
-    if (strcmp(name, "rect") == 0) {
-        SVGRectF rect = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0),
-                         parseNumber(getAttr(node, "width"), 0.0),
-                         parseNumber(getAttr(node, "height"), 0.0)};
-        SVGNumber rx = parseNumber(getAttr(node, "rx"), 0.0);
-        SVGNumber ry = parseNumber(getAttr(node, "ry"), 0.0);
-        newElement = std::make_unique<SVGRect>(rect, rx, ry);
-    }
-    else if (strcmp(name, "circle") == 0) {
-        SVGPointF center = {parseNumber(getAttr(node, "cx"), 0.0),
-                            parseNumber(getAttr(node, "cy"), 0.0)};
-        SVGNumber r = parseNumber(getAttr(node, "r"), 0.0);
-        newElement = std::make_unique<SVGCircle>(center, r);
-    }
-    else if (strcmp(name, "ellipse") == 0) {
-        SVGPointF center = {parseNumber(getAttr(node, "cx"), 0.0),
-                            parseNumber(getAttr(node, "cy"), 0.0)};
-        SVGNumber rx = parseNumber(getAttr(node, "rx"), 0.0);
-        SVGNumber ry = parseNumber(getAttr(node, "ry"), 0.0);
-        newElement = std::make_unique<SVGEllipse>(center, rx, ry);
-    }
-    else if (strcmp(name, "line") == 0) {
-        SVGPointF p1 = {parseNumber(getAttr(node, "x1"), 0.0),
-                        parseNumber(getAttr(node, "y1"), 0.0)};
-        SVGPointF p2 = {parseNumber(getAttr(node, "x2"), 0.0),
-                        parseNumber(getAttr(node, "y2"), 0.0)};
-        newElement = std::make_unique<SVGLine>(p1, p2);
-    }
-    else if (strcmp(name, "polygon") == 0) {
-        newElement = std::make_unique<SVGPolygon>(parsePoints(getAttr(node, "points")));
-    }
-    else if (strcmp(name, "polyline") == 0) {
-        newElement = std::make_unique<SVGPolyline>(parsePoints(getAttr(node, "points")));
-    }
-    else if (strcmp(name, "g") == 0) {
-        newElement = std::make_unique<SVGGroup>();
-    }
-    else if (strcmp(name, "path") == 0) {
-        const char* d = getAttr(node, "d");
-        newElement = std::make_unique<SVGPath>(d ? std::string(d) : std::string());
-    }
-    else if (strcmp(name, "text") == 0) {
-        SVGPointF pos = {parseNumber(getAttr(node, "x"), 0.0),
-                         parseNumber(getAttr(node, "y"), 0.0)};
-        newElement = std::make_unique<SVGText>(pos, node->value());
-    }
+  if (strcmp(name, "rect") == 0) {
+    SVGRectF rect = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0),
+                     parseNumber(getAttr(node, "width"), 0.0),
+                     parseNumber(getAttr(node, "height"), 0.0)};
+    SVGNumber rx = parseNumber(getAttr(node, "rx"), 0.0);
+    SVGNumber ry = parseNumber(getAttr(node, "ry"), 0.0);
+    newElement = std::make_unique<SVGRect>(rect, rx, ry);
+  }
+  else if (strcmp(name, "circle") == 0) {
+    SVGPointF center = {parseNumber(getAttr(node, "cx"), 0.0),
+                        parseNumber(getAttr(node, "cy"), 0.0)};
+    SVGNumber r = parseNumber(getAttr(node, "r"), 0.0);
+    newElement = std::make_unique<SVGCircle>(center, r);
+  }
+  else if (strcmp(name, "ellipse") == 0) {
+    SVGPointF center = {parseNumber(getAttr(node, "cx"), 0.0),
+                        parseNumber(getAttr(node, "cy"), 0.0)};
+    SVGNumber rx = parseNumber(getAttr(node, "rx"), 0.0);
+    SVGNumber ry = parseNumber(getAttr(node, "ry"), 0.0);
+    newElement = std::make_unique<SVGEllipse>(center, rx, ry);
+  }
+  else if (strcmp(name, "line") == 0) {
+    SVGPointF p1 = {parseNumber(getAttr(node, "x1"), 0.0), parseNumber(getAttr(node, "y1"), 0.0)};
+    SVGPointF p2 = {parseNumber(getAttr(node, "x2"), 0.0), parseNumber(getAttr(node, "y2"), 0.0)};
+    newElement = std::make_unique<SVGLine>(p1, p2);
+  }
+  else if (strcmp(name, "polygon") == 0) {
+    newElement = std::make_unique<SVGPolygon>(parsePoints(getAttr(node, "points")));
+  }
+  else if (strcmp(name, "polyline") == 0) {
+    newElement = std::make_unique<SVGPolyline>(parsePoints(getAttr(node, "points")));
+  }
+  else if (strcmp(name, "path") == 0) {
+      const char* dAttr = getAttr(node, "d");
+      newElement = std::make_unique<SVGPath>(dAttr);
+  }
+  else if (strcmp(name, "g") == 0) {
+    newElement = std::make_unique<SVGGroup>();
+  }
+  else if (strcmp(name, "text") == 0) {
+    SVGPointF pos = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0)};
+    newElement = std::make_unique<SVGText>(pos, node->value());
+  }
 
     // Apply style and transform to the element
     if (newElement) {
         SVGStyle style = parseStyle(node, parentStyle);
         newElement->setStyle(style);
 
-        SVGTransform transform = parseTransform(node, parentTransform);
-        newElement->setTransform(transform);
-    }
+    SVGTransform transform = parseTransform(node, SVGTransform());
+    newElement->setTransform(transform);
+  }
 
     return newElement;
 }
@@ -278,111 +245,58 @@ std::vector<SVGPointF> SVGFactoryImpl::parsePoints(const char* pointsStr)
  */
 SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaultValue)
 {
-    if (colorStr.empty()) {
+    if (colorStr.empty())
         return defaultValue;
-    }
-    // Convert to lowercase for case-insensitive matching
-    std::transform(colorStr.begin(), colorStr.end(), colorStr.begin(), ::tolower);
 
-    // Check for "none" (transparent/no color)
-    if (colorStr == "none") {
-        SVGColor color;
-        color.isNone = true;
-        color.a = 0;
-        return color;
+    // 1. Xử lý trường hợp "none" hoặc Gradient "url(...)" 
+    if (colorStr == "none" || colorStr.find("url(") != std::string::npos) {
+        return {0, 0, 0, 0, true}; // isNone = true
     }
 
-    // Check for named colors
-    if (colorStr == "black")
-        return {0, 0, 0, 255, false};
-    if (colorStr == "red")
-        return {255, 0, 0, 255, false};
-    if (colorStr == "green")
-        return {0, 128, 0, 255, false};
-    if (colorStr == "blue")
-        return {0, 0, 255, 255, false};
-    if (colorStr == "white")
-        return {255, 255, 255, 255, false};
-
-    // Check for RGB format: "rgb(r, g, b)"
-    if (colorStr.rfind("rgb(", 0) == 0) {
+    // 2. Xử lý thủ công cho "rgb(r, g, b)" vì QColor không hỗ trợ cú pháp này(có lẽ)
+    if (colorStr.find("rgb(") != std::string::npos) {
         SVGColor color{0, 0, 0, 255, false};
         try {
-            // Extract arguments: "rgb(255, 0, 0)" -> "255, 0, 0"
-            std::string args = colorStr.substr(4, colorStr.length() - 5);
+            size_t start = colorStr.find('(') + 1;
+            size_t end = colorStr.find(')');
+            if (end == std::string::npos)
+                return defaultValue;
+
+            std::string args = colorStr.substr(start, end - start);
+            // Thay thế dấu phẩy bằng khoảng trắng để dễ parse
+            std::replace(args.begin(), args.end(), ',', ' ');
+
             std::stringstream ss(args);
             int r, g, b;
-            char comma;
-            ss >> r >> comma >> g >> comma >> b;
-            if (ss.fail()) {
-                return defaultValue;
+            ss >> r >> g >> b; // stringstream tự bỏ qua khoảng trắng
+
+            if (!ss.fail()) {
+                // Clamp giá trị trong khoảng 0-255
+                color.r = static_cast<unsigned char>(std::max(0, std::min(r, 255)));
+                color.g = static_cast<unsigned char>(std::max(0, std::min(g, 255)));
+                color.b = static_cast<unsigned char>(std::max(0, std::min(b, 255)));
+                return color;
             }
-            // Clamp values to [0, 255]
-            color.r = (unsigned char)std::max(0, std::min(r, 255));
-            color.g = (unsigned char)std::max(0, std::min(g, 255));
-            color.b = (unsigned char)std::max(0, std::min(b, 255));
-            return color;
         }
         catch (...) {
-            return defaultValue;
         }
+        return defaultValue; // Parse lỗi thì trả về mặc định
     }
 
-    // Check for hex format: "#RRGGBB" or "#RGB"
-    if (colorStr[0] == '#') {
-        SVGColor color{0, 0, 0, 255, false};
-        std::string hex = colorStr.substr(1); // Remove '#'
-        try {
-            if (hex.length() == 6) {
-                // 6-digit hex: "#FF0000"
-                color.r = (unsigned char)std::stoul(hex.substr(0, 2), nullptr, 16);
-                color.g = (unsigned char)std::stoul(hex.substr(2, 2), nullptr, 16);
-                color.b = (unsigned char)std::stoul(hex.substr(4, 2), nullptr, 16);
-            }
-            else if (hex.length() == 3) {
-                // 3-digit hex shorthand: "#F00" -> "#FF0000" (each digit duplicated)
-                color.r =
-                    (unsigned char)std::stoul(hex.substr(0, 1) + hex.substr(0, 1), nullptr, 16);
-                color.g =
-                    (unsigned char)std::stoul(hex.substr(1, 1) + hex.substr(1, 1), nullptr, 16);
-                color.b =
-                    (unsigned char)std::stoul(hex.substr(2, 1) + hex.substr(2, 1), nullptr, 16);
-            }
-            return color;
-        }
-        catch (...) {
-            return defaultValue;
-        }
+    // 3. Các trường hợp còn lại (Tên màu: "red", Hex: "#F00") cho QColor 
+    QColor qc(QString::fromStdString(colorStr));
+    if (qc.isValid()) {
+        return {static_cast<unsigned char>(qc.red()), static_cast<unsigned char>(qc.green()),
+                static_cast<unsigned char>(qc.blue()), static_cast<unsigned char>(qc.alpha()),
+                false};
     }
+
+    // Nếu QColor cũng không xác định được
     return defaultValue;
 }
 
-/**
- * @brief Parses style attributes from an XML node and applies CSS-style inheritance.
- *
- * Algorithm:
- * 1. Create a new style and inherit from parent (CSS cascading)
- * 2. Collect all style attributes from XML:
- *    - Individual attributes: fill, stroke, stroke-width, font-size, font-family, etc.
- *    - Style attribute: "style='fill:red;stroke:blue'" (CSS-like syntax)
- * 3. Parse the style attribute string (semicolon-separated declarations)
- * 4. Apply parsed values to the style object (overriding inherited values)
- * 5. Apply defaults for any unset properties
- *
- * Style attribute format: "property1:value1;property2:value2"
- * - Split by semicolon to get individual declarations
- * - Split each declaration by colon to get property:value pairs
- * - Trim whitespace from keys and values
- *
- * Opacity handling:
- * - fill-opacity and stroke-opacity: specific opacity for fill/stroke
- * - opacity: general opacity that multiplies with fill/stroke opacity
- * - Values are clamped to [0.0, 1.0]
- *
- * @param node The XML node to parse style from
- * @param parentStyle The parent style to inherit from
- * @return SVGStyle object with parsed and inherited style properties
- */
+// QColor không đọc được mã rgb nên tự viết thủ công
+
 SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGStyle& parentStyle)
 {
     SVGStyle style;
@@ -475,17 +389,50 @@ SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGSty
         }
     }
 
-    if (attrs.count("display")) {
-        if (attrs["display"] == "none") {
-            style.isDisplayed = false;
-        }
-        else {
-            style.isDisplayed = true;
-        }
+  if (attrs.count("display")) {
+    if (attrs["display"] == "none") {
+      style.isDisplayed = false;
     }
+    else {
+      style.isDisplayed = true;
+    }
+  }
 
-    style.applyDefaults();
-    return style;
+// 1. Parse Text Anchor (Căn lề)
+  const char* anchor = getAttr(node, "text-anchor");
+  if (anchor) {
+      style.textAnchor = anchor;
+  }
+
+  // 2. Parse Font Style (In nghiêng)
+  const char* fStyle = getAttr(node, "font-style");
+  if (fStyle) {
+      std::string fs(fStyle);
+      // Nếu gặp italic hoặc oblique thì bật cờ isItalic
+      if (fs.find("italic") != std::string::npos || fs.find("oblique") != std::string::npos) {
+          style.isItalic = true;
+      }
+      else if (fs == "normal") {
+          style.isItalic = false;
+      }
+  }
+
+  // 3. Parse Font Weight (In đậm)
+  const char* fWeight = getAttr(node, "font-weight");
+  if (fWeight) {
+      std::string fw(fWeight);
+      if (fw == "bold" || fw == "bolder") {
+          style.isBold = true;
+          style.fontWeight = 75; // Qt::Bold tương đương 75
+      }
+      else if (fw == "normal") {
+          style.isBold = false;
+          style.fontWeight = 50; // Qt::Normal tương đương 50
+      }
+  }
+  
+  style.applyDefaults();
+  return style;
 }
 
 /**

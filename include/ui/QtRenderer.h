@@ -47,22 +47,22 @@ class QtRenderer : public Renderer
 
     // --- IMPLEMENT CÁC HÀM VISIT BẰNG QT6 ---
 
-    /**
-     * @brief Các hàm visit cho từng shape.
-     *
-     * * - Vai trò của Role C (Implement):
-     * Phải viết logic .cpp cho TẤT CẢ các hàm này.
-     * Ví dụ: Lấy dữ liệu từ 'rect.getStyle()',
-     * chuyển 'SVGColor' thành 'QColor', và gọi 'm_painter->drawRect(...)'.
-     */
-    void visit(SVGRect& rect) override;
-    void visit(SVGCircle& circle) override;
-    void visit(SVGPolygon& polygon) override;
-    void visit(SVGPolyline& polyline) override;
-    void visit(SVGText& text) override;
-    void visit(SVGEllipse& ellipse) override;
-    void visit(SVGLine& line) override;
-    void visit(SVGPath& path) override;
+  /**
+   * @brief Các hàm visit cho từng shape.
+   *
+   * * - Vai trò của Role C (Implement):
+   * Phải viết logic .cpp cho TẤT CẢ các hàm này.
+   * Ví dụ: Lấy dữ liệu từ 'rect.getStyle()',
+   * chuyển 'SVGColor' thành 'QColor', và gọi 'm_painter->drawRect(...)'.
+   */
+  void visit(SVGRect& rect) override;
+  void visit(SVGCircle& circle) override;
+  void visit(SVGPolygon& polygon) override;
+  void visit(SVGPolyline& polyline) override;
+  void visit(SVGText& text) override;
+  void visit(SVGEllipse& ellipse) override;
+  void visit(SVGLine& line) override;
+  void visit(SVGPath& path) override;
 
     /**
       * @brief Các hàm visit cho Group.

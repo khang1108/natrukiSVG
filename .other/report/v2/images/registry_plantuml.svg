@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="697px" preserveAspectRatio="none" style="width:603px;height:697px;background:#FFFFFF;" version="1.1" viewBox="0 0 603 697" width="603px" zoomAndPan="magnify"><defs/><g><!--MD5=[d78d78bdc704abe86df16c42e2d25b76]
+class ServerPrototype--><g id="elem_ServerPrototype"><rect codeLine="4" fill="#F1F1F1" height="105.1563" id="ServerPrototype" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="203" x="73" y="197"/><ellipse cx="115" cy="217.1328" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M110.9219,212.8984 L110.9219,210.7422 L118.3125,210.7422 L118.3125,212.8984 L115.8438,212.8984 L115.8438,220.9766 L118.3125,220.9766 L118.3125,223.1328 L110.9219,223.1328 L110.9219,220.9766 L113.3906,220.9766 L113.3906,212.8984 L110.9219,212.8984 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="70" x="155.5" y="213.1387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="111" x="135" y="228.9639">ServerPrototype</text><line style="stroke:#181818;stroke-width:0.5;" x1="74" x2="275" y1="237.2656" y2="237.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="74" x2="275" y1="245.2656" y2="245.2656"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="191" x="79" y="262.2607">+clone() : ServerPrototype*</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="144" x="79" y="278.5576">+showConfig() : void</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="145" x="79" y="294.8545">+~ServerPrototype()</text></g><!--MD5=[74165353921214e709dc7bafeec5cb36]
+class LinuxServer--><g id="elem_LinuxServer"><rect codeLine="10" fill="#F1F1F1" height="194.6719" id="LinuxServer" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="288" x="30.5" y="379"/><ellipse cx="130.75" cy="395" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M133.7188,400.6406 Q133.1406,400.9375 132.5,401.0781 Q131.8594,401.2344 131.1563,401.2344 Q128.6563,401.2344 127.3281,399.5938 Q126.0156,397.9375 126.0156,394.8125 Q126.0156,391.6875 127.3281,390.0313 Q128.6563,388.375 131.1563,388.375 Q131.8594,388.375 132.5,388.5313 Q133.1563,388.6875 133.7188,388.9844 L133.7188,391.7031 Q133.0938,391.125 132.5,390.8594 Q131.9063,390.5781 131.2813,390.5781 Q129.9375,390.5781 129.25,391.6563 Q128.5625,392.7188 128.5625,394.8125 Q128.5625,396.9063 129.25,397.9844 Q129.9375,399.0469 131.2813,399.0469 Q131.9063,399.0469 132.5,398.7813 Q133.0938,398.5 133.7188,397.9219 L133.7188,400.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="151.25" y="399.8467">LinuxServer</text><line style="stroke:#181818;stroke-width:0.5;" x1="31.5" x2="317.5" y1="411" y2="411"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="36.5" y="427.9951">-name_ : string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="36.5" y="444.292">-osVersion_ : string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="36.5" y="460.5889">-ramGB_ : int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="262" x="36.5" y="476.8857">-installedPackages_ : vector&lt;string&gt;*</text><line style="stroke:#181818;stroke-width:0.5;" x1="31.5" x2="317.5" y1="484.1875" y2="484.1875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="36.5" y="501.1826">+LinuxServer(name : string, ram : int)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="276" x="36.5" y="517.4795">+LinuxServer(const LinuxServer&amp; other)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="36.5" y="533.7764">+~LinuxServer()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="36.5" y="550.0732">+clone() : ServerPrototype*</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="36.5" y="566.3701">+showConfig() : void</text></g><!--MD5=[e7cc39acdcb1c297e3f9db2c0f8eda11]
+class ServerRegistry--><g id="elem_ServerRegistry"><rect codeLine="23" fill="#F1F1F1" height="113.1875" id="ServerRegistry" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="335" x="7" y="7"/><ellipse cx="120.25" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M123.2188,28.6406 Q122.6406,28.9375 122,29.0781 Q121.3594,29.2344 120.6563,29.2344 Q118.1563,29.2344 116.8281,27.5938 Q115.5156,25.9375 115.5156,22.8125 Q115.5156,19.6875 116.8281,18.0313 Q118.1563,16.375 120.6563,16.375 Q121.3594,16.375 122,16.5313 Q122.6563,16.6875 123.2188,16.9844 L123.2188,19.7031 Q122.5938,19.125 122,18.8594 Q121.4063,18.5781 120.7813,18.5781 Q119.4375,18.5781 118.75,19.6563 Q118.0625,20.7188 118.0625,22.8125 Q118.0625,24.9063 118.75,25.9844 Q119.4375,27.0469 120.7813,27.0469 Q121.4063,27.0469 122,26.7813 Q122.5938,26.5 123.2188,25.9219 L123.2188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="140.75" y="27.8467">ServerRegistry</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="341" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="306" x="13" y="55.9951">-templates : map&lt;string, ServerPrototype*&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="341" y1="63.2969" y2="63.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="13" y="80.292">+ServerRegistry()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="13" y="96.5889">+~ServerRegistry()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="323" x="13" y="112.8857">+createServer(type : string) : ServerPrototype*</text></g><path d="M424.5,444 L424.5,467.6992 L227.5,545.2266 L424.5,475.6992 L424.5,499.3984 A0,0 0 0 0 424.5,499.3984 L596.5,499.3984 A0,0 0 0 0 596.5,499.3984 L596.5,454 L586.5,444 L424.5,444 A0,0 0 0 0 424.5,444 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M586.5,444 L586.5,454 L596.5,454 L586.5,444 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="133" x="430.5" y="461.0669">Prototype Pattern</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="430.5" y="476.1997">Returns a deep copy of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="430.5" y="491.3325">the LinuxServer object</text><g id="elem_GMN139"><path d="M377.5,20.5 L377.5,59.5 L342.09,63.5 L377.5,67.5 L377.5,106.1641 A0,0 0 0 0 377.5,106.1641 L585.5,106.1641 A0,0 0 0 0 585.5,106.1641 L585.5,30.5 L575.5,20.5 L377.5,20.5 A0,0 0 0 0 377.5,20.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M575.5,20.5 L575.5,30.5 L585.5,30.5 L575.5,20.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="121" x="383.5" y="37.5669">Registry Pattern</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="383.5" y="52.6997">Centralized management</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="383.5" y="67.8325">of server prototypes:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="383.5" y="82.9653">• Standard_VPS (4GB RAM)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="383.5" y="98.0981">• HighMem_VPS (64GB RAM)</text></g><g id="elem_GMN142"><path d="M73,635 L73,690.3984 A0,0 0 0 0 73,690.3984 L276,690.3984 A0,0 0 0 0 276,690.3984 L276,645 L266,635 L178.5,635 L174.5,574.08 L170.5,635 L73,635 A0,0 0 0 0 73,635 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M266,635 L266,645 L276,645 L266,635 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="81" x="79" y="652.0669">Deep Copy</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="79" y="667.1997">installedPackages_ is cloned</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="182" x="79" y="682.3325">to ensure independent state</text></g><!--MD5=[bfe07866306ccf7f3f06cf72869180eb]
+reverse link ServerPrototype to LinuxServer--><g id="link_ServerPrototype_LinuxServer"><path codeLine="31" d="M174.5,322.39 C174.5,340.4 174.5,360.01 174.5,379 " fill="none" id="ServerPrototype-backto-LinuxServer" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="167.5,322.12,174.5,302.12,181.5,322.12,167.5,322.12" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="175.5" y="345.0669">implements</text></g><!--MD5=[191f904f3a5aba65250daf00264805ee]
+link ServerRegistry to ServerPrototype--><g id="link_ServerRegistry_ServerPrototype"><path codeLine="32" d="M174.5,132.21 C174.5,132.21 174.5,167.23 174.5,183.46 " fill="none" id="ServerRegistry-ServerPrototype" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="174.5,196.75,178.5,187.75,174.5,191.75,170.5,187.75,174.5,196.75" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="174.5" x2="174.5" y1="191.75" y2="183.75"/><polygon fill="none" points="174.5,120.21,170.5,126.21,174.5,132.21,178.5,126.21,174.5,120.21" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="175.5" y="163.0669">manages</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="136.1938" y="186.0959">many</text></g><!--MD5=[a03fd85a0eec49681242a5ba7ff18360]
+link LinuxServer to LinuxServer--><g id="link_LinuxServer_LinuxServer"><path codeLine="33" d="M318.82,454.9 C339.56,458.36 353.5,465.56 353.5,476.5 C353.5,486.5 341.85,493.37 324.01,497.12 " fill="none" id="LinuxServer-to-LinuxServer" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="318.82,498.1,328.3998,500.3863,323.7357,497.1855,326.9365,492.5213,318.82,498.1" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="359.5" y="481.0669">clones</text></g><!--MD5=[8ac0f55e5cd02fe52cea5752fc5e111d]
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+interface ServerPrototype <<interface>> {
+  + {abstract} clone() : ServerPrototype*
+  + {abstract} showConfig() : void
+  + {abstract} ~ServerPrototype()
+}
+
+class LinuxServer {
+  - name_ : string
+  - osVersion_ : string
+  - ramGB_ : int
+  - installedPackages_ : vector<string>*
+  
+  + LinuxServer(name : string, ram : int)
+  + LinuxServer(const LinuxServer& other)
+  + ~LinuxServer()
+  + clone() : ServerPrototype*
+  + showConfig() : void
+}
+
+class ServerRegistry {
+  - templates : map<string, ServerPrototype*>
+  
+  + ServerRegistry()
+  + ~ServerRegistry()
+  + createServer(type : string) : ServerPrototype*
+}
+
+ServerPrototype <|.. LinuxServer : implements
+ServerRegistry o- -> "many" ServerPrototype : manages
+LinuxServer .> LinuxServer : clones
+
+note right of LinuxServer::clone
+  **Prototype Pattern**
+  Returns a deep copy of 
+  the LinuxServer object
+end note
+
+note right of ServerRegistry
+  **Registry Pattern**
+  Centralized management
+  of server prototypes:
+  • Standard_VPS (4GB RAM)
+  • HighMem_VPS (64GB RAM)
+end note
+
+note bottom of LinuxServer
+  **Deep Copy**
+  installedPackages_ is cloned
+  to ensure independent state
+end note
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,4 +1,4 @@
-#include "ui/CanvasWidget.h"
+﻿#include "ui/CanvasWidget.h"
 
 #include "svg/SVGDocument.h"
 #include "svg/SVGElement.h"
@@ -161,14 +161,13 @@ void CanvasWidget::zoomReset()
     update();
 }
 
-/**
- * @brief Rotates the view by 90 degrees (clockwise).
- *
- * Algorithm:
- * - Adds 90 degrees to current rotation
- * - Uses modulo 360 to keep rotation in [0, 360) range
- * - Triggers repaint
- */
+void CanvasWidget::setScale(double scale)
+{
+    m_scale = scale;
+    clampScale();
+    update();
+}
+
 void CanvasWidget::rotate()
 {
     m_rotation = std::fmod(m_rotation + 90.0, 360.0);
@@ -481,22 +480,19 @@ QTransform CanvasWidget::buildViewTransform(const QSize& viewportSize) const
         const_cast<CanvasWidget*>(this)->m_lastViewportSize = viewportSize;
     }
 
-    // Build transformation chain (applied right to left):
-    // 1. Translate to scene center (move origin to center of SVG content)
-    transform.translate(-(bounds.x + bounds.width / 2.0), -(bounds.y + bounds.height / 2.0));
-    // 2. Scale (zoom and fit-to-viewport)
-    transform.scale(m_scale * fitScale, m_scale * fitScale);
-    // 3. Rotate
+    transform.translate(viewportSize.width() / 2.0, viewportSize.height() / 2.0);
+    transform.translate(m_panOffset.x(), m_panOffset.y());
+
     transform.rotate(m_rotation);
-    // 4. Flip (if enabled, mirror horizontally)
+
     if (m_isFlipped) {
         transform.scale(-1.0, 1.0);
     }
-    // 5. Pan (user pan offset)
-    transform.translate(m_panOffset.x(), m_panOffset.y());
-    // 6. Translate to viewport center (move origin to center of screen)
-    transform.translate(viewportSize.width() / 2.0, viewportSize.height() / 2.0);
+    transform.scale(m_scale * fitScale, m_scale * fitScale);
+    transform.translate(-(bounds.x + bounds.width / 2.0), -(bounds.y + bounds.height / 2.0));
     return transform;
+
+    // Đã fix phần rotate và flip
 }
 
 /**

@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{patterns_prototype}
+{Patterns.dev}, ``Prototype pattern.'' \url{https://www.patterns.dev/posts/prototype-pattern}, 2024.
+\newblock Accessed: Dec. 2, 2025.
+
+\bibitem{faraz_prototype_proscons}
+A.~Faraz, ``Prototype pattern: Pros and cons.'' \url{https://example.com/prototype-pros-cons}, 2024.
+\newblock Accessed: Dec. 2, 2025.
+
+\bibitem{ramjas_prototype}
+K.~Ramjas, ``Understanding prototype pattern in software design.'' \url{https://example.com/prototype-pattern}, 2023.
+\newblock Accessed: Dec. 2, 2025.
+
+\bibitem{gfg_registry}
+{GeeksforGeeks}, ``Registry design pattern.'' \url{https://www.geeksforgeeks.org/registry-design-pattern/}, 2024.
+\newblock Accessed: Dec. 2, 2025.
+
+\end{thebibliography}

@@ -1,324 +1,254 @@
-#include "SVGPath.h"
+#include "svg/SVGPath.h"
 
 #include <algorithm>
 #include <cctype>
-#include <cmath>
-#include <cstdlib>
+#include <cmath> 
 #include <limits>
+#include <sstream>
 
-namespace
+SVGPath::SVGPath(const std::string& dData) : m_cachedBBox{0, 0, 0, 0} { parseD(dData); }
+
+void SVGPath::accept(NodeVisitor& visitor) { visitor.visit(*this); }
+
+SVGRectF SVGPath::localBox() const { return m_cachedBBox; }
+
+const std::vector<PathCommand>& SVGPath::getCommands() const { return m_commands; }
+
+void SVGPath::parseD(const std::string& d)
 {
-    inline bool isCommand(char c) { return std::isalpha(static_cast<unsigned char>(c)) != 0; }
-} // namespace
+    m_commands.clear();
 
-SVGPath::SVGPath(const std::string& pathData) : m_pathData(pathData) { computeLocalBounds(); }
-
-void SVGPath::skipSeparators(const std::string& data, size_t& index)
-{
-    while (index < data.size()) {
-        char c = data[index];
-        if (c == ',' || std::isspace(static_cast<unsigned char>(c))) {
-            ++index;
-        }
-        else {
-            break;
-        }
-    }
-}
-
-bool SVGPath::readNumber(const std::string& data, size_t& index, SVGNumber& value)
-{
-    skipSeparators(data, index);
-    if (index >= data.size()) {
-        return false;
-    }
-
-    const char* start = data.c_str() + index;
-    char* end = nullptr;
-    value = std::strtod(start, &end);
-    if (start == end) {
-        return false;
-    }
-
-    index = static_cast<size_t>(end - data.c_str());
-    return true;
-}
-
-/**
- * @brief Calculates the bounding box (local bounds) of the SVG path.
- *
- * Algorithm:
- * 1. Parse the path data string similar to rendering, but track min/max coordinates instead
- * 2. For each path command, track all points that the path passes through:
- *    - M/L: Track the point coordinates
- *    - H: Track the X coordinate (Y stays same)
- *    - V: Track the Y coordinate (X stays same)
- *    - C/S: Track control points and end point (approximate bounds for curves)
- *    - Q/T: Track control point and end point
- *    - A: Track end point (simplified - full implementation would calculate arc bounds)
- *    - Z: Track subpath start point
- * 3. Update min/max X and Y values as we encounter points
- * 4. Return a rectangle containing all points
- *
- * Note: For curves (C, S, Q, T, A), this is an approximation. A more accurate implementation
- * would calculate the actual extrema of the curves.
- *
- * The bounds are calculated in local coordinate space (before any transforms are applied).
- */
-void SVGPath::computeLocalBounds()
-{
-    // Initialize bounds to extreme values
     SVGNumber minX = std::numeric_limits<SVGNumber>::infinity();
     SVGNumber minY = std::numeric_limits<SVGNumber>::infinity();
     SVGNumber maxX = -std::numeric_limits<SVGNumber>::infinity();
     SVGNumber maxY = -std::numeric_limits<SVGNumber>::infinity();
-    bool hasPoint = false;
+    bool hasPoints = false;
 
-    // Lambda function to update bounding box with a new point
+    // Virtual Pen để theo dõi tọa độ thực tế khi tính BBox
+    SVGNumber curX = 0.0;
+    SVGNumber curY = 0.0;
+    SVGNumber startX = 0.0; // Điểm bắt đầu của sub-path (để dùng cho lệnh Z)
+    SVGNumber startY = 0.0;
+
+    size_t i = 0;
+    size_t len = d.length();
+
+    auto skipDelimiters = [&]() {
+        while (i < len && (std::isspace(d[i]) || d[i] == ',')) {
+            i++;
+        }
+    };
+
+    auto readNumber = [&]() -> SVGNumber {
+        skipDelimiters();
+        if (i >= len)
+            return 0.0;
+
+        size_t start = i;
+        if (d[i] == '-' || d[i] == '+')
+            i++;
+        while (i < len && (isdigit(d[i]) || d[i] == '.'))
+            i++;
+        if (i < len && (d[i] == 'e' || d[i] == 'E')) {
+            i++;
+            if (i < len && (d[i] == '-' || d[i] == '+'))
+                i++;
+            while (i < len && isdigit(d[i]))
+                i++;
+        }
+
+        if (start == i)
+            return 0.0; // Không đọc được số
+
+        try {
+            return std::stod(d.substr(start, i - start));
+        }
+        catch (...) {
+            return 0.0;
+        }
+    };
+
     auto updateBounds = [&](SVGNumber x, SVGNumber y) {
-        if (!std::isfinite(x) || !std::isfinite(y)) {
-            return; // Skip invalid coordinates
-        }
-        hasPoint = true;
-        minX = std::min(minX, x);
-        minY = std::min(minY, y);
-        maxX = std::max(maxX, x);
-        maxY = std::max(maxY, y);
+        if (x < minX)
+            minX = x;
+        if (x > maxX)
+            maxX = x;
+        if (y < minY)
+            minY = y;
+        if (y > maxY)
+            maxY = y;
+        hasPoints = true;
     };
 
-    const std::string& data = m_pathData;
-    size_t index = 0;
-    char command = 0;
-    SVGPointF current{0, 0};
-    SVGPointF subpathStart{0, 0};
+    char currentCmd = '\0';
 
-    auto readPoint = [&](SVGPointF& out, bool relativeToCurrent) -> bool {
-        SVGNumber x = 0;
-        SVGNumber y = 0;
-        if (!readNumber(data, index, x) || !readNumber(data, index, y)) {
-            return false;
-        }
-        if (relativeToCurrent) {
-            out.x = current.x + x;
-            out.y = current.y + y;
-        }
-        else {
-            out.x = x;
-            out.y = y;
-        }
-        return true;
-    };
-
-    while (index < data.size()) {
-        skipSeparators(data, index);
-        if (index >= data.size()) {
+    while (i < len) {
+        skipDelimiters();
+        if (i >= len)
             break;
-        }
 
-        char c = data[index];
-        if (isCommand(c)) {
-            command = c;
-            ++index;
+        if (isalpha(d[i])) {
+            currentCmd = d[i];
+            i++;
         }
-        else if (command == 0) {
-            ++index;
+        // Nếu không có chữ cái, dùng lại lệnh trước đó (implicit command)
+        else if (currentCmd == '\0') {
+            i++;
             continue;
         }
 
-        bool isRelative = std::islower(static_cast<unsigned char>(command)) != 0;
-        char upperCmd = static_cast<char>(std::toupper(static_cast<unsigned char>(command)));
+        PathCommand cmd;
+        cmd.type = currentCmd;
 
-        switch (upperCmd) {
-        case 'M': {
-            bool firstPoint = true;
-            while (true) {
-                SVGPointF point;
-                if (!readPoint(point, isRelative)) {
-                    break;
-                }
-                if (firstPoint) {
-                    current = point;
-                    subpathStart = point;
-                    updateBounds(point.x, point.y);
-                    firstPoint = false;
-                }
-                else {
-                    current = point;
-                    updateBounds(point.x, point.y);
-                }
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
-            }
-            // After M, subsequent coordinates are treated as L commands
-            // Check if there are more coordinates (not a command) to process as L
-            // Note: skipSeparators was already called in the loop, so index should be
-            // pointing to the next character (command or coordinate)
-            if (index < data.size() && !isCommand(data[index])) {
-                upperCmd = 'L';
-                command = isRelative ? 'l' : 'L';
-            }
-            else {
-                // Next character is a command, clear so it will be processed in next iteration
-                command = 0;
-            }
-            break;
+        bool isRelative = islower(currentCmd);
+        char type = tolower(currentCmd);
+
+        // Xác định số lượng tham số và đọc chúng
+        int argsCount = 0;
+        if (type == 'z')
+            argsCount = 0;
+        else if (type == 'h' || type == 'v')
+            argsCount = 1;
+        else if (type == 'm' || type == 'l' || type == 't')
+            argsCount = 2;
+        else if (type == 's' || type == 'q')
+            argsCount = 4;
+        else if (type == 'c')
+            argsCount = 6;
+        else if (type == 'a')
+            argsCount = 7;
+
+        for (int k = 0; k < argsCount; ++k) {
+            cmd.args.push_back(readNumber());
         }
-        case 'L':
-        case 'T': {
-            while (true) {
-                SVGPointF point;
-                if (!readPoint(point, isRelative)) {
-                    break;
-                }
-                current = point;
-                updateBounds(point.x, point.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
+        m_commands.push_back(cmd);
+
+        SVGNumber nx = curX; // next X
+        SVGNumber ny = curY; // next Y
+
+        switch (type) {
+        case 'm': // MoveTo
+        case 'l': // LineTo
+        case 't': // Smooth Quad
+            nx = cmd.args[0];
+            ny = cmd.args[1];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
             }
+            updateBounds(nx, ny);
+            curX = nx;
+            curY = ny;
+            if (type == 'm') {
+                startX = curX;
+                startY = curY;
+            } // M bắt đầu subpath mới
             break;
-        }
-        case 'H': {
-            while (true) {
-                SVGNumber x = 0;
-                if (!readNumber(data, index, x)) {
-                    break;
-                }
-                current.x = isRelative ? current.x + x : x;
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
+
+        case 'h': // Horizontal
+            nx = cmd.args[0];
+            if (isRelative)
+                nx += curX;
+            updateBounds(nx, curY);
+            curX = nx;
+            break;
+
+        case 'v': // Vertical
+            ny = cmd.args[0];
+            if (isRelative)
+                ny += curY;
+            updateBounds(curX, ny);
+            curY = ny;
+            break;
+
+        case 'c': // Cubic Bezier (x1 y1 x2 y2 x y)
+            // Cập nhật bounds cho điểm đích (x,y)
+            nx = cmd.args[4];
+            ny = cmd.args[5];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
             }
-            break;
-        }
-        case 'V': {
-            while (true) {
-                SVGNumber y = 0;
-                if (!readNumber(data, index, y)) {
-                    break;
-                }
-                current.y = isRelative ? current.y + y : y;
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
-            }
-            break;
-        }
-        case 'C': {
-            while (true) {
-                SVGPointF control1;
-                SVGPointF control2;
-                SVGPointF endPoint;
-                if (!readPoint(control1, isRelative) || !readPoint(control2, isRelative) ||
-                    !readPoint(endPoint, isRelative)) {
-                    break;
-                }
-                updateBounds(control1.x, control1.y);
-                updateBounds(control2.x, control2.y);
-                current = endPoint;
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
-            }
-            break;
-        }
-        case 'Q': {
-            while (true) {
-                SVGPointF control;
-                SVGPointF endPoint;
-                if (!readPoint(control, isRelative) || !readPoint(endPoint, isRelative)) {
-                    break;
-                }
-                updateBounds(control.x, control.y);
-                current = endPoint;
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
-            }
-            break;
-        }
-        case 'S': {
-            while (true) {
-                SVGPointF control;
-                SVGPointF endPoint;
-                if (!readPoint(control, isRelative) || !readPoint(endPoint, isRelative)) {
-                    break;
-                }
-                updateBounds(control.x, control.y);
-                current = endPoint;
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
-                }
-            }
-            break;
-        }
-        case 'A': {
-            constexpr int paramsPerArc = 7;
-            while (true) {
-                SVGNumber values[paramsPerArc] = {};
-                bool ok = true;
-                for (int i = 0; i < paramsPerArc; ++i) {
-                    ok &= readNumber(data, index, values[i]);
-                }
-                if (!ok) {
-                    break;
-                }
-                SVGNumber x = values[5];
-                SVGNumber y = values[6];
+            updateBounds(nx, ny);
+
+            // Cập nhật bounds cho các điểm điều khiển (Control points)
+            // Để BBox bao trọn đường cong
+            {
+                SVGNumber c1x = cmd.args[0], c1y = cmd.args[1];
+                SVGNumber c2x = cmd.args[2], c2y = cmd.args[3];
                 if (isRelative) {
-                    x += current.x;
-                    y += current.y;
+                    c1x += curX;
+                    c1y += curY;
+                    c2x += curX;
+                    c2y += curY;
                 }
-                current = {x, y};
-                updateBounds(current.x, current.y);
-                skipSeparators(data, index);
-                if (index >= data.size() || isCommand(data[index])) {
-                    break;
+                updateBounds(c1x, c1y);
+                updateBounds(c2x, c2y);
+            }
+            curX = nx;
+            curY = ny;
+            break;
+
+        case 's': // Smooth Cubic (x2 y2 x y)
+            nx = cmd.args[2];
+            ny = cmd.args[3];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+
+            {
+                SVGNumber c2x = cmd.args[0], c2y = cmd.args[1];
+                if (isRelative) {
+                    c2x += curX;
+                    c2y += curY;
                 }
+                updateBounds(c2x, c2y);
             }
+            curX = nx;
+            curY = ny;
             break;
-        }
-        case 'Z':
-        case 'z': {
-            current = subpathStart;
-            updateBounds(current.x, current.y);
-            // Clear command after Z so we look for a new one
-            command = 0;
-            break;
-        }
-        default: {
-            // Unsupported commands: skip until next command letter.
-            while (index < data.size() && !isCommand(data[index])) {
-                ++index;
+
+        case 'q': // Quadratic Bezier (x1 y1 x y)
+            nx = cmd.args[2];
+            ny = cmd.args[3];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
             }
-            // Clear command if we hit unknown
-            command = 0;
+            updateBounds(nx, ny);
+            {
+                SVGNumber c1x = cmd.args[0], c1y = cmd.args[1];
+                if (isRelative) {
+                    c1x += curX;
+                    c1y += curY;
+                }
+                updateBounds(c1x, c1y);
+            }
+            curX = nx;
+            curY = ny;
             break;
+
+        case 'z': // Close Path
+            curX = startX;
+            curY = startY;
+            break;
+
+            // TODO: Arc ('a') tính toán phức tạp hơn, tạm thời bỏ qua check bounds chi tiết cho A
         }
-        }
+
+        // Xử lý trường hợp đặc biệt: Sau M/m mà còn số thì các số sau là L/l
+        if (currentCmd == 'M')
+            currentCmd = 'L';
+        if (currentCmd == 'm')
+            currentCmd = 'l';
     }
 
-    if (!hasPoint) {
-        m_localBounds = {0, 0, 0, 0};
+    if (hasPoints) {
+        m_cachedBBox = {minX, minY, maxX - minX, maxY - minY};
     }
     else {
-        m_localBounds = {minX, minY, maxX - minX, maxY - minY};
+        m_cachedBBox = {0, 0, 0, 0};
     }
 }
-
-SVGRectF SVGPath::localBox() const { return m_localBounds; }
-
-SVGRectF SVGPath::worldBox() const { return SVGElement::worldBox(); }

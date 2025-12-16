@@ -1,0 +1,439 @@
+\section{Introduction}
+Sau khi đã hoàn thành \code{milestone-1} nhóm đã có được một ứng dụng cơ bản, có giao diện cho phép người dùng có thể chọn các file \code{svg} bất kỳ để hiển thị lên màn hình. Ứng dụng cũng đã được xây dựng để có thể hỗ trợ được các tính năng cơ bản cho việc tùy biến cũng như là nhu cầu của người dùng như là: \textit{Xoay, Phóng to, Thu nhỏ, Lật ngược}. 
+Hiện tại, ứng dụng của nhóm đã có thể hỗ trợ các \code{tag} cơ bản của một file \code{svg} để có thể hiện thị các hình dạng cơ bảng như: \code{<rect>}, \code{<circle>}, \code{<ellipse>}, \code{<line>}, \code{<polyline>}, \code{<polygon>}, \code{<text>}. 
+
+Tuy nhiên, nhu cầu của người dùng không chỉ dừng lại ở đó, các file \code{svg} được yêu cầu phải có thể chứa các hình ảnh phức tạp, có đường cong, đường uốn lượng, đường xiên ngang từ đó mà tạo nên tính sáng tạo và đa dạng của bức tranh hơn. Do đó nhóm đã thêm các tag để thực hiện được nhu cầu đó chính là: \code{<path>}. Việc thêm \code{<path>} nó cũng không phải là một thách thức quá lớn cho nhóm vì ngay từ ban đầu, nhóm đã thống nhất xây dựng theo các \code{design pattern} nào đó, thống nhất với về cách code, cũng như là tổ chức quản lý, do đó việc bảo trì và thêm tính năng đã được đơn giản hóa đi rất nhiều.
+
+\section{GitHub Repository Link}
+Nhằm phục vụ cho việc quản lý dự án, cũng như là công khai các mã nguồn có trong dự án thì nhóm cũng đã đẩy toàn bộ dự án lên trên \href{https://github.com/}{GitHub}:
+
+\textbf{Link: } \href{https://github.com/khang1108/prototype-design-pattern}{See more}
+
+\section{GitHub Commit List}
+Để cung cấp một cái nhìn minh bạch và toàn diện về quá trình phát triển của dự án, dưới đây là toàn bộ lịch sử commit được trích xuất từ repository. Danh sách này được trình bày theo định dạng rút gọn, thể hiện các thay đổi, gộp nhánh và các cột mốc quan trọng từ khi bắt đầu cho đến khi hoàn thiện dự án.
+
+% Sử dụng môi trường figure để có caption và label, giúp nó không bị tách rời
+\begin{figure}[htbp]
+% Sử dụng lstlisting để hiển thị code một cách ổn định và an toàn
+\begin{lstlisting}[
+    language=bash, 
+    basicstyle=\ttfamily\scriptsize, % Font chữ TINY (rất nhỏ) để chứa được toàn bộ log
+    breaklines=true,         % Tự động xuống dòng khi cần
+    frame=single,            % Thêm khung bao quanh
+    caption={Lịch sử commit đầy đủ của dự án NaTruKi},
+    label=lst:gitlog_full
+]
+commit a6e0fa047fe45823b7a9c6bdf619f8a54add5b44 (HEAD -> main, origin/main)
+Merge: 46ccd09 70bc072
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Mon Dec 1 23:50:45 2025 +0700
+
+    Merge branch 'main' of https://github.com/khang1108/natrukiSVG
+
+commit 46ccd097e39a24cde396dc24b6ff031c96ea81dc
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Mon Dec 1 23:46:17 2025 +0700
+
+    Initial commit
+
+commit 70bc072e9e8158615007d6e5bb19ef252ece207b
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Mon Dec 1 23:42:18 2025 +0700
+
+    Initial commit
+
+\end{lstlisting}
+\end{figure}
+
+\section{GitHub Contribution}
+Bằng việc sử dụng GitHub để quản lý dự án, cũng như là tổ chức và xây dựng thì nhóm cũng đã có thể ghi lại những hoạt động và đóng góp của từng thành viên như sau:
+
+\FloatBarrier
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/github_stats.jpg}
+  \caption{GitHub Contributions stats}
+  \label{fig:github_stats}
+\end{figure}
+
+Qua hình ảnh này, ta có thể thấy được mức độ hoạt động của các thành viên trong nhóm. Vì dự án này không quá nặng về code nên mà thiên về tìm hiểu nội dung, các thành viên chủ yếu hoạt động bên \href{docs.google.com}{Google Docs} nên trên Github sẽ không quá nổi bật.
+
+% --- THÊM LỆNH NÀY VÀO ---
+\FloatBarrier 
+% -------------------------
+
+\section{Class Diagram}
+Để trực quan hóa được ý tưởng về các tổ chức và xây dựng dự án này của nhóm thì ta có thể xem qua \textit{Class Diagram} - \textit{Unified Model Language (UML)}, đây chính là sơ đồ tổng thể toàn bộ các mối quan hệ của các class có trong dự án, cũng như là các thuộc tính, các phương thức được xây dựng cho mỗi class.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{images/bacteria_plantuml.png}
+  \caption{Bacteria UML Class Diagram}
+  \label{fig:bacteria_uml}
+\end{figure}
+
+% --- THÊM LỆNH NÀY VÀO ---
+\FloatBarrier 
+% -------------------------
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/registry_plantuml.png}
+    \caption{Registry Prototype UML Class Diagram}
+    \label{fig:registry_uml}
+\end{figure}
+
+% --- THÊM LỆNH NÀY VÀO ---
+\FloatBarrier 
+% -------------------------
+
+\subsection{Basic Prototype Implementation}
+\subsubsection{Định nghĩa}
+Đây là dạng thuần túy của mẫu thiết kế Prototype, nó tập trung vào kỹ thuật \textbf{Tự nhân bản}. Cấu trúc của nó bao gồm 3 phần chính đó là \textbf{Client}, \textbf{Prototype Interface} và \textbf{Concrete Prototype} với các nhiệm vụ khác nhau như sau \cite{patterns_prototype}:
+
+\FloatBarrier 
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{images/basic_implementation.jpg}
+  \caption{Cấu trúc của Basic Prototype Implementation}
+  \label{label:structure_basic_prototype}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{Prototype Interface:} Cấu trúc này có nhiệm vụ là định nghĩa các phương thức cho việc nhân bản \textit{cloning} các đối tượng và đặt các tiêu chuẩn sao cho tất cả các \textbf{concrete prototypes} phải tuân theo. Nó bao gồm một phương thức \code{clone()} là nơi mà các \textbf{concrete prototypes} sẽ triển khai để tạo một bản sao của nó.
+  \item \textbf{Concrete Prototypes:} Lớp này sẽ triển khai các \code{prototype interface} hoặc là mở rộng lớp trừu tượng. Nó biểu diễn một đối tượng có kiểu đặc biệt có thể được nhân bản.
+  \item \textbf{Client:} Người dùng là đoạn mã nguồn hoặc là một module nào đó sẽ yêu cầu việc khởi tạo một đối tượng bới bằng cách giao tiếp với \textbf{prototype}.
+  \item \textbf{Clone method:} Đây sẽ là phương thức được định nghĩa bên trong \code{prototype interface} hoặc là \code{abstract class} và chỉ ra rằng một đối tượng phải được nhân bản như nào. Các \code{concrete prototypes} sẽ triển khai phương thức này để định nghĩa thuộc tính nhân bản riêng biệt cho bản thân nó.
+\end{itemize}
+
+\FloatBarrier
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{images/analogy_example.jpg}
+  \caption{Hình ảnh ẩn dụ cho Prototype}
+  \label{label:anology_img}
+\end{figure}
+
+\FloatBarrier
+Chẳng hạn như hình ảnh ẩn dụ thực tế về Protype ở trên, ban đầu ta có một mẫu được gọi là \code{Prototype} có các thuộc tính và thông tin cơ bản về class này. Sau đó \code{Client} sẽ tiến hành gọi \code{clone()} để có thể nhân bản ra các bản sao khác để tạo ra thêm các mẫu rời rạc khác từ đó mà có thể tùy chỉnh các thông tin cho các mẫu đó.
+
+Việc áp dụng Prototype không chỉ giúp cho \code{Client} có thể dễ dàng khởi tạo một đối tượng mới dựa trên đối tượng mẫu mà không cần biết chi tiết về bên trong lớp đó có những gì. Từ đó mà giúp cho code của ta có thể gọn hơn, dễ chỉnh sửa cũng như là sửa lỗi. Tóm gọn lại Protype sẽ có các lợi ích như sau \cite{faraz_prototype_proscons}:
+\begin{itemize}
+  \item \textbf{Efficient Object Creation:} Prototype pattern cho phép ta một cách khởi tạo các object một cách hiểu quả hơn thông qua việc cho phép các đối tượng có thể \code{clone()} thay vì là khởi tạo từ đầu. Nó có thể cải thiện hiệu suất một cách mạnh mẽ, đặc biệt là nếu các đối tượng phức tạp.
+  \item \textbf{Reduced Subclassing:} Thay vì là ta phải tạo nhiều subclass khác nhau để tạo các đối tượng khác nhau, thì với \code{Prototype} thì ta chỉ cần xây dựng phương thức \code{clone()}. Nó giúp ta giải được sự bùng nổ subclass, cũng như là đơn giản hóa các lớp kế thừa và làm cho \code{codebase} có thể dễ bảo trì hơn.
+  \item \textbf{Flexibility:} Nhân bản các đối tượng cho phép ta có thể tùy chỉnh các thông tin đối tượng một cách độc lập, cũng như là thay đổi \code{dynamic runtime changes} không ảnh hưởng tới đối tượng nguyên bản. 
+  \item \textbf{Promotes Reusability:} Bằng cách cung cấp các kỹ thuật \code{clone} thì \code{Prototype} pattern có thể tái sử dụng. Các đối tượng được nhân bản có thể bảo toàn như là các mẫu ban đầu với sự tương đồng về thuộc tính, hành vi, từ đó mà có thể tiết kiệm thời gian và nguồn lực.
+\end{itemize}
+
+\subsubsection{Code Demo}
+\begin{lstlisting}
+  #include <iostream>
+  #include <vector>
+  #include <string>
+
+  #define RED "\033[31m"
+  #define YELLOW "\033[33m"
+  #define GREEN "\033[32m"
+  #define RESET "\033[0m"
+
+  class Bacteria{
+  private:
+      std::string dna_;
+      std::vector<std::string> resistanceList_;
+      std::vector<std::string> mutationHistory_;
+      int generation_;
+  public:
+      /// @brief : Default constructor
+      Bacteria() : dna_(""), resistanceList_({}), mutationHistory_({}), generation_(0){
+          std::cout << "\n[INFO] Initialize a " << RED << "'bacteria'" << RESET << " object via " << 
+                  YELLOW << "'default constructor'" << RESET << '\n';
+      } 
+      /// @brief : Copy constructor using Deep Copy
+      Bacteria(const Bacteria& other){
+          dna_ = other.dna_;
+          resistanceList_ = other.resistanceList_;
+          mutationHistory_ = other.mutationHistory_;
+          generation_ = other.generation_;
+
+          std::cout << "\n[INFO] Initialize a " << RED << "'bacteria'" << RESET << " object via " << 
+                  YELLOW << "'copy constructor'" << RESET << '\n';
+      }
+      /// @brief : Destructor
+      ~Bacteria(){
+          std::cout << "\n[INFO] Deleting the" << RED << "'bacteria'" << RESET << " object\n";
+      }
+      /// @brief : Clone method
+      Bacteria* clone() {
+          std::cout << "Cloning " << RED << "'bacteria'" << RESET << " object via " 
+                  << YELLOW << "'clone()'" << RESET << "method\n"; 
+
+          Bacteria* newBacteria = new Bacteria(*this);
+
+          newBacteria->generation_ = this->generation_ + 1;
+
+          return newBacteria;
+      }
+
+      ///< @brief : Mutating 
+      void mutate(const std::string& resistanceSubstance) {
+          this->dna_ += "_Mutated";
+          this->resistanceList_.push_back("Resist-" + resistanceSubstance);
+          this->mutationHistory_.push_back("Mutate-" + resistanceSubstance);
+      }
+
+      void printInfo() {
+          std::cout << "--- Bacteria Info ---" << "\n";
+          std::cout << "Gen: " << dna_ << "\n";
+          std::cout << "Generation: " << generation_ << "\n";
+          std::cout << "Resistance: ";
+          for (const auto& r : resistanceList_) std::cout << r << " ";
+          std::cout << "\n" << "\n";
+      }
+  };
+  int main()
+  {
+      std::ios_base::sync_with_stdio(false);
+
+      Bacteria* mother = new Bacteria();
+
+      mother->mutate("Penicillin");      
+      mother->mutate("Ampicillin");     
+      mother->mutate("Tetracycline");    
+      mother->mutate("Streptomycin");    
+
+      std::cout << "Mother after mutated:" << std::endl;
+      mother->printInfo();
+
+      std::cout << "Child cloned from Mother:" << std::endl;
+      Bacteria* child = mother->clone();
+
+      child->mutate("Chloramphenicol");
+
+      child->printInfo();
+
+      delete child;
+      delete mother;
+
+      return 0;
+  }
+\end{lstlisting}
+
+\subsubsection{Output}
+\begin{TerminalBox}
+% --- DÒNG 1: KHỞI TẠO MẸ ---
+[INFO] Initialize a \cred{'bacteria'} object via \cyellow{'default constructor'} \\
+Mother after mutated: \\
+--- Bacteria Info --- \\
+Gen: \_Mutated\_Mutated\_Mutated\_Mutated \\
+Generation: 0 \\
+Resistance: Resist-Penicillin Resist-Ampicillin Resist-Tetracycline Resist-Streptomycin \\[1em]
+
+% --- DÒNG 2: CLONE ---
+Child cloned from Mother: \\
+Cloning \cred{'bacteria'} object via \cyellow{'clone()'} method \\[1em]
+
+% --- DÒNG 3: KẾT QUẢ CON ---
+[INFO] Initialize a \cred{'bacteria'} object via \cyellow{'copy constructor'} \\
+--- Bacteria Info --- \\
+Gen: \_Mutated\_Mutated\_Mutated\_Mutated\_Mutated \\
+Generation: 1 \\
+Resistance: Resist-Penicillin Resist-Ampicillin Resist-Tetracycline Resist-Streptomycin Resist-Chloramphenicol
+\end{TerminalBox}
+
+\subsection{Registry Prototype Implementation}
+Đây là dạng mở rộng hơn của Prototype, ta tiến hành kết hợp 2 pattern lại với nhau cụ thể trong trường hợp này là kết hợp giữa \code{Registry} và \code{Prototype} pattern. Mục tiêu của việc triển khai này sẽ tập trung vào việc ta có thể \textbf{quản lý và tái sử dụng}. Nó cung cấp cho ta một cách để có thể truy cập các \code{Prototype} thường dùng. Các \code{Prototypes} ấy sẽ được lưu trữ trong một tập hợp được xây dựng từ trước và luôn sẵn sàng để có thể được nhân bản \cite{ramjas_prototype}. 
+
+\FloatBarrier
+
+\begin{figure}
+  \includegraphics[width=0.9\textwidth]{images/registry_implementation.jpg}
+  \caption{Cấu trúc cho Registry Implementation}
+  \label{label:registry}
+\end{figure}
+
+\FloatBarrier
+Trong cấu trúc này ta sẽ tạo thêm một lớp \code{PrototypeRegistry} để có thể lưu trữ các 
+
+\subsubsection{Registry Pattern}
+Registry Pattern là một hướng đi \code{cấu trúc hóa} được sử dụng để tập trung hóa và quản lý truy cập tới các phần tử được chia sẻ hoặc là các phiên bản bên trong một phần mềm\cite{gfg_registry}. Mẫu thiết kế này nó liên quan tới việc khởi tạo một \code{registry} (thanh ghi) là kho lưu trữ trung tâm hoặc toàn cục, nơi các đối tượng sẽ đăng ký và lưu trữ với các mã định danh duy nhất.
+
+Việc kết hợp \code{Registry} và \code{Prototype} tạo cho ta sự tiện lợi khi nó đã tiền xây dựng sẵn và khi cần ta chỉ cần truy cập tới đối tượng ta cần nhân bản thông quan một \code{key}, thông thường các đối tượng ấy sẽ được lưu trữ bên trong một \code{Hash Map}. Nhờ sự kết hợp đó nó cho ta thấy được các lợi ích như sau:
+\begin{itemize}
+  \item \textbf{Access Efficiency:} Khi được triển khai đúng cách, \code{Registry} sẽ cho ta thấy được hiệu quả được cải thiện rõ rệt bằng việc cung cấp một các truy cập tối ưu đến các tài nguyên được chia sẻ. Các thành phần sẽ có thể được truy vấn các đối tượng một cách nhanh chóng từ thanh ghi mà không cần phải khởi tạo hoặc là tra cứu chúng nhiều lần.
+  \item \textbf{Caching and Optimizations:} \code{Registry} có thể kết hợp với các chiến lược lưu bộ nhớ đệm \code{caching} để tối ưu hiệu quả. Nhờ vào điều này mà nhu cầu về các truy vấn lặp đi lặp lại và khởi tạo các đối tượng được giảm đi rõ rệt.
+  \item \textbf{Centralized Resource Management:} Nhờ vào việc tập trung các tài nguyên chia sẻ vào một chỗ tại \code{Registry}, nên mẫu thiết kế này có thể đơn giản hóa cho việc tinh chỉnh quá trình có thể thêm hoặc bớt một cách dễ dàng. Thay vì là ta phải quản lý các nguồn tài nguyên trên nhiều đối tượng, nhiều nodes khác nhau thì bây giờ tất cả đều tập trung tại một \code{Registry} đơn lẻ.
+\end{itemize}
+
+\subsubsection{Demo Code}
+\begin{lstlisting}
+  #include <iostream>
+  #include <string>
+  #include <map>
+  #include <thread>
+  #include <chrono>
+  #include <map>
+  #include <vector>
+
+  #define RED "\033[31m"
+  #define YELLOW "\033[33m"
+  #define GREEN "\033[32m"
+  #define RESET "\033[0m"
+
+  class ServerPrototype
+  {
+  public:
+      ///< @brief: Pure virtual allowing each subclass to define its own method
+      virtual ServerPrototype* clone() const = 0;
+      virtual void showConfig() = 0;
+      virtual ~ServerPrototype() {}
+  };
+
+  class LinuxServer : public ServerPrototype {
+  private:
+      std::string name_;
+      std::string osVersion_;
+      int ramGB_;
+      std::vector<std::string>* installedPackages_;
+  public:
+      LinuxServer(std::string name, int ram) : name_(name), ramGB_(ram) {
+          this->osVersion_ = "Linux 6.17.4-arch2-1";
+          installedPackages_ = new std::vector<std::string>{"nginx", "mysql", "php"};
+
+          std::cout << "[System] Installing OS for Prototype " << name_ 
+                  << "via " << RED << "'default  constructor'" << RESET << '\n';
+      }
+
+      LinuxServer(const LinuxServer& other){
+          name_ = other.name_;
+          osVersion_ = other.osVersion_;
+          ramGB_  =  other.ramGB_;
+
+          installedPackages_ =  new std::vector<std::string>(*other.installedPackages_);
+
+          std::cout << "[System] Installing OS for Prototype " << name_ 
+                  << "via " << RED << "'copy  constructor'" << RESET << '\n';
+      }
+
+      ServerPrototype* clone() const override {
+          return new LinuxServer(*this);
+      }
+
+      void showConfig() override {
+          std::cout << "Server: " << name_ << " | OS: " << osVersion_ << " | RAM: " << ramGB_ << "GB" << std::endl;
+      }
+
+      ~LinuxServer(){
+          delete installedPackages_;
+      }
+  };
+
+  class ServerRegistry
+  {
+  private:
+      std::map<std::string,  ServerPrototype*> templates;
+
+  public:
+      ServerRegistry() {
+          std::cout <<  "=== STARTING REIGSTRY ===" << std::endl;
+
+          templates["Standard"] = new LinuxServer("Standard_VPS", 4);
+          templates["HighMem"] = new LinuxServer("HighMem_VPS", 64);
+
+          std::cout << "=== COMPLETED INITIALIZATION ===" << std::endl;
+      }
+
+      ~ServerRegistry() {
+          for (auto const& [key, val] : templates) {
+              delete val;
+          }
+          templates.clear();
+      }
+
+      ServerPrototype* createServer(std::string type){
+          if(templates.find(type) != templates.end()){
+              return templates[type]->clone();
+          }
+          return nullptr;
+      }
+  };
+
+  int main() {
+      std::ios_base::sync_with_stdio(false);
+
+      ServerRegistry registry;
+
+      std::cout << "[INFO] Create a " << RED << "'Standard'" << RESET 
+              << " server\n";
+      ServerPrototype* standardServer = registry.createServer("Standard");
+      if(standardServer) standardServer->showConfig();
+
+      std::cout << "[INFO] Create a " << RED << "'HigMem'" << RESET 
+              << " server\n";
+      ServerPrototype* highMem = registry.createServer("HighMem");
+      if(highMem) highMem->showConfig();
+
+      std::cout << "[INFO] Create a " << RED << "'Standard'" << RESET 
+              << " server\n";
+      ServerPrototype* standardServer2 = registry.createServer("Standard");
+      if(standardServer2) standardServer2->showConfig();
+
+      delete standardServer;
+      delete highMem;
+      delete standardServer2;
+
+      return 0;
+  }
+\end{lstlisting}
+
+\subsubsection{Output}
+    \begin{TerminalBox}
+    === STARTING REIGSTRY === \\
+    ~[System] Installing OS for Prototype Standard\_VPSvia \cred{'default  constructor'} \\
+    ~[System] Installing OS for Prototype HighMem\_VPSvia \cred{'default  constructor'} \\
+    === COMPLETED INITIALIZATION === \\[0.5em]
+    
+    ~[INFO] Create a \cred{'Standard'} server \\
+    ~[System] Installing OS for Prototype Standard\_VPSvia \cred{'copy  constructor'} \\
+    Server: Standard\_VPS | OS: Linux 6.17.4-arch2-1 | RAM: 4GB \\[0.5em]
+    
+    ~[INFO] Create a \cred{'HigMem'} server \\
+    ~[System] Installing OS for Prototype HighMem\_VPSvia \cred{'copy  constructor'} \\
+    Server: HighMem\_VPS | OS: Linux 6.17.4-arch2-1 | RAM: 64GB \\[0.5em]
+    
+    ~[INFO] Create a \cred{'Standard'} server \\
+    ~[System] Installing OS for Prototype Standard\_VPSvia \cred{'copy  constructor'} \\
+    Server: Standard\_VPS | OS: Linux 6.17.4-arch2-1 | RAM: 4GB
+    \end{TerminalBox}
+\section{Feature Checklist}
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \caption{Checklist các hạng mục công việc cần thực hiện}
+    \label{tab:checklist}
+    \begin{tabular}{@{} l c p{7cm} c c @{}}
+        \toprule
+        \textbf{Danh mục} & \textbf{ID} & \textbf{Nội dung công việc} & \textbf{Ưu tiên} & \textbf{Trạng thái} \\
+        \midrule
+        
+        Documentation & D.1 & \textbf{Main Report}: Viết báo cáo chính của dự án. & M & Done \\
+                      & D.2 & \textbf{Slide}: Thiết kế slide thuyết trình. & M & Done \\
+        
+        \addlinespace[0.5em] 
+        
+        Implementation & C.1 & \textbf{Basic Prototype Demo Code}: Cài đặt mẫu Prototype cơ bản. & M & Done \\
+                       & C.2 & \textbf{Registry Prototype Demo Code}: Cài đặt Registry quản lý mẫu. & M & Done \\
+        
+        \addlinespace[0.5em] 
+        
+        Media          & V.1 & \textbf{Video}: Quay video demo sản phẩm. & M & Done \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Conclusion}
+Prototype Pattern là một mẫu thiết kế phổ biến và mạnh mẽ, được ứng dụng nhiều trong thực tế đặc biệt là trong lĩnh vực phát triển phần mềm. Nó cho phép người dùng có thể sử dụng \code{clone()} để có thể khởi tạo một đói tượng mới mà không cần biết quá cụ thể về đối tượng, đặc biệt là sẽ làm đơn giản vấn đề nếu như đối tượng đó quá phức tạp chứa nhiều lớp chồng lớp, cấu trúc chồng cấu trúc, hoặc là có chứa các logic phức tạp tốn nhiều thời gian để thực hiện khởi tạo.
+
+Mẫu thiết kế này thể hiện được hiệu quả mạnh mẽ nếu như được xây dựng đúng cách nhưng nó sẽ khá phức tạp cho việc xây dựng \code{deep copy} yêu cầu có một kỹ năng thực tế và một kiến thức về thuật toán vững chắc. Prototype cung cấp cho ta một giải pháp khởi tạo đối tượng hiệu quả, giảm thiểu được bùng nổ các lớp trong quá trình phát triển, cũng như là tạo cho ta sự tùy biến và cho ta khả năng tái sử dụng các chức năng và thông tin của đối tượng.Done
+
+Ngoài ra, ta có thể tối ưu hiệu quả của Prototype pattern bằng cách kếp hợp với Registry Pattern. Nó cho khả năng lưu trữ bộ nhớ đệm với một số đối tượng cụ thể, và các đối tượng này có thể được truy cập thông qua một \code{key} định danh duy nhất, và sau này nếu ta cần nhân bản đối tượng thì ta chỉ cần truy cập tới đối tượng ấy thông qua một \code{key}, việc này giúp cho ta có thể cải thiện tốc độ xử lý và tiết kiệm bộ nhớ. 
