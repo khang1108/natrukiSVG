@@ -85,6 +85,13 @@ void CanvasWidget::zoomReset()
     update();
 }
 
+void CanvasWidget::setScale(double scale)
+{
+    m_scale = scale;
+    clampScale();
+    update();
+}
+
 void CanvasWidget::rotate()
 {
     m_rotation = std::fmod(m_rotation + 90.0, 360.0);
