@@ -27,7 +27,27 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
     if (!name || *name == '\0') {
         return nullptr; // Invalid node
     }
+    //-------------------------------------------------
+    // 1. Reset cache CSS khi bắt đầu parse file mới 
+    if (strcmp(name, "svg") == 0) {
+        m_cssClasses.clear();
+    }
 
+    // 2. Xử lý thẻ <style>: Đọc nội dung CSS lưu vào m_cssClasses
+    if (strcmp(name, "style") == 0) {
+        parseCssContent(node->value());
+        return nullptr; // Không tạo đối tượng vẽ cho thẻ style
+    }
+
+    // 3. Xử lý thẻ <defs>: Trả về Group ẩn để tiếp tục duyệt con (tìm thẻ style bên trong)
+    if (strcmp(name, "defs") == 0) {
+        auto group = std::make_unique<SVGGroup>();
+        SVGStyle defsStyle;
+        defsStyle.isDisplayed = false; // Defs không hiển thị
+        group->setStyle(defsStyle);
+        return group;
+    }
+    //-------------------------------------------------
     // Get parent's style and transform for inheritance
     const SVGStyle& parentStyle = (parentElement) ? parentElement->getStyle() : SVGStyle();
     const SVGTransform& parentTransform =
@@ -297,11 +317,70 @@ SVGColor SVGFactoryImpl::parseColor(std::string colorStr, const SVGColor& defaul
 
 // QColor không đọc được mã rgb nên tự viết thủ công
 
+// --- NEW: Parse nội dung thẻ <style> ---
+void SVGFactoryImpl::parseCssContent(const std::string& content)
+{
+    if (content.empty())
+        return;
+    size_t pos = 0;
+    while (pos < content.length()) {
+        // 1. Tìm tên class (bắt đầu bằng dấu chấm)
+        size_t startClass = content.find('.', pos);
+        if (startClass == std::string::npos)
+            break;
+
+        size_t startBrace = content.find('{', startClass);
+        if (startBrace == std::string::npos)
+            break;
+
+        // Lấy tên class (bỏ dấu chấm)
+        std::string className = content.substr(startClass + 1, startBrace - startClass - 1);
+        className = trim(className); // Xóa khoảng trắng thừa
+
+        // 2. Tìm nội dung style bên trong {}
+        size_t endBrace = content.find('}', startBrace);
+        if (endBrace == std::string::npos)
+            break;
+
+        std::string body = content.substr(startBrace + 1, endBrace - startBrace - 1);
+
+        // 3. Parse từng thuộc tính
+        std::stringstream ss(body);
+        std::string item;
+        while (std::getline(ss, item, ';')) {
+            size_t colon = item.find(':');
+            if (colon != std::string::npos) {
+                std::string key = trim(item.substr(0, colon));
+                std::string val = trim(item.substr(colon + 1));
+                if (!key.empty()) {
+                    // Lưu vào biến thành viên m_cssClasses
+                    m_cssClasses[className][key] = val;
+                }
+            }
+        }
+        pos = endBrace + 1;
+    }
+}
+// UPDATE: CSS CLASS ADDED
 SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGStyle& parentStyle)
 {
     SVGStyle style;
     style.inheritFrom(parentStyle);           // Start with inherited values
     std::map<std::string, std::string> attrs; // Collect all style attributes
+    
+    const char* classAttr = getAttr(node, "class");
+    if (classAttr && *classAttr != '\0') {
+        std::string className(classAttr);
+        std::stringstream ss(className);
+        std::string singleClass;
+        while (ss >> singleClass) {
+            if (m_cssClasses.count(singleClass)) {
+                for (const auto& pair : m_cssClasses[singleClass]) {
+                    attrs[pair.first] = pair.second;
+                }
+            }
+        }
+    }
 
     if (auto* attr = node->first_attribute("fill"))
         attrs["fill"] = attr->value();
