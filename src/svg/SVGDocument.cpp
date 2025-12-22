@@ -58,6 +58,9 @@ void SVGDocument::addChild(std::unique_ptr<SVGElement> child)
 {
     if (child)
         m_children.push_back(std::move(child));
+
+    if(child->getId() != "")
+        m_defs[child->getId()] = std::move(child);
 }
 
 /**

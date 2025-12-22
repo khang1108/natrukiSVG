@@ -74,6 +74,11 @@ public:
   const SVGStyle& getStyle() const; // Phiên bản const
   SVGTransform& getTransform();
   const SVGTransform& getTransform() const; // Phiên bản const
+
+  // <-------------------Getter / Setter------------------->
+  std::string getId() const;
+
+  void setId(const std::string& id);
 };
 
 #endif // SVG_ELEMENT_H

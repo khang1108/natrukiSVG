@@ -20,6 +20,8 @@ public:
   SVGNumber fillOpacity = 1.0;
   SVGNumber strokeOpacity = 1.0;
   SVGFillRule fillRule = SVGFillRule::NonZero;
+  std::string fillUrl;
+  std::string strokeUrl;
 
   // --- Thuộc tính Font ---
   std::string fontFamily;
@@ -30,7 +32,6 @@ public:
   bool isItalic = false;    
   int fontWeight = 50;       // Độ đậm nhạt - Bold
   bool isBold = false;      
-
 
   /**
    * @brief Lưu thuộc tính 'display'.
