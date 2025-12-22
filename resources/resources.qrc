@@ -22,6 +22,7 @@
         <file alias="resources/icons/Download button.png">viewer/icons/Download button.png</file>
         <file alias="resources/icons/zoom in button.png">viewer/icons/zoom in button.png</file>
         <file alias="resources/icons/zoom out button.png">viewer/icons/zoom out button.png</file>
+        <file alias="resources/icons/cursor.png">viewer/icons/cursor.png</file>
     </qresource>
     <qresource prefix="/about/icons">
         <file alias="resources/about/icons/Khung text.png">about/icons/Khung text.png</file>
