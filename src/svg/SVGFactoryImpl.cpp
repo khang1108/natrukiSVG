@@ -3,6 +3,7 @@
 #include "SVGCircle.h"
 #include "SVGEllipse.h"
 #include "SVGGroup.h"
+#include "SVGGradient.h" // Add this include
 #include "SVGLine.h"
 #include "SVGPath.h"
 #include "SVGPolygon.h"
@@ -98,9 +99,112 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
     SVGPointF pos = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0)};
     newElement = std::make_unique<SVGText>(pos, node->value());
   }
+  // --- GRADIENT PARSING ---
+  else if (strcmp(name, "linearGradient") == 0) {
+      auto linear = std::make_unique<LinearGradient>();
+      // Parse Gradient Attributes
+      const char* x1 = getAttr(node, "x1");
+      const char* y1 = getAttr(node, "y1");
+      const char* x2 = getAttr(node, "x2");
+      const char* y2 = getAttr(node, "y2");
+      // Note: Coordinates in gradients can be percentages. For now assume numbers/fractions. 
+      // If "0%" -> 0.0, "100%" -> 1.0. parseNumber handles simple numbers.
+      // Need to handle units? parseNumber handles px.
+      // We need to implement parsing percentages if they appear here, but parseNumber might take stod ("0%") as 0.
+      linear->x1 = parseNumber(x1, 0.0);
+      linear->y1 = parseNumber(y1, 0.0);
+      linear->x2 = parseNumber(x2, 1.0);
+      linear->y2 = parseNumber(y2, 0.0);
+      newElement = std::move(linear);
+  }
+  else if (strcmp(name, "radialGradient") == 0) {
+      auto radial = std::make_unique<RadialGradient>();
+      radial->cx = parseNumber(getAttr(node, "cx"), 0.5);
+      radial->cy = parseNumber(getAttr(node, "cy"), 0.5);
+      radial->r  = parseNumber(getAttr(node, "r"), 0.5);
+      radial->fx = parseNumber(getAttr(node, "fx"), radial->cx);
+      radial->fy = parseNumber(getAttr(node, "fy"), radial->cy);
+      newElement = std::move(radial);
+  }
+  else if (strcmp(name, "stop") == 0) {
+      // Create a dummy element to return? No, stop is minimal.
+      // But SVGDocument expects an SVGElement.
+      // Ideally "stop" is NOT an SVGElement that draws. 
+      // But we can make it one or handle it in parent.
+      // Wait, if I created Stop class inside SVGGradient.h as struct, I can't return it here as unique_ptr<SVGElement>.
+      // Problem: SVGDocument calls createDefaultFactory -> createElement.
+      // If "stop" is encountered inside "linearGradient", parseRecursive calls createElement.
+      // It returns a generic SVGElement. 
+      // Option 1: Create a wrapper class SVGStopElement : public SVGElement that holds the struct.
+      // Option 2: Handle "stop" by looking at parentElement.
+      if (parentElement) {
+          Gradient* parentGradient = dynamic_cast<Gradient*>(parentElement);
+          if (parentGradient) {
+              SVGStop stop;
+              stop.offset = parseNumber(getAttr(node, "offset"), 0.0); 
+              // offset can be "50%"
+              std::string offsetStr = getAttr(node, "offset");
+              if (offsetStr.find('%') != std::string::npos) {
+                  stop.offset = parseNumber(offsetStr.c_str(), 0.0) / 100.0f;
+              }
+
+              // Parse stop-color
+              std::string stopColorStr = getAttr(node, "stop-color");
+              stop.stopColor = parseColor(stopColorStr, {0,0,0,255}); // default black
+
+              // Parse stop-opacity
+              stop.stopOpacity = parseNumber(getAttr(node, "stop-opacity"), 1.0);
+              const char* styleStr = getAttr(node, "style");
+              if (styleStr) {
+                  // Fallback: parse style string for stop-color/opacity if standard attributes missing?
+                  // Or assume parsed in style?
+                  // For <stop>, style attributes are common.
+                  // Helper: we can reuse parseStyle logic OR just simplistic parse.
+                  // Let's rely on standard attributes first.
+                  // If attributes missing, check style string manually or use parseStyle?
+                  // Re-using parseStyle returns SVGStyle, but we need SVGStop struct values.
+                  // TODO: Better parsing of style for Stops. For now assume attributes or simple style.
+              }
+              
+              parentGradient->addStop(stop);
+              return nullptr; // We handled it, don't return new child for generic addition
+          }
+      }
+      return nullptr; // Ignore if not inside gradient
+  }
+
+  // --- COMMON GRADIENT ATTRIBUTES (applied to newElement if it is a Gradient) ---
+  if (newElement && (strcmp(name, "linearGradient") == 0 || strcmp(name, "radialGradient") == 0)) {
+      Gradient* grad = dynamic_cast<Gradient*>(newElement.get());
+      if (grad) {
+          const char* units = getAttr(node, "gradientUnits");
+          if (units && strcmp(units, "userSpaceOnUse") == 0)
+              grad->setGradientUnits(GradientUnit::UserSpaceOnUse);
+          else
+              grad->setGradientUnits(GradientUnit::ObjectBoundingBox); // Default
+
+          const char* spread = getAttr(node, "spreadMethod");
+          if (spread && strcmp(spread, "reflect") == 0)
+              grad->setSpreadMethod(SpreadMethod::Reflect);
+          else if (spread && strcmp(spread, "repeat") == 0)
+              grad->setSpreadMethod(SpreadMethod::Repeat);
+          else
+              grad->setSpreadMethod(SpreadMethod::Pad); // Default
+         
+           const char* href = getAttr(node, "href");
+           if (!href) href = getAttr(node, "xlink:href");
+           // TODO: Handle href (inheritance of stops) if needed.
+      }
+  }
 
     // Apply style and transform to the element
     if (newElement) {
+        // --- NEW: Parse ID ---
+        const char* id = getAttr(node, "id");
+        if (id && *id != '\0') {
+            newElement->setId(std::string(id));
+        }
+
         SVGStyle style = parseStyle(node, parentStyle);
         newElement->setStyle(style);
 

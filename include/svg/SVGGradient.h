@@ -75,6 +75,8 @@ public:
 class LinearGradient : public Gradient
 {
 public:
+    SVGNumber x1 = 0.0, y1 = 0.0;
+    SVGNumber x2 = 1.0, y2 = 0.0; // Default: horizontal
     LinearGradient();
     ~LinearGradient() = default;
 };
@@ -82,6 +84,8 @@ public:
 class RadialGradient : public Gradient
 {
 public:
+    SVGNumber cx = 0.5, cy = 0.5, r = 0.5;
+    SVGNumber fx = 0.5, fy = 0.5;
     RadialGradient();
     ~RadialGradient() = default;
 };

@@ -56,11 +56,12 @@ void SVGDocument::setViewBox(const SVGRectF& viewBox) { m_viewBox = viewBox; }
  */
 void SVGDocument::addChild(std::unique_ptr<SVGElement> child)
 {
-    if (child)
-        m_children.push_back(std::move(child));
+    if (!child) return;
 
-    if(child->getId() != "")
-        m_defs[child->getId()] = std::move(child);
+    if (!child->getId().empty()) {
+        m_defs[child->getId()] = child.get();
+    }
+    m_children.push_back(std::move(child));
 }
 
 /**
@@ -206,6 +207,9 @@ void SVGDocument::parseRecursive(rapidxml::xml_node<char>* xmlNode, SVGElement* 
     }
 
     SVGElement* newElementPtr = newElement.get();
+    if (!newElementPtr->getId().empty()) {
+        m_defs[newElementPtr->getId()] = newElementPtr;
+    }
     SVGGroup* group = dynamic_cast<SVGGroup*>(newElementPtr);
     if (group) {
 
@@ -322,4 +326,19 @@ SVGRectF SVGDocument::getContentBoundingBox() const
 
     return {minX - paddingX, minY - paddingY, (maxX - minX) + 2 * paddingX,
             (maxY - minY) + 2 * paddingY};
+}
+
+/**
+ * @brief Finds an element by its ID.
+ *
+ * @param id The ID to search for
+ * @return Pointer to the element if found, nullptr otherwise
+ */
+SVGElement* SVGDocument::findElementById(const std::string& id)
+{
+    auto it = m_defs.find(id);
+    if (it != m_defs.end()) {
+        return it->second;
+    }
+    return nullptr;
 }

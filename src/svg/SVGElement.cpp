@@ -106,3 +106,13 @@ SVGRectF SVGElement::worldBox() const
 
     return {minX, minY, maxX - minX, maxY - minY};
 }
+
+std::string SVGElement::getId() const
+{
+    return m_id;
+}
+
+void SVGElement::setId(const std::string& id)
+{
+    m_id = id;
+}

@@ -28,7 +28,7 @@ private:
   SVGRectF m_viewBox;
   std::vector<std::unique_ptr<SVGElement>> m_children;
   std::unique_ptr<SVGFactory> m_factory;
-  std::map<std::string, std::unique_ptr<SVGElement>> m_defs;
+  std::map<std::string, SVGElement*> m_defs;
   /**
    * @brief Hàm đệ quy chính
    * (Chỉ cần 2 tham số)
@@ -49,7 +49,10 @@ public:
   void draw(NodeVisitor& visitor);
   const SVGRectF& getViewBox() const { return m_viewBox; }
   const std::vector<std::unique_ptr<SVGElement>>& getChildren() const;
-  std::unique_ptr<SVGElement> findElementById(const std::string& id);
+  // ...
+  // ...
+  // Change return type to raw pointer
+  SVGElement* findElementById(const std::string& id);
 
   /**
    * @brief Tải, parse file SVG.
