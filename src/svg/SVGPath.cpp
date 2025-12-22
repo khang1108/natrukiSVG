@@ -39,26 +39,54 @@ void SVGPath::parseD(const std::string& d)
         }
     };
 
-    auto readNumber = [&]() -> SVGNumber {
+auto readNumber = [&]() -> SVGNumber {
         skipDelimiters();
         if (i >= len)
             return 0.0;
 
         size_t start = i;
+
+        // 1. Xử lý dấu +/-
         if (d[i] == '-' || d[i] == '+')
             i++;
-        while (i < len && (isdigit(d[i]) || d[i] == '.'))
-            i++;
+
+        // 2. Đọc phần số nguyên và thập phân (Chỉ cho phép 1 dấu chấm)
+        bool dotSeen = false;
+        while (i < len) {
+            if (isdigit(d[i])) {
+                i++;
+            }
+            else if (d[i] == '.') {
+                if (dotSeen)
+                    break; // Gặp dấu chấm thứ 2 -> DỪNG LẠI (Đây là bắt đầu số mới)
+                dotSeen = true;
+                i++;
+            }
+            else {
+                break; // Ký tự khác -> Dừng
+            }
+        }
+
+        // 3. Xử lý số mũ (Scientific notation: 1.2e-5)
         if (i < len && (d[i] == 'e' || d[i] == 'E')) {
+            size_t eStart = i;
             i++;
             if (i < len && (d[i] == '-' || d[i] == '+'))
                 i++;
-            while (i < len && isdigit(d[i]))
-                i++;
+
+            // Phải có ít nhất 1 số sau e/E
+            if (i < len && isdigit(d[i])) {
+                while (i < len && isdigit(d[i]))
+                    i++;
+            }
+            else {
+                // Nếu sau e không có số, rollback lại trước chữ e
+                i = eStart;
+            }
         }
 
         if (start == i)
-            return 0.0; // Không đọc được số
+            return 0.0;
 
         try {
             return std::stod(d.substr(start, i - start));
@@ -235,8 +263,17 @@ void SVGPath::parseD(const std::string& d)
             curY = startY;
             break;
 
-            // TODO: Arc ('a') tính toán phức tạp hơn, tạm thời bỏ qua check bounds chi tiết cho A
-        }
+        case 'a': // Arc 
+            nx = cmd.args[5];
+            ny = cmd.args[6];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+            curX = nx;
+            curY = ny;
+            break;        }
 
         // Xử lý trường hợp đặc biệt: Sau M/m mà còn số thì các số sau là L/l
         if (currentCmd == 'M')
