@@ -8,6 +8,8 @@
 
 #include <fstream>
 #include <limits>
+#include <iostream>
+#include <cstring>
 #include <sstream>
 #include <stdexcept>
 #include <vector>
@@ -195,14 +197,62 @@ bool SVGDocument::load(const std::string& filePath)
  */
 void SVGDocument::parseRecursive(rapidxml::xml_node<char>* xmlNode, SVGElement* parentElement)
 {
+    // 1. Handle <style> tag
+    if (strcmp(xmlNode->name(), "style") == 0) {
+        if (xmlNode->value()) {
+            parseStyleBlock(xmlNode->value());
+        }
+        return; // Do not create element for <style>
+    }
 
-    std::unique_ptr<SVGElement> newElement = m_factory->createElement(xmlNode, parentElement);
+    // 2. Prepare Base Style and Transform
+    SVGStyle baseStyle;
+    SVGTransform baseTransform;
+    
+    // Start with parent's style/transform
+    if (parentElement) {
+        baseStyle = parentElement->getStyle();
+        baseTransform = parentElement->getTransform();
+    }
+    
+    // Apply Class Style (if any) to Base Style
+    // Effectively: Parent < Class
+    rapidxml::xml_attribute<char>* classAttr = xmlNode->first_attribute("class");
+    if (classAttr && classAttr->value()) {
+        std::string className = classAttr->value();
+        // Handle multiple classes? Simple implementation: exact match or single class
+        // Assuming single class for now as per requirement (cls-1)
+        // If content is ".cls-1", map key is "cls-1"
+        if (m_stylesByClass.count(className)) {
+             // In SVGStyle, inheritFrom merges "if not set in this, take from other"
+             // Here baseStyle contains parent values.
+             // We want: Result = Parent. Then override with Class.
+             // But inheritFrom does: Result.inheritFrom(Parent). 
+             // We want: Temp = Class. Temp.inheritFrom(Parent). Base = Temp.
+             
+             SVGStyle classStyle = m_stylesByClass[className];
+             classStyle.inheritFrom(baseStyle);
+             baseStyle = classStyle;
+        }
+    }
+
+    std::unique_ptr<SVGElement> newElement = m_factory->createElement(xmlNode, baseStyle, baseTransform);
 
     if (!newElement) {
         return;
     }
 
+    // Register ID if present
+    const std::string& id = newElement->getId();
+    if (!id.empty()) {
+        m_elementsById[id] = newElement.get();
+    }
+
     SVGElement* newElementPtr = newElement.get();
+    
+    // Parse stops if it is a gradient (Factory handles type check)
+    m_factory->parseStops(newElementPtr, xmlNode);
+
     SVGGroup* group = dynamic_cast<SVGGroup*>(newElementPtr);
     if (group) {
 
@@ -223,6 +273,35 @@ void SVGDocument::parseRecursive(rapidxml::xml_node<char>* xmlNode, SVGElement* 
     else {
 
         this->addChild(std::move(newElement));
+    }
+}
+
+void SVGDocument::parseStyleBlock(const std::string& content) {
+    // Simple parser for block: .cls { ... } .cls2 { ... }
+    std::size_t pos = 0;
+    while (pos < content.length()) {
+        std::size_t openBrace = content.find('{', pos);
+        if (openBrace == std::string::npos) break;
+        
+        std::string selector = content.substr(pos, openBrace - pos);
+        
+        std::size_t closeBrace = content.find('}', openBrace);
+        if (closeBrace == std::string::npos) break;
+        
+        std::string body = content.substr(openBrace + 1, closeBrace - openBrace - 1);
+        
+        // Clean selector
+        // Remove whitespace
+        while (!selector.empty() && isspace(selector.front())) selector.erase(0, 1);
+        while (!selector.empty() && isspace(selector.back())) selector.pop_back();
+        
+        if (!selector.empty() && selector.front() == '.') {
+            std::string className = selector.substr(1); // remove '.'
+            m_stylesByClass[className] = m_factory->createStyleFromCSS(body);
+             std::cout << "DEBUG: Parsed CSS Class: " << className << std::endl;
+        }
+        
+        pos = closeBrace + 1;
     }
 }
 
@@ -275,6 +354,15 @@ SVGRectF SVGDocument::parseViewBox(const char* viewBoxStr) const
         return {0, 0, 0, 0};
 
     return {minX, minY, width, height};
+}
+
+SVGElement* SVGDocument::getElementById(const std::string& id) const
+{
+    auto it = m_elementsById.find(id);
+    if (it != m_elementsById.end()) {
+        return it->second;
+    }
+    return nullptr;
 }
 
 // --- HÀM MỚI: Tính Bounding Box của toàn bộ tài liệu ---

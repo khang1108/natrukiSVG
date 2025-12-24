@@ -20,6 +20,8 @@ public:
   SVGNumber fillOpacity = 1.0;
   SVGNumber strokeOpacity = 1.0;
   SVGFillRule fillRule = SVGFillRule::NonZero;
+  std::string fillUrl;
+  std::string strokeUrl;
 
   // --- Thuộc tính Font ---
   std::string fontFamily;

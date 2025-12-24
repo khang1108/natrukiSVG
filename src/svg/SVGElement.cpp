@@ -54,6 +54,10 @@ SVGTransform& SVGElement::getTransform() { return m_transform; }
  */
 const SVGTransform& SVGElement::getTransform() const { return m_transform; }
 
+void SVGElement::setId(const std::string& id) { m_id = id; }
+
+const std::string& SVGElement::getId() const { return m_id; }
+
 /**
  * @brief Calculates the world bounding box (after applying transforms).
  *

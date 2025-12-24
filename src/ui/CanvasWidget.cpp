@@ -521,7 +521,8 @@ void CanvasWidget::renderDocument(QPainter& painter, const QSize& viewportSize)
     painter.setWorldTransform(buildViewTransform(viewportSize));
 
     // Render document using Visitor pattern
-    QtRenderer renderer(&painter);
+    // Render document using Visitor pattern
+    QtRenderer renderer(&painter, *m_document);
     m_document->draw(renderer);
 
     painter.restore(); // Restore state

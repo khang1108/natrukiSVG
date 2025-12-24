@@ -4,6 +4,7 @@
 #include "Renderer.h" // Kế thừa giao diện Strategy/Visitor
 #include "svg/SVGStyle.h"
 #include "svg/SVGTransform.h"
+#include "svg/SVGDocument.h"
 
 #include <QPainter> // SỬ DỤNG THƯ VIỆN QT6
 #include <QPainterPath>
@@ -25,6 +26,7 @@ class QtRenderer : public Renderer
      * 'QPainter' từ 'CanvasWidget::paintEvent'.
      */
     QPainter* m_painter;
+    const SVGDocument& m_document;
 
   public:
     /**
@@ -35,7 +37,7 @@ class QtRenderer : public Renderer
      * Viết logic cho hàm này trong 'QtRenderer.cpp'.
      * Chủ yếu là để gán 'm_painter = painter;'.
      */
-    QtRenderer(QPainter* painter);
+    QtRenderer(QPainter* painter, const SVGDocument& document);
 
     /**
      * @brief Hàm hủy (Destructor).
@@ -78,6 +80,11 @@ class QtRenderer : public Renderer
   private:
     bool prepareForDrawing(const SVGStyle& style) const;
     void drawPath(const QPainterPath& path, const SVGStyle& style, const SVGTransform& transform);
+    
+    // Helpers for gradients
+    QBrush getBrush(const SVGStyle& style, const SVGRectF& bbox);
+    QPen getPen(const SVGStyle& style, const SVGRectF& bbox);
+    QBrush createBrushFromGradient(SVGElement* gradientElement, const SVGRectF& bbox, double opacity);
 };
 
 #endif // UI_QT_RENDERER_H

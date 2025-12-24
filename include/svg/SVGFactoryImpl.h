@@ -30,7 +30,12 @@ public:
    * (Logic if/else sẽ nằm trong file .cpp)
    */
   virtual std::unique_ptr<SVGElement> createElement(rapidxml::xml_node<char>* node,
-                                                    SVGElement* parentElement) override;
+                                              const SVGStyle& baseStyle,
+                                              const SVGTransform& baseTransform) override;
+
+    SVGStyle createStyleFromCSS(const std::string& cssContent) override;
+    
+    void parseStops(SVGElement* gradient, rapidxml::xml_node<char>* node) override;
 
 private:
   // --- CÁC HÀM TIỆN ÍCH (HELPERS) ĐỂ PARSE ---

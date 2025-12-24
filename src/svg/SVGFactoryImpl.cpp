@@ -10,32 +10,34 @@
 #include "SVGRect.h"
 #include "SVGPath.h"
 #include "SVGText.h"
+#include "SVGGradient.h"
 
 #include <algorithm>
 #include <cctype>
 #include <cstring>
 #include <sstream>
+#include <iostream>
 #include <stdexcept>
 
 #include <QColor>
 #include <QString>
 
 std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<char>* node,
-                                                          SVGElement* parentElement)
+                                                          const SVGStyle& baseStyle,
+                                                          const SVGTransform& baseTransform)
 {
     const char* name = node->name();
     if (!name || *name == '\0') {
         return nullptr; // Invalid node
     }
 
-    // Get parent's style and transform for inheritance
-    const SVGStyle& parentStyle = (parentElement) ? parentElement->getStyle() : SVGStyle();
-    const SVGTransform& parentTransform =
-        (parentElement) ? parentElement->getTransform() : SVGTransform();
+    // Use passed base style/transform
+    const SVGStyle& parentStyle = baseStyle;
+    const SVGTransform& parentTransform = baseTransform;
 
     std::unique_ptr<SVGElement> newElement = nullptr;
-
-  if (strcmp(name, "rect") == 0) {
+    
+    if (strcmp(name, "rect") == 0) {
     SVGRectF rect = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0),
                      parseNumber(getAttr(node, "width"), 0.0),
                      parseNumber(getAttr(node, "height"), 0.0)};
@@ -71,16 +73,102 @@ std::unique_ptr<SVGElement> SVGFactoryImpl::createElement(rapidxml::xml_node<cha
       const char* dAttr = getAttr(node, "d");
       newElement = std::make_unique<SVGPath>(dAttr);
   }
-  else if (strcmp(name, "g") == 0) {
+  else if (strcmp(name, "g") == 0 || strcmp(name, "defs") == 0) {
     newElement = std::make_unique<SVGGroup>();
   }
   else if (strcmp(name, "text") == 0) {
     SVGPointF pos = {parseNumber(getAttr(node, "x"), 0.0), parseNumber(getAttr(node, "y"), 0.0)};
     newElement = std::make_unique<SVGText>(pos, node->value());
   }
+  else if (strcmp(name, "linearGradient") == 0) {
+      auto grad = std::make_unique<SVGLinearGradient>();
+      grad->x1 = parseNumber(getAttr(node, "x1"), 0.0);
+      grad->y1 = parseNumber(getAttr(node, "y1"), 0.0);
+      grad->x2 = parseNumber(getAttr(node, "x2"), 1.0); // Default 100%
+      grad->y2 = parseNumber(getAttr(node, "y2"), 0.0);
+      
+      const char* units = getAttr(node, "gradientUnits");
+      if (units && strcmp(units, "userSpaceOnUse") == 0) {
+          grad->gradientUnits = SVGGradientUnits::UserSpaceOnUse;
+      }
+      
+      const char* spread = getAttr(node, "spreadMethod");
+      if (spread) {
+          if (strcmp(spread, "reflect") == 0) grad->spreadMethod = SVGSpreadMethod::Reflect;
+          else if (strcmp(spread, "repeat") == 0) grad->spreadMethod = SVGSpreadMethod::Repeat;
+      }
+      
+      newElement = std::move(grad);
+  }
+  else if (strcmp(name, "radialGradient") == 0) {
+      auto grad = std::make_unique<SVGRadialGradient>();
+      grad->cx = parseNumber(getAttr(node, "cx"), 0.5);
+      grad->cy = parseNumber(getAttr(node, "cy"), 0.5);
+      grad->r = parseNumber(getAttr(node, "r"), 0.5);
+      grad->fx = parseNumber(getAttr(node, "fx"), grad->cx); // Default to cx
+      grad->fy = parseNumber(getAttr(node, "fy"), grad->cy); // Default to cy
+      
+      const char* units = getAttr(node, "gradientUnits");
+      if (units && strcmp(units, "userSpaceOnUse") == 0) {
+          grad->gradientUnits = SVGGradientUnits::UserSpaceOnUse;
+      }
+
+      const char* spread = getAttr(node, "spreadMethod");
+      if (spread) {
+          if (strcmp(spread, "reflect") == 0) grad->spreadMethod = SVGSpreadMethod::Reflect;
+          else if (strcmp(spread, "repeat") == 0) grad->spreadMethod = SVGSpreadMethod::Repeat;
+      }
+
+      newElement = std::move(grad);
+  }
+  else if (strcmp(name, "stop") == 0) {
+      // stop elements are not SVGElement in our hierarchy (they are data), 
+      // but to fit in the recursion, we might need a dummy element or handle them differently.
+      // However, the current architecture expects SVGElement.
+      // A better way is to treat Gradient as a container (Group-like) and Stop as a child?
+      // OR, handle stops inside the Gradient parsing manually?
+      // Since specific structure requires `parseRecursive` to handle children, let's treat Stop as an Element?
+      // But Stop is simple. 
+      // Let's create a temporary solution: 
+      // Check if parent is a Gradient, and add stop directly to it?
+      // `parseRecursive` doesn't know about Gradient-specifics easily without casting.
+      
+      // Let's assume we can't easily change `parseRecursive` right now.
+      // I will NOT create an element for `stop` here.
+      // Instead, `parseRecursive` should handle non-element children?
+      // Or I make `SVGGradient` a `SVGGroup` subclass? No, `SVGGroup` has `m_children`.
+      // `SVGGradient` has `m_stops`.
+      
+      // Let's modify `createElement` to return nullptr for "stop", 
+      // AND modify `SVGDocument::parseRecursive` to handle "stop" if parent is gradient.
+      
+      // BUT `createElement` is called first.
+      
+      // ALTERNATIVE: Make `SVGStopElement` that inherits `SVGElement`. 
+      // Then in `parseRecursive`, we can check type.
+      // But `SVGStop` is a struct in header.
+      
+      // Let's just return nullptr here and let `parseRecursive` handle `stop` parsing manually?
+      // No, `parseRecursive` calls `createElement`.
+      
+      // Let's go with the manual parsing of children inside `SVGFactoryImpl`? No, factory creates ONE element.
+      
+      // BEST APPROACH: Add `parseStops` helper in `SVGDocument` or `SVGFactory`.
+      // Recursion in `SVGDocument` iterates children.
+      
+      // FOR NOW: I will treat specific parsing in `SVGDocument::parseRecursive`.
+      // So here, return nullptr for stop.
+      return nullptr;
+  }
 
     // Apply style and transform to the element
     if (newElement) {
+        // Parse ID
+        const char* id = getAttr(node, "id");
+        if (id && *id != '\0') {
+            newElement->setId(id);
+        }
+
         SVGStyle style = parseStyle(node, parentStyle);
         newElement->setStyle(style);
 
@@ -169,6 +257,11 @@ SVGNumber SVGFactoryImpl::parseNumber(const char* value, SVGNumber defaultValue)
         unitPos = strValue.rfind("px");
         if (unitPos != std::string::npos && unitPos == strValue.length() - 2) {
             return std::stod(strValue.substr(0, unitPos));
+        }
+
+        // Check for "%" unit
+        if (strValue.back() == '%') {
+             return std::stod(strValue.substr(0, strValue.size() - 1)) / 100.0;
         }
 
         return std::stod(strValue);
@@ -338,10 +431,27 @@ SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGSty
         }
     }
 
-    if (attrs.count("fill"))
-        style.fillColor = parseColor(attrs["fill"], style.fillColor);
-    if (attrs.count("stroke"))
-        style.strokeColor = parseColor(attrs["stroke"], style.strokeColor);
+    if (attrs.count("fill")) {
+        std::string val = attrs["fill"];
+        if (val.find("url(") != std::string::npos) {
+            style.fillUrl = val;
+            style.fillColor = {0,0,0,0,true}; // None
+        } else {
+            style.fillColor = parseColor(val, style.fillColor);
+            style.fillUrl = ""; // Clear inherited
+        }
+    }
+
+    if (attrs.count("stroke")) {
+         std::string val = attrs["stroke"];
+        if (val.find("url(") != std::string::npos) {
+            style.strokeUrl = val;
+            style.strokeColor = {0,0,0,0,true}; // None
+        } else {
+            style.strokeColor = parseColor(val, style.strokeColor);
+            style.strokeUrl = "";
+        }
+    }
     if (attrs.count("stroke-width"))
         style.strokeWidth = parseNumber(attrs["stroke-width"].c_str(), style.strokeWidth);
     if (attrs.count("font-size"))
@@ -470,16 +580,19 @@ SVGStyle SVGFactoryImpl::parseStyle(rapidxml::xml_node<char>* node, const SVGSty
 SVGTransform SVGFactoryImpl::parseTransform(rapidxml::xml_node<char>* node,
                                             const SVGTransform& parentTransform)
 {
-    SVGTransform worldTransform = parentTransform; // Start with parent transform
+    // FIX: Do NOT apply parent transform here.
+    // The renderer applies parent logic by traversing the tree.
+    // Baking parent transform here results in Double Transformation (Parent * Parent * Local).
+    
+    SVGTransform localTransform; // Identity start
     const char* transformStr = getAttr(node, "transform");
     if (!transformStr || *transformStr == '\0') {
-        return worldTransform; // No local transform, return parent
+        return localTransform; // Return Identity
     }
 
-    SVGTransform localTransform; // Build local transform from string
     std::string str(transformStr);
     size_t pos = 0;
-    // Parse each transform function in the string
+    // ... rest of parsing logic ...
     while (pos < str.length()) {
         // Find start of function name (skip whitespace)
         size_t startFunc = str.find_first_not_of(" \t\r\n", pos);
@@ -533,20 +646,151 @@ SVGTransform SVGFactoryImpl::parseTransform(rapidxml::xml_node<char>* node,
         pos = endArgs + 1;
     }
 
-    // In SVG, transforms are applied in order: parent first, then local.
-    // When we have: <g transform="A"><path transform="B"/></g>
-    // The path should be transformed by A then B (parent then local).
-    //
-    // In matrix multiplication, to apply transform A then B to point P:
-    //   First: A * P
-    //   Then: B * (A * P) = (B * A) * P
-    // So the combined matrix is B * A (local * parent).
-    //
-    // The multiply function does: this = this * other
-    // So: result.multiply(worldTransform) means result = result * worldTransform
-    // If result = localTransform, then: result = localTransform * worldTransform = local * parent
-    // This correctly applies parent first, then local.
-    SVGTransform result = localTransform;
-    result.multiply(worldTransform); // result = local * parent (correct: parent first, then local)
-    return result;
+    // Do NOT multiply with parentTransform. 
+    // Return only the local transform for this node.
+    return localTransform;
+}
+
+void SVGFactoryImpl::parseStops(SVGElement* gradientElement, rapidxml::xml_node<char>* node)
+{
+    SVGGradient* gradient = dynamic_cast<SVGGradient*>(gradientElement);
+    if (!gradient) return;
+
+    for (rapidxml::xml_node<char>* child = node->first_node(); child; child = child->next_sibling()) {
+        if (strcmp(child->name(), "stop") == 0) {
+            SVGStop stop;
+            // Parse offset
+            const char* offsetStr = getAttr(child, "offset");
+            SVGNumber offset = 0.0;
+            if (offsetStr) {
+                std::string s(offsetStr);
+                if (!s.empty() && s.back() == '%') {
+                    try {
+                        offset = std::stod(s.substr(0, s.size() - 1)) / 100.0;
+                    } catch (...) { offset = 0.0; }
+                } else {
+                    offset = parseNumber(offsetStr, 0.0);
+                }
+            }
+            stop.offset = std::clamp(offset, 0.0, 1.0);
+
+            // Parse color (stop-color or style)
+            const char* stopColorAttr = getAttr(child, "stop-color");
+            stop.stopColor = parseColor(stopColorAttr ? stopColorAttr : "black", {0,0,0,255});
+            
+            // Check stop-opacity
+            stop.stopOpacity = parseNumber(getAttr(child, "stop-opacity"), 1.0);
+            
+            // Handle style="..." for stop-color/opacity
+             const char* styleStr = getAttr(child, "style");
+             if (styleStr) {
+                 std::stringstream ss(styleStr);
+                 std::string item;
+                 while(std::getline(ss, item, ';')) {
+                     size_t colon = item.find(':');
+                     if(colon != std::string::npos) {
+                         std::string key = trim(item.substr(0, colon));
+                         std::string value = trim(item.substr(colon+1));
+                         if (key == "stop-color") {
+                             stop.stopColor = parseColor(value, stop.stopColor);
+                         } else if (key == "stop-opacity") {
+                             stop.stopOpacity = parseNumber(value.c_str(), stop.stopOpacity);
+                         }
+                     }
+                 }
+             }
+
+             gradient->stops.push_back(stop);
+
+             // DEBUG LOG
+             std::cout << "DEBUG: Parsed Stop for Gradient ID=" << gradient->getId() 
+                       << " Offset=" << stop.offset 
+                       << " Color=(" << (int)stop.stopColor.r << "," 
+                       << (int)stop.stopColor.g << "," 
+                       << (int)stop.stopColor.b << "," 
+                       << (int)stop.stopColor.a << ")" << std::endl;
+        }
+    }
+}
+
+SVGStyle SVGFactoryImpl::createStyleFromCSS(const std::string& cssContent) {
+    // Reusing parsing logic for key:value; pairs
+    SVGStyle style;
+    // Default style has "unset" values.
+    
+    std::map<std::string, std::string> attrs;
+    
+    if (!cssContent.empty()) {
+        std::stringstream ss(cssContent);
+        std::string declaration;
+        while (std::getline(ss, declaration, ';')) {
+            size_t colonPos = declaration.find(':');
+            if (colonPos != std::string::npos) {
+                std::string key = trim(declaration.substr(0, colonPos));
+                std::string value = trim(declaration.substr(colonPos + 1));
+                attrs[key] = value;
+            }
+        }
+    }
+    
+    // Apply parsed attributes to style
+    if (attrs.count("fill")) {
+        std::string val = attrs["fill"];
+        if (val.find("url(") != std::string::npos) {
+            style.fillUrl = val;
+            style.fillColor = {0,0,0,0,true}; // None
+        } else {
+            style.fillColor = parseColor(val, style.fillColor);
+        }
+    }
+
+    if (attrs.count("stroke")) {
+         std::string val = attrs["stroke"];
+        if (val.find("url(") != std::string::npos) {
+            style.strokeUrl = val;
+            style.strokeColor = {0,0,0,0,true}; // None
+        } else {
+            style.strokeColor = parseColor(val, style.strokeColor);
+        }
+    }
+    
+    if (attrs.count("stroke-width"))
+        style.strokeWidth = parseNumber(attrs["stroke-width"].c_str(), style.strokeWidth);
+    if (attrs.count("font-size"))
+        style.fontSize = parseNumber(attrs["font-size"].c_str(), style.fontSize);
+    if (attrs.count("font-family"))
+        style.fontFamily = attrs["font-family"];
+    if (attrs.count("fill-rule")) {
+        if (attrs["fill-rule"] == "evenodd") style.fillRule = SVGFillRule::EvenOdd;
+        else style.fillRule = SVGFillRule::NonZero;
+    }
+    if (attrs.count("display")) {
+        if (attrs["display"] == "none") style.isDisplayed = false;
+        else style.isDisplayed = true;
+    }
+    if (attrs.count("fill-opacity"))
+        style.fillOpacity = parseNumber(attrs["fill-opacity"].c_str(), style.fillOpacity);
+    if (attrs.count("stroke-opacity"))
+        style.strokeOpacity = parseNumber(attrs["stroke-opacity"].c_str(), style.strokeOpacity);
+    if (attrs.count("opacity")) {
+         SVGNumber opacity = parseNumber(attrs["opacity"].c_str(), 1.0);
+         style.fillOpacity = std::clamp(style.fillOpacity * opacity, 0.0, 1.0);
+         style.strokeOpacity = std::clamp(style.strokeOpacity * opacity, 0.0, 1.0);
+    }
+    
+    if (attrs.count("text-anchor")) style.textAnchor = attrs["text-anchor"];
+    
+    if (attrs.count("font-style")) {
+        std::string fs = attrs["font-style"];
+        if (fs.find("italic") != std::string::npos || fs.find("oblique") != std::string::npos) style.isItalic = true;
+        else if (fs == "normal") style.isItalic = false;
+    }
+    
+    if (attrs.count("font-weight")) {
+        std::string fw = attrs["font-weight"];
+        if (fw == "bold" || fw == "bolder") { style.isBold = true; style.fontWeight = 75; }
+        else if (fw == "normal") { style.isBold = false; style.fontWeight = 50; }
+    }
+    
+    return style;
 }

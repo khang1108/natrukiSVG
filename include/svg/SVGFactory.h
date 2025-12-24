@@ -1,6 +1,8 @@
 #ifndef SVG_FACTORY_H
 #define SVG_FACTORY_H
 
+#include "SVGStyle.h"
+#include "SVGTransform.h"
 #include <memory>
 #include <string>
 
@@ -30,10 +32,16 @@ public:
    * * Factory sẽ tự lấy 2 giá trị đó từ đây.
    * * Nếu parentElement là NULL (cấp cao nhất), Factory sẽ dùng giá trị mặc định.
    */
-  virtual std::unique_ptr<SVGElement>
-  createElement(rapidxml::xml_node<char>* node,
-                SVGElement* parentElement // <--- SỬA Ở ĐÂY (chỉ 2 tham số)
-                ) = 0;
+    // Creates an element from an XML node, using provided base style and transform
+    virtual std::unique_ptr<SVGElement> createElement(rapidxml::xml_node<char>* node,
+                                                      const SVGStyle& baseStyle,
+                                                      const SVGTransform& baseTransform) = 0;
+                                                      
+    // Parses a CSS declaration string (e.g. "fill:red; stroke:blue") into an SVGStyle
+    virtual SVGStyle createStyleFromCSS(const std::string& cssContent) = 0;
+  
+  // Helper to parse stops for a gradient
+  virtual void parseStops(SVGElement* gradient, rapidxml::xml_node<char>* node) {}
 
   /**
    * @brief Tạo ra một instance (thể hiện) cụ thể của Factory.

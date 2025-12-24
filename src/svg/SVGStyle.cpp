@@ -105,6 +105,16 @@ void SVGStyle::inheritFrom(const SVGStyle& parent)
     if (!parent.isDisplayed) {
         this->isDisplayed = parent.isDisplayed;
     }
+
+    // Inherit fill URL if not set
+	if (this->fillUrl.empty()) {
+		this->fillUrl = parent.fillUrl;
+	}
+
+    // Inherit stroke URL if not set
+	if (this->strokeUrl.empty()) {
+		this->strokeUrl = parent.strokeUrl;
+	}   
 }
 
 /**

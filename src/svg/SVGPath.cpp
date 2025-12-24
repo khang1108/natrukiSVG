@@ -5,6 +5,7 @@
 #include <cmath> 
 #include <limits>
 #include <sstream>
+#include <locale>
 
 SVGPath::SVGPath(const std::string& dData) : m_cachedBBox{0, 0, 0, 0} { parseD(dData); }
 
@@ -39,29 +40,65 @@ void SVGPath::parseD(const std::string& d)
         }
     };
 
-    auto readNumber = [&]() -> SVGNumber {
+auto readNumber = [&]() -> SVGNumber {
         skipDelimiters();
         if (i >= len)
             return 0.0;
 
         size_t start = i;
+
+        // 1. Xử lý dấu +/-
         if (d[i] == '-' || d[i] == '+')
             i++;
-        while (i < len && (isdigit(d[i]) || d[i] == '.'))
-            i++;
+
+        // 2. Đọc phần số nguyên và thập phân (Chỉ cho phép 1 dấu chấm)
+        bool dotSeen = false;
+        while (i < len) {
+            if (isdigit(d[i])) {
+                i++;
+            }
+            else if (d[i] == '.') {
+                if (dotSeen)
+                    break; // Gặp dấu chấm thứ 2 -> DỪNG LẠI (Đây là bắt đầu số mới)
+                dotSeen = true;
+                i++;
+            }
+            else {
+                break; // Ký tự khác -> Dừng
+            }
+        }
+
+        // 3. Xử lý số mũ (Scientific notation: 1.2e-5)
         if (i < len && (d[i] == 'e' || d[i] == 'E')) {
+            size_t eStart = i;
             i++;
             if (i < len && (d[i] == '-' || d[i] == '+'))
                 i++;
-            while (i < len && isdigit(d[i]))
-                i++;
+
+            // Phải có ít nhất 1 số sau e/E
+            if (i < len && isdigit(d[i])) {
+                while (i < len && isdigit(d[i]))
+                    i++;
+            }
+            else {
+                // Nếu sau e không có số, rollback lại trước chữ e
+                i = eStart;
+            }
         }
 
         if (start == i)
-            return 0.0; // Không đọc được số
+            return 0.0;
 
         try {
-            return std::stod(d.substr(start, i - start));
+            // Fix: Use locale-independent parsing to ensure '.' is always treated as decimal separator.
+            // std::stod depends on system locale (e.g. might expect ',' in Vietnamese locale).
+            std::string numStr = d.substr(start, i - start);
+            std::istringstream iss(numStr);
+            iss.imbue(std::locale::classic());
+            SVGNumber val;
+            iss >> val;
+            if (iss.fail()) return 0.0;
+            return val;
         }
         catch (...) {
             return 0.0;
@@ -81,6 +118,25 @@ void SVGPath::parseD(const std::string& d)
     };
 
     char currentCmd = '\0';
+
+    // Fix: SVG Arc flags (large-arc and sweep) must be read as single characters '0' or '1'.
+    // They are NOT generic numbers and might not be separated by delimiters from subsequent numbers.
+    // e.g., "01" means flag 0 then flag 1. Standard number parsing would read "01" as 1.0 (one number).
+    auto readFlag = [&]() -> SVGNumber {
+        skipDelimiters();
+        if (i >= len)
+            return 0.0;
+        
+        char c = d[i];
+        if (c == '0') {
+            i++;
+            return 0.0;
+        } else if (c == '1') {
+            i++;
+            return 1.0;
+        }
+        return 0.0;
+    };
 
     while (i < len) {
         skipDelimiters();
@@ -105,6 +161,8 @@ void SVGPath::parseD(const std::string& d)
 
         // Xác định số lượng tham số và đọc chúng
         int argsCount = 0;
+        bool isArc = false;
+
         if (type == 'z')
             argsCount = 0;
         else if (type == 'h' || type == 'v')
@@ -115,11 +173,25 @@ void SVGPath::parseD(const std::string& d)
             argsCount = 4;
         else if (type == 'c')
             argsCount = 6;
-        else if (type == 'a')
+        else if (type == 'a') {
             argsCount = 7;
+            isArc = true;
+        }
 
-        for (int k = 0; k < argsCount; ++k) {
-            cmd.args.push_back(readNumber());
+        if (isArc) {
+            // Arc: rx ry x-axis-rotation large-arc-flag sweep-flag x y
+            // Flags must be read as flags (0 or 1), not generic numbers to avoid parsing errors.
+            cmd.args.push_back(readNumber()); // rx
+            cmd.args.push_back(readNumber()); // ry
+            cmd.args.push_back(readNumber()); // rotation
+            cmd.args.push_back(readFlag());   // large-arc (Fixed: use readFlag)
+            cmd.args.push_back(readFlag());   // sweep     (Fixed: use readFlag)
+            cmd.args.push_back(readNumber()); // x
+            cmd.args.push_back(readNumber()); // y
+        } else {
+            for (int k = 0; k < argsCount; ++k) {
+                cmd.args.push_back(readNumber());
+            }
         }
         m_commands.push_back(cmd);
 
@@ -235,8 +307,17 @@ void SVGPath::parseD(const std::string& d)
             curY = startY;
             break;
 
-            // TODO: Arc ('a') tính toán phức tạp hơn, tạm thời bỏ qua check bounds chi tiết cho A
-        }
+        case 'a': // Arc 
+            nx = cmd.args[5];
+            ny = cmd.args[6];
+            if (isRelative) {
+                nx += curX;
+                ny += curY;
+            }
+            updateBounds(nx, ny);
+            curX = nx;
+            curY = ny;
+            break;        }
 
         // Xử lý trường hợp đặc biệt: Sau M/m mà còn số thì các số sau là L/l
         if (currentCmd == 'M')

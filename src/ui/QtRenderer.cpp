@@ -11,6 +11,7 @@
 #include "svg/SVGStyle.h"
 #include "svg/SVGText.h"
 #include "svg/SVGTransform.h"
+#include "svg/SVGDocument.h"
 
 #include <QColor>
 #include <QFont>
@@ -22,7 +23,11 @@
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
+#include <cmath>
 #include <vector>
+#include <iostream>
+#include <QLocale>
+#include "svg/SVGGradient.h"
 
 namespace
 {
@@ -98,6 +103,10 @@ namespace
 
     bool hasVisibleFill(const SVGStyle& style)
     {
+        // If a gradient URL is present, it is visible (unless opacity is 0)
+        if (!style.fillUrl.empty()) {
+            return normalizedOpacity(style.fillOpacity) > 0.0;
+        }
         if (style.fillColor.isNone) {
             return false;
         }
@@ -106,6 +115,11 @@ namespace
 
     bool hasVisibleStroke(const SVGStyle& style)
     {
+        // If a gradient URL is present, it is visible
+        if (!style.strokeUrl.empty()) {
+             if (style.strokeWidth <= 0.0) return false;
+             return normalizedOpacity(style.strokeOpacity) > 0.0;
+        }
         if (style.strokeColor.isNone) {
             return false;
         }
@@ -332,20 +346,100 @@ namespace
          * @param value Output parameter for the parsed number
          * @return true if a number was successfully parsed, false otherwise
          */
+        /**
+         * @brief Reads a single floating-point number from the path data string.
+         *
+         * Algorithm:
+         * 1. Skip any leading separators (whitespace, commas)
+         * 2. Parse number manually to ensure locale independence (always use dot for decimal)
+         *    and specific SVG number rules.
+         * 3. Update m_index to point after the parsed number
+         * 4. Return false if no valid number found
+         *
+         * @param value Output parameter for the parsed number
+         * @return true if a number was successfully parsed, false otherwise
+         */
         bool readNumber(double& value)
         {
             skipSeparators();
             if (m_index >= m_data.size()) {
                 return false;
             }
-            const char* start = m_data.c_str() + m_index;
-            char* end = nullptr;
-            value = std::strtod(start, &end);
-            if (start == end) {
-                return false; // No number found
+
+            size_t start = m_index;
+            // Handle sign
+            if (m_index < m_data.size() && (m_data[m_index] == '+' || m_data[m_index] == '-')) {
+                ++m_index;
             }
-            m_index = static_cast<size_t>(end - m_data.c_str());
-            return true;
+            // Handle digits before dot
+            bool hasMsg = false;
+            while (m_index < m_data.size() && std::isdigit(static_cast<unsigned char>(m_data[m_index]))) {
+                ++m_index;
+                hasMsg = true;
+            }
+            // Handle dot and digits after dot
+            if (m_index < m_data.size() && m_data[m_index] == '.') {
+                ++m_index;
+                while (m_index < m_data.size() && std::isdigit(static_cast<unsigned char>(m_data[m_index]))) {
+                    ++m_index;
+                    hasMsg = true;
+                }
+            }
+            // Handle exponent
+            if (hasMsg && m_index < m_data.size() && (m_data[m_index] == 'e' || m_data[m_index] == 'E')) {
+                size_t eStart = m_index;
+                ++m_index;
+                if (m_index < m_data.size() && (m_data[m_index] == '+' || m_data[m_index] == '-')) {
+                    ++m_index;
+                }
+                bool hasExpDigits = false;
+                while (m_index < m_data.size() && std::isdigit(static_cast<unsigned char>(m_data[m_index]))) {
+                    ++m_index;
+                    hasExpDigits = true;
+                }
+                if (!hasExpDigits) {
+                    // Invalid exponent part, rollback
+                    m_index = eStart; 
+                }
+            }
+
+            if (!hasMsg) {
+                m_index = start;
+                return false;
+            }
+
+            std::string numStr = m_data.substr(start, m_index - start);
+            // Use QLocale::c() to ensure '.' is always treated as decimal separator
+            bool ok = false;
+            value = QLocale::c().toDouble(QString::fromStdString(numStr), &ok);
+            return ok;
+        }
+
+        /**
+         * @brief Reads a single flag (0 or 1) for Arc commands.
+         * 
+         * SVG Arc flags (large-arc and sweep) are strictly '0' or '1'.
+         * They must NOT be followed by a comma (though a comma separator is allowed *after* them).
+         * Crucially, they do not consume more characters. e.g. "10" is flag '1' then number '0'.
+         * 
+         * @param value Output parameter (input as boolean)
+         * @return true if success
+         */
+        bool readFlag(bool& value) {
+            skipSeparators();
+            if (m_index >= m_data.size()) return false;
+            
+            char c = m_data[m_index];
+            if (c == '0') {
+                value = false;
+                m_index++;
+                return true;
+            } else if (c == '1') {
+                value = true;
+                m_index++;
+                return true;
+            }
+            return false;
         }
 
         /**
@@ -718,32 +812,161 @@ namespace
          * @param relative If true, end coordinates are relative to current position; if false,
          * absolute
          */
+        /**
+         * @brief Handles the 'A' (elliptical arc) and 'a' (relative elliptical arc) commands.
+         *
+         * Algorithm:
+         * - Reads rx, ry, rotation, large-arc-flag, sweep-flag, x, y.
+         * - Converts Endpoint Parameterization (SVG) -> Center Parameterization.
+         * - Approximates the arc using Cubic Bezier curves.
+         */
         void handleArc(bool relative)
         {
-            constexpr int paramsPerArc = 7; // Arc requires 7 parameters
             while (true) {
-                double values[paramsPerArc] = {};
-                bool ok = true;
-                // Read all 7 parameters for the arc
-                for (int i = 0; i < paramsPerArc; ++i) {
-                    ok &= readNumber(values[i]);
+                double rx, ry, xAxisRotation;
+                bool largeArcFlag, sweepFlag;
+                QPointF end;
+
+                if (!readNumber(rx) || !readNumber(ry) || !readNumber(xAxisRotation) ||
+                    !readFlag(largeArcFlag) || !readFlag(sweepFlag) ||
+                    !readPoint(end, relative)) {
+                    break; 
                 }
-                if (!ok) {
-                    break; // Not enough parameters for an arc
+
+                // Current point (start of arc)
+                double x1 = m_current.x();
+                double y1 = m_current.y();
+                double x2 = end.x();
+                double y2 = end.y();
+
+                // 1. Handle degenerate cases
+                if (x1 == x2 && y1 == y2) {
+                    // End points are same, nothing to draw
+                    continue; 
                 }
-                // Extract end point (last two parameters)
-                QPointF end(values[5], values[6]);
-                if (relative) {
-                    end.setX(m_current.x() + end.x());
-                    end.setY(m_current.y() + end.y());
+                if (rx == 0.0 || ry == 0.0) {
+                    // Zero radius -> treat as straight line
+                    m_path.lineTo(end);
+                    m_current = end;
+                    m_prevCommand = 'A';
+                    skipSeparators();
+                     if (m_index >= m_data.size() || isCommand(m_data[m_index])) break;
+                    continue;
                 }
-                // Simplified: draw a line to the end point
-                // Full implementation would calculate the actual elliptical arc
-                m_path.lineTo(end);
+
+                rx = std::abs(rx);
+                ry = std::abs(ry);
+
+                // 2. Convert rotation to radians
+                double phi = xAxisRotation * M_PI / 180.0;
+                double cosPhi = std::cos(phi);
+                double sinPhi = std::sin(phi);
+
+                // 3. Compute (x1', y1')
+                double dx = (x1 - x2) / 2.0;
+                double dy = (y1 - y2) / 2.0;
+                double x1p = cosPhi * dx + sinPhi * dy;
+                double y1p = -sinPhi * dx + cosPhi * dy;
+
+                // 4. Adjust radii if needed
+                double lambda = (x1p * x1p) / (rx * rx) + (y1p * y1p) / (ry * ry);
+                if (lambda > 1.0) {
+                    double sqrtLambda = std::sqrt(lambda);
+                    rx *= sqrtLambda;
+                    ry *= sqrtLambda;
+                }
+
+                // 5. Compute (cx', cy')
+                double numerator = (rx*rx*ry*ry) - (rx*rx*y1p*y1p) - (ry*ry*x1p*x1p);
+                if (numerator < 0.0) numerator = 0.0; // Float precision check
+                double denominator = (rx*rx*y1p*y1p) + (ry*ry*x1p*x1p);
+                
+                double coef = std::sqrt(numerator / denominator);
+                if (largeArcFlag == sweepFlag) coef = -coef;
+                
+                double cxp = coef * ((rx * y1p) / ry);
+                double cyp = coef * (-(ry * x1p) / rx);
+
+                // 6. Compute Center (cx, cy)
+                double cx = cosPhi * cxp - sinPhi * cyp + (x1 + x2) / 2.0;
+                double cy = sinPhi * cxp + cosPhi * cyp + (y1 + y2) / 2.0;
+
+                // 7. Compute Start Angle (theta1) and Sweep Angle (dTheta)
+                auto angle = [](double ux, double uy, double vx, double vy) {
+                    double sign = (ux * vy - uy * vx < 0) ? -1.0 : 1.0;
+                    double dot = ux * vx + uy * vy;
+                    double mag = std::sqrt(ux*ux + uy*uy) * std::sqrt(vx*vx + vy*vy);
+                    double ratio = dot / mag;
+                    // clamp ratio
+                    if (ratio > 1.0) ratio = 1.0;
+                    if (ratio < -1.0) ratio = -1.0;
+                    return sign * std::acos(ratio);
+                };
+
+                // Vector (1, 0)
+                // Vector ( (x1' - cx')/rx, (y1' - cy')/ry )
+                double vx1 = (x1p - cxp) / rx;
+                double vy1 = (y1p - cyp) / ry;
+                // Vector ( (-x1' - cx')/rx, (-y1' - cy')/ry )
+                double vx2 = (-x1p - cxp) / rx;
+                double vy2 = (-y1p - cyp) / ry;
+
+                double theta1 = angle(1.0, 0.0, vx1, vy1);
+                double dTheta = angle(vx1, vy1, vx2, vy2);
+
+                if (!sweepFlag && dTheta > 0) dTheta -= 2.0 * M_PI;
+                else if (sweepFlag && dTheta < 0) dTheta += 2.0 * M_PI;
+
+                // 8. Approximate Arc with Cubic Bezier Segments
+                // Split into segments <= 90 degrees
+                int segments = static_cast<int>(std::ceil(std::abs(dTheta) / (M_PI / 2.0)));
+                double delta = dTheta / segments;
+                double t = 8.0 / 3.0 * std::sin(delta / 4.0) * std::sin(delta / 4.0) / std::sin(delta / 2.0);
+
+                double theta = theta1;
+                
+                for (int i = 0; i < segments; ++i) {
+                    double cosTheta = std::cos(theta);
+                    double sinTheta = std::sin(theta);
+                    double thetaNext = theta + delta;
+                    double cosThetaNext = std::cos(thetaNext);
+                    double sinThetaNext = std::sin(thetaNext);
+
+                    // End point of this segment (on unit circle)
+                    double epx = cosThetaNext;
+                    double epy = sinThetaNext;
+
+                    // Starting point on unit circle
+                    double spx = cosTheta;
+                    double spy = sinTheta;
+
+                    // Control points on unit circle
+                    double cp1x = spx - t * spy;
+                    double cp1y = spy + t * spx;
+                    double cp2x = epx + t * epy;
+                    double cp2y = epy - t * epx;
+
+                    // Map all points to actual coordinates
+                    auto mapPoint = [&](double u, double v) {
+                        double rotX = rx * u;
+                        double rotY = ry * v;
+                        return QPointF(
+                            cosPhi * rotX - sinPhi * rotY + cx,
+                            sinPhi * rotX + cosPhi * rotY + cy
+                        );
+                    };
+
+                    QPointF c1 = mapPoint(cp1x, cp1y);
+                    QPointF c2 = mapPoint(cp2x, cp2y);
+                    QPointF p2 = mapPoint(epx, epy);
+
+                    m_path.cubicTo(c1, c2, p2);
+                    theta = thetaNext;
+                }
+
                 m_current = end;
                 m_prevCommand = 'A';
                 skipSeparators();
-                // Stop if we've reached the end or encountered a new command
                 if (m_index >= m_data.size() || isCommand(m_data[m_index])) {
                     break;
                 }
@@ -775,7 +998,7 @@ namespace
  *
  * @param painter Pointer to the QPainter to use for rendering
  */
-QtRenderer::QtRenderer(QPainter* painter) : m_painter(painter) {}
+QtRenderer::QtRenderer(QPainter* painter, const SVGDocument& document) : m_painter(painter), m_document(document) {}
 
 QtRenderer::~QtRenderer() = default;
 
@@ -1086,6 +1309,7 @@ void QtRenderer::visit(SVGPath& svgPath)
     QPainterPath path;
 
     QPointF currentPos(0, 0);
+    QPointF subPathStart(0, 0);
 
     QPointF lastControlPoint(0, 0);
     char lastCmd = '\0';
@@ -1105,7 +1329,8 @@ void QtRenderer::visit(SVGPath& svgPath)
             }
             path.moveTo(x, y);
             currentPos = QPointF(x, y);
-            lastControlPoint = currentPos; // Reset control point
+            subPathStart = currentPos; // Store subpath start
+            lastControlPoint = currentPos;
             break;
         }
         case 'l': { // LineTo (x, y)
@@ -1182,15 +1407,189 @@ void QtRenderer::visit(SVGPath& svgPath)
         }
         case 'z': { // ClosePath
             path.closeSubpath();
-            // Sau khi close, currentPos thường quay về điểm MoveTo gần nhất
+            // Fix: update currentPos to subpath start (SVG Spec) so subsequent relative moves work correctly.
+            currentPos = subPathStart;
+            lastControlPoint = currentPos;
             break;
         }
-            // TODO: Thêm case 'q', 't', 'a' nếu cần sau này.
+        case 'q': { // Quadratic Bezier (x1, y1, x, y)
+            // Fix: Implement 'q' command. Previously missing, causing gaps in paths (e.g. KHTN text letters).
+            // Without this, currentPos is not updated, causing subsequent relative commands to draw from wrong position.
+            double x1 = args[0], y1 = args[1];
+            double x = args[2], y = args[3];
+
+            if (isRelative) {
+                x1 += currentPos.x();
+                y1 += currentPos.y();
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+            path.quadTo(x1, y1, x, y);
+            lastControlPoint = QPointF(x1, y1);
+            currentPos = QPointF(x, y);
+            break;
         }
+        case 't': { // Smooth Quadratic (x, y)
+             // Fix: Implement 't' command for smooth quadratic curves.
+             // Auto-calculates control point by reflecting previous control point.
+            double x1, y1;
+            if (lastCmd == 'q' || lastCmd == 't') {
+                x1 = 2 * currentPos.x() - lastControlPoint.x();
+                y1 = 2 * currentPos.y() - lastControlPoint.y();
+            }
+            else {
+                x1 = currentPos.x();
+                y1 = currentPos.y();
+            }
+
+            double x = args[0], y = args[1];
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+
+            path.quadTo(x1, y1, x, y);
+            lastControlPoint = QPointF(x1, y1); // Store calculated control point
+            currentPos = QPointF(x, y);
+            break;
+        }
+        case 'a': { // Arc (rx, ry, rot, large, sweep, x, y)
+            // Fix: Implement 'a' command. Previously missing.
+            // Converts SVG Arc (Endpoint Parameterization) to Cubic Beziers (Center Parameterization).
+            double rx = std::abs(args[0]);
+            double ry = std::abs(args[1]);
+            double xAxisRotation = args[2];
+            bool largeArcFlag = (args[3] != 0.0);
+            bool sweepFlag = (args[4] != 0.0);
+            double x = args[5], y = args[6];
+
+            if (isRelative) {
+                x += currentPos.x();
+                y += currentPos.y();
+            }
+
+            double x1 = currentPos.x();
+            double y1 = currentPos.y();
+            double x2 = x;
+            double y2 = y;
+
+            if (x1 == x2 && y1 == y2) {
+                // End points are same, nothing to draw
+            }
+            else if (rx == 0.0 || ry == 0.0) {
+                // Zero radius -> treat as straight line
+                path.lineTo(x, y);
+            }
+            else {
+                 // 2. Convert rotation to radians
+                double phi = xAxisRotation * M_PI / 180.0;
+                double cosPhi = std::cos(phi);
+                double sinPhi = std::sin(phi);
+
+                // 3. Compute (x1', y1')
+                double dx = (x1 - x2) / 2.0;
+                double dy = (y1 - y2) / 2.0;
+                double x1p = cosPhi * dx + sinPhi * dy;
+                double y1p = -sinPhi * dx + cosPhi * dy;
+
+                // 4. Adjust radii if needed
+                double lambda = (x1p * x1p) / (rx * rx) + (y1p * y1p) / (ry * ry);
+                if (lambda > 1.0) {
+                    double sqrtLambda = std::sqrt(lambda);
+                    rx *= sqrtLambda;
+                    ry *= sqrtLambda;
+                }
+
+                // 5. Compute (cx', cy')
+                double numerator = (rx * rx * ry * ry) - (rx * rx * y1p * y1p) - (ry * ry * x1p * x1p);
+                if (numerator < 0.0) numerator = 0.0;
+                double denominator = (rx * rx * y1p * y1p) + (ry * ry * x1p * x1p);
+
+                double coef = std::sqrt(numerator / denominator);
+                if (largeArcFlag == sweepFlag)
+                    coef = -coef;
+
+                double cxp = coef * ((rx * y1p) / ry);
+                double cyp = coef * (-(ry * x1p) / rx);
+
+                // 6. Compute Center (cx, cy)
+                double cx = cosPhi * cxp - sinPhi * cyp + (x1 + x2) / 2.0;
+                double cy = sinPhi * cxp + cosPhi * cyp + (y1 + y2) / 2.0;
+
+                // 7. Compute Start Angle (theta1) and Sweep Angle (dTheta)
+                auto angle = [](double ux, double uy, double vx, double vy) {
+                    double sign = (ux * vy - uy * vx < 0) ? -1.0 : 1.0;
+                    double dot = ux * vx + uy * vy;
+                    double mag = std::sqrt(ux * ux + uy * uy) * std::sqrt(vx * vx + vy * vy);
+                    double ratio = dot / mag;
+                    if (ratio > 1.0) ratio = 1.0;
+                    if (ratio < -1.0) ratio = -1.0;
+                    return sign * std::acos(ratio);
+                };
+
+                double vx1 = (x1p - cxp) / rx;
+                double vy1 = (y1p - cyp) / ry;
+                double vx2 = (-x1p - cxp) / rx;
+                double vy2 = (-y1p - cyp) / ry;
+
+                double theta1 = angle(1.0, 0.0, vx1, vy1);
+                double dTheta = angle(vx1, vy1, vx2, vy2);
+
+                if (!sweepFlag && dTheta > 0) dTheta -= 2.0 * M_PI;
+                else if (sweepFlag && dTheta < 0) dTheta += 2.0 * M_PI;
+
+                // 8. Approximate Arc with Cubic Bezier Segments
+                int segments = static_cast<int>(std::ceil(std::abs(dTheta) / (M_PI / 2.0)));
+                double delta = dTheta / segments;
+                double t = 8.0 / 3.0 * std::sin(delta / 4.0) * std::sin(delta / 4.0) / std::sin(delta / 2.0);
+
+                double theta = theta1;
+
+                for (int i = 0; i < segments; ++i) {
+                    double cosTheta = std::cos(theta);
+                    double sinTheta = std::sin(theta);
+                    double thetaNext = theta + delta;
+                    double cosThetaNext = std::cos(thetaNext);
+                    double sinThetaNext = std::sin(thetaNext);
+
+                    double epx = cosThetaNext;
+                    double epy = sinThetaNext;
+
+                    double spx = cosTheta;
+                    double spy = sinTheta;
+
+                    double cp1x = spx - t * spy;
+                    double cp1y = spy + t * spx;
+                    double cp2x = epx + t * epy;
+                    double cp2y = epy - t * epx;
+
+                    auto mapPoint = [&](double u, double v) {
+                        double rotX = rx * u;
+                        double rotY = ry * v;
+                        return QPointF(
+                            cosPhi * rotX - sinPhi * rotY + cx,
+                            sinPhi * rotX + cosPhi * rotY + cy
+                        );
+                    };
+
+                    QPointF c1 = mapPoint(cp1x, cp1y);
+                    QPointF c2 = mapPoint(cp2x, cp2y);
+                    QPointF p2 = mapPoint(epx, epy);
+
+                    path.cubicTo(c1, c2, p2);
+                    theta = thetaNext;
+                }
+            }
+            currentPos = QPointF(x, y);
+            lastControlPoint = currentPos;
+            break;
+        }
+    }
 
         // Cập nhật lastCmd để dùng cho logic Smooth Curve
-        if (type != 'm')
-            lastCmd = type;
+        // Fix: Always update lastCmd. Even 'm' should be tracked so that subsequent 's' or 't'
+        // know that the previous command was NOT a curve (and thus won't reflect a control point).
+        lastCmd = type;
     }
 
     // Gọi hàm vẽ chung
@@ -1289,21 +1688,17 @@ void QtRenderer::drawPath(const QPainterPath& path, const SVGStyle& style,
     QTransform combined = localTransform * currentWorld;
     m_painter->setWorldTransform(combined);
 
-    // Create brush for fill
-    QBrush brush(Qt::NoBrush);
-    if (hasVisibleFill(style)) {
-        QColor fillColor = toQColor(style.fillColor, normalizedOpacity(style.fillOpacity));
-        brush = QBrush(fillColor);
-    }
+    // Calculate BBox for gradient (relative to untransformed path)
+    SVGRectF bbox = {0,0,0,0};
+    QRectF r = path.boundingRect();
+    bbox.x = r.x();
+    bbox.y = r.y();
+    bbox.width = r.width();
+    bbox.height = r.height();
 
-    // Create pen for stroke
-    QPen pen(Qt::NoPen);
-    if (hasVisibleStroke(style)) {
-        QColor strokeColor = toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity));
-        pen = QPen(strokeColor, style.strokeWidth > 0.0 ? style.strokeWidth : 1.0);
-        pen.setJoinStyle(Qt::MiterJoin); // Sharp corners
-        pen.setCapStyle(Qt::FlatCap);    // Flat line caps
-    }
+    // Create brush and pen using helpers
+    QBrush brush = getBrush(style, bbox);
+    QPen pen = getPen(style, bbox);
 
     m_painter->setBrush(brush);
     m_painter->setPen(pen);
@@ -1313,4 +1708,178 @@ void QtRenderer::drawPath(const QPainterPath& path, const SVGStyle& style,
     pathCopy.setFillRule(toQtFillRule(style.fillRule));
     m_painter->drawPath(pathCopy);
     m_painter->restore(); // Restore state
+}
+
+// --- Helper Methods ---
+
+QBrush QtRenderer::createBrushFromGradient(SVGElement* gradientElement, const SVGRectF& bbox, double opacity)
+{
+    SVGGradient* svgGrad = dynamic_cast<SVGGradient*>(gradientElement);
+    if (!svgGrad) return QBrush(Qt::NoBrush);
+
+    QGradient* qGrad = nullptr;
+    
+    // Determine coordinate system
+    bool userSpace = (svgGrad->gradientUnits == SVGGradientUnits::UserSpaceOnUse);
+
+    if (auto* linear = dynamic_cast<SVGLinearGradient*>(svgGrad)) {
+        double x1 = linear->x1;
+        double y1 = linear->y1;
+        double x2 = linear->x2;
+        double y2 = linear->y2;
+        
+        // Use raw coordinates (0..1 for bbox, or user units)
+        qGrad = new QLinearGradient(x1, y1, x2, y2);
+    }
+    else if (auto* radial = dynamic_cast<SVGRadialGradient*>(svgGrad)) {
+        double cx = radial->cx;
+        double cy = radial->cy;
+        double r = radial->r;
+        double fx = radial->fx;
+        double fy = radial->fy;
+        
+        // Use raw coordinates
+        qGrad = new QRadialGradient(cx, cy, r, fx, fy);
+    }
+
+    if (!qGrad) return QBrush(Qt::NoBrush);
+
+    // Set coordinate mode (Logical mode for brush, but QGradient modes are for QPainter usage directly? 
+    // Actually QBrush takes QGradient. QBrush transform handles the mapping.
+    // We treat the gradient as being in its local definition space.)
+    // But QLinearGradient assumes Logical Coordinates.
+    
+    switch(svgGrad->spreadMethod) {
+        case SVGSpreadMethod::Pad: qGrad->setSpread(QGradient::PadSpread); break;
+        case SVGSpreadMethod::Reflect: qGrad->setSpread(QGradient::ReflectSpread); break;
+        case SVGSpreadMethod::Repeat: qGrad->setSpread(QGradient::RepeatSpread); break;
+    }
+
+    for (const auto& stop : svgGrad->stops) {
+        QColor color = toQColor(stop.stopColor, normalizedOpacity(stop.stopOpacity) * opacity);
+        qGrad->setColorAt(stop.offset, color);
+        
+        // std::cout << "DEBUG: Render Gradient Stop: Offset=" << stop.offset 
+        //           << " Color=" << color.name().toStdString() << " Alpha=" << color.alpha() << std::endl;
+    }
+    
+    QBrush brush(*qGrad);
+    delete qGrad;
+    
+    // Calculate final transform
+    // Final = GradientTransform * (BBoxMapping if applicable)
+    // Order applied to point P: P_user = M * P_grad
+    // If objectBoundingBox: P_user = BBoxMatrix * GradMatrix * P_grad
+    // Wait. GradMatrix applies first in the chain (local deformation of unit square).
+    // So QTransform Combined = GradMatrix * BBoxMatrix.
+    
+    QTransform gradTransform = toQTransform(svgGrad->getTransform());
+    
+    if (userSpace) {
+        brush.setTransform(gradTransform);
+    } else {
+        // Create BBox mapping: Map Unit Square (0..1) to BBox (x,y, w,h)
+        // Operation: Scale(w,h) then Translate(x,y).
+        // Qt Matrix Multiplication Order: M1 * M2 = apply M1 then M2? 
+        // Wait, earlier I concluded: QTransform().translate.scale -> T * S.
+        // And vector v * T * S -> (v+d)*s. This is Trans then Scale. WRONG for BBox.
+        // We want Scale then Trans.
+        // So QTransform().translate(x,y).scale(w,h) ? 
+        // -> Matrix is Translate * Scale.
+        // v * T * S -> (v*T) * S ?? No.
+        // If I use the builder: t.translate(tx, ty).scale(sx, sy).
+        // It produces a matrix M = T * S (if T is left).
+        // Qt uses Row Vectors. v' = v * M.
+        // v' = v * (T * S) = (v * T) * S.
+        // v * T -> (x+tx, y+ty).
+        // Result * S -> ((x+tx)*sx, (y+ty)*sy).
+        // This is Translate THEN Scale.
+        
+        // We want Scale THEN Translate.
+        // v * S -> (x*sx, y*sy).
+        // Result * T -> (x*sx + tx, y*sy + ty).
+        // So we need Matrix M = S * T.
+        // Builder: t.scale(sx,sy).translate(tx,ty).
+        
+        // Create BBox mapping: Map Unit Square (0..1) to BBox (x,y, w,h)
+        // Operation: Scale(w,h) then Translate(x,y).
+        
+        QTransform bboxTransform(bbox.width, 0, 0, bbox.height, bbox.x, bbox.y);
+        
+        // Combined = Grad * BBox.
+        // Apply Grad deformation, then Map to BBox.
+        // v' = v * Grad * BBox.
+        
+        brush.setTransform(gradTransform * bboxTransform);
+    }
+    
+    return brush;
+}
+
+QBrush QtRenderer::getBrush(const SVGStyle& style, const SVGRectF& bbox)
+{
+    if (!style.fillUrl.empty()) {
+        std::string id = style.fillUrl;
+        if (id.size() > 5 && id.substr(0,4) == "url(") {
+            id = id.substr(4, id.size() - 5);
+             if (!id.empty() && id.front() == '#') id = id.substr(1);
+        } else if (!id.empty() && id.front() == '#') {
+             id = id.substr(1);
+        }
+        
+        if (!id.empty() && id.back() == ')') id.pop_back();
+
+        SVGElement* elem = m_document.getElementById(id);
+        if (elem) {
+             std::cout << "DEBUG: Found Gradient ID=" << id << " for Fill" << std::endl;
+             QBrush brush = createBrushFromGradient(elem, bbox, normalizedOpacity(style.fillOpacity));
+             if (brush.style() != Qt::NoBrush) {
+                 return brush;
+             } else {
+                 std::cout << "DEBUG: Failed to create brush from Gradient ID=" << id << std::endl;
+             }
+        } else {
+            std::cout << "DEBUG: Gradient ID=" << id << " NOT FOUND!" << std::endl;
+        }
+    }
+
+    if (hasVisibleFill(style)) {
+        QColor fillColor = toQColor(style.fillColor, normalizedOpacity(style.fillOpacity));
+        return QBrush(fillColor);
+    }
+    return QBrush(Qt::NoBrush);
+}
+
+QPen QtRenderer::getPen(const SVGStyle& style, const SVGRectF& bbox)
+{
+    if (!style.strokeUrl.empty()) {
+         std::string id = style.strokeUrl;
+         if (id.size() > 5 && id.substr(0,4) == "url(") {
+            id = id.substr(4, id.size() - 5);
+             if (!id.empty() && id.front() == '#') id = id.substr(1);
+        } else if (!id.empty() && id.front() == '#') {
+             id = id.substr(1);
+        }
+        if (!id.empty() && id.back() == ')') id.pop_back();
+
+        SVGElement* elem = m_document.getElementById(id);
+        if (elem) {
+             QBrush brush = createBrushFromGradient(elem, bbox, normalizedOpacity(style.strokeOpacity));
+             if (brush.style() != Qt::NoBrush) {
+                 QPen pen(brush, style.strokeWidth);
+                  pen.setJoinStyle(Qt::MiterJoin);
+                  pen.setCapStyle(Qt::FlatCap);
+                 return pen;
+             }
+        }
+    }
+    
+    if (hasVisibleStroke(style)) {
+        QColor strokeColor = toQColor(style.strokeColor, normalizedOpacity(style.strokeOpacity));
+        QPen pen(strokeColor, style.strokeWidth > 0.0 ? style.strokeWidth : 1.0);
+        pen.setJoinStyle(Qt::MiterJoin);
+        pen.setCapStyle(Qt::FlatCap);
+        return pen;
+    }
+    return QPen(Qt::NoPen);
 }
