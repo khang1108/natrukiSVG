@@ -32,3 +32,4 @@ ui_*.h
 *.exe
 *.out
 .submit
+*.zip
