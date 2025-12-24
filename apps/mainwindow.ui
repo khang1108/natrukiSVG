@@ -93,7 +93,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#About:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -119,7 +123,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Premium:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -145,7 +153,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Upload:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -171,7 +183,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Rotate:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -197,7 +213,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Flip:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -223,7 +243,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Copy:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -249,7 +273,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Zoom:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -304,7 +332,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Browse:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -330,7 +362,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Fullscreen:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -356,7 +392,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#DownloadPNG:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -382,7 +422,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#ZoomIn:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -408,7 +452,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#ZoomOut:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -664,7 +712,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Back:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
@@ -779,7 +831,11 @@
     background-position: center; 
     
     border: none;
+}
 
+QPushButton#Back_2:pressed {
+    margin-top: 3px;
+    margin-left: 3px;
 }</string>
        </property>
        <property name="text">
