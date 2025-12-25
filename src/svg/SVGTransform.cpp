@@ -213,3 +213,42 @@ SVGPointF SVGTransform::map(const SVGPointF& point) const
 
     return newPoint;
 }
+
+/**
+ * @brief Set matrix directly with 6 values.
+ *
+ * Algorithm:
+ * - Sets the transformation matrix to the specified values
+ * - Matrix format (SVG standard):
+ *   [a  c  e]   [m[0][0]  m[0][1]  m[0][2]]
+ *   [b  d  f] = [m[1][0]  m[1][1]  m[1][2]]
+ *   [0  0  1]   [m[2][0]  m[2][1]  m[2][2]]
+ *
+ * @param a Scale/rotate X component (m[0][0])
+ * @param b Skew Y component (m[1][0])
+ * @param c Skew X component (m[0][1])
+ * @param d Scale/rotate Y component (m[1][1])
+ * @param e Translate X component (m[0][2])
+ * @param f Translate Y component (m[1][2])
+ */
+void SVGTransform::setMatrix(SVGNumber a, SVGNumber b, SVGNumber c, SVGNumber d, SVGNumber e,
+                             SVGNumber f)
+{
+    m_matrix[0][0] = a;
+    m_matrix[1][0] = b;
+    m_matrix[0][1] = c;
+    m_matrix[1][1] = d;
+    m_matrix[0][2] = e;
+    m_matrix[1][2] = f;
+    // Bottom row remains [0, 0, 1]
+    m_matrix[2][0] = 0.0;
+    m_matrix[2][1] = 0.0;
+    m_matrix[2][2] = 1.0;
+}
+
+/**
+ * @brief Get the transformation matrix.
+ *
+ * @return const SVGNumber(&)[3][3] Reference to the 3x3 matrix array
+ */
+const SVGNumber (&SVGTransform::getMatrix() const)[3][3] { return m_matrix; }
