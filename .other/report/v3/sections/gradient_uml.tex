@@ -1,0 +1,88 @@
+\FloatBarrier
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=2cm,
+        font=\small,
+        umlclass/.style={
+            rectangle split, 
+            rectangle split parts=2, 
+            draw, 
+            fill=white, 
+            text width=4.5cm, 
+            align=left, 
+            minimum height=1cm,
+            drop shadow
+        },
+        abstract/.style={
+            umlclass, 
+            fill=gray!10, 
+            font=\itshape
+        },
+        inheritance/.style={
+            -open triangle 45, 
+            thick
+        },
+        composition/.style={
+            diamond-, 
+            thick
+        }
+    ]
+
+    % SVGElement (Abstract Base)
+    \node[abstract] (SVGElement) {
+        \textbf{SVGElement}
+        \nodepart{second}
+        + accept(visitor: NodeVisitor)\\
+        + localBox(): SVGRectF
+    };
+
+    % SVGGradient
+    \node[umlclass, below=1.5cm of SVGElement] (SVGGradient) {
+        \textbf{SVGGradient}
+        \nodepart{second}
+        + stops: vector$<$SVGStop$>$\\
+        + gradientUnits: Enum\\
+        + spreadMethod: Enum
+    };
+
+    % SVGStop
+    \node[umlclass, right=2cm of SVGGradient, text width=3.5cm] (SVGStop) {
+        \textbf{SVGStop} (struct)
+        \nodepart{second}
+        + offset: SVGNumber\\
+        + stopColor: SVGColor\\
+        + stopOpacity: SVGNumber
+    };
+
+    % SVGLinearGradient
+    \node[umlclass, below left=1.5cm and -1cm of SVGGradient] (SVGLinearGradient) {
+        \textbf{SVGLinearGradient}
+        \nodepart{second}
+        + x1, y1: SVGNumber\\
+        + x2, y2: SVGNumber
+    };
+
+    % SVGRadialGradient
+    \node[umlclass, below right=1.5cm and -1cm of SVGGradient] (SVGRadialGradient) {
+        \textbf{SVGRadialGradient}
+        \nodepart{second}
+        + cx, cy, r: SVGNumber\\
+        + fx, fy: SVGNumber
+    };
+
+    % Draw Relationships
+    % Inheritance
+    \draw[inheritance] (SVGGradient) -- (SVGElement);
+    
+    % Orthogonal lines for subclasses
+    \draw[inheritance] (SVGLinearGradient.north) -- ++(0,0.5) -| (SVGGradient.south);
+    \draw[inheritance] (SVGRadialGradient.north) -- ++(0,0.5) -| (SVGGradient.south);
+
+    % Composition
+    \draw[composition] (SVGGradient.east) -- (SVGStop.west) node[midway, above] {stops};
+
+    \end{tikzpicture}
+    \caption{Chi tiết Diagram Class cho Linear và Radial Gradient}
+    \label{fig:gradient_uml_tikz}
+\end{figure}

@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="3101px" preserveAspectRatio="none" style="width:7179px;height:3101px;background:#FFFFFF;" version="1.1" viewBox="0 0 7179 3101" width="7179px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="293" x="3436" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="283" x="3441" y="22.9951">natrukiSVG - UML 2.5 Class Diagram</text><!--MD5=[f2029d4a1a8e4c8cffb2d37372895cc2]
+cluster Core Types--><g id="cluster_Core Types"><path d="M1842.5,2785.2969 L1934.5,2785.2969 A3.75,3.75 0 0 1 1937,2787.7969 L1944,2807.5938 L2448.5,2807.5938 A2.5,2.5 0 0 1 2451,2810.0938 L2451,2981.7969 A2.5,2.5 0 0 1 2448.5,2984.2969 L1842.5,2984.2969 A2.5,2.5 0 0 1 1840,2981.7969 L1840,2787.7969 A2.5,2.5 0 0 1 1842.5,2785.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1840" x2="1944" y1="2807.5938" y2="2807.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="91" x="1844" y="2800.292">Core Types</text></g><!--MD5=[e05953106d10aafa9e15aeb55315d17b]
+cluster Style & Transform--><g id="cluster_Style &amp; Transform"><path d="M1846.5,2255.2969 L1991.5,2255.2969 A3.75,3.75 0 0 1 1994,2257.7969 L2001,2277.5938 L2572.5,2277.5938 A2.5,2.5 0 0 1 2575,2280.0938 L2575,2663.7969 A2.5,2.5 0 0 1 2572.5,2666.2969 L1846.5,2666.2969 A2.5,2.5 0 0 1 1844,2663.7969 L1844,2257.7969 A2.5,2.5 0 0 1 1846.5,2255.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1844" x2="2001" y1="2277.5938" y2="2277.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="144" x="1848" y="2270.292">Style &amp; Transform</text></g><!--MD5=[141562efabcf0d5f29821fc117d0a6ef]
+cluster Visitor Pattern--><g id="cluster_Visitor Pattern"><path d="M417.5,1894.7969 L532.5,1894.7969 A3.75,3.75 0 0 1 535,1897.2969 L542,1917.0938 L750.5,1917.0938 A2.5,2.5 0 0 1 753,1919.5938 L753,2173.2969 A2.5,2.5 0 0 1 750.5,2175.7969 L417.5,2175.7969 A2.5,2.5 0 0 1 415,2173.2969 L415,1897.2969 A2.5,2.5 0 0 1 417.5,1894.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="415" x2="542" y1="1917.0938" y2="1917.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="114" x="419" y="1909.792">Visitor Pattern</text></g><!--MD5=[1a7818a84056f9b05180cc400a739bab]
+cluster SVG Elements--><g id="cluster_SVG Elements"><path d="M2601.5,1862.2969 L2712.5,1862.2969 A3.75,3.75 0 0 1 2715,1864.7969 L2722,1884.5938 L6251.5,1884.5938 A2.5,2.5 0 0 1 6254,1887.0938 L6254,2606.7969 A2.5,2.5 0 0 1 6251.5,2609.2969 L2601.5,2609.2969 A2.5,2.5 0 0 1 2599,2606.7969 L2599,1864.7969 A2.5,2.5 0 0 1 2601.5,1862.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2599" x2="2722" y1="1884.5938" y2="1884.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="110" x="2603" y="1877.292">SVG Elements</text></g><!--MD5=[5feef17ed36116c43753f9cca42e57ad]
+cluster Gradients--><g id="cluster_Gradients"><path d="M6280.5,2352.7969 L6358.5,2352.7969 A3.75,3.75 0 0 1 6361,2355.2969 L6368,2375.0938 L7006.5,2375.0938 A2.5,2.5 0 0 1 7009,2377.5938 L7009,2990.2969 A2.5,2.5 0 0 1 7006.5,2992.7969 L6280.5,2992.7969 A2.5,2.5 0 0 1 6278,2990.2969 L6278,2355.2969 A2.5,2.5 0 0 1 6280.5,2352.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6278" x2="6368" y1="2375.0938" y2="2375.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77" x="6282" y="2367.792">Gradients</text></g><!--MD5=[c83f7e89d14978f5b8f5cfcf24665839]
+cluster Factory Pattern--><g id="cluster_Factory Pattern"><path d="M826.5,1943.7969 L949.5,1943.7969 A3.75,3.75 0 0 1 952,1946.2969 L959,1966.0938 L1817.5,1966.0938 A2.5,2.5 0 0 1 1820,1968.5938 L1820,2541.7969 A2.5,2.5 0 0 1 1817.5,2544.2969 L826.5,2544.2969 A2.5,2.5 0 0 1 824,2541.7969 L824,1946.2969 A2.5,2.5 0 0 1 826.5,1943.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="824" x2="959" y1="1966.0938" y2="1966.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="122" x="828" y="1958.792">Factory Pattern</text></g><!--MD5=[b9a21446531377608e60d8d427d4b256]
+cluster Document--><g id="cluster_Document"><path d="M573.5,1410.2969 L654.5,1410.2969 A3.75,3.75 0 0 1 657,1412.7969 L664,1432.5938 L1120.5,1432.5938 A2.5,2.5 0 0 1 1123,1435.0938 L1123,1810.7969 A2.5,2.5 0 0 1 1120.5,1813.2969 L573.5,1813.2969 A2.5,2.5 0 0 1 571,1810.7969 L571,1412.7969 A2.5,2.5 0 0 1 573.5,1410.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="571" x2="664" y1="1432.5938" y2="1432.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="575" y="1425.292">Document</text></g><!--MD5=[d012bf4d5d0b281f447e9ce51490d367]
+cluster Renderer (Strategy)--><g id="cluster_Renderer (Strategy)"><path d="M8.5,2401.7969 L167.5,2401.7969 A3.75,3.75 0 0 1 170,2404.2969 L177,2424.0938 L797.5,2424.0938 A2.5,2.5 0 0 1 800,2426.5938 L800,3091.7969 A2.5,2.5 0 0 1 797.5,3094.2969 L8.5,3094.2969 A2.5,2.5 0 0 1 6,3091.7969 L6,2404.2969 A2.5,2.5 0 0 1 8.5,2401.7969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="177" y1="2424.0938" y2="2424.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="10" y="2416.792">Renderer (Strategy)</text></g><!--MD5=[bbb0e4d566985bca371255726ff58364]
+cluster UI Layer (Qt6)--><g id="cluster_UI Layer (Qt6)"><path d="M578.5,43.2969 L688.5,43.2969 A3.75,3.75 0 0 1 691,45.7969 L698,65.5938 L1115.5,65.5938 A2.5,2.5 0 0 1 1118,68.0938 L1118,1358.7969 A2.5,2.5 0 0 1 1115.5,1361.2969 L578.5,1361.2969 A2.5,2.5 0 0 1 576,1358.7969 L576,45.7969 A2.5,2.5 0 0 1 578.5,43.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="576" x2="698" y1="65.5938" y2="65.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="580" y="58.292">UI Layer (Qt6)</text></g><!--MD5=[c328d1547d475fa2af06345a5445e24d]
+class SVGColor--><g id="elem_SVGColor"><rect codeLine="6" fill="#F1F1F1" height="129.4844" id="SVGColor" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="1856" y="2839.2969"/><ellipse cx="1889.45" cy="2855.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1892.4188,2860.9375 Q1891.8406,2861.2344 1891.2,2861.375 Q1890.5594,2861.5313 1889.8563,2861.5313 Q1887.3563,2861.5313 1886.0281,2859.8906 Q1884.7156,2858.2344 1884.7156,2855.1094 Q1884.7156,2851.9844 1886.0281,2850.3281 Q1887.3563,2848.6719 1889.8563,2848.6719 Q1890.5594,2848.6719 1891.2,2848.8281 Q1891.8563,2848.9844 1892.4188,2849.2813 L1892.4188,2852 Q1891.7938,2851.4219 1891.2,2851.1563 Q1890.6063,2850.875 1889.9813,2850.875 Q1888.6375,2850.875 1887.95,2851.9531 Q1887.2625,2853.0156 1887.2625,2855.1094 Q1887.2625,2857.2031 1887.95,2858.2813 Q1888.6375,2859.3438 1889.9813,2859.3438 Q1890.6063,2859.3438 1891.2,2859.0781 Q1891.7938,2858.7969 1892.4188,2858.2188 L1892.4188,2860.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="1907.55" y="2860.1436">SVGColor</text><line style="stroke:#181818;stroke-width:0.5;" x1="1857" x2="1993" y1="2871.2969" y2="2871.2969"/><ellipse cx="1867" cy="2884.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="1876" y="2888.292">unsigned char r</text><ellipse cx="1867" cy="2901.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="1876" y="2904.5889">unsigned char g</text><ellipse cx="1867" cy="2917.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="1876" y="2920.8857">unsigned char b</text><ellipse cx="1867" cy="2933.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1876" y="2937.1826">unsigned char a</text><ellipse cx="1867" cy="2950.1328" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="1876" y="2953.4795">bool isNone</text><line style="stroke:#181818;stroke-width:0.5;" x1="1857" x2="1993" y1="2960.7813" y2="2960.7813"/></g><!--MD5=[73a49f25fd4e3b2e31fb26db92a1d67f]
+class SVGPointF--><g id="elem_SVGPointF"><rect codeLine="14" fill="#F1F1F1" height="80.5938" id="SVGPointF" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="2331" y="2863.2969"/><ellipse cx="2346" cy="2879.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2348.9688,2884.9375 Q2348.3906,2885.2344 2347.75,2885.375 Q2347.1094,2885.5313 2346.4063,2885.5313 Q2343.9063,2885.5313 2342.5781,2883.8906 Q2341.2656,2882.2344 2341.2656,2879.1094 Q2341.2656,2875.9844 2342.5781,2874.3281 Q2343.9063,2872.6719 2346.4063,2872.6719 Q2347.1094,2872.6719 2347.75,2872.8281 Q2348.4063,2872.9844 2348.9688,2873.2813 L2348.9688,2876 Q2348.3438,2875.4219 2347.75,2875.1563 Q2347.1563,2874.875 2346.5313,2874.875 Q2345.1875,2874.875 2344.5,2875.9531 Q2343.8125,2877.0156 2343.8125,2879.1094 Q2343.8125,2881.2031 2344.5,2882.2813 Q2345.1875,2883.3438 2346.5313,2883.3438 Q2347.1563,2883.3438 2347.75,2883.0781 Q2348.3438,2882.7969 2348.9688,2882.2188 L2348.9688,2884.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="2360" y="2884.1436">SVGPointF</text><line style="stroke:#181818;stroke-width:0.5;" x1="2332" x2="2434" y1="2895.2969" y2="2895.2969"/><ellipse cx="2342" cy="2908.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="2351" y="2912.292">double x</text><ellipse cx="2342" cy="2925.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="2351" y="2928.5889">double y</text><line style="stroke:#181818;stroke-width:0.5;" x1="2332" x2="2434" y1="2935.8906" y2="2935.8906"/></g><!--MD5=[0adabed42205289934f9a365a6ed5a18]
+class SVGRectF--><g id="elem_SVGRectF"><rect codeLine="19" fill="#F1F1F1" height="113.1875" id="SVGRectF" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="2029" y="2847.2969"/><ellipse cx="2053.45" cy="2863.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2056.4188,2868.9375 Q2055.8406,2869.2344 2055.2,2869.375 Q2054.5594,2869.5313 2053.8563,2869.5313 Q2051.3563,2869.5313 2050.0281,2867.8906 Q2048.7156,2866.2344 2048.7156,2863.1094 Q2048.7156,2859.9844 2050.0281,2858.3281 Q2051.3563,2856.6719 2053.8563,2856.6719 Q2054.5594,2856.6719 2055.2,2856.8281 Q2055.8563,2856.9844 2056.4188,2857.2813 L2056.4188,2860 Q2055.7938,2859.4219 2055.2,2859.1563 Q2054.6063,2858.875 2053.9813,2858.875 Q2052.6375,2858.875 2051.95,2859.9531 Q2051.2625,2861.0156 2051.2625,2863.1094 Q2051.2625,2865.2031 2051.95,2866.2813 Q2052.6375,2867.3438 2053.9813,2867.3438 Q2054.6063,2867.3438 2055.2,2867.0781 Q2055.7938,2866.7969 2056.4188,2866.2188 L2056.4188,2868.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="2069.55" y="2868.1436">SVGRectF</text><line style="stroke:#181818;stroke-width:0.5;" x1="2030" x2="2150" y1="2879.2969" y2="2879.2969"/><ellipse cx="2040" cy="2892.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="2049" y="2896.292">double x</text><ellipse cx="2040" cy="2909.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="2049" y="2912.5889">double y</text><ellipse cx="2040" cy="2925.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="2049" y="2928.8857">double width</text><ellipse cx="2040" cy="2941.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="2049" y="2945.1826">double height</text><line style="stroke:#181818;stroke-width:0.5;" x1="2030" x2="2150" y1="2952.4844" y2="2952.4844"/></g><!--MD5=[4bea98cf5cc0b8e6f9017ac3b3ba99b7]
+class SVGFillRule--><g id="elem_SVGFillRule"><rect codeLine="26" fill="#F1F1F1" height="80.5938" id="SVGFillRule" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="2186.5" y="2863.2969"/><ellipse cx="2201.5" cy="2879.2969" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2205.6094,2885.2969 L2197.8906,2885.2969 L2197.8906,2872.9063 L2205.6094,2872.9063 L2205.6094,2875.0625 L2200.3438,2875.0625 L2200.3438,2877.7344 L2205.1094,2877.7344 L2205.1094,2879.8906 L2200.3438,2879.8906 L2200.3438,2883.1406 L2205.6094,2883.1406 L2205.6094,2885.2969 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="2215.5" y="2884.1436">SVGFillRule</text><line style="stroke:#181818;stroke-width:0.5;" x1="2187.5" x2="2294.5" y1="2895.2969" y2="2895.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="2192.5" y="2912.292">NonZero</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="2192.5" y="2928.5889">EvenOdd</text><line style="stroke:#181818;stroke-width:0.5;" x1="2187.5" x2="2294.5" y1="2935.8906" y2="2935.8906"/></g><!--MD5=[4475a509f9a084d9f517cc062383845b]
+class SVGStyle--><g id="elem_SVGStyle"><rect codeLine="33" fill="#F1F1F1" height="341.3438" id="SVGStyle" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="312" x="1860" y="2309.2969"/><ellipse cx="1980.75" cy="2325.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1983.7188,2330.9375 Q1983.1406,2331.2344 1982.5,2331.375 Q1981.8594,2331.5313 1981.1563,2331.5313 Q1978.6563,2331.5313 1977.3281,2329.8906 Q1976.0156,2328.2344 1976.0156,2325.1094 Q1976.0156,2321.9844 1977.3281,2320.3281 Q1978.6563,2318.6719 1981.1563,2318.6719 Q1981.8594,2318.6719 1982.5,2318.8281 Q1983.1563,2318.9844 1983.7188,2319.2813 L1983.7188,2322 Q1983.0938,2321.4219 1982.5,2321.1563 Q1981.9063,2320.875 1981.2813,2320.875 Q1979.9375,2320.875 1979.25,2321.9531 Q1978.5625,2323.0156 1978.5625,2325.1094 Q1978.5625,2327.2031 1979.25,2328.2813 Q1979.9375,2329.3438 1981.2813,2329.3438 Q1981.9063,2329.3438 1982.5,2329.0781 Q1983.0938,2328.7969 1983.7188,2328.2188 L1983.7188,2330.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="2001.25" y="2330.1436">SVGStyle</text><line style="stroke:#181818;stroke-width:0.5;" x1="1861" x2="2171" y1="2341.2969" y2="2341.2969"/><ellipse cx="1871" cy="2354.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="1880" y="2358.292">SVGColor fillColor</text><ellipse cx="1871" cy="2371.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="1880" y="2374.5889">SVGColor strokeColor</text><ellipse cx="1871" cy="2387.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="1880" y="2390.8857">double strokeWidth</text><ellipse cx="1871" cy="2403.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="1880" y="2407.1826">double fillOpacity</text><ellipse cx="1871" cy="2420.1328" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="1880" y="2423.4795">double strokeOpacity</text><ellipse cx="1871" cy="2436.4297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1880" y="2439.7764">SVGFillRule fillRule</text><ellipse cx="1871" cy="2452.7266" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1880" y="2456.0732">string fillUrl</text><ellipse cx="1871" cy="2469.0234" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="1880" y="2472.3701">string strokeUrl</text><ellipse cx="1871" cy="2485.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="1880" y="2488.667">string fontFamily</text><ellipse cx="1871" cy="2501.6172" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="1880" y="2504.9639">double fontSize</text><ellipse cx="1871" cy="2517.9141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="1880" y="2521.2607">string textAnchor</text><ellipse cx="1871" cy="2534.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="1880" y="2537.5576">bool isItalic</text><ellipse cx="1871" cy="2550.5078" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="1880" y="2553.8545">int fontWeight</text><ellipse cx="1871" cy="2566.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1880" y="2570.1514">bool isBold</text><ellipse cx="1871" cy="2583.1016" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="1880" y="2586.4482">bool isDisplayed</text><line style="stroke:#181818;stroke-width:1.0;" x1="1861" x2="2171" y1="2593.75" y2="2593.75"/><ellipse cx="1871" cy="2607.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="1880" y="2610.7451">SVGStyle()</text><ellipse cx="1871" cy="2623.6953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="286" x="1880" y="2627.042">void inheritFrom(const SVGStyle&amp; parent)</text><ellipse cx="1871" cy="2639.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="1880" y="2643.3389">void applyDefaults()</text></g><!--MD5=[3fe3be040cd5df9ba9d87cc20f0d5a7a]
+class SVGTransform--><g id="elem_SVGTransform"><rect codeLine="55" fill="#F1F1F1" height="162.0781" id="SVGTransform" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="351" x="2207.5" y="2398.7969"/><ellipse cx="2329.25" cy="2414.7969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2332.2188,2420.4375 Q2331.6406,2420.7344 2331,2420.875 Q2330.3594,2421.0313 2329.6563,2421.0313 Q2327.1563,2421.0313 2325.8281,2419.3906 Q2324.5156,2417.7344 2324.5156,2414.6094 Q2324.5156,2411.4844 2325.8281,2409.8281 Q2327.1563,2408.1719 2329.6563,2408.1719 Q2330.3594,2408.1719 2331,2408.3281 Q2331.6563,2408.4844 2332.2188,2408.7813 L2332.2188,2411.5 Q2331.5938,2410.9219 2331,2410.6563 Q2330.4063,2410.375 2329.7813,2410.375 Q2328.4375,2410.375 2327.75,2411.4531 Q2327.0625,2412.5156 2327.0625,2414.6094 Q2327.0625,2416.7031 2327.75,2417.7813 Q2328.4375,2418.8438 2329.7813,2418.8438 Q2330.4063,2418.8438 2331,2418.5781 Q2331.5938,2418.2969 2332.2188,2417.7188 L2332.2188,2420.4375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="2349.75" y="2419.6436">SVGTransform</text><line style="stroke:#181818;stroke-width:0.5;" x1="2208.5" x2="2557.5" y1="2430.7969" y2="2430.7969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2215.5" y="2441.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="2227.5" y="2447.792">double m_matrix[3][3]</text><line style="stroke:#181818;stroke-width:1.0;" x1="2208.5" x2="2557.5" y1="2455.0938" y2="2455.0938"/><ellipse cx="2218.5" cy="2468.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="2227.5" y="2472.0889">SVGTransform()</text><ellipse cx="2218.5" cy="2485.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="238" x="2227.5" y="2488.3857">void translate(double tx, double ty)</text><ellipse cx="2218.5" cy="2501.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="220" x="2227.5" y="2504.6826">void scale(double sx, double sy)</text><ellipse cx="2218.5" cy="2517.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="173" x="2227.5" y="2520.9795">void rotate(double angle)</text><ellipse cx="2218.5" cy="2533.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="289" x="2227.5" y="2537.2764">void multiply(const SVGTransform&amp; other)</text><ellipse cx="2218.5" cy="2550.2266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="325" x="2227.5" y="2553.5732">SVGPointF map(const SVGPointF&amp; point) const</text></g><!--MD5=[5bdbf1526208a92e7c89624584724c76]
+class NodeVisitor--><g id="elem_NodeVisitor"><rect codeLine="68" fill="#F1F1F1" height="210.9688" id="NodeVisitor" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="306" x="431" y="1948.7969"/><ellipse cx="540.25" cy="1964.7969" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M536.1719,1960.5625 L536.1719,1958.4063 L543.5625,1958.4063 L543.5625,1960.5625 L541.0938,1960.5625 L541.0938,1968.6406 L543.5625,1968.6406 L543.5625,1970.7969 L536.1719,1970.7969 L536.1719,1968.6406 L538.6406,1968.6406 L538.6406,1960.5625 L536.1719,1960.5625 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="79" x="560.75" y="1969.6436">NodeVisitor</text><line style="stroke:#181818;stroke-width:0.5;" x1="432" x2="736" y1="1980.7969" y2="1980.7969"/><line style="stroke:#181818;stroke-width:0.5;" x1="432" x2="736" y1="1988.7969" y2="1988.7969"/><ellipse cx="442" cy="2002.4453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="172" x="451" y="2005.792">void visit(SVGRect&amp; rect)</text><ellipse cx="442" cy="2018.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="187" x="451" y="2022.0889">void visit(SVGCircle&amp; circle)</text><ellipse cx="442" cy="2035.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="223" x="451" y="2038.3857">void visit(SVGPolygon&amp; polygon)</text><ellipse cx="442" cy="2051.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="217" x="451" y="2054.6826">void visit(SVGPolyline&amp; polyline)</text><ellipse cx="442" cy="2067.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="169" x="451" y="2070.9795">void visit(SVGText&amp; text)</text><ellipse cx="442" cy="2083.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="201" x="451" y="2087.2764">void visit(SVGEllipse&amp; ellipse)</text><ellipse cx="442" cy="2100.2266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="165" x="451" y="2103.5732">void visit(SVGLine&amp; line)</text><ellipse cx="442" cy="2116.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="175" x="451" y="2119.8701">void visit(SVGPath&amp; path)</text><ellipse cx="442" cy="2132.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="280" x="451" y="2136.167">void visitGroupBegin(SVGGroup&amp; group)</text><ellipse cx="442" cy="2149.1172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="267" x="451" y="2152.4639">void visitGroupEnd(SVGGroup&amp; group)</text></g><!--MD5=[dd8b5216aded4a835298bcaa96ca2e05]
+class SVGElement--><g id="elem_SVGElement"><rect codeLine="83" fill="#F1F1F1" height="276.1563" id="SVGElement" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="384" x="3350" y="1916.2969"/><ellipse cx="3494.75" cy="1932.2969" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M3494.8594,1927.6406 L3493.7031,1932.7188 L3496.0313,1932.7188 L3494.8594,1927.6406 Z M3493.375,1925.4063 L3496.3594,1925.4063 L3499.7188,1937.7969 L3497.2656,1937.7969 L3496.5,1934.7344 L3493.2188,1934.7344 L3492.4688,1937.7969 L3490.0313,1937.7969 L3493.375,1925.4063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="86" x="3515.25" y="1937.1436">SVGElement</text><line style="stroke:#181818;stroke-width:0.5;" x1="3351" x2="3733" y1="1948.2969" y2="1948.2969"/><polygon fill="none" points="3361,1956.9453,3365,1960.9453,3361,1964.9453,3357,1960.9453" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="3370" y="1965.292">string m_id</text><polygon fill="none" points="3361,1973.2422,3365,1977.2422,3361,1981.2422,3357,1977.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="3370" y="1981.5889">SVGStyle m_style</text><polygon fill="none" points="3361,1989.5391,3365,1993.5391,3361,1997.5391,3357,1993.5391" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189" x="3370" y="1997.8857">SVGTransform m_transform</text><line style="stroke:#181818;stroke-width:1.0;" x1="3351" x2="3733" y1="2005.1875" y2="2005.1875"/><ellipse cx="3361" cy="2018.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="224" x="3370" y="2022.1826">void accept(NodeVisitor&amp; visitor)</text><ellipse cx="3361" cy="2035.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="183" x="3370" y="2038.4795">SVGRectF localBox() const</text><ellipse cx="3361" cy="2051.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="233" x="3370" y="2054.7764">virtual SVGRectF worldBox() const</text><ellipse cx="3361" cy="2067.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="250" x="3370" y="2071.0732">void setStyle(const SVGStyle&amp; style)</text><ellipse cx="3361" cy="2084.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="358" x="3370" y="2087.3701">void setTransform(const SVGTransform&amp; transform)</text><ellipse cx="3361" cy="2100.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="3370" y="2103.667">SVGStyle&amp; getStyle()</text><ellipse cx="3361" cy="2116.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="3370" y="2119.9639">const SVGStyle&amp; getStyle() const</text><ellipse cx="3361" cy="2132.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="3370" y="2136.2607">SVGTransform&amp; getTransform()</text><ellipse cx="3361" cy="2149.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="304" x="3370" y="2152.5576">const SVGTransform&amp; getTransform() const</text><ellipse cx="3361" cy="2165.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="3370" y="2168.8545">void setId(const string&amp; id)</text><ellipse cx="3361" cy="2181.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="3370" y="2185.1514">const string&amp; getId() const</text></g><!--MD5=[3886a77cc365daff7eafe8e390fde3d8]
+class SVGRect--><g id="elem_SVGRect"><rect codeLine="101" fill="#F1F1F1" height="210.9688" id="SVGRect" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="396" x="3853" y="2374.2969"/><ellipse cx="4016.25" cy="2390.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M4019.2188,2395.9375 Q4018.6406,2396.2344 4018,2396.375 Q4017.3594,2396.5313 4016.6563,2396.5313 Q4014.1563,2396.5313 4012.8281,2394.8906 Q4011.5156,2393.2344 4011.5156,2390.1094 Q4011.5156,2386.9844 4012.8281,2385.3281 Q4014.1563,2383.6719 4016.6563,2383.6719 Q4017.3594,2383.6719 4018,2383.8281 Q4018.6563,2383.9844 4019.2188,2384.2813 L4019.2188,2387 Q4018.5938,2386.4219 4018,2386.1563 Q4017.4063,2385.875 4016.7813,2385.875 Q4015.4375,2385.875 4014.75,2386.9531 Q4014.0625,2388.0156 4014.0625,2390.1094 Q4014.0625,2392.2031 4014.75,2393.2813 Q4015.4375,2394.3438 4016.7813,2394.3438 Q4017.4063,2394.3438 4018,2394.0781 Q4018.5938,2393.7969 4019.2188,2393.2188 L4019.2188,2395.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="4036.75" y="2395.1436">SVGRect</text><line style="stroke:#181818;stroke-width:0.5;" x1="3854" x2="4248" y1="2406.2969" y2="2406.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3861" y="2416.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="3873" y="2423.292">SVGRectF m_rect</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3861" y="2433.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="3873" y="2439.5889">double m_rx</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3861" y="2449.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="3873" y="2455.8857">double m_ry</text><line style="stroke:#181818;stroke-width:1.0;" x1="3854" x2="4248" y1="2463.1875" y2="2463.1875"/><ellipse cx="3864" cy="2476.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="370" x="3873" y="2480.1826">SVGRect(const SVGRectF&amp; rect, double rx, double ry)</text><ellipse cx="3864" cy="2493.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="3873" y="2496.4795">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="3864" cy="2509.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="236" x="3873" y="2512.7764">const SVGRectF&amp; getRect() const</text><ellipse cx="3864" cy="2525.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="3873" y="2529.0732">double getRx() const</text><ellipse cx="3864" cy="2542.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="3873" y="2545.3701">double getRy() const</text><ellipse cx="3864" cy="2558.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="3873" y="2561.667">SVGRectF localBox() const override</text><ellipse cx="3864" cy="2574.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="3873" y="2577.9639">SVGRectF worldBox() const override</text></g><!--MD5=[9b940280214af15d985833888688d0ce]
+class SVGCircle--><g id="elem_SVGCircle"><rect codeLine="115" fill="#F1F1F1" height="194.6719" id="SVGCircle" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="310" x="4284" y="2382.2969"/><ellipse cx="4401.25" cy="2398.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M4404.2188,2403.9375 Q4403.6406,2404.2344 4403,2404.375 Q4402.3594,2404.5313 4401.6563,2404.5313 Q4399.1563,2404.5313 4397.8281,2402.8906 Q4396.5156,2401.2344 4396.5156,2398.1094 Q4396.5156,2394.9844 4397.8281,2393.3281 Q4399.1563,2391.6719 4401.6563,2391.6719 Q4402.3594,2391.6719 4403,2391.8281 Q4403.6563,2391.9844 4404.2188,2392.2813 L4404.2188,2395 Q4403.5938,2394.4219 4403,2394.1563 Q4402.4063,2393.875 4401.7813,2393.875 Q4400.4375,2393.875 4399.75,2394.9531 Q4399.0625,2396.0156 4399.0625,2398.1094 Q4399.0625,2400.2031 4399.75,2401.2813 Q4400.4375,2402.3438 4401.7813,2402.3438 Q4402.4063,2402.3438 4403,2402.0781 Q4403.5938,2401.7969 4404.2188,2401.2188 L4404.2188,2403.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="4421.75" y="2403.1436">SVGCircle</text><line style="stroke:#181818;stroke-width:0.5;" x1="4285" x2="4593" y1="2414.2969" y2="2414.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4292" y="2424.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="4304" y="2431.292">double m_cx</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4292" y="2441.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="4304" y="2447.5889">double m_cy</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4292" y="2457.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="4304" y="2463.8857">double m_r</text><line style="stroke:#181818;stroke-width:1.0;" x1="4285" x2="4593" y1="2471.1875" y2="2471.1875"/><ellipse cx="4295" cy="2484.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="4304" y="2488.1826">SVGCircle(double cx, double cy, double r)</text><ellipse cx="4295" cy="2501.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="4304" y="2504.4795">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="4295" cy="2517.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4304" y="2520.7764">double getCx() const</text><ellipse cx="4295" cy="2533.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4304" y="2537.0732">double getCy() const</text><ellipse cx="4295" cy="2550.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="4304" y="2553.3701">double getR() const</text><ellipse cx="4295" cy="2566.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="4304" y="2569.667">SVGRectF localBox() const override</text></g><!--MD5=[572c3d202bafae8eeefa02eb184628f6]
+class SVGEllipse--><g id="elem_SVGEllipse"><rect codeLine="128" fill="#F1F1F1" height="227.2656" id="SVGEllipse" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="395" x="4629.5" y="2366.2969"/><ellipse cx="4786.25" cy="2382.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M4789.2188,2387.9375 Q4788.6406,2388.2344 4788,2388.375 Q4787.3594,2388.5313 4786.6563,2388.5313 Q4784.1563,2388.5313 4782.8281,2386.8906 Q4781.5156,2385.2344 4781.5156,2382.1094 Q4781.5156,2378.9844 4782.8281,2377.3281 Q4784.1563,2375.6719 4786.6563,2375.6719 Q4787.3594,2375.6719 4788,2375.8281 Q4788.6563,2375.9844 4789.2188,2376.2813 L4789.2188,2379 Q4788.5938,2378.4219 4788,2378.1563 Q4787.4063,2377.875 4786.7813,2377.875 Q4785.4375,2377.875 4784.75,2378.9531 Q4784.0625,2380.0156 4784.0625,2382.1094 Q4784.0625,2384.2031 4784.75,2385.2813 Q4785.4375,2386.3438 4786.7813,2386.3438 Q4787.4063,2386.3438 4788,2386.0781 Q4788.5938,2385.7969 4789.2188,2385.2188 L4789.2188,2387.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="4806.75" y="2387.1436">SVGEllipse</text><line style="stroke:#181818;stroke-width:0.5;" x1="4630.5" x2="5023.5" y1="2398.2969" y2="2398.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4637.5" y="2408.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="4649.5" y="2415.292">double m_cx</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4637.5" y="2425.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="4649.5" y="2431.5889">double m_cy</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4637.5" y="2441.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="4649.5" y="2447.8857">double m_rx</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="4637.5" y="2457.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="4649.5" y="2464.1826">double m_ry</text><line style="stroke:#181818;stroke-width:1.0;" x1="4630.5" x2="5023.5" y1="2471.4844" y2="2471.4844"/><ellipse cx="4640.5" cy="2485.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="369" x="4649.5" y="2488.4795">SVGEllipse(double cx, double cy, double rx, double ry)</text><ellipse cx="4640.5" cy="2501.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="4649.5" y="2504.7764">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="4640.5" cy="2517.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4649.5" y="2521.0732">double getCx() const</text><ellipse cx="4640.5" cy="2534.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4649.5" y="2537.3701">double getCy() const</text><ellipse cx="4640.5" cy="2550.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4649.5" y="2553.667">double getRx() const</text><ellipse cx="4640.5" cy="2566.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="4649.5" y="2569.9639">double getRy() const</text><ellipse cx="4640.5" cy="2582.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="4649.5" y="2586.2607">SVGRectF localBox() const override</text></g><!--MD5=[8613fb32ca71d07cd28411ebd049582b]
+class SVGLine--><g id="elem_SVGLine"><rect codeLine="143" fill="#F1F1F1" height="227.2656" id="SVGLine" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="389" x="5059.5" y="2366.2969"/><ellipse cx="5221.25" cy="2382.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M5224.2188,2387.9375 Q5223.6406,2388.2344 5223,2388.375 Q5222.3594,2388.5313 5221.6563,2388.5313 Q5219.1563,2388.5313 5217.8281,2386.8906 Q5216.5156,2385.2344 5216.5156,2382.1094 Q5216.5156,2378.9844 5217.8281,2377.3281 Q5219.1563,2375.6719 5221.6563,2375.6719 Q5222.3594,2375.6719 5223,2375.8281 Q5223.6563,2375.9844 5224.2188,2376.2813 L5224.2188,2379 Q5223.5938,2378.4219 5223,2378.1563 Q5222.4063,2377.875 5221.7813,2377.875 Q5220.4375,2377.875 5219.75,2378.9531 Q5219.0625,2380.0156 5219.0625,2382.1094 Q5219.0625,2384.2031 5219.75,2385.2813 Q5220.4375,2386.3438 5221.7813,2386.3438 Q5222.4063,2386.3438 5223,2386.0781 Q5223.5938,2385.7969 5224.2188,2385.2188 L5224.2188,2387.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="5241.75" y="2387.1436">SVGLine</text><line style="stroke:#181818;stroke-width:0.5;" x1="5060.5" x2="5447.5" y1="2398.2969" y2="2398.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5067.5" y="2408.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="5079.5" y="2415.292">double m_x1</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5067.5" y="2425.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="5079.5" y="2431.5889">double m_y1</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5067.5" y="2441.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="5079.5" y="2447.8857">double m_x2</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5067.5" y="2457.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="5079.5" y="2464.1826">double m_y2</text><line style="stroke:#181818;stroke-width:1.0;" x1="5060.5" x2="5447.5" y1="2471.4844" y2="2471.4844"/><ellipse cx="5070.5" cy="2485.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="363" x="5079.5" y="2488.4795">SVGLine(double x1, double y1, double x2, double y2)</text><ellipse cx="5070.5" cy="2501.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="5079.5" y="2504.7764">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="5070.5" cy="2517.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="5079.5" y="2521.0732">double getX1() const</text><ellipse cx="5070.5" cy="2534.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="5079.5" y="2537.3701">double getY1() const</text><ellipse cx="5070.5" cy="2550.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="5079.5" y="2553.667">double getX2() const</text><ellipse cx="5070.5" cy="2566.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="5079.5" y="2569.9639">double getY2() const</text><ellipse cx="5070.5" cy="2582.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="5079.5" y="2586.2607">SVGRectF localBox() const override</text></g><!--MD5=[b07ef3b34cb644a833e5e925b4c4331a]
+class SVGPolygon--><g id="elem_SVGPolygon"><rect codeLine="158" fill="#F1F1F1" height="129.4844" id="SVGPolygon" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="361" x="5483.5" y="2415.2969"/><ellipse cx="5617.75" cy="2431.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M5620.7188,2436.9375 Q5620.1406,2437.2344 5619.5,2437.375 Q5618.8594,2437.5313 5618.1563,2437.5313 Q5615.6563,2437.5313 5614.3281,2435.8906 Q5613.0156,2434.2344 5613.0156,2431.1094 Q5613.0156,2427.9844 5614.3281,2426.3281 Q5615.6563,2424.6719 5618.1563,2424.6719 Q5618.8594,2424.6719 5619.5,2424.8281 Q5620.1563,2424.9844 5620.7188,2425.2813 L5620.7188,2428 Q5620.0938,2427.4219 5619.5,2427.1563 Q5618.9063,2426.875 5618.2813,2426.875 Q5616.9375,2426.875 5616.25,2427.9531 Q5615.5625,2429.0156 5615.5625,2431.1094 Q5615.5625,2433.2031 5616.25,2434.2813 Q5616.9375,2435.3438 5618.2813,2435.3438 Q5618.9063,2435.3438 5619.5,2435.0781 Q5620.0938,2434.7969 5620.7188,2434.2188 L5620.7188,2436.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="5638.25" y="2436.1436">SVGPolygon</text><line style="stroke:#181818;stroke-width:0.5;" x1="5484.5" x2="5843.5" y1="2447.2969" y2="2447.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5491.5" y="2457.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="5503.5" y="2464.292">vector&lt;SVGPointF&gt; m_points</text><line style="stroke:#181818;stroke-width:1.0;" x1="5484.5" x2="5843.5" y1="2471.5938" y2="2471.5938"/><ellipse cx="5494.5" cy="2485.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="335" x="5503.5" y="2488.5889">SVGPolygon(const vector&lt;SVGPointF&gt;&amp; points)</text><ellipse cx="5494.5" cy="2501.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="5503.5" y="2504.8857">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="5494.5" cy="2517.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="317" x="5503.5" y="2521.1826">const vector&lt;SVGPointF&gt;&amp; getPoints() const</text><ellipse cx="5494.5" cy="2534.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="5503.5" y="2537.4795">SVGRectF localBox() const override</text></g><!--MD5=[f33802c28cda0e35041301535bc7734b]
+class SVGPolyline--><g id="elem_SVGPolyline"><rect codeLine="167" fill="#F1F1F1" height="129.4844" id="SVGPolyline" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="358" x="5880" y="2415.2969"/><ellipse cx="6014.25" cy="2431.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6017.2188,2436.9375 Q6016.6406,2437.2344 6016,2437.375 Q6015.3594,2437.5313 6014.6563,2437.5313 Q6012.1563,2437.5313 6010.8281,2435.8906 Q6009.5156,2434.2344 6009.5156,2431.1094 Q6009.5156,2427.9844 6010.8281,2426.3281 Q6012.1563,2424.6719 6014.6563,2424.6719 Q6015.3594,2424.6719 6016,2424.8281 Q6016.6563,2424.9844 6017.2188,2425.2813 L6017.2188,2428 Q6016.5938,2427.4219 6016,2427.1563 Q6015.4063,2426.875 6014.7813,2426.875 Q6013.4375,2426.875 6012.75,2427.9531 Q6012.0625,2429.0156 6012.0625,2431.1094 Q6012.0625,2433.2031 6012.75,2434.2813 Q6013.4375,2435.3438 6014.7813,2435.3438 Q6015.4063,2435.3438 6016,2435.0781 Q6016.5938,2434.7969 6017.2188,2434.2188 L6017.2188,2436.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="6034.75" y="2436.1436">SVGPolyline</text><line style="stroke:#181818;stroke-width:0.5;" x1="5881" x2="6237" y1="2447.2969" y2="2447.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="5888" y="2457.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="5900" y="2464.292">vector&lt;SVGPointF&gt; m_points</text><line style="stroke:#181818;stroke-width:1.0;" x1="5881" x2="6237" y1="2471.5938" y2="2471.5938"/><ellipse cx="5891" cy="2485.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="332" x="5900" y="2488.5889">SVGPolyline(const vector&lt;SVGPointF&gt;&amp; points)</text><ellipse cx="5891" cy="2501.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="5900" y="2504.8857">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="5891" cy="2517.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="317" x="5900" y="2521.1826">const vector&lt;SVGPointF&gt;&amp; getPoints() const</text><ellipse cx="5891" cy="2534.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="5900" y="2537.4795">SVGRectF localBox() const override</text></g><!--MD5=[1b1e9204f72e60c299db9ed49876ef0d]
+class SVGPath--><g id="elem_SVGPath"><rect codeLine="176" fill="#F1F1F1" height="129.4844" id="SVGPath" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="310" x="2615" y="2415.2969"/><ellipse cx="2735.75" cy="2431.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2738.7188,2436.9375 Q2738.1406,2437.2344 2737.5,2437.375 Q2736.8594,2437.5313 2736.1563,2437.5313 Q2733.6563,2437.5313 2732.3281,2435.8906 Q2731.0156,2434.2344 2731.0156,2431.1094 Q2731.0156,2427.9844 2732.3281,2426.3281 Q2733.6563,2424.6719 2736.1563,2424.6719 Q2736.8594,2424.6719 2737.5,2424.8281 Q2738.1563,2424.9844 2738.7188,2425.2813 L2738.7188,2428 Q2738.0938,2427.4219 2737.5,2427.1563 Q2736.9063,2426.875 2736.2813,2426.875 Q2734.9375,2426.875 2734.25,2427.9531 Q2733.5625,2429.0156 2733.5625,2431.1094 Q2733.5625,2433.2031 2734.25,2434.2813 Q2734.9375,2435.3438 2736.2813,2435.3438 Q2736.9063,2435.3438 2737.5,2435.0781 Q2738.0938,2434.7969 2738.7188,2434.2188 L2738.7188,2436.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="2756.25" y="2436.1436">SVGPath</text><line style="stroke:#181818;stroke-width:0.5;" x1="2616" x2="2924" y1="2447.2969" y2="2447.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2623" y="2457.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="2635" y="2464.292">string m_pathData</text><line style="stroke:#181818;stroke-width:1.0;" x1="2616" x2="2924" y1="2471.5938" y2="2471.5938"/><ellipse cx="2626" cy="2485.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231" x="2635" y="2488.5889">SVGPath(const string&amp; pathData)</text><ellipse cx="2626" cy="2501.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="2635" y="2504.8857">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="2626" cy="2517.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="2635" y="2521.1826">const string&amp; getPathData() const</text><ellipse cx="2626" cy="2534.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="2635" y="2537.4795">SVGRectF localBox() const override</text></g><!--MD5=[134974e8ec98be497be3310fdcc6160e]
+class SVGText--><g id="elem_SVGText"><rect codeLine="185" fill="#F1F1F1" height="194.6719" id="SVGText" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="353" x="2960.5" y="2382.2969"/><ellipse cx="3103.25" cy="2398.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M3106.2188,2403.9375 Q3105.6406,2404.2344 3105,2404.375 Q3104.3594,2404.5313 3103.6563,2404.5313 Q3101.1563,2404.5313 3099.8281,2402.8906 Q3098.5156,2401.2344 3098.5156,2398.1094 Q3098.5156,2394.9844 3099.8281,2393.3281 Q3101.1563,2391.6719 3103.6563,2391.6719 Q3104.3594,2391.6719 3105,2391.8281 Q3105.6563,2391.9844 3106.2188,2392.2813 L3106.2188,2395 Q3105.5938,2394.4219 3105,2394.1563 Q3104.4063,2393.875 3103.7813,2393.875 Q3102.4375,2393.875 3101.75,2394.9531 Q3101.0625,2396.0156 3101.0625,2398.1094 Q3101.0625,2400.2031 3101.75,2401.2813 Q3102.4375,2402.3438 3103.7813,2402.3438 Q3104.4063,2402.3438 3105,2402.0781 Q3105.5938,2401.7969 3106.2188,2401.2188 L3106.2188,2403.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="3123.75" y="2403.1436">SVGText</text><line style="stroke:#181818;stroke-width:0.5;" x1="2961.5" x2="3312.5" y1="2414.2969" y2="2414.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2968.5" y="2424.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="2980.5" y="2431.292">double m_x</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2968.5" y="2441.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="2980.5" y="2447.5889">double m_y</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2968.5" y="2457.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="2980.5" y="2463.8857">string m_text</text><line style="stroke:#181818;stroke-width:1.0;" x1="2961.5" x2="3312.5" y1="2471.1875" y2="2471.1875"/><ellipse cx="2971.5" cy="2484.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="327" x="2980.5" y="2488.1826">SVGText(double x, double y, const string&amp; text)</text><ellipse cx="2971.5" cy="2501.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="2980.5" y="2504.4795">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="2971.5" cy="2517.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="2980.5" y="2520.7764">double getX() const</text><ellipse cx="2971.5" cy="2533.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="2980.5" y="2537.0732">double getY() const</text><ellipse cx="2971.5" cy="2550.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="204" x="2980.5" y="2553.3701">const string&amp; getText() const</text><ellipse cx="2971.5" cy="2566.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="2980.5" y="2569.667">SVGRectF localBox() const override</text></g><!--MD5=[ce51af88fc47fdc153150854d55f4534]
+class SVGGroup--><g id="elem_SVGGroup"><rect codeLine="198" fill="#F1F1F1" height="162.0781" id="SVGGroup" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="469" x="3348.5" y="2398.7969"/><ellipse cx="3542.75" cy="2414.7969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M3545.7188,2420.4375 Q3545.1406,2420.7344 3544.5,2420.875 Q3543.8594,2421.0313 3543.1563,2421.0313 Q3540.6563,2421.0313 3539.3281,2419.3906 Q3538.0156,2417.7344 3538.0156,2414.6094 Q3538.0156,2411.4844 3539.3281,2409.8281 Q3540.6563,2408.1719 3543.1563,2408.1719 Q3543.8594,2408.1719 3544.5,2408.3281 Q3545.1563,2408.4844 3545.7188,2408.7813 L3545.7188,2411.5 Q3545.0938,2410.9219 3544.5,2410.6563 Q3543.9063,2410.375 3543.2813,2410.375 Q3541.9375,2410.375 3541.25,2411.4531 Q3540.5625,2412.5156 3540.5625,2414.6094 Q3540.5625,2416.7031 3541.25,2417.7813 Q3541.9375,2418.8438 3543.2813,2418.8438 Q3543.9063,2418.8438 3544.5,2418.5781 Q3545.0938,2418.2969 3545.7188,2417.7188 L3545.7188,2420.4375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="3563.25" y="2419.6436">SVGGroup</text><line style="stroke:#181818;stroke-width:0.5;" x1="3349.5" x2="3816.5" y1="2430.7969" y2="2430.7969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3356.5" y="2441.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="330" x="3368.5" y="2447.792">vector&lt;unique_ptr&lt;SVGElement&gt;&gt; m_children</text><line style="stroke:#181818;stroke-width:1.0;" x1="3349.5" x2="3816.5" y1="2455.0938" y2="2455.0938"/><ellipse cx="3359.5" cy="2468.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="3368.5" y="2472.0889">SVGGroup()</text><ellipse cx="3359.5" cy="2485.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="322" x="3368.5" y="2488.3857">void addChild(unique_ptr&lt;SVGElement&gt; child)</text><ellipse cx="3359.5" cy="2501.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="443" x="3368.5" y="2504.6826">const vector&lt;unique_ptr&lt;SVGElement&gt;&gt;&amp; getChildren() const</text><ellipse cx="3359.5" cy="2517.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="3368.5" y="2520.9795">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="3359.5" cy="2533.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="3368.5" y="2537.2764">SVGRectF localBox() const override</text><ellipse cx="3359.5" cy="2550.2266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="3368.5" y="2553.5732">SVGRectF worldBox() const override</text></g><!--MD5=[c944a706c5e8cc4d8486d3e4ad40b500]
+class SVGGradientUnits--><g id="elem_SVGGradientUnits"><rect codeLine="211" fill="#F1F1F1" height="80.5938" id="SVGGradientUnits" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="155" x="6837.5" y="2439.2969"/><ellipse cx="6852.5" cy="2455.2969" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6856.6094,2461.2969 L6848.8906,2461.2969 L6848.8906,2448.9063 L6856.6094,2448.9063 L6856.6094,2451.0625 L6851.3438,2451.0625 L6851.3438,2453.7344 L6856.1094,2453.7344 L6856.1094,2455.8906 L6851.3438,2455.8906 L6851.3438,2459.1406 L6856.6094,2459.1406 L6856.6094,2461.2969 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="6866.5" y="2460.1436">SVGGradientUnits</text><line style="stroke:#181818;stroke-width:0.5;" x1="6838.5" x2="6991.5" y1="2471.2969" y2="2471.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="6843.5" y="2488.292">UserSpaceOnUse</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="6843.5" y="2504.5889">ObjectBoundingBox</text><line style="stroke:#181818;stroke-width:0.5;" x1="6838.5" x2="6991.5" y1="2511.8906" y2="2511.8906"/></g><!--MD5=[4ba52f3d2236d24f4145573f5bfd04b9]
+class SVGSpreadMethod--><g id="elem_SVGSpreadMethod"><rect codeLine="216" fill="#F1F1F1" height="96.8906" id="SVGSpreadMethod" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="6639.5" y="2431.2969"/><ellipse cx="6654.5" cy="2447.2969" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6658.6094,2453.2969 L6650.8906,2453.2969 L6650.8906,2440.9063 L6658.6094,2440.9063 L6658.6094,2443.0625 L6653.3438,2443.0625 L6653.3438,2445.7344 L6658.1094,2445.7344 L6658.1094,2447.8906 L6653.3438,2447.8906 L6653.3438,2451.1406 L6658.6094,2451.1406 L6658.6094,2453.2969 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="6668.5" y="2452.1436">SVGSpreadMethod</text><line style="stroke:#181818;stroke-width:0.5;" x1="6640.5" x2="6801.5" y1="2463.2969" y2="2463.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="6645.5" y="2480.292">Pad</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="6645.5" y="2496.5889">Reflect</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="6645.5" y="2512.8857">Repeat</text><line style="stroke:#181818;stroke-width:0.5;" x1="6640.5" x2="6801.5" y1="2520.1875" y2="2520.1875"/></g><!--MD5=[aa5e47308803d98c4dcd598874e4efd5]
+class SVGStop--><g id="elem_SVGStop"><rect codeLine="222" fill="#F1F1F1" height="96.8906" id="SVGStop" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="6294" y="2855.2969"/><ellipse cx="6340.25" cy="2871.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6343.2188,2876.9375 Q6342.6406,2877.2344 6342,2877.375 Q6341.3594,2877.5313 6340.6563,2877.5313 Q6338.1563,2877.5313 6336.8281,2875.8906 Q6335.5156,2874.2344 6335.5156,2871.1094 Q6335.5156,2867.9844 6336.8281,2866.3281 Q6338.1563,2864.6719 6340.6563,2864.6719 Q6341.3594,2864.6719 6342,2864.8281 Q6342.6563,2864.9844 6343.2188,2865.2813 L6343.2188,2868 Q6342.5938,2867.4219 6342,2867.1563 Q6341.4063,2866.875 6340.7813,2866.875 Q6339.4375,2866.875 6338.75,2867.9531 Q6338.0625,2869.0156 6338.0625,2871.1094 Q6338.0625,2873.2031 6338.75,2874.2813 Q6339.4375,2875.3438 6340.7813,2875.3438 Q6341.4063,2875.3438 6342,2875.0781 Q6342.5938,2874.7969 6343.2188,2874.2188 L6343.2188,2876.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="6360.75" y="2876.1436">SVGStop</text><line style="stroke:#181818;stroke-width:0.5;" x1="6295" x2="6455" y1="2887.2969" y2="2887.2969"/><ellipse cx="6305" cy="2900.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="6314" y="2904.292">double offset</text><ellipse cx="6305" cy="2917.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="6314" y="2920.5889">SVGColor stopColor</text><ellipse cx="6305" cy="2933.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="6314" y="2936.8857">double stopOpacity</text><line style="stroke:#181818;stroke-width:0.5;" x1="6295" x2="6455" y1="2944.1875" y2="2944.1875"/></g><!--MD5=[ba4f257fe3894d1d865e754778fd3145]
+class SVGGradient--><g id="elem_SVGGradient"><rect codeLine="228" fill="#F1F1F1" height="145.7813" id="SVGGradient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="310" x="6294" y="2406.7969"/><ellipse cx="6400.75" cy="2422.7969" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6400.8594,2418.1406 L6399.7031,2423.2188 L6402.0313,2423.2188 L6400.8594,2418.1406 Z M6399.375,2415.9063 L6402.3594,2415.9063 L6405.7188,2428.2969 L6403.2656,2428.2969 L6402.5,2425.2344 L6399.2188,2425.2344 L6398.4688,2428.2969 L6396.0313,2428.2969 L6399.375,2415.9063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="88" x="6421.25" y="2427.6436">SVGGradient</text><line style="stroke:#181818;stroke-width:0.5;" x1="6295" x2="6603" y1="2438.7969" y2="2438.7969"/><ellipse cx="6305" cy="2452.4453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="6314" y="2455.792">vector&lt;SVGStop&gt; stops</text><ellipse cx="6305" cy="2468.7422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="219" x="6314" y="2472.0889">SVGGradientUnits gradientUnits</text><ellipse cx="6305" cy="2485.0391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="236" x="6314" y="2488.3857">SVGSpreadMethod spreadMethod</text><line style="stroke:#181818;stroke-width:1.0;" x1="6295" x2="6603" y1="2495.6875" y2="2495.6875"/><ellipse cx="6305" cy="2509.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="6314" y="2512.6826">SVGGradient()</text><ellipse cx="6305" cy="2525.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="284" x="6314" y="2528.9795">void accept(NodeVisitor&amp; visitor) override</text><ellipse cx="6305" cy="2541.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="243" x="6314" y="2545.2764">SVGRectF localBox() const override</text></g><!--MD5=[9bf2dfb8c8efe092678491530ea5f716]
+class SVGLinearGradient--><g id="elem_SVGLinearGradient"><rect codeLine="238" fill="#F1F1F1" height="129.4844" id="SVGLinearGradient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="165" x="6491.5" y="2839.2969"/><ellipse cx="6508.3" cy="2855.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6511.2688,2860.9375 Q6510.6906,2861.2344 6510.05,2861.375 Q6509.4094,2861.5313 6508.7063,2861.5313 Q6506.2063,2861.5313 6504.8781,2859.8906 Q6503.5656,2858.2344 6503.5656,2855.1094 Q6503.5656,2851.9844 6504.8781,2850.3281 Q6506.2063,2848.6719 6508.7063,2848.6719 Q6509.4094,2848.6719 6510.05,2848.8281 Q6510.7063,2848.9844 6511.2688,2849.2813 L6511.2688,2852 Q6510.6438,2851.4219 6510.05,2851.1563 Q6509.4563,2850.875 6508.8313,2850.875 Q6507.4875,2850.875 6506.8,2851.9531 Q6506.1125,2853.0156 6506.1125,2855.1094 Q6506.1125,2857.2031 6506.8,2858.2813 Q6507.4875,2859.3438 6508.8313,2859.3438 Q6509.4563,2859.3438 6510.05,2859.0781 Q6510.6438,2858.7969 6511.2688,2858.2188 L6511.2688,2860.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="6522.7" y="2860.1436">SVGLinearGradient</text><line style="stroke:#181818;stroke-width:0.5;" x1="6492.5" x2="6655.5" y1="2871.2969" y2="2871.2969"/><ellipse cx="6502.5" cy="2884.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="6511.5" y="2888.292">double x1</text><ellipse cx="6502.5" cy="2901.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="6511.5" y="2904.5889">double y1</text><ellipse cx="6502.5" cy="2917.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="6511.5" y="2920.8857">double x2</text><ellipse cx="6502.5" cy="2933.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="6511.5" y="2937.1826">double y2</text><line style="stroke:#181818;stroke-width:1.0;" x1="6492.5" x2="6655.5" y1="2944.4844" y2="2944.4844"/><ellipse cx="6502.5" cy="2958.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="6511.5" y="2961.4795">SVGLinearGradient()</text></g><!--MD5=[bbb0321ca81623236e404fef2d46397f]
+class SVGRadialGradient--><g id="elem_SVGRadialGradient"><rect codeLine="247" fill="#F1F1F1" height="145.7813" id="SVGRadialGradient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="165" x="6691.5" y="2830.7969"/><ellipse cx="6708.3" cy="2846.7969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M6711.2688,2852.4375 Q6710.6906,2852.7344 6710.05,2852.875 Q6709.4094,2853.0313 6708.7063,2853.0313 Q6706.2063,2853.0313 6704.8781,2851.3906 Q6703.5656,2849.7344 6703.5656,2846.6094 Q6703.5656,2843.4844 6704.8781,2841.8281 Q6706.2063,2840.1719 6708.7063,2840.1719 Q6709.4094,2840.1719 6710.05,2840.3281 Q6710.7063,2840.4844 6711.2688,2840.7813 L6711.2688,2843.5 Q6710.6438,2842.9219 6710.05,2842.6563 Q6709.4563,2842.375 6708.8313,2842.375 Q6707.4875,2842.375 6706.8,2843.4531 Q6706.1125,2844.5156 6706.1125,2846.6094 Q6706.1125,2848.7031 6706.8,2849.7813 Q6707.4875,2850.8438 6708.8313,2850.8438 Q6709.4563,2850.8438 6710.05,2850.5781 Q6710.6438,2850.2969 6711.2688,2849.7188 L6711.2688,2852.4375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="6722.7" y="2851.6436">SVGRadialGradient</text><line style="stroke:#181818;stroke-width:0.5;" x1="6692.5" x2="6855.5" y1="2862.7969" y2="2862.7969"/><ellipse cx="6702.5" cy="2876.4453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="6711.5" y="2879.792">double cx</text><ellipse cx="6702.5" cy="2892.7422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="6711.5" y="2896.0889">double cy</text><ellipse cx="6702.5" cy="2909.0391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="6711.5" y="2912.3857">double r</text><ellipse cx="6702.5" cy="2925.3359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="6711.5" y="2928.6826">double fx</text><ellipse cx="6702.5" cy="2941.6328" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="6711.5" y="2944.9795">double fy</text><line style="stroke:#181818;stroke-width:1.0;" x1="6692.5" x2="6855.5" y1="2952.2813" y2="2952.2813"/><ellipse cx="6702.5" cy="2965.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="6711.5" y="2969.2764">SVGRadialGradient()</text></g><!--MD5=[dad940c865b7ce86f229cf83f9f5d0ce]
+class SVGFactory--><g id="elem_SVGFactory"><rect codeLine="259" fill="#F1F1F1" height="113.1875" id="SVGFactory" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="904" x="900" y="1997.7969"/><ellipse cx="1308.25" cy="2013.7969" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1304.1719,2009.5625 L1304.1719,2007.4063 L1311.5625,2007.4063 L1311.5625,2009.5625 L1309.0938,2009.5625 L1309.0938,2017.6406 L1311.5625,2017.6406 L1311.5625,2019.7969 L1304.1719,2019.7969 L1304.1719,2017.6406 L1306.6406,2017.6406 L1306.6406,2009.5625 L1304.1719,2009.5625 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="79" x="1328.75" y="2018.6436">SVGFactory</text><line style="stroke:#181818;stroke-width:0.5;" x1="901" x2="1803" y1="2029.7969" y2="2029.7969"/><line style="stroke:#181818;stroke-width:0.5;" x1="901" x2="1803" y1="2037.7969" y2="2037.7969"/><ellipse cx="911" cy="2051.4453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="878" x="920" y="2054.792">unique_ptr&lt;SVGElement&gt; createElement(xml_node* node, const SVGStyle&amp; baseStyle, const SVGTransform&amp; baseTransform)</text><ellipse cx="911" cy="2067.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="394" x="920" y="2071.0889">SVGStyle createStyleFromCSS(const string&amp; cssContent)</text><ellipse cx="911" cy="2084.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="396" x="920" y="2087.3857">void parseStops(SVGElement* gradient, xml_node* node)</text><ellipse cx="911" cy="2100.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="334" x="920" y="2103.6826">unique_ptr&lt;SVGFactory&gt; createDefaultFactory()</text></g><!--MD5=[304914186af44f5791fbff711f548494]
+class SVGFactoryImpl--><g id="elem_SVGFactoryImpl"><rect codeLine="266" fill="#F1F1F1" height="96.8906" id="SVGFactoryImpl" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="964" x="840" y="2431.2969"/><ellipse cx="1264.25" cy="2447.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1267.2188,2452.9375 Q1266.6406,2453.2344 1266,2453.375 Q1265.3594,2453.5313 1264.6563,2453.5313 Q1262.1563,2453.5313 1260.8281,2451.8906 Q1259.5156,2450.2344 1259.5156,2447.1094 Q1259.5156,2443.9844 1260.8281,2442.3281 Q1262.1563,2440.6719 1264.6563,2440.6719 Q1265.3594,2440.6719 1266,2440.8281 Q1266.6563,2440.9844 1267.2188,2441.2813 L1267.2188,2444 Q1266.5938,2443.4219 1266,2443.1563 Q1265.4063,2442.875 1264.7813,2442.875 Q1263.4375,2442.875 1262.75,2443.9531 Q1262.0625,2445.0156 1262.0625,2447.1094 Q1262.0625,2449.2031 1262.75,2450.2813 Q1263.4375,2451.3438 1264.7813,2451.3438 Q1265.4063,2451.3438 1266,2451.0781 Q1266.5938,2450.7969 1267.2188,2450.2188 L1267.2188,2452.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="1284.75" y="2452.1436">SVGFactoryImpl</text><line style="stroke:#181818;stroke-width:0.5;" x1="841" x2="1803" y1="2463.2969" y2="2463.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="841" x2="1803" y1="2471.2969" y2="2471.2969"/><ellipse cx="851" cy="2484.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="938" x="860" y="2488.292">unique_ptr&lt;SVGElement&gt; createElement(xml_node* node, const SVGStyle&amp; baseStyle, const SVGTransform&amp; baseTransform) override</text><ellipse cx="851" cy="2501.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="454" x="860" y="2504.5889">SVGStyle createStyleFromCSS(const string&amp; cssContent) override</text><ellipse cx="851" cy="2517.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="456" x="860" y="2520.8857">void parseStops(SVGElement* gradient, xml_node* node) override</text></g><!--MD5=[5feab723a55e51f1d5db1ed89b764b6c]
+class SVGDocument--><g id="elem_SVGDocument"><rect codeLine="274" fill="#F1F1F1" height="333.0469" id="SVGDocument" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="519" x="587.5" y="1464.2969"/><ellipse cx="791.75" cy="1480.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M794.7188,1485.9375 Q794.1406,1486.2344 793.5,1486.375 Q792.8594,1486.5313 792.1563,1486.5313 Q789.6563,1486.5313 788.3281,1484.8906 Q787.0156,1483.2344 787.0156,1480.1094 Q787.0156,1476.9844 788.3281,1475.3281 Q789.6563,1473.6719 792.1563,1473.6719 Q792.8594,1473.6719 793.5,1473.8281 Q794.1563,1473.9844 794.7188,1474.2813 L794.7188,1477 Q794.0938,1476.4219 793.5,1476.1563 Q792.9063,1475.875 792.2813,1475.875 Q790.9375,1475.875 790.25,1476.9531 Q789.5625,1478.0156 789.5625,1480.1094 Q789.5625,1482.2031 790.25,1483.2813 Q790.9375,1484.3438 792.2813,1484.3438 Q792.9063,1484.3438 793.5,1484.0781 Q794.0938,1483.7969 794.7188,1483.2188 L794.7188,1485.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="812.25" y="1485.1436">SVGDocument</text><line style="stroke:#181818;stroke-width:0.5;" x1="588.5" x2="1105.5" y1="1496.2969" y2="1496.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1506.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="607.5" y="1513.292">SVGRectF m_viewBox</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1523.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="330" x="607.5" y="1529.5889">vector&lt;unique_ptr&lt;SVGElement&gt;&gt; m_children</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1539.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="247" x="607.5" y="1545.8857">unique_ptr&lt;SVGFactory&gt; m_factory</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1555.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="312" x="607.5" y="1562.1826">map&lt;string, SVGElement*&gt; m_elementsById</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1572.1328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="281" x="607.5" y="1578.4795">map&lt;string, SVGStyle&gt; m_stylesByClass</text><line style="stroke:#181818;stroke-width:1.0;" x1="588.5" x2="1105.5" y1="1585.7813" y2="1585.7813"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1596.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="493" x="607.5" y="1602.7764">void parseRecursive(xml_node* xmlNode, SVGElement* parentElement)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1612.7266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="304" x="607.5" y="1619.0732">void parseStyleBlock(const string&amp; content)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1629.0234"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="382" x="607.5" y="1635.3701">SVGRectF parseViewBox(const char* viewBoxStr) const</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="595.5" y="1645.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="298" x="607.5" y="1651.667">SVGRectF getContentBoundingBox() const</text><line style="stroke:#181818;stroke-width:1.0;" x1="588.5" x2="1105.5" y1="1658.9688" y2="1658.9688"/><ellipse cx="598.5" cy="1672.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="607.5" y="1675.9639">SVGDocument()</text><ellipse cx="598.5" cy="1688.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="306" x="607.5" y="1692.2607">void setViewBox(const SVGRectF&amp; viewBox)</text><ellipse cx="598.5" cy="1705.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="322" x="607.5" y="1708.5576">void addChild(unique_ptr&lt;SVGElement&gt; child)</text><ellipse cx="598.5" cy="1721.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="210" x="607.5" y="1724.8545">void draw(NodeVisitor&amp; visitor)</text><ellipse cx="598.5" cy="1737.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="262" x="607.5" y="1741.1514">const SVGRectF&amp; getViewBox() const</text><ellipse cx="598.5" cy="1754.1016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="443" x="607.5" y="1757.4482">const vector&lt;unique_ptr&lt;SVGElement&gt;&gt;&amp; getChildren() const</text><ellipse cx="598.5" cy="1770.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="369" x="607.5" y="1773.7451">SVGElement* getElementById(const string&amp; id) const</text><ellipse cx="598.5" cy="1786.6953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="221" x="607.5" y="1790.042">bool load(const string&amp; filePath)</text></g><!--MD5=[4945c737fad898a5ce312252f730d528]
+class Renderer--><g id="elem_Renderer"><rect codeLine="298" fill="#F1F1F1" height="48" id="Renderer" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="535.5" y="2455.7969"/><ellipse cx="550.5" cy="2471.7969" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M546.4219,2467.5625 L546.4219,2465.4063 L553.8125,2465.4063 L553.8125,2467.5625 L551.3438,2467.5625 L551.3438,2475.6406 L553.8125,2475.6406 L553.8125,2477.7969 L546.4219,2477.7969 L546.4219,2475.6406 L548.8906,2475.6406 L548.8906,2467.5625 L546.4219,2467.5625 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="65" x="564.5" y="2476.6436">Renderer</text><line style="stroke:#181818;stroke-width:0.5;" x1="536.5" x2="631.5" y1="2487.7969" y2="2487.7969"/><line style="stroke:#181818;stroke-width:0.5;" x1="536.5" x2="631.5" y1="2495.7969" y2="2495.7969"/></g><!--MD5=[ee7034dc11d3cefdb1cbfd52bab53367]
+class QtRenderer--><g id="elem_QtRenderer"><rect codeLine="301" fill="#F1F1F1" height="349.3438" id="QtRenderer" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="761" x="22.5" y="2729.2969"/><ellipse cx="358.25" cy="2745.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M361.2188,2750.9375 Q360.6406,2751.2344 360,2751.375 Q359.3594,2751.5313 358.6563,2751.5313 Q356.1563,2751.5313 354.8281,2749.8906 Q353.5156,2748.2344 353.5156,2745.1094 Q353.5156,2741.9844 354.8281,2740.3281 Q356.1563,2738.6719 358.6563,2738.6719 Q359.3594,2738.6719 360,2738.8281 Q360.6563,2738.9844 361.2188,2739.2813 L361.2188,2742 Q360.5938,2741.4219 360,2741.1563 Q359.4063,2740.875 358.7813,2740.875 Q357.4375,2740.875 356.75,2741.9531 Q356.0625,2743.0156 356.0625,2745.1094 Q356.0625,2747.2031 356.75,2748.2813 Q357.4375,2749.3438 358.7813,2749.3438 Q359.4063,2749.3438 360,2749.0781 Q360.5938,2748.7969 361.2188,2748.2188 L361.2188,2750.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="378.75" y="2750.1436">QtRenderer</text><line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="782.5" y1="2761.2969" y2="2761.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2771.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="42.5" y="2778.292">QPainter* m_painter</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2788.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="42.5" y="2794.5889">const SVGDocument&amp; m_document</text><line style="stroke:#181818;stroke-width:1.0;" x1="23.5" x2="782.5" y1="2801.8906" y2="2801.8906"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2812.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="372" x="42.5" y="2818.8857">bool prepareForDrawing(const SVGStyle&amp; style) const</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2828.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="679" x="42.5" y="2835.1826">void drawPath(const QPainterPath&amp; path, const SVGStyle&amp; style, const SVGTransform&amp; transform)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2845.1328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="453" x="42.5" y="2851.4795">QBrush getBrush(const SVGStyle&amp; style, const SVGRectF&amp; bbox)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2861.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="425" x="42.5" y="2867.7764">QPen getPen(const SVGStyle&amp; style, const SVGRectF&amp; bbox)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="30.5" y="2877.7266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="735" x="42.5" y="2884.0732">QBrush createBrushFromGradient(SVGElement* gradientElement, const SVGRectF&amp; bbox, double opacity)</text><line style="stroke:#181818;stroke-width:1.0;" x1="23.5" x2="782.5" y1="2891.375" y2="2891.375"/><ellipse cx="33.5" cy="2905.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="449" x="42.5" y="2908.3701">QtRenderer(QPainter* painter, const SVGDocument&amp; document)</text><ellipse cx="33.5" cy="2921.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="42.5" y="2924.667">void visit(SVGRect&amp; rect) override</text><ellipse cx="33.5" cy="2937.6172" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="247" x="42.5" y="2940.9639">void visit(SVGCircle&amp; circle) override</text><ellipse cx="33.5" cy="2953.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="42.5" y="2957.2607">void visit(SVGPolygon&amp; polygon) override</text><ellipse cx="33.5" cy="2970.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="277" x="42.5" y="2973.5576">void visit(SVGPolyline&amp; polyline) override</text><ellipse cx="33.5" cy="2986.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="229" x="42.5" y="2989.8545">void visit(SVGText&amp; text) override</text><ellipse cx="33.5" cy="3002.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="261" x="42.5" y="3006.1514">void visit(SVGEllipse&amp; ellipse) override</text><ellipse cx="33.5" cy="3019.1016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="225" x="42.5" y="3022.4482">void visit(SVGLine&amp; line) override</text><ellipse cx="33.5" cy="3035.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="235" x="42.5" y="3038.7451">void visit(SVGPath&amp; path) override</text><ellipse cx="33.5" cy="3051.6953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="340" x="42.5" y="3055.042">void visitGroupBegin(SVGGroup&amp; group) override</text><ellipse cx="33.5" cy="3067.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="327" x="42.5" y="3071.3389">void visitGroupEnd(SVGGroup&amp; group) override</text></g><!--MD5=[1e9ff3b27ae304bfa95fafb02518fa25]
+class CanvasWidget--><g id="elem_CanvasWidget"><rect codeLine="326" fill="#F1F1F1" height="658.9844" id="CanvasWidget" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="504" x="595" y="686.2969"/><ellipse cx="793.75" cy="702.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M796.7188,707.9375 Q796.1406,708.2344 795.5,708.375 Q794.8594,708.5313 794.1563,708.5313 Q791.6563,708.5313 790.3281,706.8906 Q789.0156,705.2344 789.0156,702.1094 Q789.0156,698.9844 790.3281,697.3281 Q791.6563,695.6719 794.1563,695.6719 Q794.8594,695.6719 795.5,695.8281 Q796.1563,695.9844 796.7188,696.2813 L796.7188,699 Q796.0938,698.4219 795.5,698.1563 Q794.9063,697.875 794.2813,697.875 Q792.9375,697.875 792.25,698.9531 Q791.5625,700.0156 791.5625,702.1094 Q791.5625,704.2031 792.25,705.2813 Q792.9375,706.3438 794.2813,706.3438 Q794.9063,706.3438 795.5,706.0781 Q796.0938,705.7969 796.7188,705.2188 L796.7188,707.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="814.25" y="707.1436">CanvasWidget</text><line style="stroke:#181818;stroke-width:0.5;" x1="596" x2="1098" y1="718.2969" y2="718.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="728.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="295" x="615" y="735.292">unique_ptr&lt;SVGDocument&gt; m_document</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="745.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="615" y="751.5889">double m_scale</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="761.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="615" y="767.8857">QPointF m_panOffset</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="777.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="615" y="784.1826">double m_rotation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="794.1328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="615" y="800.4795">bool m_isFlipped</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="810.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="615" y="816.7764">SVGRectF m_sceneBounds</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="826.7266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="615" y="833.0732">bool m_hasSceneBounds</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="843.0234"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222" x="615" y="849.3701">bool m_hasPaintedWithValidSize</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="859.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="615" y="865.667">double m_fitScale</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="875.6172"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="615" y="881.9639">QSize m_lastViewportSize</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="891.9141"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="615" y="898.2607">bool m_isPanning</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="908.2109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="615" y="914.5576">QPoint m_lastMousePos</text><line style="stroke:#181818;stroke-width:1.0;" x1="596" x2="1098" y1="921.8594" y2="921.8594"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="932.5078"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314" x="615" y="938.8545">SVGRectF calculateDocumentBounds() const</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="948.8047"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="459" x="615" y="955.1514">QTransform buildViewTransform(const QSize&amp; viewportSize) const</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="965.1016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="478" x="615" y="971.4482">void renderDocument(QPainter&amp; painter, const QSize&amp; viewportSize)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="981.3984"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="615" y="987.7451">void clampScale()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="997.6953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189" x="615" y="1004.042">void updateSceneBounds()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="1013.9922"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="278" x="615" y="1020.3389">const SVGRectF&amp; sceneBounds() const</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="603" y="1030.2891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="438" x="615" y="1036.6357">void applyZoom(double factor, const QPointF&amp; viewportAnchor)</text><line style="stroke:#181818;stroke-width:1.0;" x1="596" x2="1098" y1="1043.9375" y2="1043.9375"/><ellipse cx="606" cy="1057.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="615" y="1060.9326">CanvasWidget(QWidget* parent)</text><ellipse cx="606" cy="1073.8828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="412" x="615" y="1077.2295">void setDocument(unique_ptr&lt;SVGDocument&gt; document)</text><ellipse cx="606" cy="1090.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="615" y="1093.5264">bool hasDocument() const</text><ellipse cx="606" cy="1106.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="165" x="615" y="1109.8232">double getScale() const</text><ellipse cx="606" cy="1122.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189" x="615" y="1126.1201">void setScale(double scale)</text><ellipse cx="606" cy="1139.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="300" x="615" y="1142.417">QImage renderToImage(const QSize&amp; size)</text><ellipse cx="606" cy="1155.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="615" y="1158.7139">void zoomIn()</text><ellipse cx="606" cy="1171.6641" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="615" y="1175.0107">void zoomOut()</text><ellipse cx="606" cy="1187.9609" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="615" y="1191.3076">void zoomReset()</text><ellipse cx="606" cy="1204.2578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="615" y="1207.6045">void rotate()</text><ellipse cx="606" cy="1220.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="615" y="1223.9014">void flip()</text><polygon fill="#FFFF44" points="606,1231.8516,610,1235.8516,606,1239.8516,602,1235.8516" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="615" y="1240.1982">void paintEvent(QPaintEvent* event)</text><polygon fill="#FFFF44" points="606,1248.1484,610,1252.1484,606,1256.1484,602,1252.1484" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="315" x="615" y="1256.4951">void mousePressEvent(QMouseEvent* event)</text><polygon fill="#FFFF44" points="606,1264.4453,610,1268.4453,606,1272.4453,602,1268.4453" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="313" x="615" y="1272.792">void mouseMoveEvent(QMouseEvent* event)</text><polygon fill="#FFFF44" points="606,1280.7422,610,1284.7422,606,1288.7422,602,1284.7422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="332" x="615" y="1289.0889">void mouseReleaseEvent(QMouseEvent* event)</text><polygon fill="#FFFF44" points="606,1297.0391,610,1301.0391,606,1305.0391,602,1301.0391" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="265" x="615" y="1305.3857">void wheelEvent(QWheelEvent* event)</text><polygon fill="#FFFF44" points="606,1313.3359,610,1317.3359,606,1321.3359,602,1317.3359" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="615" y="1321.6826">void showEvent(QShowEvent* event)</text><polygon fill="#FFFF44" points="606,1329.6328,610,1333.6328,606,1337.6328,602,1333.6328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="270" x="615" y="1337.9795">void resizeEvent(QResizeEvent* event)</text></g><!--MD5=[e6c809820d88acc3564faeb20394ab9d]
+class MainWindow--><g id="elem_MainWindow"><rect codeLine="368" fill="#F1F1F1" height="512.3125" id="MainWindow" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="509" x="592.5" y="97.2969"/><ellipse cx="799.75" cy="113.2969" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M802.7188,118.9375 Q802.1406,119.2344 801.5,119.375 Q800.8594,119.5313 800.1563,119.5313 Q797.6563,119.5313 796.3281,117.8906 Q795.0156,116.2344 795.0156,113.1094 Q795.0156,109.9844 796.3281,108.3281 Q797.6563,106.6719 800.1563,106.6719 Q800.8594,106.6719 801.5,106.8281 Q802.1563,106.9844 802.7188,107.2813 L802.7188,110 Q802.0938,109.4219 801.5,109.1563 Q800.9063,108.875 800.2813,108.875 Q798.9375,108.875 798.25,109.9531 Q797.5625,111.0156 797.5625,113.1094 Q797.5625,115.2031 798.25,116.2813 Q798.9375,117.3438 800.2813,117.3438 Q800.9063,117.3438 801.5,117.0781 Q802.0938,116.7969 802.7188,116.2188 L802.7188,118.9375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="820.25" y="118.1436">MainWindow</text><line style="stroke:#181818;stroke-width:0.5;" x1="593.5" x2="1100.5" y1="129.2969" y2="129.2969"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="139.9453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="612.5" y="146.292">Ui::MainWindow* ui</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="156.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="612.5" y="162.5889">CanvasWidget* m_canvas</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="172.5391"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="612.5" y="178.8857">QString m_currentSvgPath</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="188.8359"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="612.5" y="195.1826">QSize m_initialSize</text><line style="stroke:#181818;stroke-width:1.0;" x1="593.5" x2="1100.5" y1="202.4844" y2="202.4844"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="213.1328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="612.5" y="219.4795">void initializeCanvas()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="229.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="282" x="612.5" y="235.7764">void toggleStackedPage(QWidget* page)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="245.7266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="612.5" y="252.0732">void updateCanvasVisibility()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="262.0234"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="483" x="612.5" y="268.3701">void showTransientMessage(const QString&amp; message, int timeoutMs)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="278.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="297" x="612.5" y="284.667">bool loadSvgFromFile(const QString&amp; path)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="294.6172"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="612.5" y="300.9639">void promptAndLoadSvg()</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="600.5" y="310.9141"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="225" x="612.5" y="317.2607">bool ensureDocumentAvailable()</text><line style="stroke:#181818;stroke-width:1.0;" x1="593.5" x2="1100.5" y1="324.5625" y2="324.5625"/><ellipse cx="603.5" cy="338.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="211" x="612.5" y="341.5576">MainWindow(QWidget* parent)</text><ellipse cx="603.5" cy="354.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="612.5" y="357.8545">void on_About_clicked()</text><ellipse cx="603.5" cy="370.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="612.5" y="374.1514">void on_Browse_clicked()</text><ellipse cx="603.5" cy="387.1016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="612.5" y="390.4482">void on_Back_clicked()</text><ellipse cx="603.5" cy="403.3984" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="612.5" y="406.7451">void on_Back_2_clicked()</text><ellipse cx="603.5" cy="419.6953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="612.5" y="423.042">void on_Premium_clicked()</text><ellipse cx="603.5" cy="435.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="612.5" y="439.3389">void on_Copy_clicked()</text><ellipse cx="603.5" cy="452.2891" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="221" x="612.5" y="455.6357">void on_DownloadPNG_clicked()</text><ellipse cx="603.5" cy="468.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="612.5" y="471.9326">void on_Flip_clicked()</text><ellipse cx="603.5" cy="484.8828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="193" x="612.5" y="488.2295">void on_Fullscreen_clicked()</text><ellipse cx="603.5" cy="501.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="612.5" y="504.5264">void on_Rotate_clicked()</text><ellipse cx="603.5" cy="517.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="612.5" y="520.8232">void on_Upload_clicked()</text><ellipse cx="603.5" cy="533.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="612.5" y="537.1201">void on_Zoom_clicked()</text><ellipse cx="603.5" cy="550.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="612.5" y="553.417">void on_ZoomOut_clicked()</text><ellipse cx="603.5" cy="566.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="612.5" y="569.7139">void on_ZoomIn_clicked()</text><ellipse cx="603.5" cy="582.6641" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="612.5" y="586.0107">void updateScaleLabel()</text><polygon fill="#FFFF44" points="603.5,593.9609,607.5,597.9609,603.5,601.9609,599.5,597.9609" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="312" x="612.5" y="602.3076">bool eventFilter(QObject* obj, QEvent* event)</text></g><g id="elem_GMN82"><path d="M6270.5,2026.7969 L6270.5,2082.1953 L6451.5,2082.1953 L6451.5,2036.7969 L6441.5,2026.7969 L6270.5,2026.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M6441.5,2026.7969 L6441.5,2036.7969 L6451.5,2036.7969 L6441.5,2026.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="6276.5" y="2043.8638">Visitor Pattern</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="6276.5" y="2058.9966">Tách biệt logic rendering</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="6276.5" y="2074.1294">khỏi cấu trúc dữ liệu SVG</text></g><g id="elem_GMN85"><path d="M6487,2026.7969 L6487,2082.1953 L6653,2082.1953 L6653,2036.7969 L6643,2026.7969 L6487,2026.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M6643,2026.7969 L6643,2036.7969 L6653,2036.7969 L6643,2026.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="115" x="6493" y="2043.8638">Factory Pattern</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="6493" y="2058.9966">Tạo các SVG elements</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="6493" y="2074.1294">từ XML nodes</text></g><g id="elem_GMN88"><path d="M7028,2452.2969 L7028,2507.6953 L7172,2507.6953 L7172,2462.2969 L7162,2452.2969 L7028,2452.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M7162,2452.2969 L7162,2462.2969 L7172,2462.2969 L7162,2452.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="123" x="7034" y="2469.3638">Strategy Pattern</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="7034" y="2484.4966">Cho phép thay đổi</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="7034" y="2499.6294">cách rendering</text></g><!--MD5=[1a2e4693f696108051d1363a28484202]
+reverse link SVGElement to SVGRect--><g id="link_SVGElement_SVGRect"><path codeLine="403" d="M3750.96,2183.2869 C3780,2203.6169 3808.83,2225.2469 3835,2247.2969 C3880.3,2285.4569 3925.73,2332.5069 3963.16,2374.1969 " fill="none" id="SVGElement-backto-SVGRect" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3746.81,2188.9269,3734.34,2171.7969,3754.77,2177.4069,3746.81,2188.9269" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[613d9e51fe39be413e5bbe8227070ad1]
+reverse link SVGElement to SVGCircle--><g id="link_SVGElement_SVGCircle"><path codeLine="404" d="M3754.11,2073.9169 C3907.52,2095.8569 4113.89,2143.5869 4267,2247.2969 C4317.27,2281.3469 4358.5,2335.0669 4387.98,2382.1969 " fill="none" id="SVGElement-backto-SVGCircle" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.11,2080.8369,3734.25,2071.1769,3755.02,2066.9769,3753.11,2080.8369" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[529bb3bd6a5cd0af0e413c5f434b6940]
+reverse link SVGElement to SVGEllipse--><g id="link_SVGElement_SVGEllipse"><path codeLine="405" d="M3754.44,2077.2969 C4022.92,2107.8369 4467.5,2168.3669 4612,2247.2969 C4664.59,2276.0269 4711.45,2322.3969 4747.89,2366.1169 " fill="none" id="SVGElement-backto-SVGEllipse" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.31,2084.2069,3734.22,2075.0169,3754.88,2070.2969,3753.31,2084.2069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ce3df8c7109a0c83db2a96be1ea268fe]
+reverse link SVGElement to SVGLine--><g id="link_SVGElement_SVGLine"><path codeLine="406" d="M3754.32,2064.5569 C4113.25,2083.1569 4822.38,2133.4269 5042,2247.2969 C5095.34,2274.9569 5142.06,2321.7269 5177.96,2366.0169 " fill="none" id="SVGElement-backto-SVGLine" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.69,2071.5369,3734.08,2063.5269,3754.41,2057.5569,3753.69,2071.5369" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f6003f8ff25974c85e0ec6641200460e]
+reverse link SVGElement to SVGPolygon--><g id="link_SVGElement_SVGPolygon"><path codeLine="407" d="M3754.06,2056.7869 C4190.48,2063.0069 5172.76,2094.1269 5466,2247.2969 C5537.96,2284.8769 5594.81,2360.6269 5628.8,2415.2569 " fill="none" id="SVGElement-backto-SVGPolygon" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.91,2063.7869,3734.01,2056.5169,3754.1,2049.7869,3753.91,2063.7869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[47a7ad87406b2b645f0c774bce2679d1]
+reverse link SVGElement to SVGPolyline--><g id="link_SVGElement_SVGPolyline"><path codeLine="408" d="M3754.34,2063.6369 C4291.89,2086.0669 5677.12,2152.4169 5862,2247.2969 C5934.19,2284.3469 5990.72,2360.3969 6024.37,2415.2369 " fill="none" id="SVGElement-backto-SVGPolyline" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.72,2070.6169,3734.03,2062.7969,3754.3,2056.6369,3753.72,2070.6169" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f3ea15763016065e887f386e5aaba14f]
+reverse link SVGElement to SVGPath--><g id="link_SVGElement_SVGPath"><path codeLine="409" d="M3330.24,2089.8769 C3208.52,2117.4969 3057.55,2165.5869 2943,2247.2969 C2881.73,2290.9969 2832.87,2362.9669 2802.9,2415.0769 " fill="none" id="SVGElement-backto-SVGPath" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3328.86,2083.0069,3349.9,2085.5269,3331.88,2096.6769,3328.86,2083.0069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0759ac8e1da279504cf37897b3c07444]
+reverse link SVGElement to SVGText--><g id="link_SVGElement_SVGText"><path codeLine="410" d="M3371.76,2206.4869 C3357.74,2220.0469 3343.98,2233.7769 3331,2247.2969 C3290.15,2289.8569 3247.73,2339.7169 3213.02,2382.2369 " fill="none" id="SVGElement-backto-SVGText" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3367.15,2201.1969,3386.44,2192.4169,3376.84,2211.3069,3367.15,2201.1969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[553a32a8608483bcd02768bdd9f2bee1]
+reverse link SVGElement to SVGGroup--><g id="link_SVGElement_SVGGroup"><path codeLine="411" d="M3545.02,2212.8669 C3545.58,2221.8169 3546.24,2230.6769 3547,2239.2969 C3551.72,2292.6969 3560.67,2352.3169 3568.46,2398.7069 " fill="none" id="SVGElement-backto-SVGGroup" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3538.01,2212.9069,3543.89,2192.5569,3551.99,2212.1369,3538.01,2212.9069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a8b829605eea36e61dcc975c003ece4c]
+reverse link SVGGroup to SVGElement--><g id="link_SVGGroup_SVGElement"><path codeLine="425" d="M3573.95,2385.3469 C3568.47,2328.7669 3561.39,2255.5769 3555.28,2192.5069 " fill="none" id="SVGGroup-backto-SVGElement" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3575.24,2398.6269,3578.6405,2392.2679,3574.0786,2386.6832,3570.6781,2393.0422,3575.24,2398.6269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="3559" y="2235.3638">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="3532.3773" y="2212.5416">0..*</text></g><!--MD5=[b3eaf418a559258503fd7eb4688597bd]
+reverse link SVGElement to SVGGradient--><g id="link_SVGElement_SVGGradient"><path codeLine="412" d="M3754.03,2060.8469 C4353.81,2077.8469 6033.42,2135.0469 6254,2247.2969 C6322.38,2282.0969 6376.19,2352.4969 6409.8,2406.5769 " fill="none" id="SVGElement-backto-SVGGradient" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="3753.81,2067.8369,3734.02,2060.2769,3754.21,2053.8469,3753.81,2067.8369" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0170764805813a13f38ee4133cc18dd0]
+reverse link SVGGradient to SVGLinearGradient--><g id="link_SVGGradient_SVGLinearGradient"><path codeLine="414" d="M6476.1,2572.2869 C6499.96,2652.8269 6534.08,2768.0169 6555.09,2838.9669 " fill="none" id="SVGGradient-backto-SVGLinearGradient" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="6469.31,2574.0269,6470.35,2552.8569,6482.74,2570.0469,6469.31,2574.0269" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[85fad23b458695d3120155ba0c9ac3f1]
+reverse link SVGGradient to SVGRadialGradient--><g id="link_SVGGradient_SVGRadialGradient"><path codeLine="415" d="M6525.94,2567.8869 C6555.74,2601.3469 6590.26,2639.7769 6622,2674.2969 C6644.77,2699.0569 6653.91,2702.3169 6674,2729.2969 C6697.57,2760.9469 6719.9,2798.6369 6737.45,2830.7869 " fill="none" id="SVGGradient-backto-SVGRadialGradient" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="6520.67,2572.4969,6512.61,2552.8969,6531.13,2563.1969,6520.67,2572.4969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a098e69b440b5165e6b93cdf53edf763]
+reverse link SVGFactory to SVGFactoryImpl--><g id="link_SVGFactory_SVGFactoryImpl"><path codeLine="417" d="M1346.62,2131.1969 C1340.46,2218.1869 1330.55,2358.0869 1325.38,2431.0469 " fill="none" id="SVGFactory-backto-SVGFactoryImpl" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1339.65,2130.5569,1348.05,2111.0969,1353.62,2131.5469,1339.65,2130.5569" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="1340" y="2235.3638">implements</text></g><!--MD5=[a88ec58aacb656ab50b632cd151aa70e]
+reverse link NodeVisitor to Renderer--><g id="link_NodeVisitor_Renderer"><path codeLine="419" d="M584,2180.2169 C584,2277.3269 584,2403.8969 584,2455.4369 " fill="none" id="NodeVisitor-backto-Renderer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="577,2179.9869,584,2159.9869,591,2179.9869,577,2179.9869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4057e779807469443f7a372ef5084fcb]
+reverse link Renderer to QtRenderer--><g id="link_Renderer_QtRenderer"><path codeLine="420" d="M566.1,2522.5369 C545.41,2570.7669 510.04,2653.2269 477.52,2729.0669 " fill="none" id="Renderer-backto-QtRenderer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="559.69,2519.7069,574.01,2504.0869,572.56,2525.2269,559.69,2519.7069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c4a3fe5a504f927f60fa92fed69653dc]
+reverse link SVGElement to SVGStyle--><g id="link_SVGElement_SVGStyle"><path codeLine="422" d="M3336.68,2065.3469 C3007.62,2084.5969 2379.84,2135.1269 2190,2247.2969 C2163.05,2263.2169 2138.92,2285.0869 2117.83,2309.0669 " fill="none" id="SVGElement-backto-SVGStyle" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3349.71,2064.5969,3343.4871,2060.9533,3337.7304,2065.2961,3343.9533,2068.9397,3349.71,2064.5969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="2226" y="2235.3638">has</text></g><!--MD5=[43104bffd754b386841169b7ff1ac4d8]
+reverse link SVGElement to SVGTransform--><g id="link_SVGElement_SVGTransform"><path codeLine="423" d="M3336.92,2061.2969 C3137.03,2075.0669 2830.26,2117.8069 2599,2247.2969 C2533.53,2283.9569 2476.47,2347.3369 2437.46,2398.5269 " fill="none" id="SVGElement-backto-SVGTransform" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="3349.93,2060.4269,3343.6754,2056.838,3337.957,2061.2312,3344.2116,2064.8201,3349.93,2060.4269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="2645" y="2235.3638">has</text></g><!--MD5=[165a295020500404b2d2d4ecb18e6fc0]
+reverse link SVGDocument to SVGElement--><g id="link_SVGDocument_SVGElement"><path codeLine="427" d="M1119.79,1674.4569 C1665.29,1759.7769 2878.61,1949.5469 3349.74,2023.2269 " fill="none" id="SVGDocument-backto-SVGElement" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1106.63,1672.4069,1111.9377,1677.2882,1118.4851,1674.2662,1113.1773,1669.3849,1106.63,1672.4069" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="2195" y="1842.3638">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="3318.7806" y="2018.7867">0..*</text></g><!--MD5=[6c3cac41c60dee58e15ec6b99aa13918]
+reverse link SVGDocument to SVGFactory--><g id="link_SVGDocument_SVGFactory"><path codeLine="428" d="M1055.51,1805.8269 C1137.83,1874.5369 1226.59,1948.6169 1285.31,1997.6369 " fill="none" id="SVGDocument-backto-SVGFactory" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1045.5,1797.4769,1047.5408,1804.3932,1054.71,1805.1695,1052.6692,1798.2532,1045.5,1797.4769" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="1100" y="1842.3638">uses</text></g><!--MD5=[3a9f2c9d890779f6c4e57d76dce68938]
+reverse link SVGGradient to SVGStop--><g id="link_SVGGradient_SVGStop"><path codeLine="430" d="M6434.08,2565.9069 C6418.8,2652.9969 6395.62,2785.1869 6383.33,2855.2869 " fill="none" id="SVGGradient-backto-SVGStop" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="6436.36,2552.8569,6431.3788,2558.0711,6434.2761,2564.6745,6439.2573,2559.4603,6436.36,2552.8569" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="6413" y="2695.3638">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="6359.8644" y="2844.1451">0..*</text></g><!--MD5=[3fd911032e8ec8bd1b28714ddd8bb67b]
+reverse link CanvasWidget to SVGDocument--><g id="link_CanvasWidget_SVGDocument"><path codeLine="432" d="M847,1359.1669 C847,1395.5869 847,1431.3169 847,1464.2669 " fill="none" id="CanvasWidget-backto-SVGDocument" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="847,1345.7269,843,1351.7269,847,1357.7269,851,1351.7269,847,1345.7269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="848" y="1390.3638">owns</text></g><!--MD5=[21b958f90c18c84231d67367b9e9ca23]
+reverse link MainWindow to CanvasWidget--><g id="link_MainWindow_CanvasWidget"><path codeLine="433" d="M847,622.6769 C847,643.6569 847,664.9769 847,686.2869 " fill="none" id="MainWindow-backto-CanvasWidget" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="847,609.6669,843,615.6669,847,621.6669,851,615.6669,847,609.6669" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="848" y="652.3638">owns</text></g><!--MD5=[c20892f577a5b046e79e03a1dc08d074]
+link SVGStyle to SVGColor--><g id="link_SVGStyle_SVGColor"><path codeLine="435" d="M1979.45,2650.3169 C1965.59,2714.5669 1950.58,2784.1569 1939.84,2833.9769 " fill="none" id="SVGStyle-to-SVGColor" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1938.75,2839.0369,1944.5406,2831.0701,1939.7937,2834.147,1936.7169,2829.4002,1938.75,2839.0369" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="1971" y="2695.3638">uses</text></g><!--MD5=[9efb33067f25d9821b0b22a430b67d52]
+link SVGStyle to SVGFillRule--><g id="link_SVGStyle_SVGFillRule"><path codeLine="436" d="M2125.39,2650.5369 C2140.72,2676.5369 2155.74,2703.3569 2169,2729.2969 C2190.81,2771.9569 2211.3,2822.7869 2224.8,2858.3669 " fill="none" id="SVGStyle-to-SVGFillRule" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="2226.58,2863.0669,2227.129,2853.2333,2224.8072,2858.3917,2219.6488,2856.0699,2226.58,2863.0669" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="2151" y="2695.3638">uses</text></g><!--MD5=[e2eca3d7c493589f2c15e8a9e9bede4d]
+link SVGTransform to SVGPointF--><g id="link_SVGTransform_SVGPointF"><path codeLine="438" d="M2383,2561.1669 C2383,2649.1469 2383,2787.0869 2383,2857.7569 " fill="none" id="SVGTransform-to-SVGPointF" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="2383,2863.1469,2387,2854.1469,2383,2858.1469,2379,2854.1469,2383,2863.1469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="2384" y="2695.3638">uses</text></g><!--MD5=[d97b8b749500eadc93ab0146e03519f7]
+link SVGElement to NodeVisitor--><g id="link_SVGElement_NodeVisitor"><path codeLine="440" d="M3349.79,2027.7469 C3032.15,1985.3469 2377.37,1904.1869 1820,1875.2969 C1598.96,1863.8369 1034.07,1805.5869 824,1875.2969 C779.14,1890.1869 735.86,1917.0769 698.71,1945.5769 " fill="none" id="SVGElement-to-NodeVisitor" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="694.67,1948.6969,704.2376,1946.36,698.6267,1945.64,699.3467,1940.0292,694.67,1948.6969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="926" y="1842.3638">accepts</text></g><!--MD5=[3c80312804e8386dbb1f20c68d5a0370]
+link SVGDocument to NodeVisitor--><g id="link_SVGDocument_NodeVisitor"><path codeLine="442" d="M743.62,1797.4769 C712.83,1846.8269 679.88,1899.6369 651.96,1944.3769 " fill="none" id="SVGDocument-to-NodeVisitor" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="649.27,1948.6869,657.432,1943.1749,651.92,1944.4469,650.648,1938.9349,649.27,1948.6869" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="724" y="1842.3638">uses</text></g><!--MD5=[a0fb4225d828e0c423e2edbb4d447bef]
+link QtRenderer to SVGDocument--><g id="link_QtRenderer_SVGDocument"><path codeLine="444" d="M611.97,2729.1769 C626.2,2711.6969 639.16,2693.3369 650,2674.2969 C692.55,2599.5369 777.9,2078.7669 820.93,1802.7169 " fill="none" id="QtRenderer-to-SVGDocument" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="821.75,1797.4569,816.41,1805.7324,820.979,1802.3971,824.3143,1806.966,821.75,1797.4569" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="751" y="2235.3638">references</text></g><!--MD5=[a2acdadac823a3cfb3affebf87e2a449]
+link SVGFactory to SVGElement--><g id="link_SVGFactory_SVGElement"><path codeLine="446" d="M1804.11,2054.2969 C2277.7,2054.2969 2999.72,2054.2969 3344.87,2054.2969 " fill="none" id="SVGFactory-to-SVGElement" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="3349.92,2054.2969,3340.92,2050.2969,3344.92,2054.2969,3340.92,2058.2969,3349.92,2054.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="48" x="2553" y="2047.3638">creates</text></g><!--MD5=[d7d82356f536e3567c079419ba51d32f]
+link SVGFactory to SVGStyle--><g id="link_SVGFactory_SVGStyle"><path codeLine="447" d="M1453.81,2110.8269 C1534.96,2152.6369 1652.7,2207.9269 1762,2239.2969 C1787.01,2246.4769 1797.2,2234.7569 1820,2247.2969 C1847.38,2262.3469 1872.59,2282.8569 1895.18,2305.4869 " fill="none" id="SVGFactory-to-SVGStyle" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1898.78,2309.1269,1895.3002,2299.9132,1895.266,2305.57,1889.6092,2305.5357,1898.78,2309.1269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="48" x="1763" y="2235.3638">creates</text></g><!--MD5=[dba1dfb33287cf22cdcddd72c931b72e]
+link SVGFactory to SVGTransform--><g id="link_SVGFactory_SVGTransform"><path codeLine="448" d="M1539.2,2110.7969 C1687.77,2152.6569 1901.43,2208.0369 2092,2239.2969 C2113.56,2242.8369 2170.61,2237.2369 2190,2247.2969 C2252.68,2279.8169 2302.91,2342.3869 2336.4,2394.2869 " fill="none" id="SVGFactory-to-SVGTransform" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="2339.18,2398.6369,2337.7164,2388.8974,2336.4928,2394.4203,2330.9699,2393.1968,2339.18,2398.6369" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="2093" y="2235.3638">uses</text></g><!--MD5=[ac6e55ac0cf063d1e569e1a14ca4fea4]
+link NodeVisitor to GMN82--><g id="link_NodeVisitor_GMN82"><path d="M676.94,1948.5469 C721.8,1905.4269 779.36,1860.4469 841.5,1837.7969 C876.7,1824.9669 6201.68,1823.9669 6236.5,1837.7969 C6314.07,1868.5969 6345.38,1975.4969 6356.14,2026.6269 " fill="none" id="NodeVisitor-GMN82" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[53824b6858126d8ef2f673c9b12f0abd]
+link SVGFactory to GMN85--><g id="link_SVGFactory_GMN85"><path d="M1605.88,1997.7769 C1860.04,1944.2769 2263.08,1867.8369 2616.5,1837.7969 C2669.57,1833.2869 6402,1818.1369 6451.5,1837.7969 C6528.16,1868.2369 6556.53,1975.3169 6565.89,2026.5669 " fill="none" id="SVGFactory-GMN85" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[5c16859ca09ffcc29f1fed65ab5af916]
+link Renderer to GMN88--><g id="link_Renderer_GMN88"><path d="M598.23,2455.7569 C632.12,2401.1969 723.64,2268.9469 841.5,2219.7969 C880.92,2203.3569 6954.06,2199.2469 6991.5,2219.7969 C7075.97,2266.1669 7094.68,2395.1369 7098.83,2452.1169 " fill="none" id="Renderer-GMN88" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--MD5=[555c51282bec6cd4023885ef10f1784a]
+@startuml
+!define ABSTRACT_CLASS abstract class
+!define INTERFACE interface
+title natrukiSVG - UML 2.5 Class Diagram
+' ==================== CORE TYPES ====================
+package "Core Types" {
+    class SVGColor {
+        +unsigned char r
+        +unsigned char g
+        +unsigned char b
+        +unsigned char a
+        +bool isNone
+    }
+    
+    class SVGPointF {
+        +double x
+        +double y
+    }
+    
+    class SVGRectF {
+        +double x
+        +double y
+        +double width
+        +double height
+    }
+    
+    enum SVGFillRule {
+        NonZero
+        EvenOdd
+    }
+}
+' ==================== STYLE & TRANSFORM ====================
+package "Style & Transform" {
+    class SVGStyle {
+        +SVGColor fillColor
+        +SVGColor strokeColor
+        +double strokeWidth
+        +double fillOpacity
+        +double strokeOpacity
+        +SVGFillRule fillRule
+        +string fillUrl
+        +string strokeUrl
+        +string fontFamily
+        +double fontSize
+        +string textAnchor
+        +bool isItalic
+        +int fontWeight
+        +bool isBold
+        +bool isDisplayed
+        - -
+        +SVGStyle()
+        +void inheritFrom(const SVGStyle& parent)
+        +void applyDefaults()
+    }
+    
+    class SVGTransform {
+        -double m_matrix[3][3]
+        - -
+        +SVGTransform()
+        +void translate(double tx, double ty)
+        +void scale(double sx, double sy)
+        +void rotate(double angle)
+        +void multiply(const SVGTransform& other)
+        +SVGPointF map(const SVGPointF& point) const
+    }
+}
+' ==================== VISITOR PATTERN ====================
+package "Visitor Pattern" {
+    INTERFACE NodeVisitor {
+        +{abstract} void visit(SVGRect& rect)
+        +{abstract} void visit(SVGCircle& circle)
+        +{abstract} void visit(SVGPolygon& polygon)
+        +{abstract} void visit(SVGPolyline& polyline)
+        +{abstract} void visit(SVGText& text)
+        +{abstract} void visit(SVGEllipse& ellipse)
+        +{abstract} void visit(SVGLine& line)
+        +{abstract} void visit(SVGPath& path)
+        +{abstract} void visitGroupBegin(SVGGroup& group)
+        +{abstract} void visitGroupEnd(SVGGroup& group)
+    }
+}
+' ==================== SVG ELEMENT HIERARCHY ====================
+package "SVG Elements" {
+    ABSTRACT_CLASS SVGElement {
+        #string m_id
+        #SVGStyle m_style
+        #SVGTransform m_transform
+        - -
+        +{abstract} void accept(NodeVisitor& visitor)
+        +{abstract} SVGRectF localBox() const
+        +virtual SVGRectF worldBox() const
+        +void setStyle(const SVGStyle& style)
+        +void setTransform(const SVGTransform& transform)
+        +SVGStyle& getStyle()
+        +const SVGStyle& getStyle() const
+        +SVGTransform& getTransform()
+        +const SVGTransform& getTransform() const
+        +void setId(const string& id)
+        +const string& getId() const
+    }
+    
+    class SVGRect {
+        -SVGRectF m_rect
+        -double m_rx
+        -double m_ry
+        - -
+        +SVGRect(const SVGRectF& rect, double rx, double ry)
+        +void accept(NodeVisitor& visitor) override
+        +const SVGRectF& getRect() const
+        +double getRx() const
+        +double getRy() const
+        +SVGRectF localBox() const override
+        +SVGRectF worldBox() const override
+    }
+    
+    class SVGCircle {
+        -double m_cx
+        -double m_cy
+        -double m_r
+        - -
+        +SVGCircle(double cx, double cy, double r)
+        +void accept(NodeVisitor& visitor) override
+        +double getCx() const
+        +double getCy() const
+        +double getR() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGEllipse {
+        -double m_cx
+        -double m_cy
+        -double m_rx
+        -double m_ry
+        - -
+        +SVGEllipse(double cx, double cy, double rx, double ry)
+        +void accept(NodeVisitor& visitor) override
+        +double getCx() const
+        +double getCy() const
+        +double getRx() const
+        +double getRy() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGLine {
+        -double m_x1
+        -double m_y1
+        -double m_x2
+        -double m_y2
+        - -
+        +SVGLine(double x1, double y1, double x2, double y2)
+        +void accept(NodeVisitor& visitor) override
+        +double getX1() const
+        +double getY1() const
+        +double getX2() const
+        +double getY2() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPolygon {
+        -vector<SVGPointF> m_points
+        - -
+        +SVGPolygon(const vector<SVGPointF>& points)
+        +void accept(NodeVisitor& visitor) override
+        +const vector<SVGPointF>& getPoints() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPolyline {
+        -vector<SVGPointF> m_points
+        - -
+        +SVGPolyline(const vector<SVGPointF>& points)
+        +void accept(NodeVisitor& visitor) override
+        +const vector<SVGPointF>& getPoints() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPath {
+        -string m_pathData
+        - -
+        +SVGPath(const string& pathData)
+        +void accept(NodeVisitor& visitor) override
+        +const string& getPathData() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGText {
+        -double m_x
+        -double m_y
+        -string m_text
+        - -
+        +SVGText(double x, double y, const string& text)
+        +void accept(NodeVisitor& visitor) override
+        +double getX() const
+        +double getY() const
+        +const string& getText() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGGroup {
+        -vector<unique_ptr<SVGElement>> m_children
+        - -
+        +SVGGroup()
+        +void addChild(unique_ptr<SVGElement> child)
+        +const vector<unique_ptr<SVGElement>>& getChildren() const
+        +void accept(NodeVisitor& visitor) override
+        +SVGRectF localBox() const override
+        +SVGRectF worldBox() const override
+    }
+}
+' ==================== GRADIENT ====================
+package "Gradients" {
+    enum SVGGradientUnits {
+        UserSpaceOnUse
+        ObjectBoundingBox
+    }
+    
+    enum SVGSpreadMethod {
+        Pad
+        Reflect
+        Repeat
+    }
+    
+    class SVGStop {
+        +double offset
+        +SVGColor stopColor
+        +double stopOpacity
+    }
+    
+    ABSTRACT_CLASS SVGGradient {
+        +vector<SVGStop> stops
+        +SVGGradientUnits gradientUnits
+        +SVGSpreadMethod spreadMethod
+        - -
+        +SVGGradient()
+        +void accept(NodeVisitor& visitor) override
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGLinearGradient {
+        +double x1
+        +double y1
+        +double x2
+        +double y2
+        - -
+        +SVGLinearGradient()
+    }
+    
+    class SVGRadialGradient {
+        +double cx
+        +double cy
+        +double r
+        +double fx
+        +double fy
+        - -
+        +SVGRadialGradient()
+    }
+}
+' ==================== FACTORY PATTERN ====================
+package "Factory Pattern" {
+    INTERFACE SVGFactory {
+        +{abstract} unique_ptr<SVGElement> createElement(xml_node* node, const SVGStyle& baseStyle, const SVGTransform& baseTransform)
+        +{abstract} SVGStyle createStyleFromCSS(const string& cssContent)
+        +{abstract} void parseStops(SVGElement* gradient, xml_node* node)
+        +{static} unique_ptr<SVGFactory> createDefaultFactory()
+    }
+    
+    class SVGFactoryImpl {
+        +unique_ptr<SVGElement> createElement(xml_node* node, const SVGStyle& baseStyle, const SVGTransform& baseTransform) override
+        +SVGStyle createStyleFromCSS(const string& cssContent) override
+        +void parseStops(SVGElement* gradient, xml_node* node) override
+    }
+}
+' ==================== DOCUMENT ====================
+package "Document" {
+    class SVGDocument {
+        -SVGRectF m_viewBox
+        -vector<unique_ptr<SVGElement>> m_children
+        -unique_ptr<SVGFactory> m_factory
+        -map<string, SVGElement*> m_elementsById
+        -map<string, SVGStyle> m_stylesByClass
+        - -
+        -void parseRecursive(xml_node* xmlNode, SVGElement* parentElement)
+        -void parseStyleBlock(const string& content)
+        -SVGRectF parseViewBox(const char* viewBoxStr) const
+        -SVGRectF getContentBoundingBox() const
+        - -
+        +SVGDocument()
+        +void setViewBox(const SVGRectF& viewBox)
+        +void addChild(unique_ptr<SVGElement> child)
+        +void draw(NodeVisitor& visitor)
+        +const SVGRectF& getViewBox() const
+        +const vector<unique_ptr<SVGElement>>& getChildren() const
+        +SVGElement* getElementById(const string& id) const
+        +bool load(const string& filePath)
+    }
+}
+' ==================== RENDERER (STRATEGY PATTERN) ====================
+package "Renderer (Strategy)" {
+    INTERFACE Renderer {
+    }
+    
+    class QtRenderer {
+        -QPainter* m_painter
+        -const SVGDocument& m_document
+        - -
+        -bool prepareForDrawing(const SVGStyle& style) const
+        -void drawPath(const QPainterPath& path, const SVGStyle& style, const SVGTransform& transform)
+        -QBrush getBrush(const SVGStyle& style, const SVGRectF& bbox)
+        -QPen getPen(const SVGStyle& style, const SVGRectF& bbox)
+        -QBrush createBrushFromGradient(SVGElement* gradientElement, const SVGRectF& bbox, double opacity)
+        - -
+        +QtRenderer(QPainter* painter, const SVGDocument& document)
+        +void visit(SVGRect& rect) override
+        +void visit(SVGCircle& circle) override
+        +void visit(SVGPolygon& polygon) override
+        +void visit(SVGPolyline& polyline) override
+        +void visit(SVGText& text) override
+        +void visit(SVGEllipse& ellipse) override
+        +void visit(SVGLine& line) override
+        +void visit(SVGPath& path) override
+        +void visitGroupBegin(SVGGroup& group) override
+        +void visitGroupEnd(SVGGroup& group) override
+    }
+}
+' ==================== UI LAYER ====================
+package "UI Layer (Qt6)" {
+    class CanvasWidget {
+        -unique_ptr<SVGDocument> m_document
+        -double m_scale
+        -QPointF m_panOffset
+        -double m_rotation
+        -bool m_isFlipped
+        -SVGRectF m_sceneBounds
+        -bool m_hasSceneBounds
+        -bool m_hasPaintedWithValidSize
+        -double m_fitScale
+        -QSize m_lastViewportSize
+        -bool m_isPanning
+        -QPoint m_lastMousePos
+        - -
+        -SVGRectF calculateDocumentBounds() const
+        -QTransform buildViewTransform(const QSize& viewportSize) const
+        -void renderDocument(QPainter& painter, const QSize& viewportSize)
+        -void clampScale()
+        -void updateSceneBounds()
+        -const SVGRectF& sceneBounds() const
+        -void applyZoom(double factor, const QPointF& viewportAnchor)
+        - -
+        +CanvasWidget(QWidget* parent)
+        +void setDocument(unique_ptr<SVGDocument> document)
+        +bool hasDocument() const
+        +double getScale() const
+        +void setScale(double scale)
+        +QImage renderToImage(const QSize& size)
+        +void zoomIn()
+        +void zoomOut()
+        +void zoomReset()
+        +void rotate()
+        +void flip()
+        #void paintEvent(QPaintEvent* event)
+        #void mousePressEvent(QMouseEvent* event)
+        #void mouseMoveEvent(QMouseEvent* event)
+        #void mouseReleaseEvent(QMouseEvent* event)
+        #void wheelEvent(QWheelEvent* event)
+        #void showEvent(QShowEvent* event)
+        #void resizeEvent(QResizeEvent* event)
+    }
+    
+    class MainWindow {
+        -Ui::MainWindow* ui
+        -CanvasWidget* m_canvas
+        -QString m_currentSvgPath
+        -QSize m_initialSize
+        - -
+        -void initializeCanvas()
+        -void toggleStackedPage(QWidget* page)
+        -void updateCanvasVisibility()
+        -void showTransientMessage(const QString& message, int timeoutMs)
+        -bool loadSvgFromFile(const QString& path)
+        -void promptAndLoadSvg()
+        -bool ensureDocumentAvailable()
+        - -
+        +MainWindow(QWidget* parent)
+        +void on_About_clicked()
+        +void on_Browse_clicked()
+        +void on_Back_clicked()
+        +void on_Back_2_clicked()
+        +void on_Premium_clicked()
+        +void on_Copy_clicked()
+        +void on_DownloadPNG_clicked()
+        +void on_Flip_clicked()
+        +void on_Fullscreen_clicked()
+        +void on_Rotate_clicked()
+        +void on_Upload_clicked()
+        +void on_Zoom_clicked()
+        +void on_ZoomOut_clicked()
+        +void on_ZoomIn_clicked()
+        +void updateScaleLabel()
+        #bool eventFilter(QObject* obj, QEvent* event)
+    }
+}
+' ==================== RELATIONSHIPS ====================
+' Inheritance - SVG Elements
+SVGElement <|- - SVGRect
+SVGElement <|- - SVGCircle
+SVGElement <|- - SVGEllipse
+SVGElement <|- - SVGLine
+SVGElement <|- - SVGPolygon
+SVGElement <|- - SVGPolyline
+SVGElement <|- - SVGPath
+SVGElement <|- - SVGText
+SVGElement <|- - SVGGroup
+SVGElement <|- - SVGGradient
+' Inheritance - Gradients
+SVGGradient <|- - SVGLinearGradient
+SVGGradient <|- - SVGRadialGradient
+' Inheritance - Factory
+SVGFactory <|.. SVGFactoryImpl : implements
+' Inheritance - Visitor & Renderer
+NodeVisitor <|- - Renderer
+Renderer <|- - QtRenderer
+' Composition - SVGElement contains Style & Transform
+SVGElement *- - SVGStyle : has
+SVGElement *- - SVGTransform : has
+' Composition - SVGGroup contains Elements
+SVGGroup *- - "0..*" SVGElement : contains
+' Composition - SVGDocument contains Elements & Factory
+SVGDocument *- - "0..*" SVGElement : contains
+SVGDocument *- - SVGFactory : uses
+' Composition - SVGGradient contains Stops
+SVGGradient *- - "0..*" SVGStop : contains
+' Composition - UI Layer
+CanvasWidget *- - SVGDocument : owns
+MainWindow *- - CanvasWidget : owns
+' Dependencies - Style uses Color & FillRule
+SVGStyle ..> SVGColor : uses
+SVGStyle ..> SVGFillRule : uses
+' Dependencies - Transform uses Point
+SVGTransform ..> SVGPointF : uses
+' Dependencies - Element accepts Visitor
+SVGElement ..> NodeVisitor : accepts
+' Dependencies - Document uses Visitor
+SVGDocument ..> NodeVisitor : uses
+' Dependencies - QtRenderer references Document
+QtRenderer ..> SVGDocument : references
+' Dependencies - Factory creates Elements & Styles
+SVGFactory ..> SVGElement : creates
+SVGFactory ..> SVGStyle : creates
+SVGFactory ..> SVGTransform : uses
+note right of NodeVisitor
+  <b>Visitor Pattern</b>
+  Tách biệt logic rendering
+  khỏi cấu trúc dữ liệu SVG
+end note
+note right of SVGFactory
+  <b>Factory Pattern</b>
+  Tạo các SVG elements
+  từ XML nodes
+end note
+note right of Renderer
+  <b>Strategy Pattern</b>
+  Cho phép thay đổi
+  cách rendering
+end note
+@enduml
+
+@startuml
+title natrukiSVG - UML 2.5 Class Diagram
+package "Core Types" {
+    class SVGColor {
+        +unsigned char r
+        +unsigned char g
+        +unsigned char b
+        +unsigned char a
+        +bool isNone
+    }
+    
+    class SVGPointF {
+        +double x
+        +double y
+    }
+    
+    class SVGRectF {
+        +double x
+        +double y
+        +double width
+        +double height
+    }
+    
+    enum SVGFillRule {
+        NonZero
+        EvenOdd
+    }
+}
+package "Style & Transform" {
+    class SVGStyle {
+        +SVGColor fillColor
+        +SVGColor strokeColor
+        +double strokeWidth
+        +double fillOpacity
+        +double strokeOpacity
+        +SVGFillRule fillRule
+        +string fillUrl
+        +string strokeUrl
+        +string fontFamily
+        +double fontSize
+        +string textAnchor
+        +bool isItalic
+        +int fontWeight
+        +bool isBold
+        +bool isDisplayed
+        - -
+        +SVGStyle()
+        +void inheritFrom(const SVGStyle& parent)
+        +void applyDefaults()
+    }
+    
+    class SVGTransform {
+        -double m_matrix[3][3]
+        - -
+        +SVGTransform()
+        +void translate(double tx, double ty)
+        +void scale(double sx, double sy)
+        +void rotate(double angle)
+        +void multiply(const SVGTransform& other)
+        +SVGPointF map(const SVGPointF& point) const
+    }
+}
+package "Visitor Pattern" {
+    interface NodeVisitor {
+        +{abstract} void visit(SVGRect& rect)
+        +{abstract} void visit(SVGCircle& circle)
+        +{abstract} void visit(SVGPolygon& polygon)
+        +{abstract} void visit(SVGPolyline& polyline)
+        +{abstract} void visit(SVGText& text)
+        +{abstract} void visit(SVGEllipse& ellipse)
+        +{abstract} void visit(SVGLine& line)
+        +{abstract} void visit(SVGPath& path)
+        +{abstract} void visitGroupBegin(SVGGroup& group)
+        +{abstract} void visitGroupEnd(SVGGroup& group)
+    }
+}
+package "SVG Elements" {
+    abstract class SVGElement {
+        #string m_id
+        #SVGStyle m_style
+        #SVGTransform m_transform
+        - -
+        +{abstract} void accept(NodeVisitor& visitor)
+        +{abstract} SVGRectF localBox() const
+        +virtual SVGRectF worldBox() const
+        +void setStyle(const SVGStyle& style)
+        +void setTransform(const SVGTransform& transform)
+        +SVGStyle& getStyle()
+        +const SVGStyle& getStyle() const
+        +SVGTransform& getTransform()
+        +const SVGTransform& getTransform() const
+        +void setId(const string& id)
+        +const string& getId() const
+    }
+    
+    class SVGRect {
+        -SVGRectF m_rect
+        -double m_rx
+        -double m_ry
+        - -
+        +SVGRect(const SVGRectF& rect, double rx, double ry)
+        +void accept(NodeVisitor& visitor) override
+        +const SVGRectF& getRect() const
+        +double getRx() const
+        +double getRy() const
+        +SVGRectF localBox() const override
+        +SVGRectF worldBox() const override
+    }
+    
+    class SVGCircle {
+        -double m_cx
+        -double m_cy
+        -double m_r
+        - -
+        +SVGCircle(double cx, double cy, double r)
+        +void accept(NodeVisitor& visitor) override
+        +double getCx() const
+        +double getCy() const
+        +double getR() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGEllipse {
+        -double m_cx
+        -double m_cy
+        -double m_rx
+        -double m_ry
+        - -
+        +SVGEllipse(double cx, double cy, double rx, double ry)
+        +void accept(NodeVisitor& visitor) override
+        +double getCx() const
+        +double getCy() const
+        +double getRx() const
+        +double getRy() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGLine {
+        -double m_x1
+        -double m_y1
+        -double m_x2
+        -double m_y2
+        - -
+        +SVGLine(double x1, double y1, double x2, double y2)
+        +void accept(NodeVisitor& visitor) override
+        +double getX1() const
+        +double getY1() const
+        +double getX2() const
+        +double getY2() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPolygon {
+        -vector<SVGPointF> m_points
+        - -
+        +SVGPolygon(const vector<SVGPointF>& points)
+        +void accept(NodeVisitor& visitor) override
+        +const vector<SVGPointF>& getPoints() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPolyline {
+        -vector<SVGPointF> m_points
+        - -
+        +SVGPolyline(const vector<SVGPointF>& points)
+        +void accept(NodeVisitor& visitor) override
+        +const vector<SVGPointF>& getPoints() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGPath {
+        -string m_pathData
+        - -
+        +SVGPath(const string& pathData)
+        +void accept(NodeVisitor& visitor) override
+        +const string& getPathData() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGText {
+        -double m_x
+        -double m_y
+        -string m_text
+        - -
+        +SVGText(double x, double y, const string& text)
+        +void accept(NodeVisitor& visitor) override
+        +double getX() const
+        +double getY() const
+        +const string& getText() const
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGGroup {
+        -vector<unique_ptr<SVGElement>> m_children
+        - -
+        +SVGGroup()
+        +void addChild(unique_ptr<SVGElement> child)
+        +const vector<unique_ptr<SVGElement>>& getChildren() const
+        +void accept(NodeVisitor& visitor) override
+        +SVGRectF localBox() const override
+        +SVGRectF worldBox() const override
+    }
+}
+package "Gradients" {
+    enum SVGGradientUnits {
+        UserSpaceOnUse
+        ObjectBoundingBox
+    }
+    
+    enum SVGSpreadMethod {
+        Pad
+        Reflect
+        Repeat
+    }
+    
+    class SVGStop {
+        +double offset
+        +SVGColor stopColor
+        +double stopOpacity
+    }
+    
+    abstract class SVGGradient {
+        +vector<SVGStop> stops
+        +SVGGradientUnits gradientUnits
+        +SVGSpreadMethod spreadMethod
+        - -
+        +SVGGradient()
+        +void accept(NodeVisitor& visitor) override
+        +SVGRectF localBox() const override
+    }
+    
+    class SVGLinearGradient {
+        +double x1
+        +double y1
+        +double x2
+        +double y2
+        - -
+        +SVGLinearGradient()
+    }
+    
+    class SVGRadialGradient {
+        +double cx
+        +double cy
+        +double r
+        +double fx
+        +double fy
+        - -
+        +SVGRadialGradient()
+    }
+}
+package "Factory Pattern" {
+    interface SVGFactory {
+        +{abstract} unique_ptr<SVGElement> createElement(xml_node* node, const SVGStyle& baseStyle, const SVGTransform& baseTransform)
+        +{abstract} SVGStyle createStyleFromCSS(const string& cssContent)
+        +{abstract} void parseStops(SVGElement* gradient, xml_node* node)
+        +{static} unique_ptr<SVGFactory> createDefaultFactory()
+    }
+    
+    class SVGFactoryImpl {
+        +unique_ptr<SVGElement> createElement(xml_node* node, const SVGStyle& baseStyle, const SVGTransform& baseTransform) override
+        +SVGStyle createStyleFromCSS(const string& cssContent) override
+        +void parseStops(SVGElement* gradient, xml_node* node) override
+    }
+}
+package "Document" {
+    class SVGDocument {
+        -SVGRectF m_viewBox
+        -vector<unique_ptr<SVGElement>> m_children
+        -unique_ptr<SVGFactory> m_factory
+        -map<string, SVGElement*> m_elementsById
+        -map<string, SVGStyle> m_stylesByClass
+        - -
+        -void parseRecursive(xml_node* xmlNode, SVGElement* parentElement)
+        -void parseStyleBlock(const string& content)
+        -SVGRectF parseViewBox(const char* viewBoxStr) const
+        -SVGRectF getContentBoundingBox() const
+        - -
+        +SVGDocument()
+        +void setViewBox(const SVGRectF& viewBox)
+        +void addChild(unique_ptr<SVGElement> child)
+        +void draw(NodeVisitor& visitor)
+        +const SVGRectF& getViewBox() const
+        +const vector<unique_ptr<SVGElement>>& getChildren() const
+        +SVGElement* getElementById(const string& id) const
+        +bool load(const string& filePath)
+    }
+}
+package "Renderer (Strategy)" {
+    interface Renderer {
+    }
+    
+    class QtRenderer {
+        -QPainter* m_painter
+        -const SVGDocument& m_document
+        - -
+        -bool prepareForDrawing(const SVGStyle& style) const
+        -void drawPath(const QPainterPath& path, const SVGStyle& style, const SVGTransform& transform)
+        -QBrush getBrush(const SVGStyle& style, const SVGRectF& bbox)
+        -QPen getPen(const SVGStyle& style, const SVGRectF& bbox)
+        -QBrush createBrushFromGradient(SVGElement* gradientElement, const SVGRectF& bbox, double opacity)
+        - -
+        +QtRenderer(QPainter* painter, const SVGDocument& document)
+        +void visit(SVGRect& rect) override
+        +void visit(SVGCircle& circle) override
+        +void visit(SVGPolygon& polygon) override
+        +void visit(SVGPolyline& polyline) override
+        +void visit(SVGText& text) override
+        +void visit(SVGEllipse& ellipse) override
+        +void visit(SVGLine& line) override
+        +void visit(SVGPath& path) override
+        +void visitGroupBegin(SVGGroup& group) override
+        +void visitGroupEnd(SVGGroup& group) override
+    }
+}
+package "UI Layer (Qt6)" {
+    class CanvasWidget {
+        -unique_ptr<SVGDocument> m_document
+        -double m_scale
+        -QPointF m_panOffset
+        -double m_rotation
+        -bool m_isFlipped
+        -SVGRectF m_sceneBounds
+        -bool m_hasSceneBounds
+        -bool m_hasPaintedWithValidSize
+        -double m_fitScale
+        -QSize m_lastViewportSize
+        -bool m_isPanning
+        -QPoint m_lastMousePos
+        - -
+        -SVGRectF calculateDocumentBounds() const
+        -QTransform buildViewTransform(const QSize& viewportSize) const
+        -void renderDocument(QPainter& painter, const QSize& viewportSize)
+        -void clampScale()
+        -void updateSceneBounds()
+        -const SVGRectF& sceneBounds() const
+        -void applyZoom(double factor, const QPointF& viewportAnchor)
+        - -
+        +CanvasWidget(QWidget* parent)
+        +void setDocument(unique_ptr<SVGDocument> document)
+        +bool hasDocument() const
+        +double getScale() const
+        +void setScale(double scale)
+        +QImage renderToImage(const QSize& size)
+        +void zoomIn()
+        +void zoomOut()
+        +void zoomReset()
+        +void rotate()
+        +void flip()
+        #void paintEvent(QPaintEvent* event)
+        #void mousePressEvent(QMouseEvent* event)
+        #void mouseMoveEvent(QMouseEvent* event)
+        #void mouseReleaseEvent(QMouseEvent* event)
+        #void wheelEvent(QWheelEvent* event)
+        #void showEvent(QShowEvent* event)
+        #void resizeEvent(QResizeEvent* event)
+    }
+    
+    class MainWindow {
+        -Ui::MainWindow* ui
+        -CanvasWidget* m_canvas
+        -QString m_currentSvgPath
+        -QSize m_initialSize
+        - -
+        -void initializeCanvas()
+        -void toggleStackedPage(QWidget* page)
+        -void updateCanvasVisibility()
+        -void showTransientMessage(const QString& message, int timeoutMs)
+        -bool loadSvgFromFile(const QString& path)
+        -void promptAndLoadSvg()
+        -bool ensureDocumentAvailable()
+        - -
+        +MainWindow(QWidget* parent)
+        +void on_About_clicked()
+        +void on_Browse_clicked()
+        +void on_Back_clicked()
+        +void on_Back_2_clicked()
+        +void on_Premium_clicked()
+        +void on_Copy_clicked()
+        +void on_DownloadPNG_clicked()
+        +void on_Flip_clicked()
+        +void on_Fullscreen_clicked()
+        +void on_Rotate_clicked()
+        +void on_Upload_clicked()
+        +void on_Zoom_clicked()
+        +void on_ZoomOut_clicked()
+        +void on_ZoomIn_clicked()
+        +void updateScaleLabel()
+        #bool eventFilter(QObject* obj, QEvent* event)
+    }
+}
+SVGElement <|- - SVGRect
+SVGElement <|- - SVGCircle
+SVGElement <|- - SVGEllipse
+SVGElement <|- - SVGLine
+SVGElement <|- - SVGPolygon
+SVGElement <|- - SVGPolyline
+SVGElement <|- - SVGPath
+SVGElement <|- - SVGText
+SVGElement <|- - SVGGroup
+SVGElement <|- - SVGGradient
+SVGGradient <|- - SVGLinearGradient
+SVGGradient <|- - SVGRadialGradient
+SVGFactory <|.. SVGFactoryImpl : implements
+NodeVisitor <|- - Renderer
+Renderer <|- - QtRenderer
+SVGElement *- - SVGStyle : has
+SVGElement *- - SVGTransform : has
+SVGGroup *- - "0..*" SVGElement : contains
+SVGDocument *- - "0..*" SVGElement : contains
+SVGDocument *- - SVGFactory : uses
+SVGGradient *- - "0..*" SVGStop : contains
+CanvasWidget *- - SVGDocument : owns
+MainWindow *- - CanvasWidget : owns
+SVGStyle ..> SVGColor : uses
+SVGStyle ..> SVGFillRule : uses
+SVGTransform ..> SVGPointF : uses
+SVGElement ..> NodeVisitor : accepts
+SVGDocument ..> NodeVisitor : uses
+QtRenderer ..> SVGDocument : references
+SVGFactory ..> SVGElement : creates
+SVGFactory ..> SVGStyle : creates
+SVGFactory ..> SVGTransform : uses
+note right of NodeVisitor
+  <b>Visitor Pattern</b>
+  Tách biệt logic rendering
+  khỏi cấu trúc dữ liệu SVG
+end note
+note right of SVGFactory
+  <b>Factory Pattern</b>
+  Tạo các SVG elements
+  từ XML nodes
+end note
+note right of Renderer
+  <b>Strategy Pattern</b>
+  Cho phép thay đổi
+  cách rendering
+end note
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

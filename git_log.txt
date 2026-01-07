@@ -1,0 +1,332 @@
+commit c1939f508ecf3952a41b77ec75a6f6fd179b8172
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Dec 24 13:04:11 2025 +0700
+
+    add animation
+
+commit 576e6aaab56e25b75ae59baccb8570eb0550c019
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Dec 24 12:47:58 2025 +0700
+
+    remove some unused files
+
+commit e4e04c6f3b45dfc9ef06355e6a6122dc7139ed67
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Dec 24 12:39:38 2025 +0700
+
+    add gradient tag
+
+commit 6afdf7ac1fcaf73188a589dc2aee9a5a24d19d35
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Mon Dec 22 08:37:31 2025 +0700
+
+    update report v2
+
+commit e72f2eaf9cfb7f706e03c0d99de21d4bf3f720fb
+Merge: 3bd57d2 988844c
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Tue Dec 16 21:45:35 2025 +0700
+
+    merge to main
+
+commit 3bd57d2b62812578c9564a41c172f6ebb0966fb2
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Tue Dec 16 21:21:51 2025 +0700
+
+    something fix
+
+commit 988844c3e1d8f788121981cd2e1e1d9b5fb8b664
+Author: pumpomeo <thihoang.31241027692@st.ueh.edu.vn>
+Date:   Tue Dec 16 14:14:08 2025 +0700
+
+    fix: scale function
+
+commit 4029ff67bf1b15fb4a7751e757fa6af4f83412c8
+Author: pumpomeo <thihoang.31241027692@st.ueh.edu.vn>
+Date:   Tue Dec 16 14:06:27 2025 +0700
+
+    copy of B#2
+
+commit 5e7f9c578fee2306323d3ae03c839fb5f0a89bfe
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Wed Dec 10 16:21:20 2025 +0700
+
+    FINAL
+    (word alignment+color+rotation)
+
+commit 8360949a8dce32fbdf471043ec711e6853d99752
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Mon Dec 8 10:10:06 2025 +0700
+
+    rotation on flipped image fix
+
+commit c013f31d88a312e2349df54af2a6f29087183bae
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Sat Nov 22 16:09:08 2025 +0700
+
+    final
+
+commit 994a0339d832c879eeec0daafe8b29d98054ba65
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Fri Nov 21 15:32:53 2025 +0700
+
+    Add SVGPath element to "finish app"
+
+commit e025c89331458d75c9e3b4401239b1ca5dfcfa1e
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Thu Nov 20 07:03:09 2025 +0700
+
+    merge files
+
+commit bf974f5e3288753c7b3101995daf1599770080eb
+Merge: 9b68759 d73a87a
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Thu Nov 20 07:02:23 2025 +0700
+
+    Merge branch 'main' of https://github.com/khang1108/natrukiSVG
+
+commit 9b68759cf86bb80e0cf016e71c68ee7a2d8182a2
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Thu Nov 20 07:01:18 2025 +0700
+
+    add explaination for functions and add SVGPath
+
+commit d73a87a334d918e4485f1839234fe46782e2c488
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Wed Nov 19 17:21:32 2025 +0700
+
+    Update README.md (#6)
+
+commit 7b0cb8d13b4919639c26958f8ceb5360fe89bb09
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Nov 19 14:46:27 2025 +0700
+
+    add some new features
+
+commit cc31aad7e1cb333bfaf54d99f982ca0fcc7e87ee
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Nov 19 13:16:27 2025 +0700
+
+    finish application
+
+commit 71746d6776c14f087a2fcc3056630723b399dfaa
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Sun Nov 16 21:43:43 2025 +0700
+
+    Remove build artifacts and IDE files from repository
+    
+    - Remove build/, .cache/, .backup_merge/, .vscode/ from git tracking
+    - Update .gitignore to ignore build artifacts and IDE files
+    - Files remain locally but are no longer tracked
+
+commit 60527b6201cef12394a552b6f697c118a27dbace
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Sun Nov 16 21:02:59 2025 +0700
+
+    fix qt
+
+commit 8761aa0f4f2aa0fd09c11ecbe188377aaaa80d21
+Merge: 0fa78f4 95451bc
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Sun Nov 16 20:22:26 2025 +0700
+
+    Merge remote-tracking branch 'origin/classdefining'
+
+commit 95451bc9d12f5931c15ef8034db44803a0ed1db2
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Sat Nov 15 14:18:47 2025 +0700
+
+    sua loi noi bo
+
+commit 0fa78f450c214ec37ed04480bb74f5b3f0787ab9
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Sat Nov 15 14:04:11 2025 +0700
+
+    fix main cmake
+
+commit ca6b2c6d3e435839990624157b381f76f97f1ff3
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 12 13:49:34 2025 +0700
+
+    sua nut size
+
+commit b143c1a8a5575bbfd20b95119a6a4d9eafe07e43
+Merge: c81019d 26235ae
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 12 13:12:04 2025 +0700
+
+    hehe
+
+commit c81019d2f0c0c6e77714355dbfb80bbb4d49571d
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 12 13:01:00 2025 +0700
+
+    latest
+
+commit 26235ae9cc18ff76a0ea5dd620e90ce50ed6452e
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Tue Nov 11 16:53:56 2025 +0700
+
+    .
+
+commit f8defdc53ef8d59716ba2d8763d72c51e0c0b4f5
+Merge: e2d8172 2a7db1e
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Tue Nov 11 16:32:59 2025 +0700
+
+    Merge branch 'Parser+SceneGraph' of https://github.com/khang1108/natrukiSVG into Parser+SceneGraph
+
+commit e2d817262d774fd0b82dc2977cb5b946f9d3dd46
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Tue Nov 11 16:28:37 2025 +0700
+
+    svgfactory adjustment
+
+commit f4af0689d92fc10b7b1607ae40ef699c8b4a570c
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Tue Nov 11 16:04:25 2025 +0700
+
+    moi nhat
+
+commit 2a7db1e253319e87a4d1bf74290b17491ef546c9
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Mon Nov 10 23:49:11 2025 +0700
+
+    Delete .vscode directory
+
+commit 86a297d9418aa308fd2f6661a872cebe0e8a6697
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Mon Nov 10 23:48:42 2025 +0700
+
+    Delete build directory
+
+commit 138dbf07b9b4f6031ff941373aea4b5fd269abaa
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Mon Nov 10 23:44:41 2025 +0700
+
+    bug fix#1
+
+commit bf6168ecf06851dc36bf1dc41660d7287e2ea69a
+Author: nh996 <hoangnhatnh123@gmail.com>
+Date:   Mon Nov 10 23:08:40 2025 +0700
+
+    roleB
+
+commit 6f85fc55fd67a47e868d0d221c714fec91045bb4
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 16:45:55 2025 +0700
+
+    add some actions on mainwindow
+
+commit c393c1d0fdd2e527854e8c7ec053ed2a6d71e3ab
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 16:35:59 2025 +0700
+
+    resources/premium added
+
+commit 7f29609a1c149e3516d74af00a6ca496ba7a3b6c
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 11:35:05 2025 +0700
+
+    da doi svg thanh png
+
+commit 3490f483f66e1e1a17871141acebfb6ecef95c1a
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 11:16:34 2025 +0700
+
+    folder resources/about added
+
+commit b35b95d618288c28360997fc49630fc55fc5f39b
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 10:18:41 2025 +0700
+
+    upload resources
+
+commit 9211e621b5bdee9bb344ff200b054623aefbfe77
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Thu Nov 6 02:31:53 2025 +0700
+
+    include folder completed
+
+commit 86c759dd3cd45a50b5b9a389c441c757d105f3e8
+Merge: da0ab28 497ded4
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 5 23:31:52 2025 +0700
+
+    Merge remote-tracking branch 'origin/main' into classdefining
+
+commit da0ab288be51e95bc870f6f3ee7b8f1c6dbb85c6
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 5 23:30:56 2025 +0700
+
+    Role A: folder /include/svg completed
+
+commit 497ded402d20ba02da050aa45a9bf3fbb68102a8
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Nov 5 23:15:52 2025 +0700
+
+    Fix README.md
+
+commit ed681028ef033d61d2d8a0f8ef6c6183328e29e5
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Wed Nov 5 23:08:04 2025 +0700
+
+    update CMakeLists
+
+commit b84fef63e39b5a2d5b3a975472854b823cf09eb0
+Author: cpgod36 <caop87944@gmail.com>
+Date:   Wed Nov 5 15:25:36 2025 +0700
+
+    define some classes
+
+commit 9ca7645e8b6aefdce662b424d9402538c98dfa9a
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Thu Oct 30 23:08:32 2025 +0700
+
+    Update contributors section with GitHub links
+
+commit e8262c033b845e4418df494196f78007fa7c899d
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Thu Oct 30 23:05:02 2025 +0700
+
+    Update class reference in README.md (#3)
+    
+    Corrected wording in project description.
+
+commit ebbeb8945861ddfd28e251dab9da5ace7ee0ff44
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Thu Oct 30 23:04:21 2025 +0700
+
+    Enhance README with project details and structure (#2)
+    
+    Expanded project description and added details about installation, contributors, and folder structure.
+
+commit 437b1f5c69caad4d59d1ce995355313c96b4c11d
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Thu Oct 30 22:44:35 2025 +0700
+
+    Delete .doc directory (#1)
+
+commit 6a36eaa0fb0247f7d0c79ec38e3e8f8b440d2c7c
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Thu Oct 30 22:38:57 2025 +0700
+
+    update folder
+
+commit 8737269c111461534a4401a6cf700bdcee019079
+Author: Nguyen Phuc Khang <nguyenphuc.khang110806@gmail.com>
+Date:   Thu Oct 30 22:37:52 2025 +0700
+
+    update folder strucutre
+
+commit 9df7af297acdb2d42e40fd30f6496f59b2565535
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Wed Oct 8 13:44:25 2025 +0700
+
+    Update README.md
+
+commit f5e5b3fc9ae52079c8b298829cf4421a85c23555
+Author: Nguyen Phuc Khang <94360818+khang1108@users.noreply.github.com>
+Date:   Wed Oct 8 13:31:42 2025 +0700
+
+    Initial commit
